@@ -1,4 +1,5 @@
 using Coordinator.Services;
+using Coordinator.Commands;
 using Coordinator.Data;
 using Microsoft.EntityFrameworkCore;
 
@@ -23,6 +24,7 @@ Directory.CreateDirectory(
 builder.Services.AddControllers();
 builder.Services.AddSingleton<WorkerRegistry>();
 builder.Services.AddSingleton<ExperimentRegistry>();
+builder.Services.AddSingleton<CoordinatorCommandProcessor>();
 builder.Services.AddHostedService<ExperimentSchedulerService>();
 builder.Services.AddHostedService<ExperimentRecoveryService>();
 
@@ -45,14 +47,50 @@ using (var scope = app.Services.CreateScope())
 var experimentRegistry =
     app.Services.GetRequiredService<ExperimentRegistry>();
 
+var commandProcessor =
+    app.Services.GetRequiredService<
+        CoordinatorCommandProcessor>();
+
 var recoveredExperiments =
     experimentRegistry.RequeueInterruptedExperiments();
 
-if (recoveredExperiments > 0)
+var interruptedExperiments = 
+    experimentRegistry.GetRunning();
+
+var recoveredExperimentCount = 0;
+
+foreach (var experiment in interruptedExperiments)
+{
+    var command =
+        new RecoverExperimentOnStartupCommand(
+            CommandId: Guid.NewGuid(),
+            OccurredAtUtc: DateTimeOffset.UtcNow,
+            ExperimentId: experiment.Id,
+            EventId: Guid.NewGuid(),
+            PreviousWorkerId:
+                experiment.AssignedWorkerId,
+            Attempt: experiment.Attempt);
+
+    try
+    {
+        commandProcessor.Apply(command);
+        recoveredExperimentCount++;
+    }
+    catch (InvalidOperationException)
+    {
+        app.Logger.LogWarning(
+            "Experiment {ExperimentId} could not be " +
+            "recovered during Coordinator startup.",
+            experiment.Id);
+    }
+}
+
+if (recoveredExperimentCount > 0)
 {
     app.Logger.LogWarning(
-        "{ExperimentCount} interrupted experiment(s) returned to Pending during Coordinator startup.",
-        recoveredExperiments);
+        "{ExperimentCount} interrupted experiment(s) " +
+        "returned to Pending during Coordinator startup.",
+        recoveredExperimentCount);
 }
 
 // Configure the HTTP request pipeline.

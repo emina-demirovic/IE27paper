@@ -1,7 +1,7 @@
 using System.Net;
 using System.Net.Http.Json;
 using Contracts;
-using Coordinator.Services;
+using Coordinator.Commands;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Coordinator.Tests.Experiments;
@@ -75,17 +75,24 @@ public sealed class AttemptFencingTests
 
         using (var scope = factory.Services.CreateScope())
         {
-            var experimentRegistry =
+            var commandProcessor =
                 scope.ServiceProvider
-                    .GetRequiredService<ExperimentRegistry>();
+                    .GetRequiredService<
+                        CoordinatorCommandProcessor>();
 
-            var requeued = experimentRegistry.TryRequeue(
-                createdExperiment.Id,
-                workerId,
-                out var requeuedExperiment);
+            var requeueResult =
+                commandProcessor.Apply(
+                    new RequeueExperimentCommand(
+                        CommandId: Guid.NewGuid(),
+                        OccurredAtUtc: DateTimeOffset.UtcNow,
+                        ExperimentId: createdExperiment.Id,
+                        EventId: Guid.NewGuid(),
+                        WorkerId: workerId,
+                        Attempt: firstAssignment.Attempt,
+                        CancelInsteadOfRequeue: false));
 
-            Assert.True(requeued);
-            Assert.NotNull(requeuedExperiment);
+            var requeuedExperiment =
+                requeueResult.Value;
 
             Assert.Equal(
                 ExperimentStatus.Pending,

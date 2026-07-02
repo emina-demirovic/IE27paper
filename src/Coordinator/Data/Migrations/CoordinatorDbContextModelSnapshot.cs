@@ -17,6 +17,30 @@ namespace Coordinator.Data.Migrations
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "10.0.9");
 
+            modelBuilder.Entity("Coordinator.Data.AppliedCommandEntity", b =>
+                {
+                    b.Property<Guid>("CommandId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("CommandType")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("TEXT");
+
+                    b.Property<Guid>("ExperimentId")
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTimeOffset>("OccurredAtUtc")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("CommandId");
+
+                    b.HasIndex("ExperimentId");
+
+                    b.ToTable("AppliedCommands");
+                });
+
             modelBuilder.Entity("Coordinator.Data.ExperimentEntity", b =>
                 {
                     b.Property<Guid>("Id")

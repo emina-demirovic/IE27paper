@@ -1,9 +1,14 @@
+using Contracts;
+using Coordinator.Commands;
+
 namespace Coordinator.Services;
 
 public sealed class ExperimentRecoveryService(
     ILogger<ExperimentRecoveryService> logger,
     WorkerRegistry workerRegistry,
-    ExperimentRegistry experimentRegistry) : BackgroundService
+    ExperimentRegistry experimentRegistry,
+    CoordinatorCommandProcessor commandProcessor)
+    : BackgroundService
 {
     protected override async Task ExecuteAsync(
         CancellationToken stoppingToken)
@@ -15,7 +20,8 @@ public sealed class ExperimentRecoveryService(
 
             foreach (var experiment in runningExperiments)
             {
-                var workerId = experiment.AssignedWorkerId;
+                var workerId =
+                    experiment.AssignedWorkerId;
 
                 if (string.IsNullOrWhiteSpace(workerId))
                 {
@@ -27,17 +33,50 @@ public sealed class ExperimentRecoveryService(
                     continue;
                 }
 
-                var requeued = experimentRegistry.TryRequeue(
-                    experiment.Id,
-                    workerId,
-                    out var requeuedExperiment);
+                var command =
+                    new RequeueExperimentCommand(
+                        CommandId: Guid.NewGuid(),
+                        OccurredAtUtc:
+                            DateTimeOffset.UtcNow,
+                        ExperimentId: experiment.Id,
+                        EventId: Guid.NewGuid(),
+                        WorkerId: workerId,
+                        Attempt: experiment.Attempt,
+                        CancelInsteadOfRequeue:
+                            experiment.CancellationRequested);
 
-                if (requeued && requeuedExperiment is not null)
+                try
                 {
-                    logger.LogWarning(
-                        "Experiment {ExperimentId} returned to Pending because worker {WorkerId} is offline.",
-                        experiment.Id,
-                        workerId);
+                    var result =
+                        commandProcessor.Apply(command);
+
+                    if (result.Value.Status ==
+                        ExperimentStatus.Cancelled)
+                    {
+                        logger.LogWarning(
+                            "Experiment {ExperimentId} was " +
+                            "cancelled because worker " +
+                            "{WorkerId} is offline.",
+                            experiment.Id,
+                            workerId);
+                    }
+                    else
+                    {
+                        logger.LogWarning(
+                            "Experiment {ExperimentId} returned " +
+                            "to Pending because worker " +
+                            "{WorkerId} is offline.",
+                            experiment.Id,
+                            workerId);
+                    }
+                }
+                catch (InvalidOperationException exception)
+                {
+                    logger.LogDebug(
+                        exception,
+                        "Recovery of experiment {ExperimentId} " +
+                        "was skipped.",
+                        experiment.Id);
                 }
             }
 
