@@ -7,6 +7,8 @@ namespace Coordinator.Services;
 public sealed class ExperimentRegistry(
     IDbContextFactory<CoordinatorDbContext> dbContextFactory)
 {
+
+    
     public ExperimentResponse Create(
         string name,
         string algorithm,
@@ -244,6 +246,7 @@ public sealed class ExperimentRegistry(
         return updatedRows == 1 &&
             experiment is not null;
     }
+    
     public bool TryComplete(
         Guid id,
         string workerId,
@@ -335,7 +338,7 @@ public sealed class ExperimentRegistry(
         transaction.Commit();
 
         return true;
-    }
+    } 
 
     public ExperimentResponse? GetNextPending()
     {
@@ -520,7 +523,7 @@ public sealed class ExperimentRegistry(
         return true;
     }
 
-    public bool TryRequestCancellation(
+     public bool TryRequestCancellation(
         Guid id,
         out ExperimentResponse? updatedExperiment)
     {
@@ -634,7 +637,7 @@ public sealed class ExperimentRegistry(
         updatedExperiment = ToResponse(updatedEntity);
 
         return true;
-    }
+    } 
 
     private static ExperimentEventEntity CreateEvent(
         Guid experimentId,
@@ -653,9 +656,9 @@ public sealed class ExperimentRegistry(
             Attempt = attempt,
             Details = details
         };
-    }
+    } 
 
-    private static ExperimentResponse ToResponse(
+    internal static ExperimentResponse ToResponse(
         ExperimentEntity experiment)
     {
         return new ExperimentResponse
@@ -722,7 +725,7 @@ public sealed class ExperimentRegistry(
         transaction.Commit();
 
         return interruptedExperiments.Length;
-    }
+    } 
 
     public IReadOnlyCollection<ExperimentEventResponse> GetEvents(
     Guid experimentId)
@@ -749,5 +752,5 @@ public sealed class ExperimentRegistry(
                 })
             .ToArray();
     }
-    
+
 }

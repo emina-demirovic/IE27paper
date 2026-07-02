@@ -1,4 +1,5 @@
 using Contracts;
+using Coordinator.Commands;
 using Coordinator.Services;
 using Microsoft.AspNetCore.Mvc;
 
@@ -11,11 +12,15 @@ public sealed class ExperimentsController : ControllerBase
     private readonly ExperimentRegistry _experimentRegistry;
     private readonly WorkerRegistry _workerRegistry;
 
+    private readonly CoordinatorCommandProcessor _commandProcessor;
 
-    public ExperimentsController(ExperimentRegistry experimentRegistry, WorkerRegistry workerRegistry)
+    public ExperimentsController(ExperimentRegistry experimentRegistry, 
+                                WorkerRegistry workerRegistry,
+                                CoordinatorCommandProcessor commandProcessor)
     {
         _experimentRegistry = experimentRegistry;
         _workerRegistry = workerRegistry;
+        _commandProcessor = commandProcessor;
     }
 
     [HttpPost]
@@ -53,15 +58,27 @@ public sealed class ExperimentsController : ControllerBase
                 "TimeoutSeconds must be between 1 and 86400.");
         }
 
-        var experiment = _experimentRegistry.Create(
-            request.Name,
-            request.Algorithm,
-            request.Environment,
-            request.Seed,
-            request.MaxSteps,
-            request.Priority,
-            request.TimeoutSeconds,
-            request.SimulateFailure);
+        var occurredAtUtc =
+            DateTimeOffset.UtcNow;
+
+        var command = new CreateExperimentCommand(
+            CommandId: Guid.NewGuid(),
+            OccurredAtUtc: occurredAtUtc,
+            ExperimentId: Guid.NewGuid(),
+            EventId: Guid.NewGuid(),
+            Name: request.Name,
+            Algorithm: request.Algorithm,
+            Environment: request.Environment,
+            Seed: request.Seed,
+            MaxSteps: request.MaxSteps,
+            Priority: request.Priority,
+            TimeoutSeconds: request.TimeoutSeconds,
+            SimulateFailure: request.SimulateFailure);
+
+        var result =
+            _commandProcessor.Apply(command);
+
+        var experiment = result.Value;
 
         return CreatedAtAction(
             nameof(GetById),
@@ -92,38 +109,50 @@ public sealed class ExperimentsController : ControllerBase
     [HttpPost("{id:guid}/assign")]
     public ActionResult<ExperimentResponse> Assign(Guid id)
     {
-        var existingExperiment = _experimentRegistry.GetById(id);
+        var existingExperiment =
+            _experimentRegistry.GetById(id);
 
         if (existingExperiment is null)
         {
-            return NotFound($"Experiment '{id}' was not found.");
+            return NotFound(
+                $"Experiment '{id}' was not found.");
         }
 
-        if (existingExperiment.Status != ExperimentStatus.Pending)
+        if (existingExperiment.Status !=
+            ExperimentStatus.Pending)
         {
             return Conflict(
-                $"Experiment '{id}' cannot be assigned because its status is " +
-                $"'{existingExperiment.Status}'.");
+                $"Experiment '{id}' cannot be assigned because " +
+                $"its status is '{existingExperiment.Status}'.");
         }
 
         var worker = _workerRegistry.GetFirstOnline();
 
         if (worker is null)
         {
-            return Conflict("No online worker is currently available.");
+            return Conflict(
+                "No online worker is currently available.");
         }
 
-        var assigned = _experimentRegistry.TryAssign(
-            id,
-            worker.WorkerId,
-            out var assignedExperiment);
+        var command = new AssignExperimentCommand(
+            CommandId: Guid.NewGuid(),
+            OccurredAtUtc: DateTimeOffset.UtcNow,
+            ExperimentId: id,
+            EventId: Guid.NewGuid(),
+            WorkerId: worker.WorkerId,
+            Attempt: existingExperiment.Attempt + 1);
 
-        if (!assigned || assignedExperiment is null)
+        try
         {
-            return Conflict($"Experiment '{id}' could not be assigned.");
-        }
+            var result =
+                _commandProcessor.Apply(command);
 
-        return Ok(assignedExperiment);
+            return Ok(result.Value);
+        }
+        catch (InvalidOperationException exception)
+        {
+            return Conflict(exception.Message);
+        }
     }
 
     [HttpGet("worker/{workerId}/next")]
@@ -247,23 +276,28 @@ public sealed class ExperimentsController : ControllerBase
 
         if (request.Attempt <= 0)
         {
-            return BadRequest("A valid execution attempt is required.");
+            return BadRequest(
+                "A valid execution attempt is required.");
         }
 
-        var existingExperiment = _experimentRegistry.GetById(id);
+        var existingExperiment =
+            _experimentRegistry.GetById(id);
 
         if (existingExperiment is null)
         {
-            return NotFound($"Experiment '{id}' was not found.");
+            return NotFound(
+                $"Experiment '{id}' was not found.");
         }
 
-        if (existingExperiment.Status != ExperimentStatus.Running)
+        if (existingExperiment.Status !=
+            ExperimentStatus.Running)
         {
             return Conflict(
                 $"Experiment '{id}' is not currently running.");
         }
 
-        if (existingExperiment.AssignedWorkerId != request.WorkerId)
+        if (existingExperiment.AssignedWorkerId !=
+            request.WorkerId)
         {
             return Conflict(
                 $"Experiment '{id}' is not assigned to worker " +
@@ -274,25 +308,8 @@ public sealed class ExperimentsController : ControllerBase
         {
             return Conflict(
                 $"Experiment '{id}' is currently on attempt " +
-                $"{existingExperiment.Attempt}, but result for attempt " +
-                $"{request.Attempt} was received.");
-        }
-
-        var completed = _experimentRegistry.TryComplete(
-            id,
-            request.WorkerId,
-            request.Attempt,
-            request.Succeeded,
-            request.WasCancelled,
-            request.ResultMessage,
-            out var finishedExperiment,
-            request.MetricsJson,
-            request.ExecutionDurationMs);
-
-        if (!completed || finishedExperiment is null)
-        {
-            return Conflict(
-                $"Experiment '{id}' could not be completed.");
+                $"{existingExperiment.Attempt}, but result for " +
+                $"attempt {request.Attempt} was received.");
         }
 
         if (existingExperiment.CancellationRequested !=
@@ -303,21 +320,31 @@ public sealed class ExperimentsController : ControllerBase
                 "cancellation state.");
         }
 
-        return Ok(finishedExperiment);
-    }
+        var command = new CompleteExperimentCommand(
+            CommandId: Guid.NewGuid(),
+            OccurredAtUtc: DateTimeOffset.UtcNow,
+            ExperimentId: id,
+            EventId: Guid.NewGuid(),
+            WorkerId: request.WorkerId,
+            Attempt: request.Attempt,
+            Succeeded: request.Succeeded,
+            WasCancelled: request.WasCancelled,
+            ResultMessage: request.ResultMessage,
+            MetricsJson: request.MetricsJson,
+            ExecutionDurationMs:
+                request.ExecutionDurationMs);
 
-    [HttpGet("{id:guid}/events")]
-    public ActionResult<IReadOnlyCollection<ExperimentEventResponse>>
-        GetEvents(Guid id)
-    {
-        var experiment = _experimentRegistry.GetById(id);
-
-        if (experiment is null)
+        try
         {
-            return NotFound($"Experiment '{id}' was not found.");
-        }
+            var result =
+                _commandProcessor.Apply(command);
 
-        return Ok(_experimentRegistry.GetEvents(id));
+            return Ok(result.Value);
+        }
+        catch (InvalidOperationException exception)
+        {
+            return Conflict(exception.Message);
+        }
     }
 
     [HttpPost("{id:guid}/cancel")]
@@ -347,18 +374,40 @@ public sealed class ExperimentsController : ControllerBase
                 $"its status is '{existingExperiment.Status}'.");
         }
 
-        var cancelled =
-            _experimentRegistry.TryRequestCancellation(
-                id,
-                out var updatedExperiment);
+        var command =
+            new RequestExperimentCancellationCommand(
+                CommandId: Guid.NewGuid(),
+                OccurredAtUtc: DateTimeOffset.UtcNow,
+                ExperimentId: id,
+                EventId: Guid.NewGuid());
 
-        if (!cancelled || updatedExperiment is null)
+        try
         {
-            return Conflict(
-                $"Experiment '{id}' could not be cancelled.");
-        }
+            var result =
+                _commandProcessor.Apply(command);
 
-        return Ok(updatedExperiment);
+            return Ok(result.Value);
+        }
+        catch (InvalidOperationException exception)
+        {
+            return Conflict(exception.Message);
+        }
     }
     
+    [HttpGet("{id:guid}/events")]
+    public ActionResult<IReadOnlyCollection<ExperimentEventResponse>>
+        GetEvents(Guid id)
+    {
+        var experiment =
+            _experimentRegistry.GetById(id);
+
+        if (experiment is null)
+        {
+            return NotFound(
+                $"Experiment '{id}' was not found.");
+        }
+
+        return Ok(
+            _experimentRegistry.GetEvents(id));
+    }
 }

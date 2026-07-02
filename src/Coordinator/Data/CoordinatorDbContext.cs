@@ -12,6 +12,9 @@ public sealed class CoordinatorDbContext(
     public DbSet<ExperimentEventEntity> ExperimentEvents =>
         Set<ExperimentEventEntity>();
 
+    public DbSet<AppliedCommandEntity> AppliedCommands =>
+        Set<AppliedCommandEntity>();
+
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<ExperimentEntity>(entity =>
@@ -49,6 +52,17 @@ public sealed class CoordinatorDbContext(
                 .WithMany()
                 .HasForeignKey(experimentEvent => experimentEvent.ExperimentId)
                 .OnDelete(DeleteBehavior.Cascade);
+        });
+
+        modelBuilder.Entity<AppliedCommandEntity>(entity =>
+        {
+            entity.HasKey(command => command.CommandId);
+
+            entity.Property(command => command.CommandType)
+                .IsRequired()
+                .HasMaxLength(100);
+
+            entity.HasIndex(command => command.ExperimentId);
         });
     }
 }

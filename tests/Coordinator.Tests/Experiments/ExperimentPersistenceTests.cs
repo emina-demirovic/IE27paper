@@ -1,7 +1,7 @@
 using System.Net;
 using System.Net.Http.Json;
 using Contracts;
-using Coordinator.Services;
+using Coordinator.Commands;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Coordinator.Tests.Experiments;
@@ -205,17 +205,23 @@ public sealed class ExperimentPersistenceTests
                 using var scope =
                     firstFactory.Services.CreateScope();
 
-                var experimentRegistry =
+                var commandProcessor =
                     scope.ServiceProvider
-                        .GetRequiredService<ExperimentRegistry>();
+                        .GetRequiredService<
+                            CoordinatorCommandProcessor>();
 
-                var assigned = experimentRegistry.TryAssign(
-                    experimentId,
-                    workerId,
-                    out var assignedExperiment);
+                var assignmentResult =
+                    commandProcessor.Apply(
+                        new AssignExperimentCommand(
+                            CommandId: Guid.NewGuid(),
+                            OccurredAtUtc: DateTimeOffset.UtcNow,
+                            ExperimentId: experimentId,
+                            EventId: Guid.NewGuid(),
+                            WorkerId: workerId,
+                            Attempt: 1));
 
-                Assert.True(assigned);
-                Assert.NotNull(assignedExperiment);
+                var assignedExperiment =
+                    assignmentResult.Value;
 
                 Assert.Equal(
                     ExperimentStatus.Running,

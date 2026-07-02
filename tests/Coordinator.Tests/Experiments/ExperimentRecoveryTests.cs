@@ -1,6 +1,7 @@
 using System.Net;
 using System.Net.Http.Json;
 using Contracts;
+using Coordinator.Commands;
 using Coordinator.Services;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -46,17 +47,23 @@ public sealed class ExperimentRecoveryTests
 
         using (var scope = factory.Services.CreateScope())
         {
-            var experimentRegistry =
+            var commandProcessor =
                 scope.ServiceProvider
-                    .GetRequiredService<ExperimentRegistry>();
+                    .GetRequiredService<
+                        CoordinatorCommandProcessor>();
 
-            var assigned = experimentRegistry.TryAssign(
-                createdExperiment.Id,
-                workerId,
-                out var assignedExperiment);
+            var assignmentResult =
+                commandProcessor.Apply(
+                    new AssignExperimentCommand(
+                        CommandId: Guid.NewGuid(),
+                        OccurredAtUtc: DateTimeOffset.UtcNow,
+                        ExperimentId: createdExperiment.Id,
+                        EventId: Guid.NewGuid(),
+                        WorkerId: workerId,
+                        Attempt: 1));
 
-            Assert.True(assigned);
-            Assert.NotNull(assignedExperiment);
+            var assignedExperiment =
+                assignmentResult.Value;
 
             Assert.Equal(
                 ExperimentStatus.Running,
@@ -195,13 +202,25 @@ public sealed class ExperimentRecoveryTests
         Assert.True(
             cancellationRequestedExperiment.CancellationRequested);
 
-        var recovered = experimentRegistry.TryRequeue(
-            createdExperiment.Id,
-            workerId,
-            out var cancelledExperiment);
+        var commandProcessor =
+            scope.ServiceProvider
+                .GetRequiredService<
+                    CoordinatorCommandProcessor>();
 
-        Assert.True(recovered);
-        Assert.NotNull(cancelledExperiment);
+        var recoveryResult =
+            commandProcessor.Apply(
+                new RequeueExperimentCommand(
+                    CommandId: Guid.NewGuid(),
+                    OccurredAtUtc:
+                        DateTimeOffset.UtcNow,
+                    ExperimentId: createdExperiment.Id,
+                    EventId: Guid.NewGuid(),
+                    WorkerId: workerId,
+                    Attempt: assignedExperiment.Attempt,
+                    CancelInsteadOfRequeue: true));
+
+        var cancelledExperiment =
+            recoveryResult.Value;
 
         Assert.Equal(
             ExperimentStatus.Cancelled,
