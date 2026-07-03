@@ -1,14 +1,26 @@
 using Coordinator.Services;
 using Coordinator.Commands;
 using Coordinator.Data;
+using Coordinator.Raft;
+using Microsoft.Extensions.Options;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-var databasePath = Path.Combine(
-    builder.Environment.ContentRootPath,
-    "Data",
-    "coordinator.db");
+var configuredDatabasePath =
+    builder.Configuration[
+        "Coordinator:DatabasePath"];
+
+var databasePath =
+    string.IsNullOrWhiteSpace(
+        configuredDatabasePath)
+        ? Path.Combine(
+            builder.Environment.ContentRootPath,
+            "Data",
+            "coordinator.db")
+        : Path.GetFullPath(
+            configuredDatabasePath,
+            builder.Environment.ContentRootPath);
 
 builder.Services.AddDbContextFactory<CoordinatorDbContext>(
     options => options.UseSqlite(
@@ -22,6 +34,48 @@ Directory.CreateDirectory(
 // Add services to the container.
 
 builder.Services.AddControllers();
+
+// RAFT configuration and services
+builder.Services.AddSingleton<
+    IValidateOptions<RaftOptions>,
+    RaftOptionsValidator>();
+
+builder.Services.AddOptions<RaftOptions>()
+    .Bind(
+        builder.Configuration.GetSection(
+            RaftOptions.SectionName))
+    .ValidateOnStart();
+
+builder.Services.AddSingleton<
+    IRaftPersistentStateStore,
+    SqliteRaftPersistentStateStore>();
+
+builder.Services.AddSingleton<RaftNodeState>();
+
+builder.Services.AddHttpClient(
+    "RaftPeer",
+    client =>
+    {
+        client.Timeout =
+            TimeSpan.FromSeconds(2);
+    });
+
+builder.Services.AddSingleton<
+    IRaftPeerClient,
+    HttpRaftPeerClient>();
+
+builder.Services.AddSingleton<
+    RaftHeartbeatSender>();
+
+builder.Services.AddHostedService<
+    RaftHeartbeatBackgroundService>();
+
+builder.Services.AddHostedService<
+    RaftElectionBackgroundService>();
+
+builder.Services.AddSingleton<
+    RaftElectionService>();
+
 builder.Services.AddSingleton<WorkerRegistry>();
 builder.Services.AddSingleton<ExperimentRegistry>();
 builder.Services.AddSingleton<CoordinatorCommandProcessor>();

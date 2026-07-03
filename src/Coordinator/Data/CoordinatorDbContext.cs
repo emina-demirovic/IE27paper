@@ -15,6 +15,9 @@ public sealed class CoordinatorDbContext(
     public DbSet<AppliedCommandEntity> AppliedCommands =>
         Set<AppliedCommandEntity>();
 
+    public DbSet<RaftPersistentStateEntity> RaftPersistentStates =>
+        Set<RaftPersistentStateEntity>();
+
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<ExperimentEntity>(entity =>
@@ -63,6 +66,18 @@ public sealed class CoordinatorDbContext(
                 .HasMaxLength(100);
 
             entity.HasIndex(command => command.ExperimentId);
+        });
+
+        modelBuilder.Entity<RaftPersistentStateEntity>(entity =>
+        {
+            entity.HasKey(state => state.NodeId);
+
+            entity.Property(state => state.NodeId)
+                .IsRequired()
+                .HasMaxLength(100);
+
+            entity.Property(state => state.VotedFor)
+                .HasMaxLength(100);
         });
     }
 }

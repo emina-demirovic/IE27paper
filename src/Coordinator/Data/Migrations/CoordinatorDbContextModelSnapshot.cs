@@ -154,6 +154,24 @@ namespace Coordinator.Data.Migrations
                     b.ToTable("ExperimentEvents");
                 });
 
+            modelBuilder.Entity("Coordinator.Data.RaftPersistentStateEntity", b =>
+                {
+                    b.Property<string>("NodeId")
+                        .HasMaxLength(100)
+                        .HasColumnType("TEXT");
+
+                    b.Property<long>("CurrentTerm")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("VotedFor")
+                        .HasMaxLength(100)
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("NodeId");
+
+                    b.ToTable("RaftPersistentStates");
+                });
+
             modelBuilder.Entity("Coordinator.Data.ExperimentEventEntity", b =>
                 {
                     b.HasOne("Coordinator.Data.ExperimentEntity", "Experiment")
