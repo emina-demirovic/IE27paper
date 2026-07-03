@@ -43,7 +43,8 @@ public sealed class RaftElectionTimeoutTests
                 LeaderId: "coordinator-peer-1",
                 PrevLogIndex: 0,
                 PrevLogTerm: 0,
-                LeaderCommit: 0));
+                LeaderCommit: 0,
+                Entries: []));
 
         timeProvider.Advance(
             TimeSpan.FromMilliseconds(200));

@@ -50,6 +50,22 @@ builder.Services.AddSingleton<
     IRaftPersistentStateStore,
     SqliteRaftPersistentStateStore>();
 
+builder.Services.AddSingleton<
+    IRaftLogStore,
+    SqliteRaftLogStore>();
+
+builder.Services.AddSingleton<CoordinatorCommandSerializer>();
+
+builder.Services.AddSingleton<RaftLogManager>();
+
+builder.Services.AddSingleton<RaftReplicationTracker>();
+
+builder.Services.AddSingleton<
+    IRaftCommitStateStore,
+    SqliteRaftCommitStateStore>();
+
+builder.Services.AddSingleton<RaftCommitManager>();
+
 builder.Services.AddSingleton<RaftNodeState>();
 
 builder.Services.AddHttpClient(

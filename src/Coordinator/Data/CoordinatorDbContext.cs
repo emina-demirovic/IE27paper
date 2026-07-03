@@ -18,6 +18,12 @@ public sealed class CoordinatorDbContext(
     public DbSet<RaftPersistentStateEntity> RaftPersistentStates =>
         Set<RaftPersistentStateEntity>();
 
+    public DbSet<RaftLogEntryEntity> RaftLogEntries =>
+        Set<RaftLogEntryEntity>();
+
+    public DbSet<RaftCommitStateEntity> RaftCommitStates =>
+        Set<RaftCommitStateEntity>();
+
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<ExperimentEntity>(entity =>
@@ -77,6 +83,49 @@ public sealed class CoordinatorDbContext(
                 .HasMaxLength(100);
 
             entity.Property(state => state.VotedFor)
+                .HasMaxLength(100);
+        });
+
+        modelBuilder.Entity<RaftLogEntryEntity>(entity =>
+        {
+            entity.HasKey(entry =>
+                new
+                {
+                    entry.NodeId,
+                    entry.LogIndex
+                });
+
+            entity.Property(entry =>
+                    entry.NodeId)
+                .IsRequired()
+                .HasMaxLength(100);
+
+            entity.Property(entry =>
+                    entry.CommandType)
+                .IsRequired()
+                .HasMaxLength(100);
+
+            entity.Property(entry =>
+                    entry.CommandPayloadJson)
+                .IsRequired();
+
+            entity.HasIndex(entry =>
+                    new
+                    {
+                        entry.NodeId,
+                        entry.CommandId
+                    })
+                .IsUnique();
+        });
+
+        modelBuilder.Entity<RaftCommitStateEntity>(entity =>
+        {
+            entity.HasKey(state =>
+                state.NodeId);
+
+            entity.Property(state =>
+                    state.NodeId)
+                .IsRequired()
                 .HasMaxLength(100);
         });
     }

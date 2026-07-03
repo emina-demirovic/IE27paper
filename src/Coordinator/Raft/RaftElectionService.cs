@@ -20,14 +20,17 @@ public sealed class RaftElectionService(
             var electionSnapshot =
                 nodeState.BeginElection();
 
+            var lastLogPosition =
+                nodeState.GetLastLogPosition();
+
             var request =
                 new RequestVoteRequest(
                     Term:
                         electionSnapshot.CurrentTerm,
                     CandidateId:
                         electionSnapshot.NodeId,
-                    LastLogIndex: 0,
-                    LastLogTerm: 0);
+                    LastLogIndex: lastLogPosition.LogIndex,
+                    LastLogTerm: lastLogPosition.Term);
 
             var responseTasks =
                 electionSnapshot.Peers

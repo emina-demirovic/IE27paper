@@ -24,12 +24,18 @@ public sealed class RaftNodeState
 
     private readonly TimeProvider _timeProvider;
 
+    private readonly RaftLogManager? _logManager;
+
+    private readonly RaftCommitManager? _commitManager;
+
     private DateTimeOffset _lastElectionActivityUtc;
 
     public RaftNodeState(
         IOptions<RaftOptions> options,
         IRaftPersistentStateStore persistentStateStore,
-        TimeProvider? timeProvider = null)
+        TimeProvider? timeProvider = null,
+        RaftLogManager? logManager = null,
+        RaftCommitManager? commitManager = null)
     {
         var raftOptions = options.Value;
 
@@ -50,6 +56,10 @@ public sealed class RaftNodeState
 
         _persistentStateStore =
             persistentStateStore;
+
+        _logManager = logManager;
+
+        _commitManager = commitManager;
 
         var persistentState =
             _persistentStateStore.LoadOrCreate(
@@ -254,6 +264,13 @@ public sealed class RaftNodeState
                 "Raft log values cannot be negative.");
         }
 
+        if (request.Entries is null)
+        {
+            throw new ArgumentException(
+                "Entries are required.",
+                nameof(request));
+        }
+
         lock (_sync)
         {
             if (request.Term < _currentTerm)
@@ -278,30 +295,53 @@ public sealed class RaftNodeState
             _leaderId = request.LeaderId;
             ResetElectionTimer();
 
-            var localLogMatches =
-                request.PrevLogIndex == 0 &&
-                request.PrevLogTerm == 0;
+            var logMatches =
+                _logManager is null
+                    ? request.PrevLogIndex == 0 &&
+                    request.PrevLogTerm == 0 &&
+                    request.Entries.Count == 0
+                    : _logManager.TryAppendEntries(
+                        request.PrevLogIndex,
+                        request.PrevLogTerm,
+                        request.Entries, 
+                        _commitManager?
+                            .GetState()
+                            .CommitIndex ?? 0);
+
+            if (logMatches)
+            {
+                _commitManager?.AdvanceFollowerCommit(
+                    request.LeaderCommit);
+            }
 
             return new AppendEntriesResponse(
                 Term: _currentTerm,
-                Success: localLogMatches);
+                Success: logMatches);
         }
     }
 
-    private static bool IsCandidateLogUpToDate(
+    private bool IsCandidateLogUpToDate(
         long candidateLastLogIndex,
         long candidateLastLogTerm)
     {
-        const long localLastLogIndex = 0;
-        const long localLastLogTerm = 0;
+        var localLastLogPosition =
+            GetLastLogPosition();
 
         return
             candidateLastLogTerm >
-                localLastLogTerm ||
+                localLastLogPosition.Term ||
             (candidateLastLogTerm ==
-                localLastLogTerm &&
+                localLastLogPosition.Term &&
             candidateLastLogIndex >=
-                localLastLogIndex);
+                localLastLogPosition.LogIndex);
+    }
+
+    public RaftLogPosition GetLastLogPosition()
+    {
+        return _logManager?.GetLastPosition()
+            ?? new RaftLogPosition(
+                LogIndex: 0,
+                Term: 0);
     }
 
     public bool HasElectionTimedOut(

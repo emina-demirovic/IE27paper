@@ -154,6 +154,55 @@ namespace Coordinator.Data.Migrations
                     b.ToTable("ExperimentEvents");
                 });
 
+            modelBuilder.Entity("Coordinator.Data.RaftCommitStateEntity", b =>
+                {
+                    b.Property<string>("NodeId")
+                        .HasMaxLength(100)
+                        .HasColumnType("TEXT");
+
+                    b.Property<long>("CommitIndex")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<long>("LastApplied")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("NodeId");
+
+                    b.ToTable("RaftCommitStates");
+                });
+
+            modelBuilder.Entity("Coordinator.Data.RaftLogEntryEntity", b =>
+                {
+                    b.Property<string>("NodeId")
+                        .HasMaxLength(100)
+                        .HasColumnType("TEXT");
+
+                    b.Property<long>("LogIndex")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<Guid>("CommandId")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("CommandPayloadJson")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("CommandType")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("TEXT");
+
+                    b.Property<long>("Term")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("NodeId", "LogIndex");
+
+                    b.HasIndex("NodeId", "CommandId")
+                        .IsUnique();
+
+                    b.ToTable("RaftLogEntries");
+                });
+
             modelBuilder.Entity("Coordinator.Data.RaftPersistentStateEntity", b =>
                 {
                     b.Property<string>("NodeId")

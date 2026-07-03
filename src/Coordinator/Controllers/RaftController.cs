@@ -71,6 +71,12 @@ public sealed class RaftController(
                 "Log values cannot be negative.");
         }
 
+        if (request.Entries is null)
+        {
+            return BadRequest(
+                "Entries are required.");
+        }
+        
         return Ok(
             nodeState.HandleAppendEntries(
                 request));

@@ -5,4 +5,5 @@ public sealed record AppendEntriesRequest(
     string LeaderId,
     long PrevLogIndex,
     long PrevLogTerm,
-    long LeaderCommit);
+    long LeaderCommit,
+    IReadOnlyList<RaftLogEntry> Entries);

@@ -400,7 +400,8 @@ public sealed class RaftFoundationTests
                         "coordinator-peer-1",
                     PrevLogIndex: 0,
                     PrevLogTerm: 0,
-                    LeaderCommit: 0));
+                    LeaderCommit: 0,
+                    Entries: []));
 
         Assert.False(response.Success);
         Assert.Equal(1, response.Term);
@@ -433,7 +434,8 @@ public sealed class RaftFoundationTests
                         "coordinator-peer-1",
                     PrevLogIndex: 0,
                     PrevLogTerm: 0,
-                    LeaderCommit: 0));
+                    LeaderCommit: 0,
+                    Entries: []));
 
         Assert.True(response.Success);
         Assert.Equal(2, response.Term);
@@ -474,7 +476,8 @@ public sealed class RaftFoundationTests
                         "coordinator-peer-1",
                     PrevLogIndex: 0,
                     PrevLogTerm: 0,
-                    LeaderCommit: 0));
+                    LeaderCommit: 0,
+                    Entries: []));
 
         Assert.True(response.Success);
 
@@ -511,7 +514,8 @@ public sealed class RaftFoundationTests
                     LeaderId: "coordinator-2",
                     PrevLogIndex: 0,
                     PrevLogTerm: 0,
-                    LeaderCommit: 0));
+                    LeaderCommit: 0,
+                    Entries: []));
 
         Assert.Equal(
             HttpStatusCode.OK,
