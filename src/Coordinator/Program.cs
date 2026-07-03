@@ -66,6 +66,18 @@ builder.Services.AddSingleton<
 
 builder.Services.AddSingleton<RaftCommitManager>();
 
+builder.Services.AddSingleton<RaftStateMachineApplier>();
+
+builder.Services.AddSingleton<IRaftStateMachineApplier>(
+    provider =>
+        provider.GetRequiredService<
+            RaftStateMachineApplier>());
+
+builder.Services.AddSingleton<
+    RaftCommandSubmitter>();
+
+builder.Services.AddHostedService<RaftStateMachineBackgroundService>();
+
 builder.Services.AddSingleton<RaftNodeState>();
 
 builder.Services.AddHttpClient(

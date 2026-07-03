@@ -8,6 +8,45 @@ namespace Coordinator.Commands;
 public sealed class CoordinatorCommandProcessor(
     IDbContextFactory<CoordinatorDbContext> dbContextFactory)
 {
+    public void Apply(CoordinatorCommand command)
+    {
+        ArgumentNullException.ThrowIfNull(command);
+
+        switch (command)
+        {
+            case CreateExperimentCommand createCommand:
+                Apply(createCommand);
+                break;
+
+            case AssignExperimentCommand assignCommand:
+                Apply(assignCommand);
+                break;
+
+            case CompleteExperimentCommand completeCommand:
+                Apply(completeCommand);
+                break;
+
+            case RequestExperimentCancellationCommand
+                cancellationCommand:
+                Apply(cancellationCommand);
+                break;
+
+            case RequeueExperimentCommand requeueCommand:
+                Apply(requeueCommand);
+                break;
+
+            case RecoverExperimentOnStartupCommand
+                recoveryCommand:
+                Apply(recoveryCommand);
+                break;
+
+            default:
+                throw new InvalidOperationException(
+                    $"Unsupported coordinator command " +
+                    $"type '{command.GetType().FullName}'.");
+        }
+    }
+
     public CommandApplicationResult<ExperimentResponse> Apply(
         CreateExperimentCommand command)
     {

@@ -12,7 +12,14 @@ public sealed class RaftOptions
 
     public bool AutomaticElectionEnabled { get; set; }
 
+    public bool ClientCommandReplicationEnabled { get; set; }
+
     public int ElectionTimeoutMinMilliseconds { get; set; } = 1500;
 
     public int ElectionTimeoutMaxMilliseconds { get; set; } = 3000;
+
+    public int CommandReplicationTimeoutMilliseconds { get; set; } = 5000;
+
+    public int CommandReplicationPollMilliseconds { get; set; } = 100;
+    
 }

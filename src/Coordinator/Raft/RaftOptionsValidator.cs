@@ -52,6 +52,22 @@ public sealed class RaftOptionsValidator
                 "Raft election timeout cannot exceed 60000 milliseconds.");
         }
 
+        if (options.CommandReplicationPollMilliseconds < 10 ||
+            options.CommandReplicationPollMilliseconds > 1000)
+        {
+            return ValidateOptionsResult.Fail(
+                "Raft:CommandReplicationPollMilliseconds must be " +
+                "between 10 and 1000.");
+        }
+
+        if (options.CommandReplicationTimeoutMilliseconds <
+            options.CommandReplicationPollMilliseconds)
+        {
+            return ValidateOptionsResult.Fail(
+                "Raft:CommandReplicationTimeoutMilliseconds must be " +
+                "greater than or equal to CommandReplicationPollMilliseconds.");
+        }
+
         var peerIds =
             new HashSet<string>(StringComparer.Ordinal);
 

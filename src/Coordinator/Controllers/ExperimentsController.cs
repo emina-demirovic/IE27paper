@@ -1,8 +1,9 @@
 using Contracts;
+using Coordinator.Raft;
 using Coordinator.Commands;
 using Coordinator.Services;
 using Microsoft.AspNetCore.Mvc;
-
+using Microsoft.Extensions.Options;
 namespace Coordinator.Controllers;
 
 [ApiController]
@@ -10,22 +11,33 @@ namespace Coordinator.Controllers;
 public sealed class ExperimentsController : ControllerBase
 {
     private readonly ExperimentRegistry _experimentRegistry;
+
     private readonly WorkerRegistry _workerRegistry;
 
     private readonly CoordinatorCommandProcessor _commandProcessor;
 
-    public ExperimentsController(ExperimentRegistry experimentRegistry, 
-                                WorkerRegistry workerRegistry,
-                                CoordinatorCommandProcessor commandProcessor)
+    private readonly RaftCommandSubmitter _raftCommandSubmitter;
+
+    private readonly IOptions<RaftOptions> _raftOptions;
+
+    public ExperimentsController(
+        ExperimentRegistry experimentRegistry,
+        WorkerRegistry workerRegistry,
+        CoordinatorCommandProcessor commandProcessor,
+        RaftCommandSubmitter raftCommandSubmitter,
+        IOptions<RaftOptions> raftOptions)
     {
         _experimentRegistry = experimentRegistry;
         _workerRegistry = workerRegistry;
         _commandProcessor = commandProcessor;
+        _raftCommandSubmitter = raftCommandSubmitter;
+        _raftOptions = raftOptions;
     }
 
     [HttpPost]
-    public ActionResult<ExperimentResponse> Create(
-        CreateExperimentRequest request)
+    public async Task<ActionResult<ExperimentResponse>> Create(
+        CreateExperimentRequest request,
+        CancellationToken cancellationToken)
     {
         if (string.IsNullOrWhiteSpace(request.Name))
         {
@@ -75,15 +87,65 @@ public sealed class ExperimentsController : ControllerBase
             TimeoutSeconds: request.TimeoutSeconds,
             SimulateFailure: request.SimulateFailure);
 
-        var result =
-            _commandProcessor.Apply(command);
+        if (!_raftOptions.Value.ClientCommandReplicationEnabled)
+        {
+            var response =
+                _commandProcessor.Apply(command);
 
-        var experiment = result.Value;
+            return CreatedAtAction(
+                nameof(GetById),
+                new { id = response.Value.Id },
+                response.Value);
+        }
+
+        var submission =
+            await _raftCommandSubmitter.SubmitAsync(
+                command,
+                cancellationToken);
+
+        if (submission.Status ==
+            RaftCommandSubmissionStatus.NotLeader)
+        {
+            return StatusCode(
+                StatusCodes.Status409Conflict,
+                new
+                {
+                    message =
+                        "This Coordinator is not the Raft leader.",
+                    leaderId =
+                        submission.LeaderId
+                });
+        }
+
+        if (submission.Status ==
+            RaftCommandSubmissionStatus.TimedOut)
+        {
+            return StatusCode(
+                StatusCodes.Status504GatewayTimeout,
+                new
+                {
+                    message =
+                        "The command was not committed before the timeout.",
+                    logIndex =
+                        submission.LogIndex
+                });
+        }
+
+        var replicatedResponse =
+            _experimentRegistry.GetById(
+                command.ExperimentId);
+
+        if (replicatedResponse is null)
+        {
+            return StatusCode(
+                StatusCodes.Status500InternalServerError,
+                "The command was committed but the experiment was not found.");
+        }
 
         return CreatedAtAction(
             nameof(GetById),
-            new { id = experiment.Id },
-            experiment);
+            new { id = replicatedResponse.Id },
+            replicatedResponse);
     }
 
     [HttpGet]
