@@ -2,6 +2,8 @@ using System.Net;
 using System.Net.Http.Json;
 using Contracts;
 using Coordinator.Raft;
+using Coordinator.Commands;
+using Coordinator.Services;
 using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -95,6 +97,451 @@ public sealed class RaftCreateExperimentEndpointTests
                     timeoutSeconds = 300,
                     simulateFailure = false
                 });
+
+        Assert.Equal(
+            HttpStatusCode.Conflict,
+            response.StatusCode);
+
+        var logStore =
+            factory.Services
+                .GetRequiredService<
+                    IRaftLogStore>();
+
+        Assert.Null(
+            logStore.GetLast());
+    }
+
+    [Fact]
+    public async Task CancelExperiment_WithRaftEnabled_UsesLeaderSubmission()
+    {
+        using var factory =
+            CreateRaftEnabledFactory();
+
+        using var client =
+            factory.CreateClient();
+
+        var nodeState =
+            factory.Services
+                .GetRequiredService<
+                    RaftNodeState>();
+
+        var election =
+            nodeState.BeginElection();
+
+        Assert.True(
+            nodeState.TryBecomeLeader(
+                election.CurrentTerm));
+
+        var createResponse =
+            await client.PostAsJsonAsync(
+                "/api/experiments",
+                new
+                {
+                    name = "Raft cancellable experiment",
+                    algorithm = "PPO",
+                    environment = "CartPole-v1",
+                    seed = 42,
+                    maxSteps = 1000,
+                    priority = 1,
+                    timeoutSeconds = 300,
+                    simulateFailure = false
+                });
+
+        Assert.Equal(
+            HttpStatusCode.Created,
+            createResponse.StatusCode);
+
+        var createdExperiment =
+            await createResponse.Content
+                .ReadFromJsonAsync<
+                    ExperimentResponse>();
+
+        Assert.NotNull(createdExperiment);
+
+        var cancelResponse =
+            await client.PostAsync(
+                $"/api/experiments/{createdExperiment.Id}/cancel",
+                content: null);
+
+        Assert.Equal(
+            HttpStatusCode.OK,
+            cancelResponse.StatusCode);
+
+        var cancelledExperiment =
+            await cancelResponse.Content
+                .ReadFromJsonAsync<
+                    ExperimentResponse>();
+
+        Assert.NotNull(cancelledExperiment);
+
+        Assert.True(
+            cancelledExperiment.CancellationRequested ||
+            cancelledExperiment.Status ==
+                ExperimentStatus.Cancelled);
+
+        var commitState =
+            factory.Services
+                .GetRequiredService<
+                    RaftCommitManager>()
+                .GetState();
+
+        Assert.Equal(2, commitState.CommitIndex);
+        Assert.Equal(2, commitState.LastApplied);
+    }
+
+    [Fact]
+    public async Task CancelExperiment_WithRaftEnabledOnFollower_ReturnsConflict()
+    {
+        using var factory =
+            CreateRaftEnabledFactory();
+
+        using var client =
+            factory.CreateClient();
+
+        var experimentId =
+            Guid.NewGuid();
+
+        var commandProcessor =
+            factory.Services
+                .GetRequiredService<
+                    CoordinatorCommandProcessor>();
+
+        commandProcessor.Apply(
+            new CreateExperimentCommand(
+                CommandId: Guid.NewGuid(),
+                OccurredAtUtc:
+                    DateTimeOffset.UtcNow,
+                ExperimentId: experimentId,
+                EventId: Guid.NewGuid(),
+                Name: "Follower cancel test",
+                Algorithm: "PPO",
+                Environment: "CartPole-v1",
+                Seed: 42,
+                MaxSteps: 1000,
+                Priority: 1,
+                TimeoutSeconds: 300,
+                SimulateFailure: false));
+
+        var response =
+            await client.PostAsync(
+                $"/api/experiments/{experimentId}/cancel",
+                content: null);
+
+        Assert.Equal(
+            HttpStatusCode.Conflict,
+            response.StatusCode);
+
+        var logStore =
+            factory.Services
+                .GetRequiredService<
+                    IRaftLogStore>();
+
+        Assert.Null(
+            logStore.GetLast());
+    }
+
+    [Fact]
+    public async Task CompleteExperiment_WithRaftEnabled_UsesLeaderSubmission()
+    {
+        using var factory =
+            CreateRaftEnabledFactory();
+
+        using var client =
+            factory.CreateClient();
+
+        var nodeState =
+            factory.Services
+                .GetRequiredService<
+                    RaftNodeState>();
+
+        var election =
+            nodeState.BeginElection();
+
+        Assert.True(
+            nodeState.TryBecomeLeader(
+                election.CurrentTerm));
+
+        var experimentId =
+            Guid.NewGuid();
+
+        var workerId =
+            "worker-1";
+
+        var commandProcessor =
+            factory.Services
+                .GetRequiredService<
+                    CoordinatorCommandProcessor>();
+
+        commandProcessor.Apply(
+            new CreateExperimentCommand(
+                CommandId: Guid.NewGuid(),
+                OccurredAtUtc: DateTimeOffset.UtcNow,
+                ExperimentId: experimentId,
+                EventId: Guid.NewGuid(),
+                Name: "Raft complete test",
+                Algorithm: "PPO",
+                Environment: "CartPole-v1",
+                Seed: 42,
+                MaxSteps: 1000,
+                Priority: 1,
+                TimeoutSeconds: 300,
+                SimulateFailure: false));
+
+        commandProcessor.Apply(
+            new AssignExperimentCommand(
+                CommandId: Guid.NewGuid(),
+                OccurredAtUtc: DateTimeOffset.UtcNow,
+                ExperimentId: experimentId,
+                EventId: Guid.NewGuid(),
+                WorkerId: workerId,
+                Attempt: 1));
+
+        var response =
+            await client.PostAsJsonAsync(
+                $"/api/experiments/{experimentId}/complete",
+                new
+                {
+                    workerId,
+                    attempt = 1,
+                    succeeded = true,
+                    wasCancelled = false,
+                    resultMessage = "Completed through Raft",
+                    metricsJson = "{\"reward\":42}",
+                    executionDurationMs = 1500
+                });
+
+        Assert.Equal(
+            HttpStatusCode.OK,
+            response.StatusCode);
+
+        var completedExperiment =
+            await response.Content
+                .ReadFromJsonAsync<
+                    ExperimentResponse>();
+
+        Assert.NotNull(completedExperiment);
+
+        Assert.Equal(
+            ExperimentStatus.Completed,
+            completedExperiment.Status);
+
+        Assert.Equal(
+            "Completed through Raft",
+            completedExperiment.ResultMessage);
+
+        var commitState =
+            factory.Services
+                .GetRequiredService<
+                    RaftCommitManager>()
+                .GetState();
+
+        Assert.Equal(1, commitState.CommitIndex);
+        Assert.Equal(1, commitState.LastApplied);
+    }
+
+    [Fact]
+    public async Task CompleteExperiment_WithRaftEnabledOnFollower_ReturnsConflict()
+    {
+        using var factory =
+            CreateRaftEnabledFactory();
+
+        using var client =
+            factory.CreateClient();
+
+        var experimentId =
+            Guid.NewGuid();
+
+        var workerId =
+            "worker-1";
+
+        var commandProcessor =
+            factory.Services
+                .GetRequiredService<
+                    CoordinatorCommandProcessor>();
+
+        commandProcessor.Apply(
+            new CreateExperimentCommand(
+                CommandId: Guid.NewGuid(),
+                OccurredAtUtc: DateTimeOffset.UtcNow,
+                ExperimentId: experimentId,
+                EventId: Guid.NewGuid(),
+                Name: "Follower complete test",
+                Algorithm: "PPO",
+                Environment: "CartPole-v1",
+                Seed: 42,
+                MaxSteps: 1000,
+                Priority: 1,
+                TimeoutSeconds: 300,
+                SimulateFailure: false));
+
+        commandProcessor.Apply(
+            new AssignExperimentCommand(
+                CommandId: Guid.NewGuid(),
+                OccurredAtUtc: DateTimeOffset.UtcNow,
+                ExperimentId: experimentId,
+                EventId: Guid.NewGuid(),
+                WorkerId: workerId,
+                Attempt: 1));
+
+        var response =
+            await client.PostAsJsonAsync(
+                $"/api/experiments/{experimentId}/complete",
+                new
+                {
+                    workerId,
+                    attempt = 1,
+                    succeeded = true,
+                    wasCancelled = false,
+                    resultMessage = "Should be rejected",
+                    metricsJson = "{\"reward\":42}",
+                    executionDurationMs = 1500
+                });
+
+        Assert.Equal(
+            HttpStatusCode.Conflict,
+            response.StatusCode);
+
+        var logStore =
+            factory.Services
+                .GetRequiredService<
+                    IRaftLogStore>();
+
+        Assert.Null(
+            logStore.GetLast());
+    }
+
+    [Fact]
+    public async Task AssignExperiment_WithRaftEnabled_UsesLeaderSubmission()
+    {
+        using var factory =
+            CreateRaftEnabledFactory();
+
+        using var client =
+            factory.CreateClient();
+
+        var nodeState =
+            factory.Services
+                .GetRequiredService<
+                    RaftNodeState>();
+
+        var election =
+            nodeState.BeginElection();
+
+        Assert.True(
+            nodeState.TryBecomeLeader(
+                election.CurrentTerm));
+
+        var createResponse =
+            await client.PostAsJsonAsync(
+                "/api/experiments",
+                new
+                {
+                    name = "Raft assign experiment",
+                    algorithm = "PPO",
+                    environment = "CartPole-v1",
+                    seed = 42,
+                    maxSteps = 1000,
+                    priority = 1,
+                    timeoutSeconds = 300,
+                    simulateFailure = false
+                });
+
+        Assert.Equal(
+            HttpStatusCode.Created,
+            createResponse.StatusCode);
+
+        var createdExperiment =
+            await createResponse.Content
+                .ReadFromJsonAsync<
+                    ExperimentResponse>();
+
+        Assert.NotNull(createdExperiment);
+
+        var workerRegistry =
+            factory.Services
+                .GetRequiredService<
+                    WorkerRegistry>();
+
+        workerRegistry.Register("worker-1");
+
+        var assignResponse =
+            await client.PostAsync(
+                $"/api/experiments/{createdExperiment.Id}/assign",
+                content: null);
+
+        Assert.Equal(
+            HttpStatusCode.OK,
+            assignResponse.StatusCode);
+
+        var assignedExperiment =
+            await assignResponse.Content
+                .ReadFromJsonAsync<
+                    ExperimentResponse>();
+
+        Assert.NotNull(assignedExperiment);
+
+        Assert.Equal(
+            ExperimentStatus.Running,
+            assignedExperiment.Status);
+
+        Assert.Equal(
+            "worker-1",
+            assignedExperiment.AssignedWorkerId);
+
+        var commitState =
+            factory.Services
+                .GetRequiredService<
+                    RaftCommitManager>()
+                .GetState();
+
+        Assert.Equal(2, commitState.CommitIndex);
+        Assert.Equal(2, commitState.LastApplied);
+    }
+
+    [Fact]
+    public async Task AssignExperiment_WithRaftEnabledOnFollower_ReturnsConflict()
+    {
+        using var factory =
+            CreateRaftEnabledFactory();
+
+        using var client =
+            factory.CreateClient();
+
+        var experimentId =
+            Guid.NewGuid();
+
+        var commandProcessor =
+            factory.Services
+                .GetRequiredService<
+                    CoordinatorCommandProcessor>();
+
+        commandProcessor.Apply(
+            new CreateExperimentCommand(
+                CommandId: Guid.NewGuid(),
+                OccurredAtUtc:
+                    DateTimeOffset.UtcNow,
+                ExperimentId: experimentId,
+                EventId: Guid.NewGuid(),
+                Name: "Follower assign test",
+                Algorithm: "PPO",
+                Environment: "CartPole-v1",
+                Seed: 42,
+                MaxSteps: 1000,
+                Priority: 1,
+                TimeoutSeconds: 300,
+                SimulateFailure: false));
+
+        var workerRegistry =
+            factory.Services
+                .GetRequiredService<
+                    WorkerRegistry>();
+
+        workerRegistry.Register("worker-1");
+
+        var response =
+            await client.PostAsync(
+                $"/api/experiments/{experimentId}/assign",
+                content: null);
 
         Assert.Equal(
             HttpStatusCode.Conflict,

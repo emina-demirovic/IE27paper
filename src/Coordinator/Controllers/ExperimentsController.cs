@@ -169,7 +169,9 @@ public sealed class ExperimentsController : ControllerBase
     }
 
     [HttpPost("{id:guid}/assign")]
-    public ActionResult<ExperimentResponse> Assign(Guid id)
+    public async Task<ActionResult<ExperimentResponse>> Assign(
+        Guid id,
+        CancellationToken cancellationToken)
     {
         var existingExperiment =
             _experimentRegistry.GetById(id);
@@ -204,17 +206,65 @@ public sealed class ExperimentsController : ControllerBase
             WorkerId: worker.WorkerId,
             Attempt: existingExperiment.Attempt + 1);
 
-        try
+        if (!_raftOptions.Value.ClientCommandReplicationEnabled)
         {
-            var result =
-                _commandProcessor.Apply(command);
+            try
+            {
+                var result =
+                    _commandProcessor.Apply(command);
 
-            return Ok(result.Value);
+                return Ok(result.Value);
+            }
+            catch (InvalidOperationException exception)
+            {
+                return Conflict(exception.Message);
+            }
         }
-        catch (InvalidOperationException exception)
+
+        var submission =
+            await _raftCommandSubmitter.SubmitAsync(
+                command,
+                cancellationToken);
+
+        if (submission.Status ==
+            RaftCommandSubmissionStatus.NotLeader)
         {
-            return Conflict(exception.Message);
+            return StatusCode(
+                StatusCodes.Status409Conflict,
+                new
+                {
+                    message =
+                        "This Coordinator is not the Raft leader.",
+                    leaderId =
+                        submission.LeaderId
+                });
         }
+
+        if (submission.Status ==
+            RaftCommandSubmissionStatus.TimedOut)
+        {
+            return StatusCode(
+                StatusCodes.Status504GatewayTimeout,
+                new
+                {
+                    message =
+                        "The command was not committed before the timeout.",
+                    logIndex =
+                        submission.LogIndex
+                });
+        }
+
+        var replicatedResponse =
+            _experimentRegistry.GetById(id);
+
+        if (replicatedResponse is null)
+        {
+            return StatusCode(
+                StatusCodes.Status500InternalServerError,
+                "The command was committed but the experiment was not found.");
+        }
+
+        return Ok(replicatedResponse);
     }
 
     [HttpGet("worker/{workerId}/next")]
@@ -327,9 +377,10 @@ public sealed class ExperimentsController : ControllerBase
     }
 
     [HttpPost("{id:guid}/complete")]
-    public ActionResult<ExperimentResponse> Complete(
+    public async Task<ActionResult<ExperimentResponse>> Complete(
         Guid id,
-        CompleteExperimentRequest request)
+        CompleteExperimentRequest request,
+        CancellationToken cancellationToken)
     {
         if (string.IsNullOrWhiteSpace(request.WorkerId))
         {
@@ -396,21 +447,71 @@ public sealed class ExperimentsController : ControllerBase
             ExecutionDurationMs:
                 request.ExecutionDurationMs);
 
-        try
+        if (!_raftOptions.Value.ClientCommandReplicationEnabled)
         {
-            var result =
-                _commandProcessor.Apply(command);
+            try
+            {
+                var result =
+                    _commandProcessor.Apply(command);
 
-            return Ok(result.Value);
+                return Ok(result.Value);
+            }
+            catch (InvalidOperationException exception)
+            {
+                return Conflict(exception.Message);
+            }
         }
-        catch (InvalidOperationException exception)
+
+        var submission =
+            await _raftCommandSubmitter.SubmitAsync(
+                command,
+                cancellationToken);
+
+        if (submission.Status ==
+            RaftCommandSubmissionStatus.NotLeader)
         {
-            return Conflict(exception.Message);
+            return StatusCode(
+                StatusCodes.Status409Conflict,
+                new
+                {
+                    message =
+                        "This Coordinator is not the Raft leader.",
+                    leaderId =
+                        submission.LeaderId
+                });
         }
+
+        if (submission.Status ==
+            RaftCommandSubmissionStatus.TimedOut)
+        {
+            return StatusCode(
+                StatusCodes.Status504GatewayTimeout,
+                new
+                {
+                    message =
+                        "The command was not committed before the timeout.",
+                    logIndex =
+                        submission.LogIndex
+                });
+        }
+
+        var replicatedResponse =
+            _experimentRegistry.GetById(id);
+
+        if (replicatedResponse is null)
+        {
+            return StatusCode(
+                StatusCodes.Status500InternalServerError,
+                "The command was committed but the experiment was not found.");
+        }
+
+        return Ok(replicatedResponse);
     }
 
     [HttpPost("{id:guid}/cancel")]
-    public ActionResult<ExperimentResponse> Cancel(Guid id)
+    public async Task<ActionResult<ExperimentResponse>> Cancel(
+        Guid id,
+        CancellationToken cancellationToken)
     {
         var existingExperiment =
             _experimentRegistry.GetById(id);
@@ -443,17 +544,65 @@ public sealed class ExperimentsController : ControllerBase
                 ExperimentId: id,
                 EventId: Guid.NewGuid());
 
-        try
+        if (!_raftOptions.Value.ClientCommandReplicationEnabled)
         {
-            var result =
-                _commandProcessor.Apply(command);
+            try
+            {
+                var result =
+                    _commandProcessor.Apply(command);
 
-            return Ok(result.Value);
+                return Ok(result.Value);
+            }
+            catch (InvalidOperationException exception)
+            {
+                return Conflict(exception.Message);
+            }
         }
-        catch (InvalidOperationException exception)
+
+        var submission =
+            await _raftCommandSubmitter.SubmitAsync(
+                command,
+                cancellationToken);
+
+        if (submission.Status ==
+            RaftCommandSubmissionStatus.NotLeader)
         {
-            return Conflict(exception.Message);
+            return StatusCode(
+                StatusCodes.Status409Conflict,
+                new
+                {
+                    message =
+                        "This Coordinator is not the Raft leader.",
+                    leaderId =
+                        submission.LeaderId
+                });
         }
+
+        if (submission.Status ==
+            RaftCommandSubmissionStatus.TimedOut)
+        {
+            return StatusCode(
+                StatusCodes.Status504GatewayTimeout,
+                new
+                {
+                    message =
+                        "The command was not committed before the timeout.",
+                    logIndex =
+                        submission.LogIndex
+                });
+        }
+
+        var replicatedResponse =
+            _experimentRegistry.GetById(id);
+
+        if (replicatedResponse is null)
+        {
+            return StatusCode(
+                StatusCodes.Status500InternalServerError,
+                "The command was committed but the experiment was not found.");
+        }
+
+        return Ok(replicatedResponse);
     }
     
     [HttpGet("{id:guid}/events")]
