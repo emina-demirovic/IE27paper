@@ -114,8 +114,13 @@ builder.Services.AddHostedService(
     provider =>
         provider.GetRequiredService<
             ExperimentSchedulerService>());
-            
-builder.Services.AddHostedService<ExperimentRecoveryService>();
+
+builder.Services.AddSingleton<ExperimentRecoveryService>();
+
+builder.Services.AddHostedService(
+    provider =>
+        provider.GetRequiredService<
+            ExperimentRecoveryService>());
 
 builder.Services.AddOpenApi();
 
