@@ -556,6 +556,168 @@ public sealed class RaftCreateExperimentEndpointTests
             logStore.GetLast());
     }
 
+    [Fact]
+    public async Task Scheduler_WithRaftEnabledOnLeader_AssignsThroughRaft()
+    {
+        using var factory =
+            CreateRaftEnabledFactory();
+
+        using var client =
+            factory.CreateClient();
+
+        var nodeState =
+            factory.Services
+                .GetRequiredService<
+                    RaftNodeState>();
+
+        var election =
+            nodeState.BeginElection();
+
+        Assert.True(
+            nodeState.TryBecomeLeader(
+                election.CurrentTerm));
+
+        var createResponse =
+            await client.PostAsJsonAsync(
+                "/api/experiments",
+                new
+                {
+                    name = "Raft scheduled experiment",
+                    algorithm = "PPO",
+                    environment = "CartPole-v1",
+                    seed = 42,
+                    maxSteps = 1000,
+                    priority = 1,
+                    timeoutSeconds = 300,
+                    simulateFailure = false
+                });
+
+        Assert.Equal(
+            HttpStatusCode.Created,
+            createResponse.StatusCode);
+
+        var createdExperiment =
+            await createResponse.Content
+                .ReadFromJsonAsync<
+                    ExperimentResponse>();
+
+        Assert.NotNull(createdExperiment);
+
+        var workerRegistry =
+            factory.Services
+                .GetRequiredService<
+                    WorkerRegistry>();
+
+        workerRegistry.Register("worker-1");
+
+        var experimentRegistry =
+            factory.Services
+                .GetRequiredService<
+                    ExperimentRegistry>();
+
+        var scheduler =
+            factory.Services
+                .GetRequiredService<
+                    ExperimentSchedulerService>();
+
+        await scheduler.RunSchedulingCycleAsync(
+            CancellationToken.None);
+
+        var assignedExperiment =
+            experimentRegistry.GetById(
+                createdExperiment.Id);
+
+        Assert.NotNull(assignedExperiment);
+
+        Assert.Equal(
+            "worker-1",
+            assignedExperiment.AssignedWorkerId);
+
+        var commitState =
+            factory.Services
+                .GetRequiredService<
+                    RaftCommitManager>()
+                .GetState();
+
+        Assert.Equal(2, commitState.CommitIndex);
+        Assert.Equal(2, commitState.LastApplied);
+    } 
+
+    [Fact]
+    public async Task Scheduler_WithRaftEnabledOnFollower_DoesNotAssign()
+    {
+        using var factory =
+            CreateRaftEnabledFactory();
+
+        using var client =
+            factory.CreateClient();
+
+        var experimentId =
+            Guid.NewGuid();
+
+        var commandProcessor =
+            factory.Services
+                .GetRequiredService<
+                    CoordinatorCommandProcessor>();
+
+        commandProcessor.Apply(
+            new CreateExperimentCommand(
+                CommandId: Guid.NewGuid(),
+                OccurredAtUtc:
+                    DateTimeOffset.UtcNow,
+                ExperimentId: experimentId,
+                EventId: Guid.NewGuid(),
+                Name: "Follower scheduler test",
+                Algorithm: "PPO",
+                Environment: "CartPole-v1",
+                Seed: 42,
+                MaxSteps: 1000,
+                Priority: 1,
+                TimeoutSeconds: 300,
+                SimulateFailure: false));
+
+        var workerRegistry =
+            factory.Services
+                .GetRequiredService<
+                    WorkerRegistry>();
+
+        workerRegistry.Register("worker-1");
+
+        var scheduler =
+            factory.Services
+                .GetRequiredService<
+                    ExperimentSchedulerService>();
+
+        await scheduler.RunSchedulingCycleAsync(
+            CancellationToken.None);
+
+        var experimentRegistry =
+            factory.Services
+                .GetRequiredService<
+                    ExperimentRegistry>();
+
+        var experiment =
+            experimentRegistry.GetById(
+                experimentId);
+
+        Assert.NotNull(experiment);
+
+        Assert.Equal(
+            ExperimentStatus.Pending,
+            experiment.Status);
+
+        Assert.Null(
+            experiment.AssignedWorkerId);
+
+        var logStore =
+            factory.Services
+                .GetRequiredService<
+                    IRaftLogStore>();
+
+        Assert.Null(
+            logStore.GetLast());
+    }
+
     private static WebApplicationFactory<Program>
         CreateRaftEnabledFactory()
     {

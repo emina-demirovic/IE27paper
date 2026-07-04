@@ -107,7 +107,14 @@ builder.Services.AddSingleton<
 builder.Services.AddSingleton<WorkerRegistry>();
 builder.Services.AddSingleton<ExperimentRegistry>();
 builder.Services.AddSingleton<CoordinatorCommandProcessor>();
-builder.Services.AddHostedService<ExperimentSchedulerService>();
+
+builder.Services.AddSingleton<ExperimentSchedulerService>();
+
+builder.Services.AddHostedService(
+    provider =>
+        provider.GetRequiredService<
+            ExperimentSchedulerService>());
+            
 builder.Services.AddHostedService<ExperimentRecoveryService>();
 
 builder.Services.AddOpenApi();
