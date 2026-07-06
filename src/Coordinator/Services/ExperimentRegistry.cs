@@ -687,6 +687,7 @@ public sealed class ExperimentRegistry(
         };
     }
 
+    /*
     public int RequeueInterruptedExperiments()
     {
         using var dbContext =
@@ -726,6 +727,7 @@ public sealed class ExperimentRegistry(
 
         return interruptedExperiments.Length;
     } 
+    */
 
     public IReadOnlyCollection<ExperimentEventResponse> GetEvents(
     Guid experimentId)
