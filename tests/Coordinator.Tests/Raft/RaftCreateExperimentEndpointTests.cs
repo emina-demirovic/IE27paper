@@ -894,6 +894,193 @@ public sealed class RaftCreateExperimentEndpointTests
             logStore.GetLast());
     }
 
+    [Fact]
+    public async Task StartupRecovery_WithRaftEnabledOnLeader_RequeuesThroughRaft()
+    {
+        using var factory =
+            CreateRaftEnabledFactory();
+
+        using var client =
+            factory.CreateClient();
+
+        var nodeState =
+            factory.Services
+                .GetRequiredService<
+                    RaftNodeState>();
+
+        var election =
+            nodeState.BeginElection();
+
+        Assert.True(
+            nodeState.TryBecomeLeader(
+                election.CurrentTerm));
+
+        var experimentId =
+            Guid.NewGuid();
+
+        var workerId =
+            "startup-worker-1";
+
+        var commandProcessor =
+            factory.Services
+                .GetRequiredService<
+                    CoordinatorCommandProcessor>();
+
+        commandProcessor.Apply(
+            new CreateExperimentCommand(
+                CommandId: Guid.NewGuid(),
+                OccurredAtUtc:
+                    DateTimeOffset.UtcNow,
+                ExperimentId: experimentId,
+                EventId: Guid.NewGuid(),
+                Name: "Raft startup recovery test",
+                Algorithm: "PPO",
+                Environment: "CartPole-v1",
+                Seed: 42,
+                MaxSteps: 1000,
+                Priority: 1,
+                TimeoutSeconds: 300,
+                SimulateFailure: false));
+
+        commandProcessor.Apply(
+            new AssignExperimentCommand(
+                CommandId: Guid.NewGuid(),
+                OccurredAtUtc:
+                    DateTimeOffset.UtcNow,
+                ExperimentId: experimentId,
+                EventId: Guid.NewGuid(),
+                WorkerId: workerId,
+                Attempt: 1));
+
+        factory.Services
+            .GetRequiredService<
+                WorkerRegistry>()
+            .Register(workerId);
+
+        var startupRecovery =
+            factory.Services
+                .GetRequiredService<
+                    ExperimentStartupRecoveryService>();
+
+        var recoveredCount =
+            await startupRecovery.RunStartupRecoveryCycleAsync(
+                CancellationToken.None);
+
+        Assert.Equal(1, recoveredCount);
+
+        var experimentRegistry =
+            factory.Services
+                .GetRequiredService<
+                    ExperimentRegistry>();
+
+        var recoveredExperiment =
+            experimentRegistry.GetById(
+                experimentId);
+
+        Assert.NotNull(recoveredExperiment);
+
+        Assert.Equal(
+            ExperimentStatus.Pending,
+            recoveredExperiment.Status);
+
+        Assert.Null(
+            recoveredExperiment.AssignedWorkerId);
+
+        var commitState =
+            factory.Services
+                .GetRequiredService<
+                    RaftCommitManager>()
+                .GetState();
+
+        Assert.Equal(1, commitState.CommitIndex);
+        Assert.Equal(1, commitState.LastApplied);
+    }
+
+    [Fact]
+    public async Task StartupRecovery_WithRaftEnabledOnFollower_DoesNotRequeue()
+    {
+        using var factory =
+            CreateRaftEnabledFactory();
+
+        using var client =
+            factory.CreateClient();
+
+        var experimentId =
+            Guid.NewGuid();
+
+        var workerId =
+            "startup-worker-1";
+
+        var commandProcessor =
+            factory.Services
+                .GetRequiredService<
+                    CoordinatorCommandProcessor>();
+
+        commandProcessor.Apply(
+            new CreateExperimentCommand(
+                CommandId: Guid.NewGuid(),
+                OccurredAtUtc:
+                    DateTimeOffset.UtcNow,
+                ExperimentId: experimentId,
+                EventId: Guid.NewGuid(),
+                Name: "Follower startup recovery test",
+                Algorithm: "PPO",
+                Environment: "CartPole-v1",
+                Seed: 42,
+                MaxSteps: 1000,
+                Priority: 1,
+                TimeoutSeconds: 300,
+                SimulateFailure: false));
+
+        commandProcessor.Apply(
+            new AssignExperimentCommand(
+                CommandId: Guid.NewGuid(),
+                OccurredAtUtc:
+                    DateTimeOffset.UtcNow,
+                ExperimentId: experimentId,
+                EventId: Guid.NewGuid(),
+                WorkerId: workerId,
+                Attempt: 1));
+
+        var startupRecovery =
+            factory.Services
+                .GetRequiredService<
+                    ExperimentStartupRecoveryService>();
+
+        var recoveredCount =
+            await startupRecovery.RunStartupRecoveryCycleAsync(
+                CancellationToken.None);
+
+        Assert.Equal(0, recoveredCount);
+
+        var experimentRegistry =
+            factory.Services
+                .GetRequiredService<
+                    ExperimentRegistry>();
+
+        var experiment =
+            experimentRegistry.GetById(
+                experimentId);
+
+        Assert.NotNull(experiment);
+
+        Assert.Equal(
+            ExperimentStatus.Running,
+            experiment.Status);
+
+        Assert.Equal(
+            workerId,
+            experiment.AssignedWorkerId);
+
+        var logStore =
+            factory.Services
+                .GetRequiredService<
+                    IRaftLogStore>();
+
+        Assert.Null(
+            logStore.GetLast());
+    }
+
     private static WebApplicationFactory<Program>
         CreateRaftEnabledFactory()
     {
