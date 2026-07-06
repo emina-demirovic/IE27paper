@@ -2,6 +2,7 @@ using System.Net;
 using System.Net.Http.Json;
 using Contracts;
 using Coordinator.Commands;
+using Coordinator.Services;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Coordinator.Tests.Experiments;
@@ -120,6 +121,14 @@ public sealed class ExperimentPersistenceTests
             {
                 using var secondClient =
                     secondFactory.CreateClient();
+
+                var startupRecovery =
+                    secondFactory.Services
+                        .GetRequiredService<
+                            ExperimentStartupRecoveryService>();
+
+                await startupRecovery.RunStartupRecoveryCycleAsync(
+                    CancellationToken.None);
 
                 var persistedExperiment =
                     await secondClient
@@ -241,6 +250,14 @@ public sealed class ExperimentPersistenceTests
             {
                 using var secondClient =
                     secondFactory.CreateClient();
+
+                var startupRecovery =
+                    secondFactory.Services
+                        .GetRequiredService<
+                            ExperimentStartupRecoveryService>();
+
+                await startupRecovery.RunStartupRecoveryCycleAsync(
+                    CancellationToken.None);
 
                 var recoveredExperiment =
                     await secondClient

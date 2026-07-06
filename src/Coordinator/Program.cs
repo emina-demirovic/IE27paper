@@ -115,14 +115,14 @@ builder.Services.AddHostedService(
         provider.GetRequiredService<
             ExperimentSchedulerService>());
 
-builder.Services.AddSingleton<ExperimentRecoveryService>();
-
 builder.Services.AddSingleton<ExperimentStartupRecoveryService>();
 
 builder.Services.AddHostedService(
     provider =>
         provider.GetRequiredService<
             ExperimentStartupRecoveryService>());
+
+builder.Services.AddSingleton<ExperimentRecoveryService>();
 
 builder.Services.AddHostedService(
     provider =>
