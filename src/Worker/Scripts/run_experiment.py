@@ -19,6 +19,11 @@ def parse_arguments() -> argparse.Namespace:
 def main() -> int:
     args = parse_arguments()
 
+    if args.algorithm.casefold() == "random-forest":
+        from classical_ml import run_random_forest
+
+        return run_random_forest(args)
+
     print(
         f"Starting {args.algorithm} on {args.environment} "
         f"with seed={args.seed} and max_steps={args.max_steps}.",
