@@ -19,6 +19,25 @@ def parse_arguments() -> argparse.Namespace:
 def main() -> int:
     args = parse_arguments()
 
+    rl_groups = {
+        "q-learning-discrete": "rl_discrete",
+        "q-learning-control": "rl_control",
+    }
+    module_name = rl_groups.get(args.algorithm.casefold())
+    if module_name is not None:
+        from importlib import import_module
+
+        try:
+            group = import_module(module_name)
+        except ModuleNotFoundError as error:
+            if error.name != module_name:
+                raise
+            print(f"RL group is not installed: {module_name}", file=sys.stderr)
+            return 1
+
+        from rl_workloads import run_q_learning
+        return run_q_learning(args, group.ENVIRONMENTS, group.STATE_BINS)
+
     if args.algorithm.casefold() == "random-forest":
         from classical_ml import run_random_forest
 
