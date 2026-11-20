@@ -1,0 +1,821 @@
+[
+  {
+    "config": {
+      "name": "logreg_novi_ulaz",
+      "algorithm": "logreg",
+      "n": 4000,
+      "d": 40,
+      "scenario": "novi parametri",
+      "iterations": 100,
+      "trees": 20,
+      "depth": 8,
+      "clusters": 8,
+      "folds": 1,
+      "repeats": 1,
+      "scaled": true
+    },
+    "procena_s": 0.8208179005720747,
+    "rezim": "model",
+    "vreme_procene_ms": 0.7840000034775585,
+    "stara_procena_s": 0.010312752535493316,
+    "stari_rezim": "model",
+    "merenja_s": [
+      0.792715750001662,
+      0.8276418339955853,
+      0.7827679580004769,
+      0.7870848749953439,
+      0.7870790410015616
+    ],
+    "upozorenja": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "izmereno_s": 0.7870848749953439,
+    "greska_s": 0.03373302557673086,
+    "greska_pct": 4.285818041787477,
+    "stara_greska_s": 0.7767721224598505
+  },
+  {
+    "config": {
+      "name": "logreg_ekstrapolacija",
+      "algorithm": "logreg",
+      "n": 16000,
+      "d": 100,
+      "scenario": "van trening opsega",
+      "iterations": 200,
+      "trees": 20,
+      "depth": 8,
+      "clusters": 8,
+      "folds": 1,
+      "repeats": 1,
+      "scaled": true
+    },
+    "procena_s": 0.9057941477470569,
+    "rezim": "model",
+    "vreme_procene_ms": 0.7574580013169907,
+    "stara_procena_s": 0.010632946398519747,
+    "stari_rezim": "model",
+    "merenja_s": [
+      0.8151115419968846,
+      0.8507600419980008,
+      0.8167494579975028,
+      0.8476993340009358,
+      0.8268888750026235
+    ],
+    "upozorenja": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "izmereno_s": 0.8268888750026235,
+    "greska_s": 0.07890527274443337,
+    "greska_pct": 9.542427662263933,
+    "stara_greska_s": 0.8162559286041038
+  },
+  {
+    "config": {
+      "name": "tree_dubina_3",
+      "algorithm": "tree",
+      "n": 5000,
+      "d": 40,
+      "scenario": "novi parametri",
+      "iterations": 100,
+      "trees": 20,
+      "depth": 3,
+      "clusters": 8,
+      "folds": 1,
+      "repeats": 1,
+      "scaled": false
+    },
+    "procena_s": 0.9420079798705947,
+    "rezim": "model",
+    "vreme_procene_ms": 0.7382500043604523,
+    "stara_procena_s": 0.010339435357412186,
+    "stari_rezim": "model",
+    "merenja_s": [
+      0.8566017080011079,
+      0.8585847499998636,
+      0.8587548750001588,
+      0.8643987499963259,
+      0.883806582998659
+    ],
+    "upozorenja": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "izmereno_s": 0.8587548750001588,
+    "greska_s": 0.08325310487043591,
+    "greska_pct": 9.69462966605232,
+    "stara_greska_s": 0.8484154396427466
+  },
+  {
+    "config": {
+      "name": "tree_dubina_25",
+      "algorithm": "tree",
+      "n": 5000,
+      "d": 40,
+      "scenario": "novi parametri",
+      "iterations": 100,
+      "trees": 20,
+      "depth": 25,
+      "clusters": 8,
+      "folds": 1,
+      "repeats": 1,
+      "scaled": false
+    },
+    "procena_s": 1.0427525463110634,
+    "rezim": "model",
+    "vreme_procene_ms": 0.7302499943762086,
+    "stara_procena_s": 0.010339435357412186,
+    "stari_rezim": "model",
+    "merenja_s": [
+      0.9432890839962056,
+      0.9382938749986351,
+      0.9308271659974707,
+      0.9884674999993877,
+      0.942221833000076
+    ],
+    "upozorenja": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "izmereno_s": 0.942221833000076,
+    "greska_s": 0.1005307133109874,
+    "greska_pct": 10.669537659819785,
+    "stara_greska_s": 0.9318823976426638
+  },
+  {
+    "config": {
+      "name": "forest_15",
+      "algorithm": "forest",
+      "n": 4000,
+      "d": 30,
+      "scenario": "novi parametri",
+      "iterations": 100,
+      "trees": 15,
+      "depth": 8,
+      "clusters": 8,
+      "folds": 1,
+      "repeats": 1,
+      "scaled": false
+    },
+    "procena_s": 1.2462949965080157,
+    "rezim": "model",
+    "vreme_procene_ms": 0.7534579999628477,
+    "stara_procena_s": 0.010312752535493316,
+    "stari_rezim": "model",
+    "merenja_s": [
+      0.9656501669960562,
+      0.9324370000031195,
+      0.9286205829994287,
+      0.935254291005549,
+      0.9400612499957788
+    ],
+    "upozorenja": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "izmereno_s": 0.935254291005549,
+    "greska_s": 0.31104070550246665,
+    "greska_pct": 33.257340649894026,
+    "stara_greska_s": 0.9249415384700557
+  },
+  {
+    "config": {
+      "name": "forest_100",
+      "algorithm": "forest",
+      "n": 4000,
+      "d": 30,
+      "scenario": "novi parametri",
+      "iterations": 100,
+      "trees": 100,
+      "depth": 8,
+      "clusters": 8,
+      "folds": 1,
+      "repeats": 1,
+      "scaled": false
+    },
+    "procena_s": 1.3765044400535371,
+    "rezim": "model",
+    "vreme_procene_ms": 0.7458749969373457,
+    "stara_procena_s": 0.010312752535493316,
+    "stari_rezim": "model",
+    "merenja_s": [
+      1.3519423750040005,
+      1.3371840000036173,
+      1.3424917500015,
+      1.3326440419987193,
+      1.3461823749967152
+    ],
+    "upozorenja": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "izmereno_s": 1.3424917500015,
+    "greska_s": 0.03401269005203722,
+    "greska_pct": 2.533549278943369,
+    "stara_greska_s": 1.3321789974660065
+  },
+  {
+    "config": {
+      "name": "sgd_iter_20",
+      "algorithm": "sgd",
+      "n": 5000,
+      "d": 40,
+      "scenario": "novi parametri",
+      "iterations": 20,
+      "trees": 20,
+      "depth": 8,
+      "clusters": 8,
+      "folds": 1,
+      "repeats": 1,
+      "scaled": false
+    },
+    "procena_s": 0.7985940642814676,
+    "rezim": "model",
+    "vreme_procene_ms": 0.7409169993479736,
+    "stara_procena_s": 0.010339435357412186,
+    "stari_rezim": "model",
+    "merenja_s": [
+      0.8168912920009461,
+      0.7879917089958326,
+      0.7884593749986379,
+      0.7963287079983274,
+      0.7872137910017045
+    ],
+    "upozorenja": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "izmereno_s": 0.7884593749986379,
+    "greska_s": 0.010134689282829679,
+    "greska_pct": 1.2853787530710998,
+    "stara_greska_s": 0.7781199396412257
+  },
+  {
+    "config": {
+      "name": "sgd_iter_300",
+      "algorithm": "sgd",
+      "n": 5000,
+      "d": 40,
+      "scenario": "novi parametri",
+      "iterations": 300,
+      "trees": 20,
+      "depth": 8,
+      "clusters": 8,
+      "folds": 1,
+      "repeats": 1,
+      "scaled": false
+    },
+    "procena_s": 0.9189833060872464,
+    "rezim": "model",
+    "vreme_procene_ms": 0.7753749960102141,
+    "stara_procena_s": 0.010339435357412186,
+    "stari_rezim": "model",
+    "merenja_s": [
+      0.8329559160047211,
+      0.8362357080040965,
+      0.8547318329947302,
+      0.8267789589954191,
+      0.8259081249998417
+    ],
+    "upozorenja": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "izmereno_s": 0.8329559160047211,
+    "greska_s": 0.08602739008252536,
+    "greska_pct": 10.327964353162452,
+    "stara_greska_s": 0.8226164806473089
+  },
+  {
+    "config": {
+      "name": "logreg_cv5",
+      "algorithm": "logreg",
+      "n": 4000,
+      "d": 30,
+      "scenario": "novi tok: CV=5",
+      "iterations": 100,
+      "trees": 20,
+      "depth": 8,
+      "clusters": 8,
+      "folds": 5,
+      "repeats": 1,
+      "scaled": true
+    },
+    "procena_s": 1.0832361369451105,
+    "rezim": "model",
+    "vreme_procene_ms": 0.7538749996456318,
+    "stara_procena_s": 0.010312752535493316,
+    "stari_rezim": "model",
+    "merenja_s": [
+      0.7939359579977463,
+      0.7943218750006054,
+      0.8021864580005058,
+      0.7903752499987604,
+      0.7927343339979416
+    ],
+    "upozorenja": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "izmereno_s": 0.7939359579977463,
+    "greska_s": 0.28930017894736415,
+    "greska_pct": 36.43872985384866,
+    "stara_greska_s": 0.783623205462253
+  },
+  {
+    "config": {
+      "name": "logreg_ponovi5",
+      "algorithm": "logreg",
+      "n": 4000,
+      "d": 30,
+      "scenario": "novi tok: ponovi=5",
+      "iterations": 100,
+      "trees": 20,
+      "depth": 8,
+      "clusters": 8,
+      "folds": 1,
+      "repeats": 5,
+      "scaled": true
+    },
+    "procena_s": 0.72897845636612,
+    "rezim": "model",
+    "vreme_procene_ms": 0.7559579971712083,
+    "stara_procena_s": 0.010312752535493316,
+    "stari_rezim": "model",
+    "merenja_s": [
+      0.8058541669961414,
+      0.798701333005738,
+      0.8013663340025232,
+      0.8045082500029821,
+      0.80419741699734
+    ],
+    "upozorenja": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "izmereno_s": 0.80419741699734,
+    "greska_s": 0.07521896063122002,
+    "greska_pct": 9.353295477131434,
+    "stara_greska_s": 0.7938846644618467
+  },
+  {
+    "config": {
+      "name": "svm_mali",
+      "algorithm": "svm",
+      "n": 1500,
+      "d": 20,
+      "scenario": "neviđen algoritam",
+      "iterations": 100,
+      "trees": 20,
+      "depth": 8,
+      "clusters": 8,
+      "folds": 1,
+      "repeats": 1,
+      "scaled": false
+    },
+    "procena_s": 0.9319980738398465,
+    "rezim": "model",
+    "vreme_procene_ms": 0.7330419975914992,
+    "stara_procena_s": 0.010246045480696143,
+    "stari_rezim": "model",
+    "merenja_s": [
+      0.7974214170026244,
+      0.805007957998896,
+      0.7883805840028799,
+      0.8128208750058548,
+      0.797155667001789
+    ],
+    "upozorenja": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "izmereno_s": 0.7974214170026244,
+    "greska_s": 0.1345766568372221,
+    "greska_pct": 16.876478856446262,
+    "stara_greska_s": 0.7871753715219282
+  },
+  {
+    "config": {
+      "name": "svm_veliki",
+      "algorithm": "svm",
+      "n": 8000,
+      "d": 60,
+      "scenario": "neviđen algoritam",
+      "iterations": 100,
+      "trees": 20,
+      "depth": 8,
+      "clusters": 8,
+      "folds": 1,
+      "repeats": 1,
+      "scaled": false
+    },
+    "procena_s": 1.003959665687146,
+    "rezim": "model",
+    "vreme_procene_ms": 0.7249589980347082,
+    "stara_procena_s": 0.010419483823168794,
+    "stari_rezim": "model",
+    "merenja_s": [
+      1.1334107500006212,
+      1.1424988329963526,
+      1.1506163329977426,
+      1.1298707090027165,
+      1.1579005419989699
+    ],
+    "upozorenja": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "izmereno_s": 1.1424988329963526,
+    "greska_s": 0.13853916730920668,
+    "greska_pct": 12.125978890137647,
+    "stara_greska_s": 1.1320793491731838
+  },
+  {
+    "config": {
+      "name": "knn_mali",
+      "algorithm": "knn",
+      "n": 2000,
+      "d": 10,
+      "scenario": "neviđen algoritam",
+      "iterations": 100,
+      "trees": 20,
+      "depth": 8,
+      "clusters": 8,
+      "folds": 1,
+      "repeats": 1,
+      "scaled": false
+    },
+    "procena_s": 0.9181125923829841,
+    "rezim": "model",
+    "vreme_procene_ms": 0.7451659985235892,
+    "stara_procena_s": 0.010259386891655576,
+    "stari_rezim": "model",
+    "merenja_s": [
+      0.8140029999995022,
+      0.8089499580019037,
+      0.8094810000038706,
+      0.8094441249995725,
+      0.8144302919972688
+    ],
+    "upozorenja": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "izmereno_s": 0.8094810000038706,
+    "greska_s": 0.10863159237911357,
+    "greska_pct": 13.419906381816762,
+    "stara_greska_s": 0.799221613112215
+  },
+  {
+    "config": {
+      "name": "knn_veliki",
+      "algorithm": "knn",
+      "n": 12000,
+      "d": 80,
+      "scenario": "neviđen algoritam",
+      "iterations": 100,
+      "trees": 20,
+      "depth": 8,
+      "clusters": 8,
+      "folds": 1,
+      "repeats": 1,
+      "scaled": false
+    },
+    "procena_s": 1.023078201430816,
+    "rezim": "model",
+    "vreme_procene_ms": 0.724541001545731,
+    "stara_procena_s": 0.01052621511084427,
+    "stari_rezim": "model",
+    "merenja_s": [
+      0.893227124994155,
+      0.8871907499997178,
+      0.9076864999951795,
+      0.8890146250050748,
+      0.8938268329948187
+    ],
+    "upozorenja": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "izmereno_s": 0.893227124994155,
+    "greska_s": 0.12985107643666094,
+    "greska_pct": 14.537296596037725,
+    "stara_greska_s": 0.8827009098833107
+  },
+  {
+    "config": {
+      "name": "kmeans_4",
+      "algorithm": "kmeans",
+      "n": 5000,
+      "d": 30,
+      "scenario": "neviđen algoritam",
+      "iterations": 100,
+      "trees": 20,
+      "depth": 8,
+      "clusters": 4,
+      "folds": 1,
+      "repeats": 1,
+      "scaled": false
+    },
+    "procena_s": 0.9708592086699686,
+    "rezim": "model",
+    "vreme_procene_ms": 0.7503750020987354,
+    "stara_procena_s": 0.010339435357412186,
+    "stari_rezim": "model",
+    "merenja_s": [
+      0.9275329160009278,
+      0.9046636659986689,
+      0.8976690409981529,
+      0.8965720420019352,
+      0.9606045420005103
+    ],
+    "upozorenja": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "izmereno_s": 0.9046636659986689,
+    "greska_s": 0.06619554267129968,
+    "greska_pct": 7.31714394633343,
+    "stara_greska_s": 0.8943242306412567
+  },
+  {
+    "config": {
+      "name": "kmeans_32",
+      "algorithm": "kmeans",
+      "n": 5000,
+      "d": 30,
+      "scenario": "neviđen algoritam",
+      "iterations": 100,
+      "trees": 20,
+      "depth": 8,
+      "clusters": 32,
+      "folds": 1,
+      "repeats": 1,
+      "scaled": false
+    },
+    "procena_s": 0.9708592086699686,
+    "rezim": "model",
+    "vreme_procene_ms": 0.7363330005318858,
+    "stara_procena_s": 0.010339435357412186,
+    "stari_rezim": "model",
+    "merenja_s": [
+      0.9351526669997838,
+      0.9436447089974536,
+      0.9335715409979457,
+      0.9336749590002,
+      0.934516833993257
+    ],
+    "upozorenja": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "izmereno_s": 0.934516833993257,
+    "greska_s": 0.03634237467671153,
+    "greska_pct": 3.8888945982297582,
+    "stara_greska_s": 0.9241773986358448
+  },
+  {
+    "config": {
+      "name": "pca",
+      "algorithm": "pca",
+      "n": 8000,
+      "d": 120,
+      "scenario": "neviđen algoritam",
+      "iterations": 100,
+      "trees": 20,
+      "depth": 8,
+      "clusters": 8,
+      "folds": 1,
+      "repeats": 1,
+      "scaled": false
+    },
+    "procena_s": 1.0167243026650452,
+    "rezim": "model",
+    "vreme_procene_ms": 0.7394999993266538,
+    "stara_procena_s": 0.010419483823168794,
+    "stari_rezim": "model",
+    "merenja_s": [
+      0.8398335419988143,
+      0.8496735420048935,
+      0.8230122079985449,
+      0.8319852919958066,
+      0.8352767500036862
+    ],
+    "upozorenja": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "izmereno_s": 0.8352767500036862,
+    "greska_s": 0.18144755266135904,
+    "greska_pct": 21.723046003681805,
+    "stara_greska_s": 0.8248572661805174
+  },
+  {
+    "config": {
+      "name": "mlp_20",
+      "algorithm": "mlp",
+      "n": 3000,
+      "d": 30,
+      "scenario": "neviđen algoritam",
+      "iterations": 20,
+      "trees": 20,
+      "depth": 8,
+      "clusters": 8,
+      "folds": 1,
+      "repeats": 1,
+      "scaled": false
+    },
+    "procena_s": 0.8832017826471161,
+    "rezim": "model",
+    "vreme_procene_ms": 0.7579160010209307,
+    "stara_procena_s": 0.010286069713574446,
+    "stari_rezim": "model",
+    "merenja_s": [
+      0.8079857499978971,
+      0.8087018329970306,
+      0.788076083001215,
+      0.7926815830069245,
+      0.803069833003974
+    ],
+    "upozorenja": [
+      "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/sklearn/neural_network/_multilayer_perceptron.py:781: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (20) reached and the optimization hasn't converged yet.\n  warnings.warn(\n",
+      "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/sklearn/neural_network/_multilayer_perceptron.py:781: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (20) reached and the optimization hasn't converged yet.\n  warnings.warn(\n",
+      "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/sklearn/neural_network/_multilayer_perceptron.py:781: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (20) reached and the optimization hasn't converged yet.\n  warnings.warn(\n",
+      "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/sklearn/neural_network/_multilayer_perceptron.py:781: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (20) reached and the optimization hasn't converged yet.\n  warnings.warn(\n",
+      "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/sklearn/neural_network/_multilayer_perceptron.py:781: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (20) reached and the optimization hasn't converged yet.\n  warnings.warn(\n"
+    ],
+    "izmereno_s": 0.803069833003974,
+    "greska_s": 0.08013194964314208,
+    "greska_pct": 9.978204428797854,
+    "stara_greska_s": 0.7927837632903996
+  },
+  {
+    "config": {
+      "name": "mlp_100",
+      "algorithm": "mlp",
+      "n": 3000,
+      "d": 30,
+      "scenario": "neviđen algoritam",
+      "iterations": 100,
+      "trees": 20,
+      "depth": 8,
+      "clusters": 8,
+      "folds": 1,
+      "repeats": 1,
+      "scaled": false
+    },
+    "procena_s": 0.9594702626725251,
+    "rezim": "model",
+    "vreme_procene_ms": 0.7495419995393604,
+    "stara_procena_s": 0.010286069713574446,
+    "stari_rezim": "model",
+    "merenja_s": [
+      0.9783815420014434,
+      0.9772112909995485,
+      0.978119166000397,
+      0.9681622499992955,
+      0.9715164169974742
+    ],
+    "upozorenja": [
+      "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/sklearn/neural_network/_multilayer_perceptron.py:781: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (100) reached and the optimization hasn't converged yet.\n  warnings.warn(\n",
+      "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/sklearn/neural_network/_multilayer_perceptron.py:781: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (100) reached and the optimization hasn't converged yet.\n  warnings.warn(\n",
+      "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/sklearn/neural_network/_multilayer_perceptron.py:781: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (100) reached and the optimization hasn't converged yet.\n  warnings.warn(\n",
+      "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/sklearn/neural_network/_multilayer_perceptron.py:781: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (100) reached and the optimization hasn't converged yet.\n  warnings.warn(\n",
+      "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/sklearn/neural_network/_multilayer_perceptron.py:781: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (100) reached and the optimization hasn't converged yet.\n  warnings.warn(\n"
+    ],
+    "izmereno_s": 0.9772112909995485,
+    "greska_s": 0.0177410283270234,
+    "greska_pct": 1.815475168003518,
+    "stara_greska_s": 0.966925221285974
+  },
+  {
+    "config": {
+      "name": "boost",
+      "algorithm": "boost",
+      "n": 6000,
+      "d": 40,
+      "scenario": "neviđen algoritam",
+      "iterations": 150,
+      "trees": 20,
+      "depth": 8,
+      "clusters": 8,
+      "folds": 1,
+      "repeats": 1,
+      "scaled": false
+    },
+    "procena_s": 1.005222845427851,
+    "rezim": "model",
+    "vreme_procene_ms": 0.732083004550077,
+    "stara_procena_s": 0.010366118179331054,
+    "stari_rezim": "model",
+    "merenja_s": [
+      1.2040830830010236,
+      1.2057739999945625,
+      1.22165466700244,
+      1.1957768329957617,
+      1.1980771670059767
+    ],
+    "upozorenja": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "izmereno_s": 1.2040830830010236,
+    "greska_s": 0.19886023757317273,
+    "greska_pct": 16.515491362733783,
+    "stara_greska_s": 1.1937169648216925
+  },
+  {
+    "config": {
+      "name": "naive_bayes",
+      "algorithm": "nb",
+      "n": 8000,
+      "d": 60,
+      "scenario": "neviđen algoritam",
+      "iterations": 100,
+      "trees": 20,
+      "depth": 8,
+      "clusters": 8,
+      "folds": 1,
+      "repeats": 1,
+      "scaled": false
+    },
+    "procena_s": 1.003959665687146,
+    "rezim": "model",
+    "vreme_procene_ms": 0.708083993231412,
+    "stara_procena_s": 0.010419483823168794,
+    "stari_rezim": "model",
+    "merenja_s": [
+      0.7722307919975719,
+      0.7647018330026185,
+      0.772678375004034,
+      0.7582526250043884,
+      0.7531687500013504
+    ],
+    "upozorenja": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "izmereno_s": 0.7647018330026185,
+    "greska_s": 0.23925783268452738,
+    "greska_pct": 31.287728413710777,
+    "stara_greska_s": 0.7542823491794497
+  }
+]

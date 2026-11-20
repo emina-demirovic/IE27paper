@@ -1,0 +1,854 @@
+{
+  "version": 1,
+  "model": {
+    "type": "static_ml",
+    "mean": [
+      8.049327522946404,
+      3.2468196947950636,
+      4.294315355578661,
+      3.3167159103498536,
+      2.3012062978220182,
+      2.197224577336219,
+      0.8664339756999316,
+      0.7945134575869864,
+      0.25,
+      0.25,
+      0.25,
+      0.25,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.3862943611198906,
+      2.6364997792818734,
+      1.7917594692280547,
+      0.0
+    ],
+    "scale": [
+      0.8961593452848784,
+      0.6211316564917314,
+      0.5914830726561299,
+      0.6531658125982333,
+      0.4587885122712437,
+      1.0,
+      0.3001415334632359,
+      0.17557154198493713,
+      0.4330127018922193,
+      0.4330127018922193,
+      0.4330127018922193,
+      0.4330127018922193,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      0.07155042182033666,
+      1.0,
+      1.0
+    ],
+    "coefficients": [
+      0.02070680213075543,
+      0.02080030729522045,
+      0.031192665311945915,
+      0.03522678650059967,
+      0.024904022604865548,
+      6.080924059295343e-32,
+      0.07834563981444137,
+      -0.01746657337185225,
+      -0.06590225251703721,
+      0.001943638918292892,
+      0.11672716161403318,
+      -0.05276854801528893,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      -0.009946640253766037,
+      3.0404620296476714e-32,
+      0.0
+    ],
+    "intercept": -0.018048637988902244,
+    "training_configurations": 16,
+    "ridge_alpha": 10.0
+  },
+  "measurements": [
+    {
+      "fingerprint": "4bf5c8b9097de60659c6d8d84a7e7b5984699447eacc7565ec1c8ab07c9f8406",
+      "source": "import os\nfor key in ('OMP_NUM_THREADS', 'OPENBLAS_NUM_THREADS', 'MKL_NUM_THREADS', 'VECLIB_MAXIMUM_THREADS', 'NUMEXPR_NUM_THREADS', 'BLIS_NUM_THREADS'):\n    os.environ[key] = \"1\"\nfrom sklearn.datasets import make_classification\nfrom sklearn.model_selection import train_test_split, StratifiedKFold\nfrom sklearn.linear_model import LogisticRegression\nfrom sklearn.pipeline import make_pipeline\nfrom sklearn.preprocessing import StandardScaler\n\ndef experiment(n, d, iterations, trees, depth, clusters, folds, repeats):\n    x, y = make_classification(n_samples=n, n_features=d,\n                               n_informative=max(2, d // 2), n_redundant=0,\n                               random_state=42)\n    for _ in range(repeats):\n        if folds > 1:\n            splits = StratifiedKFold(n_splits=folds, shuffle=True, random_state=42).split(x, y)\n        else:\n            splits = [train_test_split(range(n), test_size=0.25, random_state=42)]\n        for train, test in splits:\n            x_train, x_test, y_train = x[train], x[test], y[train]\n            model = LogisticRegression(max_iter=iterations, solver=\"lbfgs\")\n            model.fit(x_train, y_train)\n            result = model.predict(x_test)\n    print(result.shape)\n\nexperiment(n=800, d=10, iterations=30, trees=10, depth=4, clusters=8, folds=1, repeats=1)\n",
+      "args": {
+        "n": 800,
+        "d": 10,
+        "iterations": 30,
+        "trees": 10,
+        "depth": 4,
+        "clusters": 8,
+        "folds": 1,
+        "repeats": 1
+      },
+      "seconds": 0.8300439590020687,
+      "label": "train_logreg_0"
+    },
+    {
+      "fingerprint": "4bf5c8b9097de60659c6d8d84a7e7b5984699447eacc7565ec1c8ab07c9f8406",
+      "source": "import os\nfor key in ('OMP_NUM_THREADS', 'OPENBLAS_NUM_THREADS', 'MKL_NUM_THREADS', 'VECLIB_MAXIMUM_THREADS', 'NUMEXPR_NUM_THREADS', 'BLIS_NUM_THREADS'):\n    os.environ[key] = \"1\"\nfrom sklearn.datasets import make_classification\nfrom sklearn.model_selection import train_test_split, StratifiedKFold\nfrom sklearn.linear_model import LogisticRegression\nfrom sklearn.pipeline import make_pipeline\nfrom sklearn.preprocessing import StandardScaler\n\ndef experiment(n, d, iterations, trees, depth, clusters, folds, repeats):\n    x, y = make_classification(n_samples=n, n_features=d,\n                               n_informative=max(2, d // 2), n_redundant=0,\n                               random_state=42)\n    for _ in range(repeats):\n        if folds > 1:\n            splits = StratifiedKFold(n_splits=folds, shuffle=True, random_state=42).split(x, y)\n        else:\n            splits = [train_test_split(range(n), test_size=0.25, random_state=42)]\n        for train, test in splits:\n            x_train, x_test, y_train = x[train], x[test], y[train]\n            model = LogisticRegression(max_iter=iterations, solver=\"lbfgs\")\n            model.fit(x_train, y_train)\n            result = model.predict(x_test)\n    print(result.shape)\n\nexperiment(n=800, d=10, iterations=30, trees=10, depth=4, clusters=8, folds=1, repeats=1)\n",
+      "args": {
+        "n": 800,
+        "d": 10,
+        "iterations": 30,
+        "trees": 10,
+        "depth": 4,
+        "clusters": 8,
+        "folds": 1,
+        "repeats": 1
+      },
+      "seconds": 0.8082027909986209,
+      "label": "train_logreg_0"
+    },
+    {
+      "fingerprint": "4bf5c8b9097de60659c6d8d84a7e7b5984699447eacc7565ec1c8ab07c9f8406",
+      "source": "import os\nfor key in ('OMP_NUM_THREADS', 'OPENBLAS_NUM_THREADS', 'MKL_NUM_THREADS', 'VECLIB_MAXIMUM_THREADS', 'NUMEXPR_NUM_THREADS', 'BLIS_NUM_THREADS'):\n    os.environ[key] = \"1\"\nfrom sklearn.datasets import make_classification\nfrom sklearn.model_selection import train_test_split, StratifiedKFold\nfrom sklearn.linear_model import LogisticRegression\nfrom sklearn.pipeline import make_pipeline\nfrom sklearn.preprocessing import StandardScaler\n\ndef experiment(n, d, iterations, trees, depth, clusters, folds, repeats):\n    x, y = make_classification(n_samples=n, n_features=d,\n                               n_informative=max(2, d // 2), n_redundant=0,\n                               random_state=42)\n    for _ in range(repeats):\n        if folds > 1:\n            splits = StratifiedKFold(n_splits=folds, shuffle=True, random_state=42).split(x, y)\n        else:\n            splits = [train_test_split(range(n), test_size=0.25, random_state=42)]\n        for train, test in splits:\n            x_train, x_test, y_train = x[train], x[test], y[train]\n            model = LogisticRegression(max_iter=iterations, solver=\"lbfgs\")\n            model.fit(x_train, y_train)\n            result = model.predict(x_test)\n    print(result.shape)\n\nexperiment(n=800, d=10, iterations=30, trees=10, depth=4, clusters=8, folds=1, repeats=1)\n",
+      "args": {
+        "n": 800,
+        "d": 10,
+        "iterations": 30,
+        "trees": 10,
+        "depth": 4,
+        "clusters": 8,
+        "folds": 1,
+        "repeats": 1
+      },
+      "seconds": 0.7994458340035635,
+      "label": "train_logreg_0"
+    },
+    {
+      "fingerprint": "d2325f684216a1994e591cd59bd59bda7cc6e632137114f3432efb73bde77560",
+      "source": "import os\nfor key in ('OMP_NUM_THREADS', 'OPENBLAS_NUM_THREADS', 'MKL_NUM_THREADS', 'VECLIB_MAXIMUM_THREADS', 'NUMEXPR_NUM_THREADS', 'BLIS_NUM_THREADS'):\n    os.environ[key] = \"1\"\nfrom sklearn.datasets import make_classification\nfrom sklearn.model_selection import train_test_split, StratifiedKFold\nfrom sklearn.linear_model import LogisticRegression\nfrom sklearn.pipeline import make_pipeline\nfrom sklearn.preprocessing import StandardScaler\n\ndef experiment(n, d, iterations, trees, depth, clusters, folds, repeats):\n    x, y = make_classification(n_samples=n, n_features=d,\n                               n_informative=max(2, d // 2), n_redundant=0,\n                               random_state=42)\n    for _ in range(repeats):\n        if folds > 1:\n            splits = StratifiedKFold(n_splits=folds, shuffle=True, random_state=42).split(x, y)\n        else:\n            splits = [train_test_split(range(n), test_size=0.25, random_state=42)]\n        for train, test in splits:\n            x_train, x_test, y_train = x[train], x[test], y[train]\n            model = make_pipeline(StandardScaler(), LogisticRegression(max_iter=iterations, solver=\"lbfgs\"))\n            model.fit(x_train, y_train)\n            result = model.predict(x_test)\n    print(result.shape)\n\nexperiment(n=2500, d=30, iterations=60, trees=20, depth=8, clusters=8, folds=1, repeats=1)\n",
+      "args": {
+        "n": 2500,
+        "d": 30,
+        "iterations": 60,
+        "trees": 20,
+        "depth": 8,
+        "clusters": 8,
+        "folds": 1,
+        "repeats": 1
+      },
+      "seconds": 0.7716312499978812,
+      "label": "train_logreg_1"
+    },
+    {
+      "fingerprint": "d2325f684216a1994e591cd59bd59bda7cc6e632137114f3432efb73bde77560",
+      "source": "import os\nfor key in ('OMP_NUM_THREADS', 'OPENBLAS_NUM_THREADS', 'MKL_NUM_THREADS', 'VECLIB_MAXIMUM_THREADS', 'NUMEXPR_NUM_THREADS', 'BLIS_NUM_THREADS'):\n    os.environ[key] = \"1\"\nfrom sklearn.datasets import make_classification\nfrom sklearn.model_selection import train_test_split, StratifiedKFold\nfrom sklearn.linear_model import LogisticRegression\nfrom sklearn.pipeline import make_pipeline\nfrom sklearn.preprocessing import StandardScaler\n\ndef experiment(n, d, iterations, trees, depth, clusters, folds, repeats):\n    x, y = make_classification(n_samples=n, n_features=d,\n                               n_informative=max(2, d // 2), n_redundant=0,\n                               random_state=42)\n    for _ in range(repeats):\n        if folds > 1:\n            splits = StratifiedKFold(n_splits=folds, shuffle=True, random_state=42).split(x, y)\n        else:\n            splits = [train_test_split(range(n), test_size=0.25, random_state=42)]\n        for train, test in splits:\n            x_train, x_test, y_train = x[train], x[test], y[train]\n            model = make_pipeline(StandardScaler(), LogisticRegression(max_iter=iterations, solver=\"lbfgs\"))\n            model.fit(x_train, y_train)\n            result = model.predict(x_test)\n    print(result.shape)\n\nexperiment(n=2500, d=30, iterations=60, trees=20, depth=8, clusters=8, folds=1, repeats=1)\n",
+      "args": {
+        "n": 2500,
+        "d": 30,
+        "iterations": 60,
+        "trees": 20,
+        "depth": 8,
+        "clusters": 8,
+        "folds": 1,
+        "repeats": 1
+      },
+      "seconds": 0.7829567919980036,
+      "label": "train_logreg_1"
+    },
+    {
+      "fingerprint": "d2325f684216a1994e591cd59bd59bda7cc6e632137114f3432efb73bde77560",
+      "source": "import os\nfor key in ('OMP_NUM_THREADS', 'OPENBLAS_NUM_THREADS', 'MKL_NUM_THREADS', 'VECLIB_MAXIMUM_THREADS', 'NUMEXPR_NUM_THREADS', 'BLIS_NUM_THREADS'):\n    os.environ[key] = \"1\"\nfrom sklearn.datasets import make_classification\nfrom sklearn.model_selection import train_test_split, StratifiedKFold\nfrom sklearn.linear_model import LogisticRegression\nfrom sklearn.pipeline import make_pipeline\nfrom sklearn.preprocessing import StandardScaler\n\ndef experiment(n, d, iterations, trees, depth, clusters, folds, repeats):\n    x, y = make_classification(n_samples=n, n_features=d,\n                               n_informative=max(2, d // 2), n_redundant=0,\n                               random_state=42)\n    for _ in range(repeats):\n        if folds > 1:\n            splits = StratifiedKFold(n_splits=folds, shuffle=True, random_state=42).split(x, y)\n        else:\n            splits = [train_test_split(range(n), test_size=0.25, random_state=42)]\n        for train, test in splits:\n            x_train, x_test, y_train = x[train], x[test], y[train]\n            model = make_pipeline(StandardScaler(), LogisticRegression(max_iter=iterations, solver=\"lbfgs\"))\n            model.fit(x_train, y_train)\n            result = model.predict(x_test)\n    print(result.shape)\n\nexperiment(n=2500, d=30, iterations=60, trees=20, depth=8, clusters=8, folds=1, repeats=1)\n",
+      "args": {
+        "n": 2500,
+        "d": 30,
+        "iterations": 60,
+        "trees": 20,
+        "depth": 8,
+        "clusters": 8,
+        "folds": 1,
+        "repeats": 1
+      },
+      "seconds": 0.7654492919973563,
+      "label": "train_logreg_1"
+    },
+    {
+      "fingerprint": "2297511b9fa4983b3c09c9ee8e999f6364ec2a48ae1526078b17f2f61c8f4de3",
+      "source": "import os\nfor key in ('OMP_NUM_THREADS', 'OPENBLAS_NUM_THREADS', 'MKL_NUM_THREADS', 'VECLIB_MAXIMUM_THREADS', 'NUMEXPR_NUM_THREADS', 'BLIS_NUM_THREADS'):\n    os.environ[key] = \"1\"\nfrom sklearn.datasets import make_classification\nfrom sklearn.model_selection import train_test_split, StratifiedKFold\nfrom sklearn.linear_model import LogisticRegression\nfrom sklearn.pipeline import make_pipeline\nfrom sklearn.preprocessing import StandardScaler\n\ndef experiment(n, d, iterations, trees, depth, clusters, folds, repeats):\n    x, y = make_classification(n_samples=n, n_features=d,\n                               n_informative=max(2, d // 2), n_redundant=0,\n                               random_state=42)\n    for _ in range(repeats):\n        if folds > 1:\n            splits = StratifiedKFold(n_splits=folds, shuffle=True, random_state=42).split(x, y)\n        else:\n            splits = [train_test_split(range(n), test_size=0.25, random_state=42)]\n        for train, test in splits:\n            x_train, x_test, y_train = x[train], x[test], y[train]\n            model = LogisticRegression(max_iter=iterations, solver=\"lbfgs\")\n            model.fit(x_train, y_train)\n            result = model.predict(x_test)\n    print(result.shape)\n\nexperiment(n=6000, d=20, iterations=100, trees=40, depth=12, clusters=8, folds=1, repeats=2)\n",
+      "args": {
+        "n": 6000,
+        "d": 20,
+        "iterations": 100,
+        "trees": 40,
+        "depth": 12,
+        "clusters": 8,
+        "folds": 1,
+        "repeats": 2
+      },
+      "seconds": 0.7748083330006921,
+      "label": "train_logreg_2"
+    },
+    {
+      "fingerprint": "2297511b9fa4983b3c09c9ee8e999f6364ec2a48ae1526078b17f2f61c8f4de3",
+      "source": "import os\nfor key in ('OMP_NUM_THREADS', 'OPENBLAS_NUM_THREADS', 'MKL_NUM_THREADS', 'VECLIB_MAXIMUM_THREADS', 'NUMEXPR_NUM_THREADS', 'BLIS_NUM_THREADS'):\n    os.environ[key] = \"1\"\nfrom sklearn.datasets import make_classification\nfrom sklearn.model_selection import train_test_split, StratifiedKFold\nfrom sklearn.linear_model import LogisticRegression\nfrom sklearn.pipeline import make_pipeline\nfrom sklearn.preprocessing import StandardScaler\n\ndef experiment(n, d, iterations, trees, depth, clusters, folds, repeats):\n    x, y = make_classification(n_samples=n, n_features=d,\n                               n_informative=max(2, d // 2), n_redundant=0,\n                               random_state=42)\n    for _ in range(repeats):\n        if folds > 1:\n            splits = StratifiedKFold(n_splits=folds, shuffle=True, random_state=42).split(x, y)\n        else:\n            splits = [train_test_split(range(n), test_size=0.25, random_state=42)]\n        for train, test in splits:\n            x_train, x_test, y_train = x[train], x[test], y[train]\n            model = LogisticRegression(max_iter=iterations, solver=\"lbfgs\")\n            model.fit(x_train, y_train)\n            result = model.predict(x_test)\n    print(result.shape)\n\nexperiment(n=6000, d=20, iterations=100, trees=40, depth=12, clusters=8, folds=1, repeats=2)\n",
+      "args": {
+        "n": 6000,
+        "d": 20,
+        "iterations": 100,
+        "trees": 40,
+        "depth": 12,
+        "clusters": 8,
+        "folds": 1,
+        "repeats": 2
+      },
+      "seconds": 0.7687938750023022,
+      "label": "train_logreg_2"
+    },
+    {
+      "fingerprint": "2297511b9fa4983b3c09c9ee8e999f6364ec2a48ae1526078b17f2f61c8f4de3",
+      "source": "import os\nfor key in ('OMP_NUM_THREADS', 'OPENBLAS_NUM_THREADS', 'MKL_NUM_THREADS', 'VECLIB_MAXIMUM_THREADS', 'NUMEXPR_NUM_THREADS', 'BLIS_NUM_THREADS'):\n    os.environ[key] = \"1\"\nfrom sklearn.datasets import make_classification\nfrom sklearn.model_selection import train_test_split, StratifiedKFold\nfrom sklearn.linear_model import LogisticRegression\nfrom sklearn.pipeline import make_pipeline\nfrom sklearn.preprocessing import StandardScaler\n\ndef experiment(n, d, iterations, trees, depth, clusters, folds, repeats):\n    x, y = make_classification(n_samples=n, n_features=d,\n                               n_informative=max(2, d // 2), n_redundant=0,\n                               random_state=42)\n    for _ in range(repeats):\n        if folds > 1:\n            splits = StratifiedKFold(n_splits=folds, shuffle=True, random_state=42).split(x, y)\n        else:\n            splits = [train_test_split(range(n), test_size=0.25, random_state=42)]\n        for train, test in splits:\n            x_train, x_test, y_train = x[train], x[test], y[train]\n            model = LogisticRegression(max_iter=iterations, solver=\"lbfgs\")\n            model.fit(x_train, y_train)\n            result = model.predict(x_test)\n    print(result.shape)\n\nexperiment(n=6000, d=20, iterations=100, trees=40, depth=12, clusters=8, folds=1, repeats=2)\n",
+      "args": {
+        "n": 6000,
+        "d": 20,
+        "iterations": 100,
+        "trees": 40,
+        "depth": 12,
+        "clusters": 8,
+        "folds": 1,
+        "repeats": 2
+      },
+      "seconds": 0.7708907080013887,
+      "label": "train_logreg_2"
+    },
+    {
+      "fingerprint": "cfdcc93bec9ab36e3637c57fb56b3d362d72da81671c65e24d23e0132058a40a",
+      "source": "import os\nfor key in ('OMP_NUM_THREADS', 'OPENBLAS_NUM_THREADS', 'MKL_NUM_THREADS', 'VECLIB_MAXIMUM_THREADS', 'NUMEXPR_NUM_THREADS', 'BLIS_NUM_THREADS'):\n    os.environ[key] = \"1\"\nfrom sklearn.datasets import make_classification\nfrom sklearn.model_selection import train_test_split, StratifiedKFold\nfrom sklearn.linear_model import LogisticRegression\nfrom sklearn.pipeline import make_pipeline\nfrom sklearn.preprocessing import StandardScaler\n\ndef experiment(n, d, iterations, trees, depth, clusters, folds, repeats):\n    x, y = make_classification(n_samples=n, n_features=d,\n                               n_informative=max(2, d // 2), n_redundant=0,\n                               random_state=42)\n    for _ in range(repeats):\n        if folds > 1:\n            splits = StratifiedKFold(n_splits=folds, shuffle=True, random_state=42).split(x, y)\n        else:\n            splits = [train_test_split(range(n), test_size=0.25, random_state=42)]\n        for train, test in splits:\n            x_train, x_test, y_train = x[train], x[test], y[train]\n            model = make_pipeline(StandardScaler(), LogisticRegression(max_iter=iterations, solver=\"lbfgs\"))\n            model.fit(x_train, y_train)\n            result = model.predict(x_test)\n    print(result.shape)\n\nexperiment(n=8000, d=60, iterations=150, trees=60, depth=16, clusters=8, folds=3, repeats=1)\n",
+      "args": {
+        "n": 8000,
+        "d": 60,
+        "iterations": 150,
+        "trees": 60,
+        "depth": 16,
+        "clusters": 8,
+        "folds": 3,
+        "repeats": 1
+      },
+      "seconds": 0.8075389169971459,
+      "label": "train_logreg_3"
+    },
+    {
+      "fingerprint": "cfdcc93bec9ab36e3637c57fb56b3d362d72da81671c65e24d23e0132058a40a",
+      "source": "import os\nfor key in ('OMP_NUM_THREADS', 'OPENBLAS_NUM_THREADS', 'MKL_NUM_THREADS', 'VECLIB_MAXIMUM_THREADS', 'NUMEXPR_NUM_THREADS', 'BLIS_NUM_THREADS'):\n    os.environ[key] = \"1\"\nfrom sklearn.datasets import make_classification\nfrom sklearn.model_selection import train_test_split, StratifiedKFold\nfrom sklearn.linear_model import LogisticRegression\nfrom sklearn.pipeline import make_pipeline\nfrom sklearn.preprocessing import StandardScaler\n\ndef experiment(n, d, iterations, trees, depth, clusters, folds, repeats):\n    x, y = make_classification(n_samples=n, n_features=d,\n                               n_informative=max(2, d // 2), n_redundant=0,\n                               random_state=42)\n    for _ in range(repeats):\n        if folds > 1:\n            splits = StratifiedKFold(n_splits=folds, shuffle=True, random_state=42).split(x, y)\n        else:\n            splits = [train_test_split(range(n), test_size=0.25, random_state=42)]\n        for train, test in splits:\n            x_train, x_test, y_train = x[train], x[test], y[train]\n            model = make_pipeline(StandardScaler(), LogisticRegression(max_iter=iterations, solver=\"lbfgs\"))\n            model.fit(x_train, y_train)\n            result = model.predict(x_test)\n    print(result.shape)\n\nexperiment(n=8000, d=60, iterations=150, trees=60, depth=16, clusters=8, folds=3, repeats=1)\n",
+      "args": {
+        "n": 8000,
+        "d": 60,
+        "iterations": 150,
+        "trees": 60,
+        "depth": 16,
+        "clusters": 8,
+        "folds": 3,
+        "repeats": 1
+      },
+      "seconds": 0.791409958001168,
+      "label": "train_logreg_3"
+    },
+    {
+      "fingerprint": "cfdcc93bec9ab36e3637c57fb56b3d362d72da81671c65e24d23e0132058a40a",
+      "source": "import os\nfor key in ('OMP_NUM_THREADS', 'OPENBLAS_NUM_THREADS', 'MKL_NUM_THREADS', 'VECLIB_MAXIMUM_THREADS', 'NUMEXPR_NUM_THREADS', 'BLIS_NUM_THREADS'):\n    os.environ[key] = \"1\"\nfrom sklearn.datasets import make_classification\nfrom sklearn.model_selection import train_test_split, StratifiedKFold\nfrom sklearn.linear_model import LogisticRegression\nfrom sklearn.pipeline import make_pipeline\nfrom sklearn.preprocessing import StandardScaler\n\ndef experiment(n, d, iterations, trees, depth, clusters, folds, repeats):\n    x, y = make_classification(n_samples=n, n_features=d,\n                               n_informative=max(2, d // 2), n_redundant=0,\n                               random_state=42)\n    for _ in range(repeats):\n        if folds > 1:\n            splits = StratifiedKFold(n_splits=folds, shuffle=True, random_state=42).split(x, y)\n        else:\n            splits = [train_test_split(range(n), test_size=0.25, random_state=42)]\n        for train, test in splits:\n            x_train, x_test, y_train = x[train], x[test], y[train]\n            model = make_pipeline(StandardScaler(), LogisticRegression(max_iter=iterations, solver=\"lbfgs\"))\n            model.fit(x_train, y_train)\n            result = model.predict(x_test)\n    print(result.shape)\n\nexperiment(n=8000, d=60, iterations=150, trees=60, depth=16, clusters=8, folds=3, repeats=1)\n",
+      "args": {
+        "n": 8000,
+        "d": 60,
+        "iterations": 150,
+        "trees": 60,
+        "depth": 16,
+        "clusters": 8,
+        "folds": 3,
+        "repeats": 1
+      },
+      "seconds": 0.7908565830002772,
+      "label": "train_logreg_3"
+    },
+    {
+      "fingerprint": "478425eeba9f751f10b4be22567b32954d9c99c17559e242e663be911c3b429a",
+      "source": "import os\nfor key in ('OMP_NUM_THREADS', 'OPENBLAS_NUM_THREADS', 'MKL_NUM_THREADS', 'VECLIB_MAXIMUM_THREADS', 'NUMEXPR_NUM_THREADS', 'BLIS_NUM_THREADS'):\n    os.environ[key] = \"1\"\nfrom sklearn.datasets import make_classification\nfrom sklearn.model_selection import train_test_split, StratifiedKFold\nfrom sklearn.tree import DecisionTreeClassifier\nfrom sklearn.pipeline import make_pipeline\nfrom sklearn.preprocessing import StandardScaler\n\ndef experiment(n, d, iterations, trees, depth, clusters, folds, repeats):\n    x, y = make_classification(n_samples=n, n_features=d,\n                               n_informative=max(2, d // 2), n_redundant=0,\n                               random_state=42)\n    for _ in range(repeats):\n        if folds > 1:\n            splits = StratifiedKFold(n_splits=folds, shuffle=True, random_state=42).split(x, y)\n        else:\n            splits = [train_test_split(range(n), test_size=0.25, random_state=42)]\n        for train, test in splits:\n            x_train, x_test, y_train = x[train], x[test], y[train]\n            model = DecisionTreeClassifier(max_depth=depth, random_state=42)\n            model.fit(x_train, y_train)\n            result = model.predict(x_test)\n    print(result.shape)\n\nexperiment(n=800, d=10, iterations=30, trees=10, depth=4, clusters=8, folds=1, repeats=1)\n",
+      "args": {
+        "n": 800,
+        "d": 10,
+        "iterations": 30,
+        "trees": 10,
+        "depth": 4,
+        "clusters": 8,
+        "folds": 1,
+        "repeats": 1
+      },
+      "seconds": 0.8196530830027768,
+      "label": "train_tree_0"
+    },
+    {
+      "fingerprint": "478425eeba9f751f10b4be22567b32954d9c99c17559e242e663be911c3b429a",
+      "source": "import os\nfor key in ('OMP_NUM_THREADS', 'OPENBLAS_NUM_THREADS', 'MKL_NUM_THREADS', 'VECLIB_MAXIMUM_THREADS', 'NUMEXPR_NUM_THREADS', 'BLIS_NUM_THREADS'):\n    os.environ[key] = \"1\"\nfrom sklearn.datasets import make_classification\nfrom sklearn.model_selection import train_test_split, StratifiedKFold\nfrom sklearn.tree import DecisionTreeClassifier\nfrom sklearn.pipeline import make_pipeline\nfrom sklearn.preprocessing import StandardScaler\n\ndef experiment(n, d, iterations, trees, depth, clusters, folds, repeats):\n    x, y = make_classification(n_samples=n, n_features=d,\n                               n_informative=max(2, d // 2), n_redundant=0,\n                               random_state=42)\n    for _ in range(repeats):\n        if folds > 1:\n            splits = StratifiedKFold(n_splits=folds, shuffle=True, random_state=42).split(x, y)\n        else:\n            splits = [train_test_split(range(n), test_size=0.25, random_state=42)]\n        for train, test in splits:\n            x_train, x_test, y_train = x[train], x[test], y[train]\n            model = DecisionTreeClassifier(max_depth=depth, random_state=42)\n            model.fit(x_train, y_train)\n            result = model.predict(x_test)\n    print(result.shape)\n\nexperiment(n=800, d=10, iterations=30, trees=10, depth=4, clusters=8, folds=1, repeats=1)\n",
+      "args": {
+        "n": 800,
+        "d": 10,
+        "iterations": 30,
+        "trees": 10,
+        "depth": 4,
+        "clusters": 8,
+        "folds": 1,
+        "repeats": 1
+      },
+      "seconds": 0.8306436249986291,
+      "label": "train_tree_0"
+    },
+    {
+      "fingerprint": "478425eeba9f751f10b4be22567b32954d9c99c17559e242e663be911c3b429a",
+      "source": "import os\nfor key in ('OMP_NUM_THREADS', 'OPENBLAS_NUM_THREADS', 'MKL_NUM_THREADS', 'VECLIB_MAXIMUM_THREADS', 'NUMEXPR_NUM_THREADS', 'BLIS_NUM_THREADS'):\n    os.environ[key] = \"1\"\nfrom sklearn.datasets import make_classification\nfrom sklearn.model_selection import train_test_split, StratifiedKFold\nfrom sklearn.tree import DecisionTreeClassifier\nfrom sklearn.pipeline import make_pipeline\nfrom sklearn.preprocessing import StandardScaler\n\ndef experiment(n, d, iterations, trees, depth, clusters, folds, repeats):\n    x, y = make_classification(n_samples=n, n_features=d,\n                               n_informative=max(2, d // 2), n_redundant=0,\n                               random_state=42)\n    for _ in range(repeats):\n        if folds > 1:\n            splits = StratifiedKFold(n_splits=folds, shuffle=True, random_state=42).split(x, y)\n        else:\n            splits = [train_test_split(range(n), test_size=0.25, random_state=42)]\n        for train, test in splits:\n            x_train, x_test, y_train = x[train], x[test], y[train]\n            model = DecisionTreeClassifier(max_depth=depth, random_state=42)\n            model.fit(x_train, y_train)\n            result = model.predict(x_test)\n    print(result.shape)\n\nexperiment(n=800, d=10, iterations=30, trees=10, depth=4, clusters=8, folds=1, repeats=1)\n",
+      "args": {
+        "n": 800,
+        "d": 10,
+        "iterations": 30,
+        "trees": 10,
+        "depth": 4,
+        "clusters": 8,
+        "folds": 1,
+        "repeats": 1
+      },
+      "seconds": 0.8116745419974905,
+      "label": "train_tree_0"
+    },
+    {
+      "fingerprint": "daa2aafe3e86b1381a74994905eb5281a1531106dd77ccff206271bfe82aa760",
+      "source": "import os\nfor key in ('OMP_NUM_THREADS', 'OPENBLAS_NUM_THREADS', 'MKL_NUM_THREADS', 'VECLIB_MAXIMUM_THREADS', 'NUMEXPR_NUM_THREADS', 'BLIS_NUM_THREADS'):\n    os.environ[key] = \"1\"\nfrom sklearn.datasets import make_classification\nfrom sklearn.model_selection import train_test_split, StratifiedKFold\nfrom sklearn.tree import DecisionTreeClassifier\nfrom sklearn.pipeline import make_pipeline\nfrom sklearn.preprocessing import StandardScaler\n\ndef experiment(n, d, iterations, trees, depth, clusters, folds, repeats):\n    x, y = make_classification(n_samples=n, n_features=d,\n                               n_informative=max(2, d // 2), n_redundant=0,\n                               random_state=42)\n    for _ in range(repeats):\n        if folds > 1:\n            splits = StratifiedKFold(n_splits=folds, shuffle=True, random_state=42).split(x, y)\n        else:\n            splits = [train_test_split(range(n), test_size=0.25, random_state=42)]\n        for train, test in splits:\n            x_train, x_test, y_train = x[train], x[test], y[train]\n            model = make_pipeline(StandardScaler(), DecisionTreeClassifier(max_depth=depth, random_state=42))\n            model.fit(x_train, y_train)\n            result = model.predict(x_test)\n    print(result.shape)\n\nexperiment(n=2500, d=30, iterations=60, trees=20, depth=8, clusters=8, folds=1, repeats=1)\n",
+      "args": {
+        "n": 2500,
+        "d": 30,
+        "iterations": 60,
+        "trees": 20,
+        "depth": 8,
+        "clusters": 8,
+        "folds": 1,
+        "repeats": 1
+      },
+      "seconds": 0.8451511669991305,
+      "label": "train_tree_1"
+    },
+    {
+      "fingerprint": "daa2aafe3e86b1381a74994905eb5281a1531106dd77ccff206271bfe82aa760",
+      "source": "import os\nfor key in ('OMP_NUM_THREADS', 'OPENBLAS_NUM_THREADS', 'MKL_NUM_THREADS', 'VECLIB_MAXIMUM_THREADS', 'NUMEXPR_NUM_THREADS', 'BLIS_NUM_THREADS'):\n    os.environ[key] = \"1\"\nfrom sklearn.datasets import make_classification\nfrom sklearn.model_selection import train_test_split, StratifiedKFold\nfrom sklearn.tree import DecisionTreeClassifier\nfrom sklearn.pipeline import make_pipeline\nfrom sklearn.preprocessing import StandardScaler\n\ndef experiment(n, d, iterations, trees, depth, clusters, folds, repeats):\n    x, y = make_classification(n_samples=n, n_features=d,\n                               n_informative=max(2, d // 2), n_redundant=0,\n                               random_state=42)\n    for _ in range(repeats):\n        if folds > 1:\n            splits = StratifiedKFold(n_splits=folds, shuffle=True, random_state=42).split(x, y)\n        else:\n            splits = [train_test_split(range(n), test_size=0.25, random_state=42)]\n        for train, test in splits:\n            x_train, x_test, y_train = x[train], x[test], y[train]\n            model = make_pipeline(StandardScaler(), DecisionTreeClassifier(max_depth=depth, random_state=42))\n            model.fit(x_train, y_train)\n            result = model.predict(x_test)\n    print(result.shape)\n\nexperiment(n=2500, d=30, iterations=60, trees=20, depth=8, clusters=8, folds=1, repeats=1)\n",
+      "args": {
+        "n": 2500,
+        "d": 30,
+        "iterations": 60,
+        "trees": 20,
+        "depth": 8,
+        "clusters": 8,
+        "folds": 1,
+        "repeats": 1
+      },
+      "seconds": 0.8455591250021826,
+      "label": "train_tree_1"
+    },
+    {
+      "fingerprint": "daa2aafe3e86b1381a74994905eb5281a1531106dd77ccff206271bfe82aa760",
+      "source": "import os\nfor key in ('OMP_NUM_THREADS', 'OPENBLAS_NUM_THREADS', 'MKL_NUM_THREADS', 'VECLIB_MAXIMUM_THREADS', 'NUMEXPR_NUM_THREADS', 'BLIS_NUM_THREADS'):\n    os.environ[key] = \"1\"\nfrom sklearn.datasets import make_classification\nfrom sklearn.model_selection import train_test_split, StratifiedKFold\nfrom sklearn.tree import DecisionTreeClassifier\nfrom sklearn.pipeline import make_pipeline\nfrom sklearn.preprocessing import StandardScaler\n\ndef experiment(n, d, iterations, trees, depth, clusters, folds, repeats):\n    x, y = make_classification(n_samples=n, n_features=d,\n                               n_informative=max(2, d // 2), n_redundant=0,\n                               random_state=42)\n    for _ in range(repeats):\n        if folds > 1:\n            splits = StratifiedKFold(n_splits=folds, shuffle=True, random_state=42).split(x, y)\n        else:\n            splits = [train_test_split(range(n), test_size=0.25, random_state=42)]\n        for train, test in splits:\n            x_train, x_test, y_train = x[train], x[test], y[train]\n            model = make_pipeline(StandardScaler(), DecisionTreeClassifier(max_depth=depth, random_state=42))\n            model.fit(x_train, y_train)\n            result = model.predict(x_test)\n    print(result.shape)\n\nexperiment(n=2500, d=30, iterations=60, trees=20, depth=8, clusters=8, folds=1, repeats=1)\n",
+      "args": {
+        "n": 2500,
+        "d": 30,
+        "iterations": 60,
+        "trees": 20,
+        "depth": 8,
+        "clusters": 8,
+        "folds": 1,
+        "repeats": 1
+      },
+      "seconds": 0.8678705419952166,
+      "label": "train_tree_1"
+    },
+    {
+      "fingerprint": "d5e82363d1f3d4121020f856b05e2f60cf3b56f9b9bc0133d3f5c898a8e5e3f2",
+      "source": "import os\nfor key in ('OMP_NUM_THREADS', 'OPENBLAS_NUM_THREADS', 'MKL_NUM_THREADS', 'VECLIB_MAXIMUM_THREADS', 'NUMEXPR_NUM_THREADS', 'BLIS_NUM_THREADS'):\n    os.environ[key] = \"1\"\nfrom sklearn.datasets import make_classification\nfrom sklearn.model_selection import train_test_split, StratifiedKFold\nfrom sklearn.tree import DecisionTreeClassifier\nfrom sklearn.pipeline import make_pipeline\nfrom sklearn.preprocessing import StandardScaler\n\ndef experiment(n, d, iterations, trees, depth, clusters, folds, repeats):\n    x, y = make_classification(n_samples=n, n_features=d,\n                               n_informative=max(2, d // 2), n_redundant=0,\n                               random_state=42)\n    for _ in range(repeats):\n        if folds > 1:\n            splits = StratifiedKFold(n_splits=folds, shuffle=True, random_state=42).split(x, y)\n        else:\n            splits = [train_test_split(range(n), test_size=0.25, random_state=42)]\n        for train, test in splits:\n            x_train, x_test, y_train = x[train], x[test], y[train]\n            model = DecisionTreeClassifier(max_depth=depth, random_state=42)\n            model.fit(x_train, y_train)\n            result = model.predict(x_test)\n    print(result.shape)\n\nexperiment(n=6000, d=20, iterations=100, trees=40, depth=12, clusters=8, folds=1, repeats=2)\n",
+      "args": {
+        "n": 6000,
+        "d": 20,
+        "iterations": 100,
+        "trees": 40,
+        "depth": 12,
+        "clusters": 8,
+        "folds": 1,
+        "repeats": 2
+      },
+      "seconds": 0.9219506669978728,
+      "label": "train_tree_2"
+    },
+    {
+      "fingerprint": "d5e82363d1f3d4121020f856b05e2f60cf3b56f9b9bc0133d3f5c898a8e5e3f2",
+      "source": "import os\nfor key in ('OMP_NUM_THREADS', 'OPENBLAS_NUM_THREADS', 'MKL_NUM_THREADS', 'VECLIB_MAXIMUM_THREADS', 'NUMEXPR_NUM_THREADS', 'BLIS_NUM_THREADS'):\n    os.environ[key] = \"1\"\nfrom sklearn.datasets import make_classification\nfrom sklearn.model_selection import train_test_split, StratifiedKFold\nfrom sklearn.tree import DecisionTreeClassifier\nfrom sklearn.pipeline import make_pipeline\nfrom sklearn.preprocessing import StandardScaler\n\ndef experiment(n, d, iterations, trees, depth, clusters, folds, repeats):\n    x, y = make_classification(n_samples=n, n_features=d,\n                               n_informative=max(2, d // 2), n_redundant=0,\n                               random_state=42)\n    for _ in range(repeats):\n        if folds > 1:\n            splits = StratifiedKFold(n_splits=folds, shuffle=True, random_state=42).split(x, y)\n        else:\n            splits = [train_test_split(range(n), test_size=0.25, random_state=42)]\n        for train, test in splits:\n            x_train, x_test, y_train = x[train], x[test], y[train]\n            model = DecisionTreeClassifier(max_depth=depth, random_state=42)\n            model.fit(x_train, y_train)\n            result = model.predict(x_test)\n    print(result.shape)\n\nexperiment(n=6000, d=20, iterations=100, trees=40, depth=12, clusters=8, folds=1, repeats=2)\n",
+      "args": {
+        "n": 6000,
+        "d": 20,
+        "iterations": 100,
+        "trees": 40,
+        "depth": 12,
+        "clusters": 8,
+        "folds": 1,
+        "repeats": 2
+      },
+      "seconds": 0.9321418330000597,
+      "label": "train_tree_2"
+    },
+    {
+      "fingerprint": "d5e82363d1f3d4121020f856b05e2f60cf3b56f9b9bc0133d3f5c898a8e5e3f2",
+      "source": "import os\nfor key in ('OMP_NUM_THREADS', 'OPENBLAS_NUM_THREADS', 'MKL_NUM_THREADS', 'VECLIB_MAXIMUM_THREADS', 'NUMEXPR_NUM_THREADS', 'BLIS_NUM_THREADS'):\n    os.environ[key] = \"1\"\nfrom sklearn.datasets import make_classification\nfrom sklearn.model_selection import train_test_split, StratifiedKFold\nfrom sklearn.tree import DecisionTreeClassifier\nfrom sklearn.pipeline import make_pipeline\nfrom sklearn.preprocessing import StandardScaler\n\ndef experiment(n, d, iterations, trees, depth, clusters, folds, repeats):\n    x, y = make_classification(n_samples=n, n_features=d,\n                               n_informative=max(2, d // 2), n_redundant=0,\n                               random_state=42)\n    for _ in range(repeats):\n        if folds > 1:\n            splits = StratifiedKFold(n_splits=folds, shuffle=True, random_state=42).split(x, y)\n        else:\n            splits = [train_test_split(range(n), test_size=0.25, random_state=42)]\n        for train, test in splits:\n            x_train, x_test, y_train = x[train], x[test], y[train]\n            model = DecisionTreeClassifier(max_depth=depth, random_state=42)\n            model.fit(x_train, y_train)\n            result = model.predict(x_test)\n    print(result.shape)\n\nexperiment(n=6000, d=20, iterations=100, trees=40, depth=12, clusters=8, folds=1, repeats=2)\n",
+      "args": {
+        "n": 6000,
+        "d": 20,
+        "iterations": 100,
+        "trees": 40,
+        "depth": 12,
+        "clusters": 8,
+        "folds": 1,
+        "repeats": 2
+      },
+      "seconds": 0.9272551670001121,
+      "label": "train_tree_2"
+    },
+    {
+      "fingerprint": "cbe0bd71733a6ccdf595deafd4cc0ac144bb2f0b8600bae7e5ee496b7d8a4b10",
+      "source": "import os\nfor key in ('OMP_NUM_THREADS', 'OPENBLAS_NUM_THREADS', 'MKL_NUM_THREADS', 'VECLIB_MAXIMUM_THREADS', 'NUMEXPR_NUM_THREADS', 'BLIS_NUM_THREADS'):\n    os.environ[key] = \"1\"\nfrom sklearn.datasets import make_classification\nfrom sklearn.model_selection import train_test_split, StratifiedKFold\nfrom sklearn.tree import DecisionTreeClassifier\nfrom sklearn.pipeline import make_pipeline\nfrom sklearn.preprocessing import StandardScaler\n\ndef experiment(n, d, iterations, trees, depth, clusters, folds, repeats):\n    x, y = make_classification(n_samples=n, n_features=d,\n                               n_informative=max(2, d // 2), n_redundant=0,\n                               random_state=42)\n    for _ in range(repeats):\n        if folds > 1:\n            splits = StratifiedKFold(n_splits=folds, shuffle=True, random_state=42).split(x, y)\n        else:\n            splits = [train_test_split(range(n), test_size=0.25, random_state=42)]\n        for train, test in splits:\n            x_train, x_test, y_train = x[train], x[test], y[train]\n            model = make_pipeline(StandardScaler(), DecisionTreeClassifier(max_depth=depth, random_state=42))\n            model.fit(x_train, y_train)\n            result = model.predict(x_test)\n    print(result.shape)\n\nexperiment(n=8000, d=60, iterations=150, trees=60, depth=16, clusters=8, folds=3, repeats=1)\n",
+      "args": {
+        "n": 8000,
+        "d": 60,
+        "iterations": 150,
+        "trees": 60,
+        "depth": 16,
+        "clusters": 8,
+        "folds": 3,
+        "repeats": 1
+      },
+      "seconds": 1.4842750419993536,
+      "label": "train_tree_3"
+    },
+    {
+      "fingerprint": "cbe0bd71733a6ccdf595deafd4cc0ac144bb2f0b8600bae7e5ee496b7d8a4b10",
+      "source": "import os\nfor key in ('OMP_NUM_THREADS', 'OPENBLAS_NUM_THREADS', 'MKL_NUM_THREADS', 'VECLIB_MAXIMUM_THREADS', 'NUMEXPR_NUM_THREADS', 'BLIS_NUM_THREADS'):\n    os.environ[key] = \"1\"\nfrom sklearn.datasets import make_classification\nfrom sklearn.model_selection import train_test_split, StratifiedKFold\nfrom sklearn.tree import DecisionTreeClassifier\nfrom sklearn.pipeline import make_pipeline\nfrom sklearn.preprocessing import StandardScaler\n\ndef experiment(n, d, iterations, trees, depth, clusters, folds, repeats):\n    x, y = make_classification(n_samples=n, n_features=d,\n                               n_informative=max(2, d // 2), n_redundant=0,\n                               random_state=42)\n    for _ in range(repeats):\n        if folds > 1:\n            splits = StratifiedKFold(n_splits=folds, shuffle=True, random_state=42).split(x, y)\n        else:\n            splits = [train_test_split(range(n), test_size=0.25, random_state=42)]\n        for train, test in splits:\n            x_train, x_test, y_train = x[train], x[test], y[train]\n            model = make_pipeline(StandardScaler(), DecisionTreeClassifier(max_depth=depth, random_state=42))\n            model.fit(x_train, y_train)\n            result = model.predict(x_test)\n    print(result.shape)\n\nexperiment(n=8000, d=60, iterations=150, trees=60, depth=16, clusters=8, folds=3, repeats=1)\n",
+      "args": {
+        "n": 8000,
+        "d": 60,
+        "iterations": 150,
+        "trees": 60,
+        "depth": 16,
+        "clusters": 8,
+        "folds": 3,
+        "repeats": 1
+      },
+      "seconds": 1.4993874579959083,
+      "label": "train_tree_3"
+    },
+    {
+      "fingerprint": "cbe0bd71733a6ccdf595deafd4cc0ac144bb2f0b8600bae7e5ee496b7d8a4b10",
+      "source": "import os\nfor key in ('OMP_NUM_THREADS', 'OPENBLAS_NUM_THREADS', 'MKL_NUM_THREADS', 'VECLIB_MAXIMUM_THREADS', 'NUMEXPR_NUM_THREADS', 'BLIS_NUM_THREADS'):\n    os.environ[key] = \"1\"\nfrom sklearn.datasets import make_classification\nfrom sklearn.model_selection import train_test_split, StratifiedKFold\nfrom sklearn.tree import DecisionTreeClassifier\nfrom sklearn.pipeline import make_pipeline\nfrom sklearn.preprocessing import StandardScaler\n\ndef experiment(n, d, iterations, trees, depth, clusters, folds, repeats):\n    x, y = make_classification(n_samples=n, n_features=d,\n                               n_informative=max(2, d // 2), n_redundant=0,\n                               random_state=42)\n    for _ in range(repeats):\n        if folds > 1:\n            splits = StratifiedKFold(n_splits=folds, shuffle=True, random_state=42).split(x, y)\n        else:\n            splits = [train_test_split(range(n), test_size=0.25, random_state=42)]\n        for train, test in splits:\n            x_train, x_test, y_train = x[train], x[test], y[train]\n            model = make_pipeline(StandardScaler(), DecisionTreeClassifier(max_depth=depth, random_state=42))\n            model.fit(x_train, y_train)\n            result = model.predict(x_test)\n    print(result.shape)\n\nexperiment(n=8000, d=60, iterations=150, trees=60, depth=16, clusters=8, folds=3, repeats=1)\n",
+      "args": {
+        "n": 8000,
+        "d": 60,
+        "iterations": 150,
+        "trees": 60,
+        "depth": 16,
+        "clusters": 8,
+        "folds": 3,
+        "repeats": 1
+      },
+      "seconds": 1.4863656669986085,
+      "label": "train_tree_3"
+    },
+    {
+      "fingerprint": "db6d47cb66f6142d09d77e7de3bc2923ef842b97c209ef13e7889af785914076",
+      "source": "import os\nfor key in ('OMP_NUM_THREADS', 'OPENBLAS_NUM_THREADS', 'MKL_NUM_THREADS', 'VECLIB_MAXIMUM_THREADS', 'NUMEXPR_NUM_THREADS', 'BLIS_NUM_THREADS'):\n    os.environ[key] = \"1\"\nfrom sklearn.datasets import make_classification\nfrom sklearn.model_selection import train_test_split, StratifiedKFold\nfrom sklearn.ensemble import RandomForestClassifier\nfrom sklearn.pipeline import make_pipeline\nfrom sklearn.preprocessing import StandardScaler\n\ndef experiment(n, d, iterations, trees, depth, clusters, folds, repeats):\n    x, y = make_classification(n_samples=n, n_features=d,\n                               n_informative=max(2, d // 2), n_redundant=0,\n                               random_state=42)\n    for _ in range(repeats):\n        if folds > 1:\n            splits = StratifiedKFold(n_splits=folds, shuffle=True, random_state=42).split(x, y)\n        else:\n            splits = [train_test_split(range(n), test_size=0.25, random_state=42)]\n        for train, test in splits:\n            x_train, x_test, y_train = x[train], x[test], y[train]\n            model = RandomForestClassifier(n_estimators=trees, max_depth=depth, n_jobs=1, random_state=42)\n            model.fit(x_train, y_train)\n            result = model.predict(x_test)\n    print(result.shape)\n\nexperiment(n=800, d=10, iterations=30, trees=10, depth=4, clusters=8, folds=1, repeats=1)\n",
+      "args": {
+        "n": 800,
+        "d": 10,
+        "iterations": 30,
+        "trees": 10,
+        "depth": 4,
+        "clusters": 8,
+        "folds": 1,
+        "repeats": 1
+      },
+      "seconds": 0.8601602499984438,
+      "label": "train_forest_0"
+    },
+    {
+      "fingerprint": "db6d47cb66f6142d09d77e7de3bc2923ef842b97c209ef13e7889af785914076",
+      "source": "import os\nfor key in ('OMP_NUM_THREADS', 'OPENBLAS_NUM_THREADS', 'MKL_NUM_THREADS', 'VECLIB_MAXIMUM_THREADS', 'NUMEXPR_NUM_THREADS', 'BLIS_NUM_THREADS'):\n    os.environ[key] = \"1\"\nfrom sklearn.datasets import make_classification\nfrom sklearn.model_selection import train_test_split, StratifiedKFold\nfrom sklearn.ensemble import RandomForestClassifier\nfrom sklearn.pipeline import make_pipeline\nfrom sklearn.preprocessing import StandardScaler\n\ndef experiment(n, d, iterations, trees, depth, clusters, folds, repeats):\n    x, y = make_classification(n_samples=n, n_features=d,\n                               n_informative=max(2, d // 2), n_redundant=0,\n                               random_state=42)\n    for _ in range(repeats):\n        if folds > 1:\n            splits = StratifiedKFold(n_splits=folds, shuffle=True, random_state=42).split(x, y)\n        else:\n            splits = [train_test_split(range(n), test_size=0.25, random_state=42)]\n        for train, test in splits:\n            x_train, x_test, y_train = x[train], x[test], y[train]\n            model = RandomForestClassifier(n_estimators=trees, max_depth=depth, n_jobs=1, random_state=42)\n            model.fit(x_train, y_train)\n            result = model.predict(x_test)\n    print(result.shape)\n\nexperiment(n=800, d=10, iterations=30, trees=10, depth=4, clusters=8, folds=1, repeats=1)\n",
+      "args": {
+        "n": 800,
+        "d": 10,
+        "iterations": 30,
+        "trees": 10,
+        "depth": 4,
+        "clusters": 8,
+        "folds": 1,
+        "repeats": 1
+      },
+      "seconds": 0.8522821669976111,
+      "label": "train_forest_0"
+    },
+    {
+      "fingerprint": "db6d47cb66f6142d09d77e7de3bc2923ef842b97c209ef13e7889af785914076",
+      "source": "import os\nfor key in ('OMP_NUM_THREADS', 'OPENBLAS_NUM_THREADS', 'MKL_NUM_THREADS', 'VECLIB_MAXIMUM_THREADS', 'NUMEXPR_NUM_THREADS', 'BLIS_NUM_THREADS'):\n    os.environ[key] = \"1\"\nfrom sklearn.datasets import make_classification\nfrom sklearn.model_selection import train_test_split, StratifiedKFold\nfrom sklearn.ensemble import RandomForestClassifier\nfrom sklearn.pipeline import make_pipeline\nfrom sklearn.preprocessing import StandardScaler\n\ndef experiment(n, d, iterations, trees, depth, clusters, folds, repeats):\n    x, y = make_classification(n_samples=n, n_features=d,\n                               n_informative=max(2, d // 2), n_redundant=0,\n                               random_state=42)\n    for _ in range(repeats):\n        if folds > 1:\n            splits = StratifiedKFold(n_splits=folds, shuffle=True, random_state=42).split(x, y)\n        else:\n            splits = [train_test_split(range(n), test_size=0.25, random_state=42)]\n        for train, test in splits:\n            x_train, x_test, y_train = x[train], x[test], y[train]\n            model = RandomForestClassifier(n_estimators=trees, max_depth=depth, n_jobs=1, random_state=42)\n            model.fit(x_train, y_train)\n            result = model.predict(x_test)\n    print(result.shape)\n\nexperiment(n=800, d=10, iterations=30, trees=10, depth=4, clusters=8, folds=1, repeats=1)\n",
+      "args": {
+        "n": 800,
+        "d": 10,
+        "iterations": 30,
+        "trees": 10,
+        "depth": 4,
+        "clusters": 8,
+        "folds": 1,
+        "repeats": 1
+      },
+      "seconds": 0.8585004999986268,
+      "label": "train_forest_0"
+    },
+    {
+      "fingerprint": "5e64efef9c463c6269ac3619a6dbe25bc00dc73745626ca6c0de41d0b54a80b3",
+      "source": "import os\nfor key in ('OMP_NUM_THREADS', 'OPENBLAS_NUM_THREADS', 'MKL_NUM_THREADS', 'VECLIB_MAXIMUM_THREADS', 'NUMEXPR_NUM_THREADS', 'BLIS_NUM_THREADS'):\n    os.environ[key] = \"1\"\nfrom sklearn.datasets import make_classification\nfrom sklearn.model_selection import train_test_split, StratifiedKFold\nfrom sklearn.ensemble import RandomForestClassifier\nfrom sklearn.pipeline import make_pipeline\nfrom sklearn.preprocessing import StandardScaler\n\ndef experiment(n, d, iterations, trees, depth, clusters, folds, repeats):\n    x, y = make_classification(n_samples=n, n_features=d,\n                               n_informative=max(2, d // 2), n_redundant=0,\n                               random_state=42)\n    for _ in range(repeats):\n        if folds > 1:\n            splits = StratifiedKFold(n_splits=folds, shuffle=True, random_state=42).split(x, y)\n        else:\n            splits = [train_test_split(range(n), test_size=0.25, random_state=42)]\n        for train, test in splits:\n            x_train, x_test, y_train = x[train], x[test], y[train]\n            model = make_pipeline(StandardScaler(), RandomForestClassifier(n_estimators=trees, max_depth=depth, n_jobs=1, random_state=42))\n            model.fit(x_train, y_train)\n            result = model.predict(x_test)\n    print(result.shape)\n\nexperiment(n=2500, d=30, iterations=60, trees=20, depth=8, clusters=8, folds=1, repeats=1)\n",
+      "args": {
+        "n": 2500,
+        "d": 30,
+        "iterations": 60,
+        "trees": 20,
+        "depth": 8,
+        "clusters": 8,
+        "folds": 1,
+        "repeats": 1
+      },
+      "seconds": 0.9194270410007448,
+      "label": "train_forest_1"
+    },
+    {
+      "fingerprint": "5e64efef9c463c6269ac3619a6dbe25bc00dc73745626ca6c0de41d0b54a80b3",
+      "source": "import os\nfor key in ('OMP_NUM_THREADS', 'OPENBLAS_NUM_THREADS', 'MKL_NUM_THREADS', 'VECLIB_MAXIMUM_THREADS', 'NUMEXPR_NUM_THREADS', 'BLIS_NUM_THREADS'):\n    os.environ[key] = \"1\"\nfrom sklearn.datasets import make_classification\nfrom sklearn.model_selection import train_test_split, StratifiedKFold\nfrom sklearn.ensemble import RandomForestClassifier\nfrom sklearn.pipeline import make_pipeline\nfrom sklearn.preprocessing import StandardScaler\n\ndef experiment(n, d, iterations, trees, depth, clusters, folds, repeats):\n    x, y = make_classification(n_samples=n, n_features=d,\n                               n_informative=max(2, d // 2), n_redundant=0,\n                               random_state=42)\n    for _ in range(repeats):\n        if folds > 1:\n            splits = StratifiedKFold(n_splits=folds, shuffle=True, random_state=42).split(x, y)\n        else:\n            splits = [train_test_split(range(n), test_size=0.25, random_state=42)]\n        for train, test in splits:\n            x_train, x_test, y_train = x[train], x[test], y[train]\n            model = make_pipeline(StandardScaler(), RandomForestClassifier(n_estimators=trees, max_depth=depth, n_jobs=1, random_state=42))\n            model.fit(x_train, y_train)\n            result = model.predict(x_test)\n    print(result.shape)\n\nexperiment(n=2500, d=30, iterations=60, trees=20, depth=8, clusters=8, folds=1, repeats=1)\n",
+      "args": {
+        "n": 2500,
+        "d": 30,
+        "iterations": 60,
+        "trees": 20,
+        "depth": 8,
+        "clusters": 8,
+        "folds": 1,
+        "repeats": 1
+      },
+      "seconds": 0.911804666997341,
+      "label": "train_forest_1"
+    },
+    {
+      "fingerprint": "5e64efef9c463c6269ac3619a6dbe25bc00dc73745626ca6c0de41d0b54a80b3",
+      "source": "import os\nfor key in ('OMP_NUM_THREADS', 'OPENBLAS_NUM_THREADS', 'MKL_NUM_THREADS', 'VECLIB_MAXIMUM_THREADS', 'NUMEXPR_NUM_THREADS', 'BLIS_NUM_THREADS'):\n    os.environ[key] = \"1\"\nfrom sklearn.datasets import make_classification\nfrom sklearn.model_selection import train_test_split, StratifiedKFold\nfrom sklearn.ensemble import RandomForestClassifier\nfrom sklearn.pipeline import make_pipeline\nfrom sklearn.preprocessing import StandardScaler\n\ndef experiment(n, d, iterations, trees, depth, clusters, folds, repeats):\n    x, y = make_classification(n_samples=n, n_features=d,\n                               n_informative=max(2, d // 2), n_redundant=0,\n                               random_state=42)\n    for _ in range(repeats):\n        if folds > 1:\n            splits = StratifiedKFold(n_splits=folds, shuffle=True, random_state=42).split(x, y)\n        else:\n            splits = [train_test_split(range(n), test_size=0.25, random_state=42)]\n        for train, test in splits:\n            x_train, x_test, y_train = x[train], x[test], y[train]\n            model = make_pipeline(StandardScaler(), RandomForestClassifier(n_estimators=trees, max_depth=depth, n_jobs=1, random_state=42))\n            model.fit(x_train, y_train)\n            result = model.predict(x_test)\n    print(result.shape)\n\nexperiment(n=2500, d=30, iterations=60, trees=20, depth=8, clusters=8, folds=1, repeats=1)\n",
+      "args": {
+        "n": 2500,
+        "d": 30,
+        "iterations": 60,
+        "trees": 20,
+        "depth": 8,
+        "clusters": 8,
+        "folds": 1,
+        "repeats": 1
+      },
+      "seconds": 0.9291503330023261,
+      "label": "train_forest_1"
+    },
+    {
+      "fingerprint": "a07730588f7a233fb6ca62ef2dc133decc5e9385ff6255633d3c375511d1997e",
+      "source": "import os\nfor key in ('OMP_NUM_THREADS', 'OPENBLAS_NUM_THREADS', 'MKL_NUM_THREADS', 'VECLIB_MAXIMUM_THREADS', 'NUMEXPR_NUM_THREADS', 'BLIS_NUM_THREADS'):\n    os.environ[key] = \"1\"\nfrom sklearn.datasets import make_classification\nfrom sklearn.model_selection import train_test_split, StratifiedKFold\nfrom sklearn.ensemble import RandomForestClassifier\nfrom sklearn.pipeline import make_pipeline\nfrom sklearn.preprocessing import StandardScaler\n\ndef experiment(n, d, iterations, trees, depth, clusters, folds, repeats):\n    x, y = make_classification(n_samples=n, n_features=d,\n                               n_informative=max(2, d // 2), n_redundant=0,\n                               random_state=42)\n    for _ in range(repeats):\n        if folds > 1:\n            splits = StratifiedKFold(n_splits=folds, shuffle=True, random_state=42).split(x, y)\n        else:\n            splits = [train_test_split(range(n), test_size=0.25, random_state=42)]\n        for train, test in splits:\n            x_train, x_test, y_train = x[train], x[test], y[train]\n            model = RandomForestClassifier(n_estimators=trees, max_depth=depth, n_jobs=1, random_state=42)\n            model.fit(x_train, y_train)\n            result = model.predict(x_test)\n    print(result.shape)\n\nexperiment(n=6000, d=20, iterations=100, trees=40, depth=12, clusters=8, folds=1, repeats=2)\n",
+      "args": {
+        "n": 6000,
+        "d": 20,
+        "iterations": 100,
+        "trees": 40,
+        "depth": 12,
+        "clusters": 8,
+        "folds": 1,
+        "repeats": 2
+      },
+      "seconds": 1.4666545000000042,
+      "label": "train_forest_2"
+    },
+    {
+      "fingerprint": "a07730588f7a233fb6ca62ef2dc133decc5e9385ff6255633d3c375511d1997e",
+      "source": "import os\nfor key in ('OMP_NUM_THREADS', 'OPENBLAS_NUM_THREADS', 'MKL_NUM_THREADS', 'VECLIB_MAXIMUM_THREADS', 'NUMEXPR_NUM_THREADS', 'BLIS_NUM_THREADS'):\n    os.environ[key] = \"1\"\nfrom sklearn.datasets import make_classification\nfrom sklearn.model_selection import train_test_split, StratifiedKFold\nfrom sklearn.ensemble import RandomForestClassifier\nfrom sklearn.pipeline import make_pipeline\nfrom sklearn.preprocessing import StandardScaler\n\ndef experiment(n, d, iterations, trees, depth, clusters, folds, repeats):\n    x, y = make_classification(n_samples=n, n_features=d,\n                               n_informative=max(2, d // 2), n_redundant=0,\n                               random_state=42)\n    for _ in range(repeats):\n        if folds > 1:\n            splits = StratifiedKFold(n_splits=folds, shuffle=True, random_state=42).split(x, y)\n        else:\n            splits = [train_test_split(range(n), test_size=0.25, random_state=42)]\n        for train, test in splits:\n            x_train, x_test, y_train = x[train], x[test], y[train]\n            model = RandomForestClassifier(n_estimators=trees, max_depth=depth, n_jobs=1, random_state=42)\n            model.fit(x_train, y_train)\n            result = model.predict(x_test)\n    print(result.shape)\n\nexperiment(n=6000, d=20, iterations=100, trees=40, depth=12, clusters=8, folds=1, repeats=2)\n",
+      "args": {
+        "n": 6000,
+        "d": 20,
+        "iterations": 100,
+        "trees": 40,
+        "depth": 12,
+        "clusters": 8,
+        "folds": 1,
+        "repeats": 2
+      },
+      "seconds": 1.4503338750000694,
+      "label": "train_forest_2"
+    },
+    {
+      "fingerprint": "a07730588f7a233fb6ca62ef2dc133decc5e9385ff6255633d3c375511d1997e",
+      "source": "import os\nfor key in ('OMP_NUM_THREADS', 'OPENBLAS_NUM_THREADS', 'MKL_NUM_THREADS', 'VECLIB_MAXIMUM_THREADS', 'NUMEXPR_NUM_THREADS', 'BLIS_NUM_THREADS'):\n    os.environ[key] = \"1\"\nfrom sklearn.datasets import make_classification\nfrom sklearn.model_selection import train_test_split, StratifiedKFold\nfrom sklearn.ensemble import RandomForestClassifier\nfrom sklearn.pipeline import make_pipeline\nfrom sklearn.preprocessing import StandardScaler\n\ndef experiment(n, d, iterations, trees, depth, clusters, folds, repeats):\n    x, y = make_classification(n_samples=n, n_features=d,\n                               n_informative=max(2, d // 2), n_redundant=0,\n                               random_state=42)\n    for _ in range(repeats):\n        if folds > 1:\n            splits = StratifiedKFold(n_splits=folds, shuffle=True, random_state=42).split(x, y)\n        else:\n            splits = [train_test_split(range(n), test_size=0.25, random_state=42)]\n        for train, test in splits:\n            x_train, x_test, y_train = x[train], x[test], y[train]\n            model = RandomForestClassifier(n_estimators=trees, max_depth=depth, n_jobs=1, random_state=42)\n            model.fit(x_train, y_train)\n            result = model.predict(x_test)\n    print(result.shape)\n\nexperiment(n=6000, d=20, iterations=100, trees=40, depth=12, clusters=8, folds=1, repeats=2)\n",
+      "args": {
+        "n": 6000,
+        "d": 20,
+        "iterations": 100,
+        "trees": 40,
+        "depth": 12,
+        "clusters": 8,
+        "folds": 1,
+        "repeats": 2
+      },
+      "seconds": 1.4758504170022206,
+      "label": "train_forest_2"
+    },
+    {
+      "fingerprint": "458d227455185658072a659f2bee334f1f89ba2abe07aeb860f63519b0fcf3a8",
+      "source": "import os\nfor key in ('OMP_NUM_THREADS', 'OPENBLAS_NUM_THREADS', 'MKL_NUM_THREADS', 'VECLIB_MAXIMUM_THREADS', 'NUMEXPR_NUM_THREADS', 'BLIS_NUM_THREADS'):\n    os.environ[key] = \"1\"\nfrom sklearn.datasets import make_classification\nfrom sklearn.model_selection import train_test_split, StratifiedKFold\nfrom sklearn.ensemble import RandomForestClassifier\nfrom sklearn.pipeline import make_pipeline\nfrom sklearn.preprocessing import StandardScaler\n\ndef experiment(n, d, iterations, trees, depth, clusters, folds, repeats):\n    x, y = make_classification(n_samples=n, n_features=d,\n                               n_informative=max(2, d // 2), n_redundant=0,\n                               random_state=42)\n    for _ in range(repeats):\n        if folds > 1:\n            splits = StratifiedKFold(n_splits=folds, shuffle=True, random_state=42).split(x, y)\n        else:\n            splits = [train_test_split(range(n), test_size=0.25, random_state=42)]\n        for train, test in splits:\n            x_train, x_test, y_train = x[train], x[test], y[train]\n            model = make_pipeline(StandardScaler(), RandomForestClassifier(n_estimators=trees, max_depth=depth, n_jobs=1, random_state=42))\n            model.fit(x_train, y_train)\n            result = model.predict(x_test)\n    print(result.shape)\n\nexperiment(n=8000, d=60, iterations=150, trees=60, depth=16, clusters=8, folds=3, repeats=1)\n",
+      "args": {
+        "n": 8000,
+        "d": 60,
+        "iterations": 150,
+        "trees": 60,
+        "depth": 16,
+        "clusters": 8,
+        "folds": 3,
+        "repeats": 1
+      },
+      "seconds": 3.912909624996246,
+      "label": "train_forest_3"
+    },
+    {
+      "fingerprint": "458d227455185658072a659f2bee334f1f89ba2abe07aeb860f63519b0fcf3a8",
+      "source": "import os\nfor key in ('OMP_NUM_THREADS', 'OPENBLAS_NUM_THREADS', 'MKL_NUM_THREADS', 'VECLIB_MAXIMUM_THREADS', 'NUMEXPR_NUM_THREADS', 'BLIS_NUM_THREADS'):\n    os.environ[key] = \"1\"\nfrom sklearn.datasets import make_classification\nfrom sklearn.model_selection import train_test_split, StratifiedKFold\nfrom sklearn.ensemble import RandomForestClassifier\nfrom sklearn.pipeline import make_pipeline\nfrom sklearn.preprocessing import StandardScaler\n\ndef experiment(n, d, iterations, trees, depth, clusters, folds, repeats):\n    x, y = make_classification(n_samples=n, n_features=d,\n                               n_informative=max(2, d // 2), n_redundant=0,\n                               random_state=42)\n    for _ in range(repeats):\n        if folds > 1:\n            splits = StratifiedKFold(n_splits=folds, shuffle=True, random_state=42).split(x, y)\n        else:\n            splits = [train_test_split(range(n), test_size=0.25, random_state=42)]\n        for train, test in splits:\n            x_train, x_test, y_train = x[train], x[test], y[train]\n            model = make_pipeline(StandardScaler(), RandomForestClassifier(n_estimators=trees, max_depth=depth, n_jobs=1, random_state=42))\n            model.fit(x_train, y_train)\n            result = model.predict(x_test)\n    print(result.shape)\n\nexperiment(n=8000, d=60, iterations=150, trees=60, depth=16, clusters=8, folds=3, repeats=1)\n",
+      "args": {
+        "n": 8000,
+        "d": 60,
+        "iterations": 150,
+        "trees": 60,
+        "depth": 16,
+        "clusters": 8,
+        "folds": 3,
+        "repeats": 1
+      },
+      "seconds": 3.9633642499975394,
+      "label": "train_forest_3"
+    },
+    {
+      "fingerprint": "458d227455185658072a659f2bee334f1f89ba2abe07aeb860f63519b0fcf3a8",
+      "source": "import os\nfor key in ('OMP_NUM_THREADS', 'OPENBLAS_NUM_THREADS', 'MKL_NUM_THREADS', 'VECLIB_MAXIMUM_THREADS', 'NUMEXPR_NUM_THREADS', 'BLIS_NUM_THREADS'):\n    os.environ[key] = \"1\"\nfrom sklearn.datasets import make_classification\nfrom sklearn.model_selection import train_test_split, StratifiedKFold\nfrom sklearn.ensemble import RandomForestClassifier\nfrom sklearn.pipeline import make_pipeline\nfrom sklearn.preprocessing import StandardScaler\n\ndef experiment(n, d, iterations, trees, depth, clusters, folds, repeats):\n    x, y = make_classification(n_samples=n, n_features=d,\n                               n_informative=max(2, d // 2), n_redundant=0,\n                               random_state=42)\n    for _ in range(repeats):\n        if folds > 1:\n            splits = StratifiedKFold(n_splits=folds, shuffle=True, random_state=42).split(x, y)\n        else:\n            splits = [train_test_split(range(n), test_size=0.25, random_state=42)]\n        for train, test in splits:\n            x_train, x_test, y_train = x[train], x[test], y[train]\n            model = make_pipeline(StandardScaler(), RandomForestClassifier(n_estimators=trees, max_depth=depth, n_jobs=1, random_state=42))\n            model.fit(x_train, y_train)\n            result = model.predict(x_test)\n    print(result.shape)\n\nexperiment(n=8000, d=60, iterations=150, trees=60, depth=16, clusters=8, folds=3, repeats=1)\n",
+      "args": {
+        "n": 8000,
+        "d": 60,
+        "iterations": 150,
+        "trees": 60,
+        "depth": 16,
+        "clusters": 8,
+        "folds": 3,
+        "repeats": 1
+      },
+      "seconds": 3.916180667001754,
+      "label": "train_forest_3"
+    },
+    {
+      "fingerprint": "405aaf0f1c3101fe230dcfc7e212e7b21e241e62038437b1e0218e9be0a09615",
+      "source": "import os\nfor key in ('OMP_NUM_THREADS', 'OPENBLAS_NUM_THREADS', 'MKL_NUM_THREADS', 'VECLIB_MAXIMUM_THREADS', 'NUMEXPR_NUM_THREADS', 'BLIS_NUM_THREADS'):\n    os.environ[key] = \"1\"\nfrom sklearn.datasets import make_classification\nfrom sklearn.model_selection import train_test_split, StratifiedKFold\nfrom sklearn.linear_model import SGDClassifier\nfrom sklearn.pipeline import make_pipeline\nfrom sklearn.preprocessing import StandardScaler\n\ndef experiment(n, d, iterations, trees, depth, clusters, folds, repeats):\n    x, y = make_classification(n_samples=n, n_features=d,\n                               n_informative=max(2, d // 2), n_redundant=0,\n                               random_state=42)\n    for _ in range(repeats):\n        if folds > 1:\n            splits = StratifiedKFold(n_splits=folds, shuffle=True, random_state=42).split(x, y)\n        else:\n            splits = [train_test_split(range(n), test_size=0.25, random_state=42)]\n        for train, test in splits:\n            x_train, x_test, y_train = x[train], x[test], y[train]\n            model = SGDClassifier(max_iter=iterations, tol=None, random_state=42)\n            model.fit(x_train, y_train)\n            result = model.predict(x_test)\n    print(result.shape)\n\nexperiment(n=800, d=10, iterations=30, trees=10, depth=4, clusters=8, folds=1, repeats=1)\n",
+      "args": {
+        "n": 800,
+        "d": 10,
+        "iterations": 30,
+        "trees": 10,
+        "depth": 4,
+        "clusters": 8,
+        "folds": 1,
+        "repeats": 1
+      },
+      "seconds": 0.7765563749999274,
+      "label": "train_sgd_0"
+    },
+    {
+      "fingerprint": "405aaf0f1c3101fe230dcfc7e212e7b21e241e62038437b1e0218e9be0a09615",
+      "source": "import os\nfor key in ('OMP_NUM_THREADS', 'OPENBLAS_NUM_THREADS', 'MKL_NUM_THREADS', 'VECLIB_MAXIMUM_THREADS', 'NUMEXPR_NUM_THREADS', 'BLIS_NUM_THREADS'):\n    os.environ[key] = \"1\"\nfrom sklearn.datasets import make_classification\nfrom sklearn.model_selection import train_test_split, StratifiedKFold\nfrom sklearn.linear_model import SGDClassifier\nfrom sklearn.pipeline import make_pipeline\nfrom sklearn.preprocessing import StandardScaler\n\ndef experiment(n, d, iterations, trees, depth, clusters, folds, repeats):\n    x, y = make_classification(n_samples=n, n_features=d,\n                               n_informative=max(2, d // 2), n_redundant=0,\n                               random_state=42)\n    for _ in range(repeats):\n        if folds > 1:\n            splits = StratifiedKFold(n_splits=folds, shuffle=True, random_state=42).split(x, y)\n        else:\n            splits = [train_test_split(range(n), test_size=0.25, random_state=42)]\n        for train, test in splits:\n            x_train, x_test, y_train = x[train], x[test], y[train]\n            model = SGDClassifier(max_iter=iterations, tol=None, random_state=42)\n            model.fit(x_train, y_train)\n            result = model.predict(x_test)\n    print(result.shape)\n\nexperiment(n=800, d=10, iterations=30, trees=10, depth=4, clusters=8, folds=1, repeats=1)\n",
+      "args": {
+        "n": 800,
+        "d": 10,
+        "iterations": 30,
+        "trees": 10,
+        "depth": 4,
+        "clusters": 8,
+        "folds": 1,
+        "repeats": 1
+      },
+      "seconds": 0.7768206670007203,
+      "label": "train_sgd_0"
+    },
+    {
+      "fingerprint": "405aaf0f1c3101fe230dcfc7e212e7b21e241e62038437b1e0218e9be0a09615",
+      "source": "import os\nfor key in ('OMP_NUM_THREADS', 'OPENBLAS_NUM_THREADS', 'MKL_NUM_THREADS', 'VECLIB_MAXIMUM_THREADS', 'NUMEXPR_NUM_THREADS', 'BLIS_NUM_THREADS'):\n    os.environ[key] = \"1\"\nfrom sklearn.datasets import make_classification\nfrom sklearn.model_selection import train_test_split, StratifiedKFold\nfrom sklearn.linear_model import SGDClassifier\nfrom sklearn.pipeline import make_pipeline\nfrom sklearn.preprocessing import StandardScaler\n\ndef experiment(n, d, iterations, trees, depth, clusters, folds, repeats):\n    x, y = make_classification(n_samples=n, n_features=d,\n                               n_informative=max(2, d // 2), n_redundant=0,\n                               random_state=42)\n    for _ in range(repeats):\n        if folds > 1:\n            splits = StratifiedKFold(n_splits=folds, shuffle=True, random_state=42).split(x, y)\n        else:\n            splits = [train_test_split(range(n), test_size=0.25, random_state=42)]\n        for train, test in splits:\n            x_train, x_test, y_train = x[train], x[test], y[train]\n            model = SGDClassifier(max_iter=iterations, tol=None, random_state=42)\n            model.fit(x_train, y_train)\n            result = model.predict(x_test)\n    print(result.shape)\n\nexperiment(n=800, d=10, iterations=30, trees=10, depth=4, clusters=8, folds=1, repeats=1)\n",
+      "args": {
+        "n": 800,
+        "d": 10,
+        "iterations": 30,
+        "trees": 10,
+        "depth": 4,
+        "clusters": 8,
+        "folds": 1,
+        "repeats": 1
+      },
+      "seconds": 0.7738296249954146,
+      "label": "train_sgd_0"
+    },
+    {
+      "fingerprint": "9836231efd497b6f09a38742e086ad64411c6a83d3782dfafe065dc23d101e5a",
+      "source": "import os\nfor key in ('OMP_NUM_THREADS', 'OPENBLAS_NUM_THREADS', 'MKL_NUM_THREADS', 'VECLIB_MAXIMUM_THREADS', 'NUMEXPR_NUM_THREADS', 'BLIS_NUM_THREADS'):\n    os.environ[key] = \"1\"\nfrom sklearn.datasets import make_classification\nfrom sklearn.model_selection import train_test_split, StratifiedKFold\nfrom sklearn.linear_model import SGDClassifier\nfrom sklearn.pipeline import make_pipeline\nfrom sklearn.preprocessing import StandardScaler\n\ndef experiment(n, d, iterations, trees, depth, clusters, folds, repeats):\n    x, y = make_classification(n_samples=n, n_features=d,\n                               n_informative=max(2, d // 2), n_redundant=0,\n                               random_state=42)\n    for _ in range(repeats):\n        if folds > 1:\n            splits = StratifiedKFold(n_splits=folds, shuffle=True, random_state=42).split(x, y)\n        else:\n            splits = [train_test_split(range(n), test_size=0.25, random_state=42)]\n        for train, test in splits:\n            x_train, x_test, y_train = x[train], x[test], y[train]\n            model = make_pipeline(StandardScaler(), SGDClassifier(max_iter=iterations, tol=None, random_state=42))\n            model.fit(x_train, y_train)\n            result = model.predict(x_test)\n    print(result.shape)\n\nexperiment(n=2500, d=30, iterations=60, trees=20, depth=8, clusters=8, folds=1, repeats=1)\n",
+      "args": {
+        "n": 2500,
+        "d": 30,
+        "iterations": 60,
+        "trees": 20,
+        "depth": 8,
+        "clusters": 8,
+        "folds": 1,
+        "repeats": 1
+      },
+      "seconds": 0.7997386249990086,
+      "label": "train_sgd_1"
+    },
+    {
+      "fingerprint": "9836231efd497b6f09a38742e086ad64411c6a83d3782dfafe065dc23d101e5a",
+      "source": "import os\nfor key in ('OMP_NUM_THREADS', 'OPENBLAS_NUM_THREADS', 'MKL_NUM_THREADS', 'VECLIB_MAXIMUM_THREADS', 'NUMEXPR_NUM_THREADS', 'BLIS_NUM_THREADS'):\n    os.environ[key] = \"1\"\nfrom sklearn.datasets import make_classification\nfrom sklearn.model_selection import train_test_split, StratifiedKFold\nfrom sklearn.linear_model import SGDClassifier\nfrom sklearn.pipeline import make_pipeline\nfrom sklearn.preprocessing import StandardScaler\n\ndef experiment(n, d, iterations, trees, depth, clusters, folds, repeats):\n    x, y = make_classification(n_samples=n, n_features=d,\n                               n_informative=max(2, d // 2), n_redundant=0,\n                               random_state=42)\n    for _ in range(repeats):\n        if folds > 1:\n            splits = StratifiedKFold(n_splits=folds, shuffle=True, random_state=42).split(x, y)\n        else:\n            splits = [train_test_split(range(n), test_size=0.25, random_state=42)]\n        for train, test in splits:\n            x_train, x_test, y_train = x[train], x[test], y[train]\n            model = make_pipeline(StandardScaler(), SGDClassifier(max_iter=iterations, tol=None, random_state=42))\n            model.fit(x_train, y_train)\n            result = model.predict(x_test)\n    print(result.shape)\n\nexperiment(n=2500, d=30, iterations=60, trees=20, depth=8, clusters=8, folds=1, repeats=1)\n",
+      "args": {
+        "n": 2500,
+        "d": 30,
+        "iterations": 60,
+        "trees": 20,
+        "depth": 8,
+        "clusters": 8,
+        "folds": 1,
+        "repeats": 1
+      },
+      "seconds": 0.7817253339962917,
+      "label": "train_sgd_1"
+    },
+    {
+      "fingerprint": "9836231efd497b6f09a38742e086ad64411c6a83d3782dfafe065dc23d101e5a",
+      "source": "import os\nfor key in ('OMP_NUM_THREADS', 'OPENBLAS_NUM_THREADS', 'MKL_NUM_THREADS', 'VECLIB_MAXIMUM_THREADS', 'NUMEXPR_NUM_THREADS', 'BLIS_NUM_THREADS'):\n    os.environ[key] = \"1\"\nfrom sklearn.datasets import make_classification\nfrom sklearn.model_selection import train_test_split, StratifiedKFold\nfrom sklearn.linear_model import SGDClassifier\nfrom sklearn.pipeline import make_pipeline\nfrom sklearn.preprocessing import StandardScaler\n\ndef experiment(n, d, iterations, trees, depth, clusters, folds, repeats):\n    x, y = make_classification(n_samples=n, n_features=d,\n                               n_informative=max(2, d // 2), n_redundant=0,\n                               random_state=42)\n    for _ in range(repeats):\n        if folds > 1:\n            splits = StratifiedKFold(n_splits=folds, shuffle=True, random_state=42).split(x, y)\n        else:\n            splits = [train_test_split(range(n), test_size=0.25, random_state=42)]\n        for train, test in splits:\n            x_train, x_test, y_train = x[train], x[test], y[train]\n            model = make_pipeline(StandardScaler(), SGDClassifier(max_iter=iterations, tol=None, random_state=42))\n            model.fit(x_train, y_train)\n            result = model.predict(x_test)\n    print(result.shape)\n\nexperiment(n=2500, d=30, iterations=60, trees=20, depth=8, clusters=8, folds=1, repeats=1)\n",
+      "args": {
+        "n": 2500,
+        "d": 30,
+        "iterations": 60,
+        "trees": 20,
+        "depth": 8,
+        "clusters": 8,
+        "folds": 1,
+        "repeats": 1
+      },
+      "seconds": 0.7779727919987636,
+      "label": "train_sgd_1"
+    },
+    {
+      "fingerprint": "79e1748e220b443f2939639be546a865ad609f6a9f1bc36813c25539e246c02a",
+      "source": "import os\nfor key in ('OMP_NUM_THREADS', 'OPENBLAS_NUM_THREADS', 'MKL_NUM_THREADS', 'VECLIB_MAXIMUM_THREADS', 'NUMEXPR_NUM_THREADS', 'BLIS_NUM_THREADS'):\n    os.environ[key] = \"1\"\nfrom sklearn.datasets import make_classification\nfrom sklearn.model_selection import train_test_split, StratifiedKFold\nfrom sklearn.linear_model import SGDClassifier\nfrom sklearn.pipeline import make_pipeline\nfrom sklearn.preprocessing import StandardScaler\n\ndef experiment(n, d, iterations, trees, depth, clusters, folds, repeats):\n    x, y = make_classification(n_samples=n, n_features=d,\n                               n_informative=max(2, d // 2), n_redundant=0,\n                               random_state=42)\n    for _ in range(repeats):\n        if folds > 1:\n            splits = StratifiedKFold(n_splits=folds, shuffle=True, random_state=42).split(x, y)\n        else:\n            splits = [train_test_split(range(n), test_size=0.25, random_state=42)]\n        for train, test in splits:\n            x_train, x_test, y_train = x[train], x[test], y[train]\n            model = SGDClassifier(max_iter=iterations, tol=None, random_state=42)\n            model.fit(x_train, y_train)\n            result = model.predict(x_test)\n    print(result.shape)\n\nexperiment(n=6000, d=20, iterations=100, trees=40, depth=12, clusters=8, folds=1, repeats=2)\n",
+      "args": {
+        "n": 6000,
+        "d": 20,
+        "iterations": 100,
+        "trees": 40,
+        "depth": 12,
+        "clusters": 8,
+        "folds": 1,
+        "repeats": 2
+      },
+      "seconds": 0.8010432079972816,
+      "label": "train_sgd_2"
+    },
+    {
+      "fingerprint": "79e1748e220b443f2939639be546a865ad609f6a9f1bc36813c25539e246c02a",
+      "source": "import os\nfor key in ('OMP_NUM_THREADS', 'OPENBLAS_NUM_THREADS', 'MKL_NUM_THREADS', 'VECLIB_MAXIMUM_THREADS', 'NUMEXPR_NUM_THREADS', 'BLIS_NUM_THREADS'):\n    os.environ[key] = \"1\"\nfrom sklearn.datasets import make_classification\nfrom sklearn.model_selection import train_test_split, StratifiedKFold\nfrom sklearn.linear_model import SGDClassifier\nfrom sklearn.pipeline import make_pipeline\nfrom sklearn.preprocessing import StandardScaler\n\ndef experiment(n, d, iterations, trees, depth, clusters, folds, repeats):\n    x, y = make_classification(n_samples=n, n_features=d,\n                               n_informative=max(2, d // 2), n_redundant=0,\n                               random_state=42)\n    for _ in range(repeats):\n        if folds > 1:\n            splits = StratifiedKFold(n_splits=folds, shuffle=True, random_state=42).split(x, y)\n        else:\n            splits = [train_test_split(range(n), test_size=0.25, random_state=42)]\n        for train, test in splits:\n            x_train, x_test, y_train = x[train], x[test], y[train]\n            model = SGDClassifier(max_iter=iterations, tol=None, random_state=42)\n            model.fit(x_train, y_train)\n            result = model.predict(x_test)\n    print(result.shape)\n\nexperiment(n=6000, d=20, iterations=100, trees=40, depth=12, clusters=8, folds=1, repeats=2)\n",
+      "args": {
+        "n": 6000,
+        "d": 20,
+        "iterations": 100,
+        "trees": 40,
+        "depth": 12,
+        "clusters": 8,
+        "folds": 1,
+        "repeats": 2
+      },
+      "seconds": 0.8132443750000675,
+      "label": "train_sgd_2"
+    },
+    {
+      "fingerprint": "79e1748e220b443f2939639be546a865ad609f6a9f1bc36813c25539e246c02a",
+      "source": "import os\nfor key in ('OMP_NUM_THREADS', 'OPENBLAS_NUM_THREADS', 'MKL_NUM_THREADS', 'VECLIB_MAXIMUM_THREADS', 'NUMEXPR_NUM_THREADS', 'BLIS_NUM_THREADS'):\n    os.environ[key] = \"1\"\nfrom sklearn.datasets import make_classification\nfrom sklearn.model_selection import train_test_split, StratifiedKFold\nfrom sklearn.linear_model import SGDClassifier\nfrom sklearn.pipeline import make_pipeline\nfrom sklearn.preprocessing import StandardScaler\n\ndef experiment(n, d, iterations, trees, depth, clusters, folds, repeats):\n    x, y = make_classification(n_samples=n, n_features=d,\n                               n_informative=max(2, d // 2), n_redundant=0,\n                               random_state=42)\n    for _ in range(repeats):\n        if folds > 1:\n            splits = StratifiedKFold(n_splits=folds, shuffle=True, random_state=42).split(x, y)\n        else:\n            splits = [train_test_split(range(n), test_size=0.25, random_state=42)]\n        for train, test in splits:\n            x_train, x_test, y_train = x[train], x[test], y[train]\n            model = SGDClassifier(max_iter=iterations, tol=None, random_state=42)\n            model.fit(x_train, y_train)\n            result = model.predict(x_test)\n    print(result.shape)\n\nexperiment(n=6000, d=20, iterations=100, trees=40, depth=12, clusters=8, folds=1, repeats=2)\n",
+      "args": {
+        "n": 6000,
+        "d": 20,
+        "iterations": 100,
+        "trees": 40,
+        "depth": 12,
+        "clusters": 8,
+        "folds": 1,
+        "repeats": 2
+      },
+      "seconds": 0.8076149999978952,
+      "label": "train_sgd_2"
+    },
+    {
+      "fingerprint": "f1bf5b821c50d4c11e94b06787e4fc24487dacbac3504730651683be59a5732a",
+      "source": "import os\nfor key in ('OMP_NUM_THREADS', 'OPENBLAS_NUM_THREADS', 'MKL_NUM_THREADS', 'VECLIB_MAXIMUM_THREADS', 'NUMEXPR_NUM_THREADS', 'BLIS_NUM_THREADS'):\n    os.environ[key] = \"1\"\nfrom sklearn.datasets import make_classification\nfrom sklearn.model_selection import train_test_split, StratifiedKFold\nfrom sklearn.linear_model import SGDClassifier\nfrom sklearn.pipeline import make_pipeline\nfrom sklearn.preprocessing import StandardScaler\n\ndef experiment(n, d, iterations, trees, depth, clusters, folds, repeats):\n    x, y = make_classification(n_samples=n, n_features=d,\n                               n_informative=max(2, d // 2), n_redundant=0,\n                               random_state=42)\n    for _ in range(repeats):\n        if folds > 1:\n            splits = StratifiedKFold(n_splits=folds, shuffle=True, random_state=42).split(x, y)\n        else:\n            splits = [train_test_split(range(n), test_size=0.25, random_state=42)]\n        for train, test in splits:\n            x_train, x_test, y_train = x[train], x[test], y[train]\n            model = make_pipeline(StandardScaler(), SGDClassifier(max_iter=iterations, tol=None, random_state=42))\n            model.fit(x_train, y_train)\n            result = model.predict(x_test)\n    print(result.shape)\n\nexperiment(n=8000, d=60, iterations=150, trees=60, depth=16, clusters=8, folds=3, repeats=1)\n",
+      "args": {
+        "n": 8000,
+        "d": 60,
+        "iterations": 150,
+        "trees": 60,
+        "depth": 16,
+        "clusters": 8,
+        "folds": 3,
+        "repeats": 1
+      },
+      "seconds": 0.9274315000002389,
+      "label": "train_sgd_3"
+    },
+    {
+      "fingerprint": "f1bf5b821c50d4c11e94b06787e4fc24487dacbac3504730651683be59a5732a",
+      "source": "import os\nfor key in ('OMP_NUM_THREADS', 'OPENBLAS_NUM_THREADS', 'MKL_NUM_THREADS', 'VECLIB_MAXIMUM_THREADS', 'NUMEXPR_NUM_THREADS', 'BLIS_NUM_THREADS'):\n    os.environ[key] = \"1\"\nfrom sklearn.datasets import make_classification\nfrom sklearn.model_selection import train_test_split, StratifiedKFold\nfrom sklearn.linear_model import SGDClassifier\nfrom sklearn.pipeline import make_pipeline\nfrom sklearn.preprocessing import StandardScaler\n\ndef experiment(n, d, iterations, trees, depth, clusters, folds, repeats):\n    x, y = make_classification(n_samples=n, n_features=d,\n                               n_informative=max(2, d // 2), n_redundant=0,\n                               random_state=42)\n    for _ in range(repeats):\n        if folds > 1:\n            splits = StratifiedKFold(n_splits=folds, shuffle=True, random_state=42).split(x, y)\n        else:\n            splits = [train_test_split(range(n), test_size=0.25, random_state=42)]\n        for train, test in splits:\n            x_train, x_test, y_train = x[train], x[test], y[train]\n            model = make_pipeline(StandardScaler(), SGDClassifier(max_iter=iterations, tol=None, random_state=42))\n            model.fit(x_train, y_train)\n            result = model.predict(x_test)\n    print(result.shape)\n\nexperiment(n=8000, d=60, iterations=150, trees=60, depth=16, clusters=8, folds=3, repeats=1)\n",
+      "args": {
+        "n": 8000,
+        "d": 60,
+        "iterations": 150,
+        "trees": 60,
+        "depth": 16,
+        "clusters": 8,
+        "folds": 3,
+        "repeats": 1
+      },
+      "seconds": 0.940380499996536,
+      "label": "train_sgd_3"
+    },
+    {
+      "fingerprint": "f1bf5b821c50d4c11e94b06787e4fc24487dacbac3504730651683be59a5732a",
+      "source": "import os\nfor key in ('OMP_NUM_THREADS', 'OPENBLAS_NUM_THREADS', 'MKL_NUM_THREADS', 'VECLIB_MAXIMUM_THREADS', 'NUMEXPR_NUM_THREADS', 'BLIS_NUM_THREADS'):\n    os.environ[key] = \"1\"\nfrom sklearn.datasets import make_classification\nfrom sklearn.model_selection import train_test_split, StratifiedKFold\nfrom sklearn.linear_model import SGDClassifier\nfrom sklearn.pipeline import make_pipeline\nfrom sklearn.preprocessing import StandardScaler\n\ndef experiment(n, d, iterations, trees, depth, clusters, folds, repeats):\n    x, y = make_classification(n_samples=n, n_features=d,\n                               n_informative=max(2, d // 2), n_redundant=0,\n                               random_state=42)\n    for _ in range(repeats):\n        if folds > 1:\n            splits = StratifiedKFold(n_splits=folds, shuffle=True, random_state=42).split(x, y)\n        else:\n            splits = [train_test_split(range(n), test_size=0.25, random_state=42)]\n        for train, test in splits:\n            x_train, x_test, y_train = x[train], x[test], y[train]\n            model = make_pipeline(StandardScaler(), SGDClassifier(max_iter=iterations, tol=None, random_state=42))\n            model.fit(x_train, y_train)\n            result = model.predict(x_test)\n    print(result.shape)\n\nexperiment(n=8000, d=60, iterations=150, trees=60, depth=16, clusters=8, folds=3, repeats=1)\n",
+      "args": {
+        "n": 8000,
+        "d": 60,
+        "iterations": 150,
+        "trees": 60,
+        "depth": 16,
+        "clusters": 8,
+        "folds": 3,
+        "repeats": 1
+      },
+      "seconds": 0.9149207079972257,
+      "label": "train_sgd_3"
+    }
+  ]
+}

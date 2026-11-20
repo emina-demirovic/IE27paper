@@ -9,3 +9,5 @@ The platform is based on a coordinator-worker model. The coordinator is responsi
 The prototype is intended to demonstrate key mechanisms relevant to distributed experiment execution, including worker registration, heartbeat-based availability tracking, experiment status management, result logging and basic fault handling. A consensus-based coordination layer may also be considered for maintaining a consistent ordering of important command events in the system.
 
 This repository is part of a master’s thesis project and is currently under active development.
+
+The [time forecasting handoff](time-forecasting/README.md) includes the local runtime estimator, evaluation results, and batch and worker evidence for continuing the scheduling experiments.

@@ -1,0 +1,80 @@
+[
+  {
+    "config": {
+      "name": "svm_30000",
+      "algorithm": "svm",
+      "n": 30000,
+      "d": 80,
+      "scenario": "neviđen algoritam — veliki",
+      "iterations": 100,
+      "trees": 20,
+      "depth": 8,
+      "clusters": 8,
+      "folds": 1,
+      "repeats": 1,
+      "scaled": false
+    },
+    "procena_s": 1.0449684914444393,
+    "rezim": "model",
+    "vreme_procene_ms": 0.7658330068807118,
+    "stara_procena_s": 0.011006505905383919,
+    "stari_rezim": "model",
+    "merenja_s": [
+      4.067771583002468,
+      4.0033446670058765,
+      3.9848856250027893,
+      4.025197209004546,
+      4.071664750001219
+    ],
+    "upozorenja": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "izmereno_s": 4.025197209004546,
+    "greska_s": 2.9802287175601063,
+    "greska_pct": 74.03932187206136,
+    "stara_greska_s": 4.014190703099161
+  },
+  {
+    "config": {
+      "name": "mlp_20000",
+      "algorithm": "mlp",
+      "n": 20000,
+      "d": 100,
+      "scenario": "neviđen algoritam — veliki",
+      "iterations": 200,
+      "trees": 20,
+      "depth": 8,
+      "clusters": 8,
+      "folds": 1,
+      "repeats": 1,
+      "scaled": false
+    },
+    "procena_s": 1.0814475920923714,
+    "rezim": "model",
+    "vreme_procene_ms": 0.7371669998974539,
+    "stara_procena_s": 0.010739677686195225,
+    "stari_rezim": "model",
+    "merenja_s": [
+      1.460446500001126,
+      1.4633155839983374,
+      1.4420926250022603,
+      1.4589686670005904,
+      1.4633007500015083
+    ],
+    "upozorenja": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "izmereno_s": 1.460446500001126,
+    "greska_s": 0.37899890790875457,
+    "greska_pct": 25.950892956945864,
+    "stara_greska_s": 1.4497068223149308
+  }
+]

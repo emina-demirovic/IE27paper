@@ -1,0 +1,699 @@
+{
+  "chosen": "V2 ridge",
+  "cv": [
+    {
+      "name": "train_forest_0",
+      "actual": 0.882814332995622,
+      "pred": {
+        "Medijana": 0.848365041994839,
+        "V2 ridge": 0.788258798669588,
+        "Random Forest": 0.839099183726837,
+        "Extra Trees": 0.8228318232561842,
+        "Gradient boosting": 0.8454403162391009
+      }
+    },
+    {
+      "name": "train_forest_1",
+      "actual": 0.9698914170003263,
+      "pred": {
+        "Medijana": 0.848365041994839,
+        "V2 ridge": 0.8180861223140234,
+        "Random Forest": 0.818616074993516,
+        "Extra Trees": 0.8258211743634527,
+        "Gradient boosting": 0.7967543418448408
+      }
+    },
+    {
+      "name": "train_forest_2",
+      "actual": 0.9068886669992935,
+      "pred": {
+        "Medijana": 0.848365041994839,
+        "V2 ridge": 0.7958202923824952,
+        "Random Forest": 0.8133811489207193,
+        "Extra Trees": 0.8059006689921924,
+        "Gradient boosting": 0.78560072043018
+      }
+    },
+    {
+      "name": "train_forest_3",
+      "actual": 0.9751085829993826,
+      "pred": {
+        "Medijana": 0.848365041994839,
+        "V2 ridge": 0.7954558113251283,
+        "Random Forest": 0.795774554169827,
+        "Extra Trees": 0.8011198555414739,
+        "Gradient boosting": 0.7971695784343057
+      }
+    },
+    {
+      "name": "train_forest_4",
+      "actual": 0.9383347920011147,
+      "pred": {
+        "Medijana": 0.848365041994839,
+        "V2 ridge": 0.7956673727684848,
+        "Random Forest": 0.7973962618085322,
+        "Extra Trees": 0.8040149554015625,
+        "Gradient boosting": 0.7971695784343057
+      }
+    },
+    {
+      "name": "train_forest_5",
+      "actual": 1.131080250001105,
+      "pred": {
+        "Medijana": 0.848365041994839,
+        "V2 ridge": 0.8516125742857924,
+        "Random Forest": 0.8306427020326537,
+        "Extra Trees": 0.9461224031881431,
+        "Gradient boosting": 0.8034702661927936
+      }
+    },
+    {
+      "name": "train_forest_dugi",
+      "actual": 41.627586375005194,
+      "pred": {
+        "Medijana": 0.848365041994839,
+        "V2 ridge": 1.1217353417278877,
+        "Random Forest": 1.326778536576245,
+        "Extra Trees": 1.34906337509525,
+        "Gradient boosting": 1.153736662699187
+      }
+    },
+    {
+      "name": "train_kmeans_0",
+      "actual": 0.9169521250005346,
+      "pred": {
+        "Medijana": 0.8498664584985818,
+        "V2 ridge": 0.7993044213833281,
+        "Random Forest": 0.7945468313765789,
+        "Extra Trees": 0.8220836771925442,
+        "Gradient boosting": 0.7883025983879487
+      }
+    },
+    {
+      "name": "train_kmeans_1",
+      "actual": 0.9216481670009671,
+      "pred": {
+        "Medijana": 0.8498664584985818,
+        "V2 ridge": 0.8852436691035898,
+        "Random Forest": 0.8480546112142526,
+        "Extra Trees": 0.8831325863137447,
+        "Gradient boosting": 0.8097355860026213
+      }
+    },
+    {
+      "name": "train_kmeans_2",
+      "actual": 0.9171694169999682,
+      "pred": {
+        "Medijana": 0.8498664584985818,
+        "V2 ridge": 0.8395577497073949,
+        "Random Forest": 0.8330860390147804,
+        "Extra Trees": 0.9006670173984804,
+        "Gradient boosting": 0.8270335561926593
+      }
+    },
+    {
+      "name": "train_kmeans_3",
+      "actual": 0.9221822500039707,
+      "pred": {
+        "Medijana": 0.8498664584985818,
+        "V2 ridge": 0.8063776252122397,
+        "Random Forest": 0.810667871126144,
+        "Extra Trees": 0.8262853768614109,
+        "Gradient boosting": 0.7982170461928166
+      }
+    },
+    {
+      "name": "train_kmeans_4",
+      "actual": 0.8954394169995794,
+      "pred": {
+        "Medijana": 0.8498664584985818,
+        "V2 ridge": 0.8361317666216389,
+        "Random Forest": 0.8059625108966294,
+        "Extra Trees": 0.8364378111333584,
+        "Gradient boosting": 0.7940069720459005
+      }
+    },
+    {
+      "name": "train_kmeans_5",
+      "actual": 0.9213940409972565,
+      "pred": {
+        "Medijana": 0.8498664584985818,
+        "V2 ridge": 1.0983098255094128,
+        "Random Forest": 0.9549002302597667,
+        "Extra Trees": 1.7268632342283832,
+        "Gradient boosting": 1.008895884715974
+      }
+    },
+    {
+      "name": "train_logreg_0",
+      "actual": 0.77184275000036,
+      "pred": {
+        "Medijana": 0.9025472709981841,
+        "V2 ridge": 0.8084807034385871,
+        "Random Forest": 0.8657449346889061,
+        "Extra Trees": 0.8571553029228335,
+        "Gradient boosting": 0.8576490320083188
+      }
+    },
+    {
+      "name": "train_logreg_1",
+      "actual": 0.7747554579982534,
+      "pred": {
+        "Medijana": 0.9025472709981841,
+        "V2 ridge": 0.9100196304241397,
+        "Random Forest": 0.8706801674227191,
+        "Extra Trees": 0.8989773321857989,
+        "Gradient boosting": 0.8588845448954859
+      }
+    },
+    {
+      "name": "train_logreg_2",
+      "actual": 0.7772747499984689,
+      "pred": {
+        "Medijana": 0.9025472709981841,
+        "V2 ridge": 0.8456996258050892,
+        "Random Forest": 0.8674023275738907,
+        "Extra Trees": 0.8732260287082056,
+        "Gradient boosting": 0.8328545466903748
+      }
+    },
+    {
+      "name": "train_logreg_3",
+      "actual": 0.7823889999999665,
+      "pred": {
+        "Medijana": 0.9025472709981841,
+        "V2 ridge": 0.8141075004231291,
+        "Random Forest": 0.8280306138076939,
+        "Extra Trees": 0.8552958826716138,
+        "Gradient boosting": 0.8398672691837074
+      }
+    },
+    {
+      "name": "train_logreg_4",
+      "actual": 0.7842129170021508,
+      "pred": {
+        "Medijana": 0.9025472709981841,
+        "V2 ridge": 0.8625851321850738,
+        "Random Forest": 0.8737282309555272,
+        "Extra Trees": 0.8573532398887693,
+        "Gradient boosting": 0.8597102650993017
+      }
+    },
+    {
+      "name": "train_logreg_5",
+      "actual": 0.7995874580010423,
+      "pred": {
+        "Medijana": 0.9025472709981841,
+        "V2 ridge": 1.1104483560143126,
+        "Random Forest": 1.000001668346979,
+        "Extra Trees": 1.2374086500758106,
+        "Gradient boosting": 0.9686273187028441
+      }
+    },
+    {
+      "name": "train_logreg_cv",
+      "actual": 0.7911184580007102,
+      "pred": {
+        "Medijana": 0.9025472709981841,
+        "V2 ridge": 1.109190891673999,
+        "Random Forest": 0.9382126417699759,
+        "Extra Trees": 0.9501852370426838,
+        "Gradient boosting": 0.8918017038619518
+      }
+    },
+    {
+      "name": "train_logreg_scaler",
+      "actual": 0.7729593750045751,
+      "pred": {
+        "Medijana": 0.9025472709981841,
+        "V2 ridge": 0.8084807034385871,
+        "Random Forest": 0.8657449346889061,
+        "Extra Trees": 0.8571553029228335,
+        "Gradient boosting": 0.8576490320083188
+      }
+    },
+    {
+      "name": "train_mlp_0",
+      "actual": 0.7936489159983466,
+      "pred": {
+        "Medijana": 0.8531307499943068,
+        "V2 ridge": 0.8382343239750196,
+        "Random Forest": 0.9078474508688119,
+        "Extra Trees": 0.8859278590247384,
+        "Gradient boosting": 0.8465362916094679
+      }
+    },
+    {
+      "name": "train_mlp_1",
+      "actual": 0.9293350840016501,
+      "pred": {
+        "Medijana": 0.8531307499943068,
+        "V2 ridge": 0.9683261794482937,
+        "Random Forest": 1.8291579978557684,
+        "Extra Trees": 1.123281243260468,
+        "Gradient boosting": 0.9468100879916063
+      }
+    },
+    {
+      "name": "train_mlp_2",
+      "actual": 0.7933966249984223,
+      "pred": {
+        "Medijana": 0.8531307499943068,
+        "V2 ridge": 0.9147470738708992,
+        "Random Forest": 0.9995593671223331,
+        "Extra Trees": 1.0815442123144037,
+        "Gradient boosting": 0.8684475094532664
+      }
+    },
+    {
+      "name": "train_mlp_3",
+      "actual": 0.9183976249987609,
+      "pred": {
+        "Medijana": 0.8531307499943068,
+        "V2 ridge": 0.859232434991354,
+        "Random Forest": 1.8030905784833038,
+        "Extra Trees": 1.0339783406032275,
+        "Gradient boosting": 0.9410164580896079
+      }
+    },
+    {
+      "name": "train_mlp_4",
+      "actual": 0.8982058749970747,
+      "pred": {
+        "Medijana": 0.8531307499943068,
+        "V2 ridge": 0.9023251228083848,
+        "Random Forest": 1.5478077268890589,
+        "Extra Trees": 1.0412142818957077,
+        "Gradient boosting": 0.939795986967955
+      }
+    },
+    {
+      "name": "train_mlp_5",
+      "actual": 1.0365152079975815,
+      "pred": {
+        "Medijana": 0.8531307499943068,
+        "V2 ridge": 1.2514621579067384,
+        "Random Forest": 2.8254055903071196,
+        "Extra Trees": 2.3270103949638963,
+        "Gradient boosting": 1.5067573719186251
+      }
+    },
+    {
+      "name": "train_mlp_dugi",
+      "actual": 3.132940208000946,
+      "pred": {
+        "Medijana": 0.8531307499943068,
+        "V2 ridge": 1.8104589290766555,
+        "Random Forest": 2.8254055903071196,
+        "Extra Trees": 2.5194365641311416,
+        "Gradient boosting": 1.5977516608622366
+      }
+    },
+    {
+      "name": "train_sgd_0",
+      "actual": 0.7900562089998857,
+      "pred": {
+        "Medijana": 0.8968226459983271,
+        "V2 ridge": 0.7975753540121777,
+        "Random Forest": 0.8335830704308935,
+        "Extra Trees": 0.8396402546189116,
+        "Gradient boosting": 0.8475467290379556
+      }
+    },
+    {
+      "name": "train_sgd_1",
+      "actual": 0.7914147919946117,
+      "pred": {
+        "Medijana": 0.8968226459983271,
+        "V2 ridge": 0.8677047184447177,
+        "Random Forest": 0.8635221039645221,
+        "Extra Trees": 0.8786912777948105,
+        "Gradient boosting": 0.8523998898285456
+      }
+    },
+    {
+      "name": "train_sgd_2",
+      "actual": 0.7889461250015302,
+      "pred": {
+        "Medijana": 0.8968226459983271,
+        "V2 ridge": 0.8318647623405638,
+        "Random Forest": 0.8389941360930937,
+        "Extra Trees": 0.8906301421508636,
+        "Gradient boosting": 0.8236382513233355
+      }
+    },
+    {
+      "name": "train_sgd_3",
+      "actual": 0.788684999999532,
+      "pred": {
+        "Medijana": 0.8968226459983271,
+        "V2 ridge": 0.8038113587773241,
+        "Random Forest": 0.8168711678183767,
+        "Extra Trees": 0.8435937835605373,
+        "Gradient boosting": 0.8368521621926612
+      }
+    },
+    {
+      "name": "train_sgd_4",
+      "actual": 0.7838033340012771,
+      "pred": {
+        "Medijana": 0.8968226459983271,
+        "V2 ridge": 0.8301589185845241,
+        "Random Forest": 0.8362525985918684,
+        "Extra Trees": 0.856168524367619,
+        "Gradient boosting": 0.845420885785828
+      }
+    },
+    {
+      "name": "train_sgd_5",
+      "actual": 0.8280863750042045,
+      "pred": {
+        "Medijana": 0.8968226459983271,
+        "V2 ridge": 1.028413100318415,
+        "Random Forest": 0.9988921593600651,
+        "Extra Trees": 1.2018577571306577,
+        "Gradient boosting": 0.9454271497197566
+      }
+    },
+    {
+      "name": "train_svm_0",
+      "actual": 0.8145235839983798,
+      "pred": {
+        "Medijana": 0.8566498749969469,
+        "V2 ridge": 0.8163943499147823,
+        "Random Forest": 0.8827132778278911,
+        "Extra Trees": 0.8805805453504296,
+        "Gradient boosting": 0.8922943273013356
+      }
+    },
+    {
+      "name": "train_svm_1",
+      "actual": 0.9553479999958654,
+      "pred": {
+        "Medijana": 0.8566498749969469,
+        "V2 ridge": 0.9500103565501226,
+        "Random Forest": 1.5825986690805194,
+        "Extra Trees": 1.026128116637623,
+        "Gradient boosting": 0.920653696027908
+      }
+    },
+    {
+      "name": "train_svm_2",
+      "actual": 0.848365041994839,
+      "pred": {
+        "Medijana": 0.8566498749969469,
+        "V2 ridge": 0.8745674119844868,
+        "Random Forest": 0.9491355514381055,
+        "Extra Trees": 1.052084192521888,
+        "Gradient boosting": 0.8334788355726579
+      }
+    },
+    {
+      "name": "train_svm_3",
+      "actual": 1.2539990829973249,
+      "pred": {
+        "Medijana": 0.8566498749969469,
+        "V2 ridge": 1.0359027496043827,
+        "Random Forest": 2.6397060512000894,
+        "Extra Trees": 1.442227558290748,
+        "Gradient boosting": 1.939182357429633
+      }
+    },
+    {
+      "name": "train_svm_4",
+      "actual": 0.8459824160017888,
+      "pred": {
+        "Medijana": 0.8566498749969469,
+        "V2 ridge": 0.8697638947158193,
+        "Random Forest": 0.9077880952590204,
+        "Extra Trees": 0.8695747656586033,
+        "Gradient boosting": 0.8287385777728208
+      }
+    },
+    {
+      "name": "train_svm_5",
+      "actual": 1.5634044589969562,
+      "pred": {
+        "Medijana": 0.8566498749969469,
+        "V2 ridge": 1.2673442985557286,
+        "Random Forest": 2.8060028142432465,
+        "Extra Trees": 2.543724890973779,
+        "Gradient boosting": 2.7836771947143824
+      }
+    },
+    {
+      "name": "train_tree_0",
+      "actual": 0.8397205000001122,
+      "pred": {
+        "Medijana": 0.8891268749976007,
+        "V2 ridge": 0.7782851878401285,
+        "Random Forest": 0.8423257759995798,
+        "Extra Trees": 0.8258310851740795,
+        "Gradient boosting": 0.8144190255268221
+      }
+    },
+    {
+      "name": "train_tree_1",
+      "actual": 0.8577805419990909,
+      "pred": {
+        "Medijana": 0.8891268749976007,
+        "V2 ridge": 0.80344178837052,
+        "Random Forest": 0.8686530030855343,
+        "Extra Trees": 0.845490747349083,
+        "Gradient boosting": 0.8182439408660037
+      }
+    },
+    {
+      "name": "train_tree_2",
+      "actual": 0.8555192079948029,
+      "pred": {
+        "Medijana": 0.8891268749976007,
+        "V2 ridge": 0.7915727654999203,
+        "Random Forest": 0.8708045689233488,
+        "Extra Trees": 0.8650321678602388,
+        "Gradient boosting": 0.7941893438924178
+      }
+    },
+    {
+      "name": "train_tree_3",
+      "actual": 0.8513678750023246,
+      "pred": {
+        "Medijana": 0.8891268749976007,
+        "V2 ridge": 0.7812283046653172,
+        "Random Forest": 0.8423257759995798,
+        "Extra Trees": 0.8258310851740795,
+        "Gradient boosting": 0.8144190255268221
+      }
+    },
+    {
+      "name": "train_tree_4",
+      "actual": 0.8531307499943068,
+      "pred": {
+        "Medijana": 0.8891268749976007,
+        "V2 ridge": 0.7912585441505234,
+        "Random Forest": 0.8454140756447304,
+        "Extra Trees": 0.8307668217191257,
+        "Gradient boosting": 0.8193108373561607
+      }
+    },
+    {
+      "name": "train_tree_5",
+      "actual": 0.9958644169964828,
+      "pred": {
+        "Medijana": 0.8891268749976007,
+        "V2 ridge": 0.8646888826096604,
+        "Random Forest": 0.9769705632945941,
+        "Extra Trees": 1.0717459892041596,
+        "Gradient boosting": 0.9171366489210049
+      }
+    }
+  ],
+  "cv_metrics": {
+    "Medijana": {
+      "mape": 14.46748693879604,
+      "mae": 1.0389697300657723
+    },
+    "V2 ridge": {
+      "mape": 13.531087122000905,
+      "mae": 1.0059144560128412
+    },
+    "Random Forest": {
+      "mape": 25.727295862917625,
+      "mae": 1.1173644784191408
+    },
+    "Extra Trees": {
+      "mape": 19.84829076367443,
+      "mae": 1.054096164447319
+    },
+    "Gradient boosting": {
+      "mape": 15.299683049626031,
+      "mae": 1.037607080111044
+    }
+  },
+  "prospective": [
+    {
+      "name": "lda_2200",
+      "pred": {
+        "Medijana": 0.8566498749969469,
+        "V2 ridge": 0.7826307131649334,
+        "Random Forest": 0.8462688806304078,
+        "Extra Trees": 0.8462467749574065,
+        "Gradient boosting": 0.8526893376807725
+      },
+      "chosen_s": 0.7826307131649334,
+      "latency_ms": 0.17737499729264528,
+      "actual": 0.7749842079938389,
+      "samples": [
+        0.8041638340000645,
+        0.7636700829971232,
+        0.8132359169976553,
+        0.7608847090014024,
+        0.7749842079938389
+      ]
+    },
+    {
+      "name": "lda_10500",
+      "pred": {
+        "Medijana": 0.8566498749969469,
+        "V2 ridge": 0.8585765765723398,
+        "Random Forest": 0.9186226844770302,
+        "Extra Trees": 1.0214495135842312,
+        "Gradient boosting": 0.8604705026565835
+      },
+      "chosen_s": 0.8585765765723398,
+      "latency_ms": 0.14879199443385005,
+      "actual": 0.7877557920000982,
+      "samples": [
+        0.7738979580026353,
+        0.7736644579999847,
+        0.7963020830065943,
+        0.7877557920000982,
+        0.7966210000013234
+      ]
+    },
+    {
+      "name": "adaboost_2200",
+      "pred": {
+        "Medijana": 0.8566498749969469,
+        "V2 ridge": 0.7826307131649334,
+        "Random Forest": 0.8462688806304078,
+        "Extra Trees": 0.8462467749574065,
+        "Gradient boosting": 0.8526893376807725
+      },
+      "chosen_s": 0.7826307131649334,
+      "latency_ms": 0.15249999705702066,
+      "actual": 0.9306847500047297,
+      "samples": [
+        0.9227890420006588,
+        0.9306847500047297,
+        0.9284318330028327,
+        0.9449105000021518,
+        0.9342497079996974
+      ]
+    },
+    {
+      "name": "adaboost_10500",
+      "pred": {
+        "Medijana": 0.8566498749969469,
+        "V2 ridge": 0.8585765765723398,
+        "Random Forest": 0.9186226844770302,
+        "Extra Trees": 1.0214495135842312,
+        "Gradient boosting": 0.8604705026565835
+      },
+      "chosen_s": 0.8585765765723398,
+      "latency_ms": 0.14675000420538709,
+      "actual": 1.8673669160052668,
+      "samples": [
+        1.9465937089989893,
+        1.8673669160052668,
+        1.862335207995784,
+        1.859149083000375,
+        1.8895323339966126
+      ]
+    },
+    {
+      "name": "centroid_2200",
+      "pred": {
+        "Medijana": 0.8566498749969469,
+        "V2 ridge": 0.7826307131649334,
+        "Random Forest": 0.8462688806304078,
+        "Extra Trees": 0.8462467749574065,
+        "Gradient boosting": 0.8526893376807725
+      },
+      "chosen_s": 0.7826307131649334,
+      "latency_ms": 0.14658300642622635,
+      "actual": 0.8139244580015657,
+      "samples": [
+        0.8139244580015657,
+        0.807547541000531,
+        0.8207557089990587,
+        0.8083017079989077,
+        0.8167109589994652
+      ]
+    },
+    {
+      "name": "centroid_10500",
+      "pred": {
+        "Medijana": 0.8566498749969469,
+        "V2 ridge": 0.8585765765723398,
+        "Random Forest": 0.9186226844770302,
+        "Extra Trees": 1.0214495135842312,
+        "Gradient boosting": 0.8604705026565835
+      },
+      "chosen_s": 0.8585765765723398,
+      "latency_ms": 0.14320800255518407,
+      "actual": 0.8288069580012234,
+      "samples": [
+        0.9241749590000836,
+        0.9336927499971353,
+        0.8288069580012234,
+        0.8275275830019382,
+        0.826487124999403
+      ]
+    }
+  ],
+  "prospective_metrics": {
+    "Medijana": {
+      "mape": 14.99536252082763,
+      "mae": 0.2176466666678607
+    },
+    "V2 ridge": {
+      "mape": 14.55727875535659,
+      "mae": 0.216062504903968
+    },
+    "Random Forest": {
+      "mape": 16.749714480698266,
+      "mae": 0.22624530252011807
+    },
+    "Extra Trees": {
+      "mape": 20.074720402372982,
+      "mae": 0.2433794230924847
+    },
+    "Gradient boosting": {
+      "mape": 15.023576980437074,
+      "mae": 0.21762334839177108
+    }
+  },
+  "historical_metrics": {
+    "Medijana": {
+      "mape": 28.14331880130061,
+      "mae": 0.8207607659445356
+    },
+    "V2 ridge": {
+      "mape": 37.26191471272085,
+      "mae": 0.7899524522196784
+    },
+    "Random Forest": {
+      "mape": 39.52333838160596,
+      "mae": 0.791592126582096
+    },
+    "Extra Trees": {
+      "mape": 40.60350713911248,
+      "mae": 0.7651475526895273
+    },
+    "Gradient boosting": {
+      "mape": 24.443604575651456,
+      "mae": 0.6612700251357597
+    }
+  }
+}

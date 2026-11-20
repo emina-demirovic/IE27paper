@@ -1,0 +1,87 @@
+{
+  "python": "3.11.9 (v3.11.9:de54cf5be3, Apr  2 2024, 07:12:50) [Clang 13.0.0 (clang-1300.0.29.30)]",
+  "executable": "/Library/Frameworks/Python.framework/Versions/3.11/bin/python3",
+  "greska": "apsolutna: abs(procena - izmereno)",
+  "rezultati": [
+    {
+      "fajl": "ispis.py",
+      "scenario": "A — prazna baza",
+      "rezim": "default",
+      "procena_s": 1.0,
+      "vreme_procene_ms": 0.05262500053504482,
+      "merenja_s": [
+        0.011510750002344139,
+        0.010533458000281826,
+        0.010761958001239691,
+        0.010863666000659578,
+        0.010536624999076594
+      ],
+      "izmereno_s": 0.010761958001239691,
+      "greska_s": 0.9892380419987603
+    },
+    {
+      "fajl": "ispis.py",
+      "scenario": "B — poznat kod",
+      "rezim": "measured",
+      "procena_s": 0.010761958001239691,
+      "vreme_procene_ms": 0.0289169984171167,
+      "merenja_s": [
+        0.01044704199739499,
+        0.010769375003292225,
+        0.010547292004048359,
+        0.010440084006404504,
+        0.010908666001341771
+      ],
+      "izmereno_s": 0.010547292004048359,
+      "greska_s": 0.00021466599719133228
+    },
+    {
+      "fajl": "ispis_komentari.py",
+      "scenario": "B — četiri komentara",
+      "rezim": "measured",
+      "procena_s": 0.010761958001239691,
+      "vreme_procene_ms": 0.04208300379104912,
+      "merenja_s": [
+        0.010810500003572088,
+        0.01073145899863448,
+        0.010616582992952317,
+        0.0107445000030566,
+        0.0105823749981937
+      ],
+      "izmereno_s": 0.01073145899863448,
+      "greska_s": 3.049900260521099e-05
+    },
+    {
+      "fajl": "zbir.py",
+      "scenario": "C1 — novi n",
+      "rezim": "model",
+      "procena_s": 0.06357166508555653,
+      "vreme_procene_ms": 0.08887500007404014,
+      "merenja_s": [
+        0.06898787499812897,
+        0.07465345800301293,
+        0.06723033400339773,
+        0.06705762500496348,
+        0.06429000000207452
+      ],
+      "izmereno_s": 0.06723033400339773,
+      "greska_s": 0.0036586689178411957
+    },
+    {
+      "fajl": "sortiranje.py",
+      "scenario": "C2 — novi algoritam",
+      "rezim": "model",
+      "procena_s": 0.023547432207252514,
+      "vreme_procene_ms": 0.10749999637482688,
+      "merenja_s": [
+        0.1345530830003554,
+        0.12289049999526469,
+        0.12396412499947473,
+        0.12291533399547916,
+        0.12148541700298665
+      ],
+      "izmereno_s": 0.12291533399547916,
+      "greska_s": 0.09936790178822665
+    }
+  ]
+}

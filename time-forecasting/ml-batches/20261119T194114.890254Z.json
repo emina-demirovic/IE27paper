@@ -1,0 +1,61 @@
+{
+  "url": "http://coordinator-host:5031",
+  "expectedCount": 20,
+  "specifications": [
+    {
+      "name": "Random forest - Iris",
+      "algorithm": "random-forest",
+      "environment": "Iris",
+      "seed": 42,
+      "maxSteps": 50,
+      "timeoutSeconds": 300
+    },
+    {
+      "name": "Random forest - Wine",
+      "algorithm": "random-forest",
+      "environment": "Wine",
+      "seed": 42,
+      "maxSteps": 50,
+      "timeoutSeconds": 300
+    },
+    {
+      "name": "Random forest - Breast Cancer",
+      "algorithm": "random-forest",
+      "environment": "Breast Cancer",
+      "seed": 42,
+      "maxSteps": 50,
+      "timeoutSeconds": 300
+    },
+    {
+      "name": "Random forest - California Housing",
+      "algorithm": "random-forest",
+      "environment": "California Housing",
+      "seed": 42,
+      "maxSteps": 50,
+      "timeoutSeconds": 300
+    }
+  ],
+  "ids": [
+    "f39a71d0-0433-4bfa-ae94-5dece92d8a08",
+    "d0c2fce1-f56f-4870-8ed0-a01e7e39f1a3",
+    "860695ff-915e-4eb1-9536-8067c8e8410b",
+    "e6667d42-30f3-4f64-bf4a-32e5611b61b6",
+    "b61d1280-24d1-41ff-b02d-d76edd05e90a",
+    "bfa6ee61-443e-433c-b490-5db78cd8ea66",
+    "4a8ff67f-379a-4b95-8037-35ca27ba67aa",
+    "3a686f10-14e0-4122-8f17-03d8648ff148",
+    "cf140ae0-6434-4a1a-8251-d601c981e77c",
+    "b98bb894-8c15-4019-8525-67bf8efec9c3",
+    "394e280d-4747-49ae-ae72-fedd0bab394f",
+    "64b4bcd5-5081-4c6a-9c86-a0e0a15feed2",
+    "93d50948-b61c-489d-828f-1c85a7bd063b",
+    "5c4dc20b-8bce-42af-8804-60478075e395",
+    "e4234b8f-fbaf-41ba-9d5c-3f887a89a736",
+    "e8686371-c00a-419a-b590-2eb0743d2878",
+    "38f0ed57-b5b9-4fdf-95be-d3075173380a",
+    "aa1e8cdd-2a4f-403e-9129-891bfb7ed0da",
+    "20dd666c-ced1-402b-a36d-1f7b9f8b1e0d",
+    "ee809278-9a16-4fe2-8bb2-d527821ed624"
+  ],
+  "submissionComplete": true
+}

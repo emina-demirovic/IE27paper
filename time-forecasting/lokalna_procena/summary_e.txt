@@ -1,0 +1,24 @@
+Sažetak razvoja lokalnog estimatora i naredni koraci
+
+Cilj je proceniti trajanje novog Python programa na ovom računaru, bez izvršavanja njegovog koda. Za već izmeren kod koristimo medijanu prethodnih trajanja. Za nov kod testirali smo linearnu i Ridge regresiju, Random Forest, Extra Trees, gradient boosting i statičku analizu. V3 prati jednostavne funkcije i lokalne module, broji Python operacije i odvojeno procenjuje pokretanje i import, pripremu podataka, trening i predikciju.
+
+Od ispisa, zbira i sortiranja stigli smo do 128 razvojnih skripti i 53 završne skripte u poslednjoj evaluaciji. Procene su sačuvane pre kontrolnih izvršavanja. Svaka završna skripta merena je pet puta u novom lokalnom procesu. Referentna metoda koristi brojanje petlji za običan Python i V2 Ridge za scikit-learn.
+
+Rezultat                                           Referentna metoda     V3
+Prosečna procentualna greška, 53 završna testa             31,9%       27,5%
+Stvarno vreme više od 2 × procene, 53 testa              13 od 53     2 od 53
+Prosečna greška, 12 skripti sa nezavisnim telima           28,8%       44,2%
+
+Najveći dobitak je smanjenje ozbiljnih potcenjivanja. Za cilj predviđanja potpuno novog koda najveću težinu ima poslednji red, gde je referentna metoda bila bolja. Tih 12 skripti predstavlja šest različitih programa sa po dve veličine ulaza. Detaljne tabele su u REZULTATI_FAZE.md.
+
+Predloženi redosled razvoja
+
+1. Napraviti nezavisan test na 30–50 zasebno napisanih programa, idealno iz stvarnih eksperimenata. Obuhvatiti različite načine učitavanja podataka, pripreme, treninga i evaluacije. Sve varijante istog programa držati u istoj grupi. Deo programa sačuvati za završno poređenje. Pratiti grešku u sekundama, procentualnu grešku i broj potcenjivanja većih od 2×, posebno za kratke i duge poslove.
+
+2. Popraviti dva poznata problema kod Pythona. Binarna pretraga procenjena je na 0,018 s, a trajala je 0,177 s. Analizator je prijavio nerazrešenu while petlju. Dodati podršku za petlje sa konstantnim korakom i prepolovljavanjem intervala. Kod prefiksnih suma V3 je procenio 0,116 s umesto 0,047 s, bez prijavljenog nerazrešenog dela. Proveriti kako se sabiraju troškovi operacija koje se često izvršavaju zajedno.
+
+3. Za bibliotečke pozive procenjivati i neizvesnost. Kod OPTICS-a procena je ostala oko 0,76 s kada je ulaz porastao sa 450 na 3.200 uzoraka, dok je stvarno trajanje poraslo sa 0,96 s na 1,52 s. Za česte operacije dodati proverene modele troška. Za ostale u --detalji prikazati raspon zasnovan na greškama sličnih izostavljenih porodica. Proveravati koliko često raspon sadrži stvarno vreme i koliko je širok.
+
+4. Testirati automatski izbor ili kombinovanje V3 i jednostavnije procene. V3 može dobiti veću težinu kada su poznati oblik podataka, osnovna operacija i broj ponavljanja. Kada dominira nepoznat bibliotečki poziv, veću težinu može dobiti referentni model. Pravilo naučiti na razvojnim programima i zamrznuti pre završnog testa.
+
+Prvi naredni eksperiment: na unapred odvojenim programima uporediti sadašnji V3, referentnu metodu i V3 sa podrškom za česte while obrasce. Kao kriterijum za usvajanje koristiti manju prosečnu grešku u sekundama i manje slučajeva gde stvarno vreme premašuje dvostruku procenu.

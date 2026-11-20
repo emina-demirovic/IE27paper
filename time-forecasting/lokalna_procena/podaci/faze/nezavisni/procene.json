@@ -1,0 +1,440 @@
+[
+  {
+    "name": "prefix_queries_20000",
+    "group": "Python",
+    "family": "prefix_queries",
+    "v3": 0.01755776687278316,
+    "detail": {
+      "seconds": 0.01755776687278316,
+      "mode": "model",
+      "phases_s": {
+        "startup_import": 0.011587542001507245,
+        "python": 0.005970224871275915
+      },
+      "work": {
+        "call": 9,
+        "loop": 60000,
+        "arithmetic": 100002,
+        "mod": 20000,
+        "allocate": 20002,
+        "index": 100000
+      },
+      "fits": [],
+      "unresolved": [],
+      "historical_unknown": null
+    },
+    "ms": 0.24004200531635433,
+    "static": 0.011829270877994465,
+    "ridge": 0.7758249966940862,
+    "route": 0.011829270877994465
+  },
+  {
+    "name": "prefix_queries_350000",
+    "group": "Python",
+    "family": "prefix_queries",
+    "v3": 0.11606579984478527,
+    "detail": {
+      "seconds": 0.11606579984478527,
+      "mode": "model",
+      "phases_s": {
+        "startup_import": 0.011587542001507245,
+        "python": 0.10447825784327802
+      },
+      "work": {
+        "call": 9,
+        "loop": 1050000,
+        "arithmetic": 1750002,
+        "mod": 350000,
+        "allocate": 350002,
+        "index": 1750000
+      },
+      "fits": [],
+      "unresolved": [],
+      "historical_unknown": null
+    },
+    "ms": 0.1590410029166378,
+    "static": 0.02943993334444824,
+    "ridge": 0.7758249966940862,
+    "route": 0.02943993334444824
+  },
+  {
+    "name": "levenshtein_140",
+    "group": "Python",
+    "family": "levenshtein",
+    "v3": 0.01619121721560052,
+    "detail": {
+      "seconds": 0.01619121721560052,
+      "mode": "model",
+      "phases_s": {
+        "startup_import": 0.011587542001507245,
+        "python": 0.004603675214093276
+      },
+      "work": {
+        "call": 19747,
+        "loop": 20020,
+        "arithmetic": 98561,
+        "mod": 280,
+        "allocate": 19880,
+        "index": 78401
+      },
+      "fits": [],
+      "unresolved": [],
+      "historical_unknown": null
+    },
+    "ms": 0.16737500118324533,
+    "static": 0.011296148096055456,
+    "ridge": 0.7758249966940862,
+    "route": 0.011296148096055456
+  },
+  {
+    "name": "levenshtein_700",
+    "group": "Python",
+    "family": "levenshtein",
+    "v3": 0.12649363226826543,
+    "detail": {
+      "seconds": 0.12649363226826543,
+      "mode": "model",
+      "phases_s": {
+        "startup_import": 0.011587542001507245,
+        "python": 0.11490609026675817
+      },
+      "work": {
+        "call": 490707,
+        "loop": 492100,
+        "arithmetic": 2452801,
+        "mod": 1400,
+        "allocate": 491400,
+        "index": 1960001
+      },
+      "fits": [],
+      "unresolved": [],
+      "historical_unknown": null
+    },
+    "ms": 0.15745800192235038,
+    "static": 0.0238925746675153,
+    "ridge": 0.7758249966940862,
+    "route": 0.0238925746675153
+  },
+  {
+    "name": "binary_lookup_12000",
+    "group": "Python",
+    "family": "binary_lookup",
+    "v3": 0.011973334953637844,
+    "detail": {
+      "seconds": 0.011973334953637844,
+      "mode": "model",
+      "phases_s": {
+        "startup_import": 0.011587542001507245,
+        "python": 0.0003857929521306
+      },
+      "work": {
+        "call": 24005,
+        "loop": 12000,
+        "arithmetic": 24000,
+        "mod": 12000
+      },
+      "fits": [],
+      "unresolved": [
+        "Nepotpuna analiza: While"
+      ],
+      "historical_unknown": {
+        "count": 18,
+        "median_ape_pct": 16.226973932891482,
+        "p90_ape_pct": 46.80254840632034
+      }
+    },
+    "ms": 0.1294999965466559,
+    "static": 0.011082151864266122,
+    "ridge": 0.7758249966940862,
+    "route": 0.011082151864266122
+  },
+  {
+    "name": "binary_lookup_210000",
+    "group": "Python",
+    "family": "binary_lookup",
+    "v3": 0.01833869422780893,
+    "detail": {
+      "seconds": 0.01833869422780893,
+      "mode": "model",
+      "phases_s": {
+        "startup_import": 0.011587542001507245,
+        "python": 0.006751152226301685
+      },
+      "work": {
+        "call": 420005,
+        "loop": 210000,
+        "arithmetic": 420000,
+        "mod": 210000
+      },
+      "fits": [],
+      "unresolved": [
+        "Nepotpuna analiza: While"
+      ],
+      "historical_unknown": {
+        "count": 18,
+        "median_ape_pct": 16.226973932891482,
+        "p90_ape_pct": 46.80254840632034
+      }
+    },
+    "ms": 0.12733299809042364,
+    "static": 0.016365350604202255,
+    "ridge": 0.7758249966940862,
+    "route": 0.016365350604202255
+  },
+  {
+    "name": "random_projection_3500",
+    "group": "sklearn",
+    "family": "random_projection",
+    "v3": 0.7675184966416059,
+    "detail": {
+      "seconds": 0.7675184966416059,
+      "mode": "model",
+      "phases_s": {
+        "data": 0.00417378827308615,
+        "fit": 0.00702177776903328,
+        "startup_import": 0.7563229169973056,
+        "python": 1.3602180837219228e-08
+      },
+      "work": {
+        "call": 5
+      },
+      "fits": [
+        {
+          "model": "GaussianRandomProjection",
+          "base": "GaussianRandomProjection",
+          "train_rows": 3500,
+          "samples_per_member": 3500,
+          "features_per_member": 64,
+          "features_per_split_or_fit": 64,
+          "members": 1
+        }
+      ],
+      "unresolved": [
+        "Nepoznat trošak fit: GaussianRandomProjection"
+      ],
+      "historical_unknown": {
+        "count": 20,
+        "median_ape_pct": 2.9740046385784478,
+        "p90_ape_pct": 4.9974970099333715
+      }
+    },
+    "ms": 0.12016600521747023,
+    "static": 0.7973595000104978,
+    "ridge": 0.7758249966940862,
+    "route": 0.7758249966940862
+  },
+  {
+    "name": "random_projection_28000",
+    "group": "sklearn",
+    "family": "random_projection",
+    "v3": 0.8458874589364419,
+    "detail": {
+      "seconds": 0.8458874589364419,
+      "mode": "model",
+      "phases_s": {
+        "data": 0.0333903061846892,
+        "fit": 0.05617422215226624,
+        "startup_import": 0.7563229169973056,
+        "python": 1.3602180837219228e-08
+      },
+      "work": {
+        "call": 5
+      },
+      "fits": [
+        {
+          "model": "GaussianRandomProjection",
+          "base": "GaussianRandomProjection",
+          "train_rows": 28000,
+          "samples_per_member": 28000,
+          "features_per_member": 64,
+          "features_per_split_or_fit": 64,
+          "members": 1
+        }
+      ],
+      "unresolved": [
+        "Nepoznat trošak fit: GaussianRandomProjection"
+      ],
+      "historical_unknown": {
+        "count": 20,
+        "median_ape_pct": 2.9740046385784478,
+        "p90_ape_pct": 4.9974970099333715
+      }
+    },
+    "ms": 0.11358300253050402,
+    "static": 1.00529100006097,
+    "ridge": 0.7758249966940862,
+    "route": 0.7758249966940862
+  },
+  {
+    "name": "covariance_4000",
+    "group": "sklearn",
+    "family": "covariance",
+    "v3": 0.7669640163038605,
+    "detail": {
+      "seconds": 0.7669640163038605,
+      "mode": "model",
+      "phases_s": {
+        "data": 0.0037265966723983484,
+        "fit": 0.006269444436636857,
+        "predict": 0.0006450364340303673,
+        "startup_import": 0.7563229169973056,
+        "python": 2.1763489339550764e-08
+      },
+      "work": {
+        "call": 8
+      },
+      "fits": [
+        {
+          "model": "LedoitWolf",
+          "base": "LedoitWolf",
+          "train_rows": 4000,
+          "samples_per_member": 4000,
+          "features_per_member": 50,
+          "features_per_split_or_fit": 50,
+          "members": 1
+        }
+      ],
+      "unresolved": [
+        "Nepoznat trošak fit: LedoitWolf"
+      ],
+      "historical_unknown": {
+        "count": 20,
+        "median_ape_pct": 2.9740046385784478,
+        "p90_ape_pct": 4.9974970099333715
+      }
+    },
+    "ms": 0.12208300177007914,
+    "static": 0.7941768750097253,
+    "ridge": 0.7758249966940862,
+    "route": 0.7758249966940862
+  },
+  {
+    "name": "covariance_24000",
+    "group": "sklearn",
+    "family": "covariance",
+    "v3": 0.8201694040191884,
+    "detail": {
+      "seconds": 0.8201694040191884,
+      "mode": "model",
+      "phases_s": {
+        "data": 0.022359580034390092,
+        "fit": 0.03761666661982114,
+        "predict": 0.0038702186041822038,
+        "startup_import": 0.7563229169973056,
+        "python": 2.1763489339550764e-08
+      },
+      "work": {
+        "call": 8
+      },
+      "fits": [
+        {
+          "model": "LedoitWolf",
+          "base": "LedoitWolf",
+          "train_rows": 24000,
+          "samples_per_member": 24000,
+          "features_per_member": 50,
+          "features_per_split_or_fit": 50,
+          "members": 1
+        }
+      ],
+      "unresolved": [
+        "Nepoznat trošak fit: LedoitWolf"
+      ],
+      "historical_unknown": {
+        "count": 20,
+        "median_ape_pct": 2.9740046385784478,
+        "p90_ape_pct": 4.9974970099333715
+      }
+    },
+    "ms": 0.11954200454056263,
+    "static": 0.9267862500419142,
+    "ridge": 0.7758249966940862,
+    "route": 0.7758249966940862
+  },
+  {
+    "name": "optics_450",
+    "group": "sklearn",
+    "family": "optics",
+    "v3": 0.7566378113352933,
+    "detail": {
+      "seconds": 0.7566378113352933,
+      "mode": "model",
+      "phases_s": {
+        "data": 0.00011738779518054797,
+        "fit": 0.00019748749975406098,
+        "startup_import": 0.7563229169973056,
+        "python": 1.9043053172106918e-08
+      },
+      "work": {
+        "call": 7
+      },
+      "fits": [
+        {
+          "model": "OPTICS",
+          "base": "OPTICS",
+          "train_rows": 450,
+          "samples_per_member": 450,
+          "features_per_member": 14,
+          "features_per_split_or_fit": 14,
+          "members": 1
+        }
+      ],
+      "unresolved": [
+        "Nepoznat trošak fit: OPTICS",
+        "Nerazrešen poziv: set"
+      ],
+      "historical_unknown": {
+        "count": 20,
+        "median_ape_pct": 2.9740046385784478,
+        "p90_ape_pct": 4.9974970099333715
+      }
+    },
+    "ms": 0.1135829952545464,
+    "static": 0.7684904390659903,
+    "ridge": 0.7758249966940862,
+    "route": 0.7758249966940862
+  },
+  {
+    "name": "optics_3200",
+    "group": "sklearn",
+    "family": "optics",
+    "v3": 0.7585620492487826,
+    "detail": {
+      "seconds": 0.7585620492487826,
+      "mode": "model",
+      "phases_s": {
+        "data": 0.0008347576546172301,
+        "fit": 0.0014043555538066558,
+        "startup_import": 0.7563229169973056,
+        "python": 1.9043053172106918e-08
+      },
+      "work": {
+        "call": 7
+      },
+      "fits": [
+        {
+          "model": "OPTICS",
+          "base": "OPTICS",
+          "train_rows": 3200,
+          "samples_per_member": 3200,
+          "features_per_member": 14,
+          "features_per_split_or_fit": 14,
+          "members": 1
+        }
+      ],
+      "unresolved": [
+        "Nepoznat trošak fit: OPTICS",
+        "Nerazrešen poziv: set"
+      ],
+      "historical_unknown": {
+        "count": 20,
+        "median_ape_pct": 2.9740046385784478,
+        "p90_ape_pct": 4.9974970099333715
+      }
+    },
+    "ms": 0.13187500007916242,
+    "static": 0.7735959000047297,
+    "ridge": 0.7758249966940862,
+    "route": 0.7758249966940862
+  }
+]

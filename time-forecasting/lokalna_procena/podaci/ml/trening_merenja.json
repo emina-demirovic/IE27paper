@@ -1,0 +1,418 @@
+[
+  {
+    "config": {
+      "name": "train_logreg_0",
+      "algorithm": "logreg",
+      "n": 800,
+      "d": 10,
+      "scenario": "trening",
+      "iterations": 30,
+      "trees": 10,
+      "depth": 4,
+      "clusters": 8,
+      "folds": 1,
+      "repeats": 1,
+      "scaled": false
+    },
+    "durations": [
+      0.8300439590020687,
+      0.8082027909986209,
+      0.7994458340035635
+    ],
+    "warnings": [
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "config": {
+      "name": "train_logreg_1",
+      "algorithm": "logreg",
+      "n": 2500,
+      "d": 30,
+      "scenario": "trening",
+      "iterations": 60,
+      "trees": 20,
+      "depth": 8,
+      "clusters": 8,
+      "folds": 1,
+      "repeats": 1,
+      "scaled": true
+    },
+    "durations": [
+      0.7716312499978812,
+      0.7829567919980036,
+      0.7654492919973563
+    ],
+    "warnings": [
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "config": {
+      "name": "train_logreg_2",
+      "algorithm": "logreg",
+      "n": 6000,
+      "d": 20,
+      "scenario": "trening",
+      "iterations": 100,
+      "trees": 40,
+      "depth": 12,
+      "clusters": 8,
+      "folds": 1,
+      "repeats": 2,
+      "scaled": false
+    },
+    "durations": [
+      0.7748083330006921,
+      0.7687938750023022,
+      0.7708907080013887
+    ],
+    "warnings": [
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "config": {
+      "name": "train_logreg_3",
+      "algorithm": "logreg",
+      "n": 8000,
+      "d": 60,
+      "scenario": "trening",
+      "iterations": 150,
+      "trees": 60,
+      "depth": 16,
+      "clusters": 8,
+      "folds": 3,
+      "repeats": 1,
+      "scaled": true
+    },
+    "durations": [
+      0.8075389169971459,
+      0.791409958001168,
+      0.7908565830002772
+    ],
+    "warnings": [
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "config": {
+      "name": "train_tree_0",
+      "algorithm": "tree",
+      "n": 800,
+      "d": 10,
+      "scenario": "trening",
+      "iterations": 30,
+      "trees": 10,
+      "depth": 4,
+      "clusters": 8,
+      "folds": 1,
+      "repeats": 1,
+      "scaled": false
+    },
+    "durations": [
+      0.8196530830027768,
+      0.8306436249986291,
+      0.8116745419974905
+    ],
+    "warnings": [
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "config": {
+      "name": "train_tree_1",
+      "algorithm": "tree",
+      "n": 2500,
+      "d": 30,
+      "scenario": "trening",
+      "iterations": 60,
+      "trees": 20,
+      "depth": 8,
+      "clusters": 8,
+      "folds": 1,
+      "repeats": 1,
+      "scaled": true
+    },
+    "durations": [
+      0.8451511669991305,
+      0.8455591250021826,
+      0.8678705419952166
+    ],
+    "warnings": [
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "config": {
+      "name": "train_tree_2",
+      "algorithm": "tree",
+      "n": 6000,
+      "d": 20,
+      "scenario": "trening",
+      "iterations": 100,
+      "trees": 40,
+      "depth": 12,
+      "clusters": 8,
+      "folds": 1,
+      "repeats": 2,
+      "scaled": false
+    },
+    "durations": [
+      0.9219506669978728,
+      0.9321418330000597,
+      0.9272551670001121
+    ],
+    "warnings": [
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "config": {
+      "name": "train_tree_3",
+      "algorithm": "tree",
+      "n": 8000,
+      "d": 60,
+      "scenario": "trening",
+      "iterations": 150,
+      "trees": 60,
+      "depth": 16,
+      "clusters": 8,
+      "folds": 3,
+      "repeats": 1,
+      "scaled": true
+    },
+    "durations": [
+      1.4842750419993536,
+      1.4993874579959083,
+      1.4863656669986085
+    ],
+    "warnings": [
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "config": {
+      "name": "train_forest_0",
+      "algorithm": "forest",
+      "n": 800,
+      "d": 10,
+      "scenario": "trening",
+      "iterations": 30,
+      "trees": 10,
+      "depth": 4,
+      "clusters": 8,
+      "folds": 1,
+      "repeats": 1,
+      "scaled": false
+    },
+    "durations": [
+      0.8601602499984438,
+      0.8522821669976111,
+      0.8585004999986268
+    ],
+    "warnings": [
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "config": {
+      "name": "train_forest_1",
+      "algorithm": "forest",
+      "n": 2500,
+      "d": 30,
+      "scenario": "trening",
+      "iterations": 60,
+      "trees": 20,
+      "depth": 8,
+      "clusters": 8,
+      "folds": 1,
+      "repeats": 1,
+      "scaled": true
+    },
+    "durations": [
+      0.9194270410007448,
+      0.911804666997341,
+      0.9291503330023261
+    ],
+    "warnings": [
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "config": {
+      "name": "train_forest_2",
+      "algorithm": "forest",
+      "n": 6000,
+      "d": 20,
+      "scenario": "trening",
+      "iterations": 100,
+      "trees": 40,
+      "depth": 12,
+      "clusters": 8,
+      "folds": 1,
+      "repeats": 2,
+      "scaled": false
+    },
+    "durations": [
+      1.4666545000000042,
+      1.4503338750000694,
+      1.4758504170022206
+    ],
+    "warnings": [
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "config": {
+      "name": "train_forest_3",
+      "algorithm": "forest",
+      "n": 8000,
+      "d": 60,
+      "scenario": "trening",
+      "iterations": 150,
+      "trees": 60,
+      "depth": 16,
+      "clusters": 8,
+      "folds": 3,
+      "repeats": 1,
+      "scaled": true
+    },
+    "durations": [
+      3.912909624996246,
+      3.9633642499975394,
+      3.916180667001754
+    ],
+    "warnings": [
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "config": {
+      "name": "train_sgd_0",
+      "algorithm": "sgd",
+      "n": 800,
+      "d": 10,
+      "scenario": "trening",
+      "iterations": 30,
+      "trees": 10,
+      "depth": 4,
+      "clusters": 8,
+      "folds": 1,
+      "repeats": 1,
+      "scaled": false
+    },
+    "durations": [
+      0.7765563749999274,
+      0.7768206670007203,
+      0.7738296249954146
+    ],
+    "warnings": [
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "config": {
+      "name": "train_sgd_1",
+      "algorithm": "sgd",
+      "n": 2500,
+      "d": 30,
+      "scenario": "trening",
+      "iterations": 60,
+      "trees": 20,
+      "depth": 8,
+      "clusters": 8,
+      "folds": 1,
+      "repeats": 1,
+      "scaled": true
+    },
+    "durations": [
+      0.7997386249990086,
+      0.7817253339962917,
+      0.7779727919987636
+    ],
+    "warnings": [
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "config": {
+      "name": "train_sgd_2",
+      "algorithm": "sgd",
+      "n": 6000,
+      "d": 20,
+      "scenario": "trening",
+      "iterations": 100,
+      "trees": 40,
+      "depth": 12,
+      "clusters": 8,
+      "folds": 1,
+      "repeats": 2,
+      "scaled": false
+    },
+    "durations": [
+      0.8010432079972816,
+      0.8132443750000675,
+      0.8076149999978952
+    ],
+    "warnings": [
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "config": {
+      "name": "train_sgd_3",
+      "algorithm": "sgd",
+      "n": 8000,
+      "d": 60,
+      "scenario": "trening",
+      "iterations": 150,
+      "trees": 60,
+      "depth": 16,
+      "clusters": 8,
+      "folds": 3,
+      "repeats": 1,
+      "scaled": true
+    },
+    "durations": [
+      0.9274315000002389,
+      0.940380499996536,
+      0.9149207079972257
+    ],
+    "warnings": [
+      "",
+      "",
+      ""
+    ]
+  }
+]

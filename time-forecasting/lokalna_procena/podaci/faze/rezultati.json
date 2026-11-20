@@ -1,0 +1,2034 @@
+[
+  {
+    "family": "transition_counts",
+    "group": "Python",
+    "name": "transition_counts_19000",
+    "detail": {
+      "seconds": 0.012392758453522917,
+      "mode": "model",
+      "phases_s": {
+        "startup_import": 0.011587542001507245,
+        "python": 0.0008052164520156724
+      },
+      "work": {
+        "call": 19004,
+        "loop": 19000,
+        "arithmetic": 38000,
+        "mod": 19000,
+        "mapping": 38000
+      },
+      "fits": [],
+      "unresolved": [],
+      "historical_unknown": null
+    },
+    "ms": 0.10791699605761096,
+    "v3": 0.012392758453522917,
+    "static": 0.011268931617698208,
+    "ridge": 0.7758249966940862,
+    "route": 0.011268931617698208,
+    "actual": 0.013048333996266592,
+    "samples": [
+      0.014496374998998363,
+      0.01289099999848986,
+      0.013027375003730413,
+      0.013048333996266592,
+      0.013236250000772998
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "family": "scaled_ridge",
+    "group": "sklearn",
+    "name": "scaled_ridge_2100",
+    "detail": {
+      "seconds": 0.7580167351194719,
+      "mode": "model",
+      "phases_s": {
+        "data": 0.0006260682409629226,
+        "preprocess": 0.0001573832394205965,
+        "fit": 0.0008426133322839935,
+        "predict": 6.772882557318856e-05,
+        "startup_import": 0.7563229169973056,
+        "python": 2.448392550699461e-08
+      },
+      "work": {
+        "call": 9
+      },
+      "fits": [
+        {
+          "model": "Ridge",
+          "base": "Ridge",
+          "train_rows": 1680,
+          "samples_per_member": 1680,
+          "features_per_member": 16,
+          "features_per_split_or_fit": 16,
+          "members": 1
+        }
+      ],
+      "unresolved": [],
+      "historical_unknown": null
+    },
+    "ms": 0.1359999951091595,
+    "v3": 0.7580167351194719,
+    "static": 0.7721106750043691,
+    "ridge": 0.7759132070603104,
+    "route": 0.7759132070603104,
+    "actual": 0.8097259159985697,
+    "samples": [
+      0.8282795829945826,
+      0.849852125000325,
+      0.7966944580039126,
+      0.7782754169966211,
+      0.8097259159985697
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "family": "transition_counts",
+    "group": "Python",
+    "name": "transition_counts_155000",
+    "detail": {
+      "seconds": 0.018156335167041675,
+      "mode": "model",
+      "phases_s": {
+        "startup_import": 0.011587542001507245,
+        "python": 0.006568793165534429
+      },
+      "work": {
+        "call": 155004,
+        "loop": 155000,
+        "arithmetic": 310000,
+        "mod": 155000,
+        "mapping": 310000
+      },
+      "fits": [],
+      "unresolved": [],
+      "historical_unknown": null
+    },
+    "ms": 0.10266600293107331,
+    "v3": 0.018156335167041675,
+    "static": 0.01489779539866444,
+    "ridge": 0.7758249966940862,
+    "route": 0.01489779539866444,
+    "actual": 0.0194638750035665,
+    "samples": [
+      0.020133332996920217,
+      0.019369583002116997,
+      0.01993841699732002,
+      0.0194638750035665,
+      0.0191699580027489
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "family": "block_order",
+    "group": "Python",
+    "name": "block_order_19000",
+    "detail": {
+      "seconds": 0.0127088721296182,
+      "mode": "model",
+      "phases_s": {
+        "startup_import": 0.011587542001507245,
+        "python": 0.001121330128110955
+      },
+      "work": {
+        "call": 4,
+        "loop": 19000,
+        "arithmetic": 19001,
+        "mod": 19000,
+        "sort": 270060.52416400774,
+        "index": 1
+      },
+      "fits": [],
+      "unresolved": [],
+      "historical_unknown": null
+    },
+    "ms": 0.09824999870033935,
+    "v3": 0.0127088721296182,
+    "static": 0.011268931617698208,
+    "ridge": 0.7758249966940862,
+    "route": 0.011268931617698208,
+    "actual": 0.013103459001285955,
+    "samples": [
+      0.013103459001285955,
+      0.013188124998123385,
+      0.012889458994322922,
+      0.014504874998237938,
+      0.012829666993638966
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "family": "scratch_space",
+    "group": "Python",
+    "name": "scratch_space_155000",
+    "detail": {
+      "seconds": 0.03857118519784388,
+      "mode": "model",
+      "phases_s": {
+        "startup_import": 0.011587542001507245,
+        "python": 0.026983643196336636
+      },
+      "work": {
+        "call": 3,
+        "loop": 155000,
+        "allocate": 5735000,
+        "arithmetic": 310000,
+        "index": 310000,
+        "mod": 310000
+      },
+      "fits": [],
+      "unresolved": [],
+      "historical_unknown": null
+    },
+    "ms": 0.10133400064660236,
+    "v3": 0.03857118519784388,
+    "static": 0.01489779539866444,
+    "ridge": 0.7758249966940862,
+    "route": 0.01489779539866444,
+    "actual": 0.03020558300340781,
+    "samples": [
+      0.030265749999671243,
+      0.030038749995583203,
+      0.03047658300056355,
+      0.03020558300340781,
+      0.029900041001383215
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "family": "bag_reg",
+    "group": "sklearn",
+    "name": "bag_reg_2100",
+    "detail": {
+      "seconds": 0.7964051506097553,
+      "mode": "model",
+      "phases_s": {
+        "data": 0.0006260682409629226,
+        "fit": 0.03877885807270173,
+        "predict": 0.0006772882557318856,
+        "startup_import": 0.7563229169973056,
+        "python": 1.9043053172106918e-08
+      },
+      "work": {
+        "call": 7
+      },
+      "fits": [
+        {
+          "model": "BaggingRegressor",
+          "base": "DecisionTree",
+          "train_rows": 1680,
+          "samples_per_member": 588,
+          "features_per_member": 12,
+          "features_per_split_or_fit": 12,
+          "members": 10
+        }
+      ],
+      "unresolved": [],
+      "historical_unknown": null
+    },
+    "ms": 0.13716599642066285,
+    "v3": 0.7964051506097553,
+    "static": 0.7912220164105893,
+    "ridge": 0.7759132070603104,
+    "route": 0.7759132070603104,
+    "actual": 0.9081531250049011,
+    "samples": [
+      0.9082482920057373,
+      0.8859693749982398,
+      0.9081531250049011,
+      0.908325958000205,
+      0.8923411249998026
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "family": "spectral_bins",
+    "group": "Python",
+    "name": "spectral_bins_450000",
+    "detail": {
+      "seconds": 0.04735471493262416,
+      "mode": "model",
+      "phases_s": {
+        "startup_import": 0.011587542001507245,
+        "python": 0.03576717293111691
+      },
+      "work": {
+        "call": 4,
+        "allocate": 63,
+        "arithmetic": 900001,
+        "loop": 450000,
+        "mod": 900000,
+        "index": 450000
+      },
+      "fits": [],
+      "unresolved": [],
+      "historical_unknown": null
+    },
+    "ms": 0.11058299423893914,
+    "v3": 0.04735471493262416,
+    "static": 0.0227692278647309,
+    "ridge": 0.7758249966940862,
+    "route": 0.0227692278647309,
+    "actual": 0.03234879099909449,
+    "samples": [
+      0.03370162499777507,
+      0.03256883299764013,
+      0.032263125001918525,
+      0.031879249996563885,
+      0.03234879099909449
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "family": "opaque_svr",
+    "group": "sklearn",
+    "name": "opaque_svr_7200",
+    "detail": {
+      "seconds": 0.7653672385960911,
+      "mode": "model",
+      "phases_s": {
+        "data": 0.003756409445777535,
+        "fit": 0.005055679993703961,
+        "predict": 0.00023221311625093221,
+        "startup_import": 0.7563229169973056,
+        "python": 1.9043053172106918e-08
+      },
+      "work": {
+        "call": 7
+      },
+      "fits": [
+        {
+          "model": "LinearSVR",
+          "base": "LinearSVR",
+          "train_rows": 5760,
+          "samples_per_member": 5760,
+          "features_per_member": 28,
+          "features_per_split_or_fit": 28,
+          "members": 1
+        }
+      ],
+      "unresolved": [
+        "Nepoznat trošak fit: LinearSVR"
+      ],
+      "historical_unknown": {
+        "count": 20,
+        "median_ape_pct": 2.9740046385784478,
+        "p90_ape_pct": 4.9974970099333715
+      }
+    },
+    "ms": 0.13154200132703409,
+    "v3": 0.7653672385960911,
+    "static": 0.7943890500097769,
+    "ridge": 0.7759132070603104,
+    "route": 0.7759132070603104,
+    "actual": 0.8001302910051891,
+    "samples": [
+      0.8048744160041679,
+      0.7847750000000815,
+      0.7922311250003986,
+      0.8001302910051891,
+      0.8147922919961275
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "family": "block_order",
+    "group": "Python",
+    "name": "block_order_450000",
+    "detail": {
+      "seconds": 0.04382595589516032,
+      "mode": "model",
+      "phases_s": {
+        "startup_import": 0.011587542001507245,
+        "python": 0.032238413893653076
+      },
+      "work": {
+        "call": 4,
+        "loop": 450000,
+        "arithmetic": 450001,
+        "mod": 450000,
+        "sort": 8450804.464145606,
+        "index": 1
+      },
+      "fits": [],
+      "unresolved": [],
+      "historical_unknown": null
+    },
+    "ms": 0.11920800170628354,
+    "v3": 0.04382595589516032,
+    "static": 0.0227692278647309,
+    "ridge": 0.7758249966940862,
+    "route": 0.0227692278647309,
+    "actual": 0.04823958300403319,
+    "samples": [
+      0.04882920900126919,
+      0.04823958300403319,
+      0.04821008299768437,
+      0.04827162499714177,
+      0.04781770800036611
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "family": "bag_reg",
+    "group": "sklearn",
+    "name": "bag_reg_14500",
+    "detail": {
+      "seconds": 9.533829473673405,
+      "mode": "model",
+      "phases_s": {
+        "data": 0.011887843384950731,
+        "fit": 8.751589151807934,
+        "predict": 0.014029542440160489,
+        "startup_import": 0.7563229169973056,
+        "python": 1.9043053172106918e-08
+      },
+      "work": {
+        "call": 7
+      },
+      "fits": [
+        {
+          "model": "BaggingRegressor",
+          "base": "DecisionTree",
+          "train_rows": 11600,
+          "samples_per_member": 11020,
+          "features_per_member": 33,
+          "features_per_split_or_fit": 33,
+          "members": 30
+        }
+      ],
+      "unresolved": [],
+      "historical_unknown": null
+    },
+    "ms": 0.1888330007204786,
+    "v3": 9.533829473673405,
+    "static": 2.0215654647985777,
+    "ridge": 0.7759132070603104,
+    "route": 0.7759132070603104,
+    "actual": 5.5158756250020815,
+    "samples": [
+      5.55359291700006,
+      5.4674121249991,
+      5.5158756250020815,
+      5.505347250000341,
+      5.529952915996546
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "family": "class_distance",
+    "group": "Python",
+    "name": "class_distance_19000",
+    "detail": {
+      "seconds": 0.031524773457580334,
+      "mode": "model",
+      "phases_s": {
+        "startup_import": 0.011587542001507245,
+        "python": 0.01993723145607309
+      },
+      "work": {
+        "call": 19005,
+        "loop": 361000,
+        "arithmetic": 1368000,
+        "mod": 1368000
+      },
+      "fits": [],
+      "unresolved": [],
+      "historical_unknown": null
+    },
+    "ms": 0.11904200073331594,
+    "v3": 0.031524773457580334,
+    "static": 0.010761958001239691,
+    "ridge": 0.7758249966940862,
+    "route": 0.010761958001239691,
+    "actual": 0.031277249996492174,
+    "samples": [
+      0.032155042004887946,
+      0.032091291002871,
+      0.031277249996492174,
+      0.031225124999764375,
+      0.030937583003833424
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "family": "csv_bag",
+    "group": "sklearn",
+    "name": "csv_bag_35",
+    "detail": {
+      "seconds": 1.7021214410772034,
+      "mode": "model",
+      "phases_s": {
+        "data": 0.006497016467954135,
+        "fit": 0.9237237536184155,
+        "predict": 0.01557762988183337,
+        "startup_import": 0.7563229169973056,
+        "python": 1.241116949921926e-07
+      },
+      "work": {
+        "call": 11,
+        "index": 2
+      },
+      "fits": [
+        {
+          "model": "BaggingClassifier",
+          "base": "DecisionTreeClassifier",
+          "train_rows": 9800,
+          "samples_per_member": 3430,
+          "features_per_member": 28,
+          "features_per_split_or_fit": 28,
+          "members": 23
+        }
+      ],
+      "unresolved": [],
+      "historical_unknown": null
+    },
+    "ms": 0.9397500034538098,
+    "v3": 1.7021214410772034,
+    "static": 0.7981146948410242,
+    "ridge": 0.8270299181966052,
+    "route": 0.8270299181966052,
+    "actual": 1.503049082995858,
+    "samples": [
+      1.503609500003222,
+      1.4839567079980043,
+      1.503049082995858,
+      1.509517999998934,
+      1.5009486669951002
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "family": "mixture_diag",
+    "group": "sklearn",
+    "name": "mixture_diag_14500",
+    "detail": {
+      "seconds": 0.7846780530422787,
+      "mode": "model",
+      "phases_s": {
+        "data": 0.011887843384950731,
+        "fit": 0.015999622202297257,
+        "predict": 0.00046765141467201626,
+        "startup_import": 0.7563229169973056,
+        "python": 1.9043053172106918e-08
+      },
+      "work": {
+        "call": 7
+      },
+      "fits": [
+        {
+          "model": "GaussianMixture",
+          "base": "GaussianMixture",
+          "train_rows": 11600,
+          "samples_per_member": 11600,
+          "features_per_member": 44,
+          "features_per_split_or_fit": 44,
+          "members": 1
+        }
+      ],
+      "unresolved": [
+        "Nepoznat trošak fit: GaussianMixture"
+      ],
+      "historical_unknown": {
+        "count": 20,
+        "median_ape_pct": 2.9740046385784478,
+        "p90_ape_pct": 4.9974970099333715
+      }
+    },
+    "ms": 0.1244590021087788,
+    "v3": 0.7846780530422787,
+    "static": 0.8522597812738241,
+    "ridge": 0.7759132070603104,
+    "route": 0.7759132070603104,
+    "actual": 0.9367617919997429,
+    "samples": [
+      1.0579131250051432,
+      1.039874415997474,
+      0.9367617919997429,
+      0.9304014590015868,
+      0.9245397910053725
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "family": "extra_reg",
+    "group": "sklearn",
+    "name": "extra_reg_14500",
+    "detail": {
+      "seconds": 6.41431915321329,
+      "mode": "model",
+      "phases_s": {
+        "data": 0.011887843384950731,
+        "fit": 5.63207883134782,
+        "predict": 0.014029542440160489,
+        "startup_import": 0.7563229169973056,
+        "python": 1.9043053172106918e-08
+      },
+      "work": {
+        "call": 7
+      },
+      "fits": [
+        {
+          "model": "ExtraTreesRegressor",
+          "base": "ExtraTree",
+          "train_rows": 11600,
+          "samples_per_member": 11600,
+          "features_per_member": 44,
+          "features_per_split_or_fit": 44,
+          "members": 30
+        }
+      ],
+      "unresolved": [],
+      "historical_unknown": null
+    },
+    "ms": 0.12862500443588942,
+    "v3": 6.41431915321329,
+    "static": 2.0215654647985777,
+    "ridge": 0.7759132070603104,
+    "route": 0.7759132070603104,
+    "actual": 1.406757083001139,
+    "samples": [
+      1.4070217909975327,
+      1.3855307499979972,
+      1.4017518340042443,
+      1.4125007500042557,
+      1.406757083001139
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "family": "spectral_bins",
+    "group": "Python",
+    "name": "spectral_bins_19000",
+    "detail": {
+      "seconds": 0.013097749635653397,
+      "mode": "model",
+      "phases_s": {
+        "startup_import": 0.011587542001507245,
+        "python": 0.0015102076341461511
+      },
+      "work": {
+        "call": 4,
+        "allocate": 19,
+        "arithmetic": 38001,
+        "loop": 19000,
+        "mod": 38000,
+        "index": 19000
+      },
+      "fits": [],
+      "unresolved": [],
+      "historical_unknown": null
+    },
+    "ms": 0.10179200035054237,
+    "v3": 0.013097749635653397,
+    "static": 0.011268931617698208,
+    "ridge": 0.7758249966940862,
+    "route": 0.011268931617698208,
+    "actual": 0.01300137500220444,
+    "samples": [
+      0.013927375002822373,
+      0.012965374997293111,
+      0.013109332998283207,
+      0.012722458995995112,
+      0.01300137500220444
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "family": "latent_pls",
+    "group": "sklearn",
+    "name": "latent_pls_7200",
+    "detail": {
+      "seconds": 0.7653672385960911,
+      "mode": "model",
+      "phases_s": {
+        "data": 0.003756409445777535,
+        "fit": 0.005055679993703961,
+        "predict": 0.00023221311625093221,
+        "startup_import": 0.7563229169973056,
+        "python": 1.9043053172106918e-08
+      },
+      "work": {
+        "call": 7
+      },
+      "fits": [
+        {
+          "model": "PLSRegression",
+          "base": "PLSRegression",
+          "train_rows": 5760,
+          "samples_per_member": 5760,
+          "features_per_member": 28,
+          "features_per_split_or_fit": 28,
+          "members": 1
+        }
+      ],
+      "unresolved": [
+        "Nepoznat trošak fit: PLSRegression"
+      ],
+      "historical_unknown": {
+        "count": 20,
+        "median_ape_pct": 2.9740046385784478,
+        "p90_ape_pct": 4.9974970099333715
+      }
+    },
+    "ms": 0.12383399734972045,
+    "v3": 0.7653672385960911,
+    "static": 0.7943890500097769,
+    "ridge": 0.7759132070603104,
+    "route": 0.7759132070603104,
+    "actual": 0.7611671249978826,
+    "samples": [
+      0.7611671249978826,
+      0.7580890829995042,
+      0.7670603340011439,
+      0.7469500830047764,
+      0.7784232910053106
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "family": "latent_pls",
+    "group": "sklearn",
+    "name": "latent_pls_14500",
+    "detail": {
+      "seconds": 0.7846780530422787,
+      "mode": "model",
+      "phases_s": {
+        "data": 0.011887843384950731,
+        "fit": 0.015999622202297257,
+        "predict": 0.00046765141467201626,
+        "startup_import": 0.7563229169973056,
+        "python": 1.9043053172106918e-08
+      },
+      "work": {
+        "call": 7
+      },
+      "fits": [
+        {
+          "model": "PLSRegression",
+          "base": "PLSRegression",
+          "train_rows": 11600,
+          "samples_per_member": 11600,
+          "features_per_member": 44,
+          "features_per_split_or_fit": 44,
+          "members": 1
+        }
+      ],
+      "unresolved": [
+        "Nepoznat trošak fit: PLSRegression"
+      ],
+      "historical_unknown": {
+        "count": 20,
+        "median_ape_pct": 2.9740046385784478,
+        "p90_ape_pct": 4.9974970099333715
+      }
+    },
+    "ms": 0.14474999625235796,
+    "v3": 0.7846780530422787,
+    "static": 0.8522597812738241,
+    "ridge": 0.7759132070603104,
+    "route": 0.7759132070603104,
+    "actual": 0.7608380000019679,
+    "samples": [
+      0.7618090420000954,
+      0.7607084999981453,
+      0.7608380000019679,
+      0.7556792920004227,
+      0.7751496250057244
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "family": "bag_reg",
+    "group": "sklearn",
+    "name": "bag_reg_7200",
+    "detail": {
+      "seconds": 1.767847938026333,
+      "mode": "model",
+      "phases_s": {
+        "data": 0.003756409445777535,
+        "fit": 1.00358875644768,
+        "predict": 0.00417983609251678,
+        "startup_import": 0.7563229169973056,
+        "python": 1.9043053172106918e-08
+      },
+      "work": {
+        "call": 7
+      },
+      "fits": [
+        {
+          "model": "BaggingRegressor",
+          "base": "DecisionTree",
+          "train_rows": 5760,
+          "samples_per_member": 3744,
+          "features_per_member": 21,
+          "features_per_split_or_fit": 21,
+          "members": 18
+        }
+      ],
+      "unresolved": [],
+      "historical_unknown": null
+    },
+    "ms": 0.14295800065156072,
+    "v3": 1.767847938026333,
+    "static": 1.0109842526136055,
+    "ridge": 0.7759132070603104,
+    "route": 0.7759132070603104,
+    "actual": 1.4525659999999334,
+    "samples": [
+      1.4514448339978117,
+      1.4513119159964845,
+      1.4619017910008552,
+      1.4525659999999334,
+      1.46195374999661
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "family": "scratch_space",
+    "group": "Python",
+    "name": "scratch_space_450000",
+    "detail": {
+      "seconds": 0.10495124247867857,
+      "mode": "model",
+      "phases_s": {
+        "startup_import": 0.011587542001507245,
+        "python": 0.09336370047717132
+      },
+      "work": {
+        "call": 3,
+        "loop": 450000,
+        "allocate": 28350000,
+        "arithmetic": 900000,
+        "index": 900000,
+        "mod": 900000
+      },
+      "fits": [],
+      "unresolved": [],
+      "historical_unknown": null
+    },
+    "ms": 0.13125000259606168,
+    "v3": 0.10495124247867857,
+    "static": 0.0227692278647309,
+    "ridge": 0.7758249966940862,
+    "route": 0.0227692278647309,
+    "actual": 0.08839354099472985,
+    "samples": [
+      0.08902633300021989,
+      0.0887307500015595,
+      0.08796820900170133,
+      0.0882588750027935,
+      0.08839354099472985
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "family": "opaque_svr",
+    "group": "sklearn",
+    "name": "opaque_svr_14500",
+    "detail": {
+      "seconds": 0.7846780530422787,
+      "mode": "model",
+      "phases_s": {
+        "data": 0.011887843384950731,
+        "fit": 0.015999622202297257,
+        "predict": 0.00046765141467201626,
+        "startup_import": 0.7563229169973056,
+        "python": 1.9043053172106918e-08
+      },
+      "work": {
+        "call": 7
+      },
+      "fits": [
+        {
+          "model": "LinearSVR",
+          "base": "LinearSVR",
+          "train_rows": 11600,
+          "samples_per_member": 11600,
+          "features_per_member": 44,
+          "features_per_split_or_fit": 44,
+          "members": 1
+        }
+      ],
+      "unresolved": [
+        "Nepoznat trošak fit: LinearSVR"
+      ],
+      "historical_unknown": {
+        "count": 20,
+        "median_ape_pct": 2.9740046385784478,
+        "p90_ape_pct": 4.9974970099333715
+      }
+    },
+    "ms": 0.1382080008625053,
+    "v3": 0.7846780530422787,
+    "static": 0.8522597812738241,
+    "ridge": 0.7759132070603104,
+    "route": 0.7759132070603104,
+    "actual": 0.8010983749991283,
+    "samples": [
+      0.7993600420013536,
+      0.7971672500061686,
+      0.8095040420012083,
+      0.8023919580009533,
+      0.8010983749991283
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "family": "cross_moment",
+    "group": "Python",
+    "name": "cross_moment_19000",
+    "detail": {
+      "seconds": 0.03242750671100199,
+      "mode": "model",
+      "phases_s": {
+        "startup_import": 0.011587542001507245,
+        "python": 0.020839964709494743
+      },
+      "work": {
+        "call": 19004,
+        "loop": 361000,
+        "arithmetic": 2052000,
+        "mod": 684000
+      },
+      "fits": [],
+      "unresolved": [],
+      "historical_unknown": null
+    },
+    "ms": 0.192749997950159,
+    "v3": 0.03242750671100199,
+    "static": 0.010761958001239691,
+    "ridge": 0.7758249966940862,
+    "route": 0.010761958001239691,
+    "actual": 0.03379129099630518,
+    "samples": [
+      0.036476791006862186,
+      0.0338635419975617,
+      0.03379129099630518,
+      0.03372845800186042,
+      0.033766417000151705
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "family": "spectral_bins",
+    "group": "Python",
+    "name": "spectral_bins_155000",
+    "detail": {
+      "seconds": 0.023907377381366054,
+      "mode": "model",
+      "phases_s": {
+        "startup_import": 0.011587542001507245,
+        "python": 0.012319835379858809
+      },
+      "work": {
+        "call": 4,
+        "allocate": 37,
+        "arithmetic": 310001,
+        "loop": 155000,
+        "mod": 310000,
+        "index": 155000
+      },
+      "fits": [],
+      "unresolved": [],
+      "historical_unknown": null
+    },
+    "ms": 0.10308399942005053,
+    "v3": 0.023907377381366054,
+    "static": 0.01489779539866444,
+    "ridge": 0.7758249966940862,
+    "route": 0.01489779539866444,
+    "actual": 0.019384791994525585,
+    "samples": [
+      0.019384791994525585,
+      0.01955887499934761,
+      0.019148084000335075,
+      0.01920441599941114,
+      0.01958362499863142
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "family": "transition_counts",
+    "group": "Python",
+    "name": "transition_counts_450000",
+    "detail": {
+      "seconds": 0.030658211126512503,
+      "mode": "model",
+      "phases_s": {
+        "startup_import": 0.011587542001507245,
+        "python": 0.019070669125005258
+      },
+      "work": {
+        "call": 450004,
+        "loop": 450000,
+        "arithmetic": 900000,
+        "mod": 450000,
+        "mapping": 900000
+      },
+      "fits": [],
+      "unresolved": [],
+      "historical_unknown": null
+    },
+    "ms": 0.10254199878545478,
+    "v3": 0.030658211126512503,
+    "static": 0.0227692278647309,
+    "ridge": 0.7758249966940862,
+    "route": 0.0227692278647309,
+    "actual": 0.03361012499954086,
+    "samples": [
+      0.03401812499942025,
+      0.03326395800104365,
+      0.03361012499954086,
+      0.03213362500537187,
+      0.03414733300451189
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "family": "class_distance",
+    "group": "Python",
+    "name": "class_distance_155000",
+    "detail": {
+      "seconds": 0.3353687360512401,
+      "mode": "model",
+      "phases_s": {
+        "startup_import": 0.011587542001507245,
+        "python": 0.3237811940497329
+      },
+      "work": {
+        "call": 155005,
+        "loop": 5735000,
+        "arithmetic": 22320000,
+        "mod": 22320000
+      },
+      "fits": [],
+      "unresolved": [],
+      "historical_unknown": null
+    },
+    "ms": 0.12220899952808395,
+    "v3": 0.3353687360512401,
+    "static": 0.010761958001239691,
+    "ridge": 0.7758249966940862,
+    "route": 0.010761958001239691,
+    "actual": 0.309041917003924,
+    "samples": [
+      0.30253637499845354,
+      0.30793570799869485,
+      0.3200721659959527,
+      0.3331998330031638,
+      0.309041917003924
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "family": "cross_moment",
+    "group": "Python",
+    "name": "cross_moment_450000",
+    "detail": {
+      "seconds": 1.700971013084791,
+      "mode": "model",
+      "phases_s": {
+        "startup_import": 0.011587542001507245,
+        "python": 1.6893834710832838
+      },
+      "work": {
+        "call": 450004,
+        "loop": 28350000,
+        "arithmetic": 167400000,
+        "mod": 55800000
+      },
+      "fits": [],
+      "unresolved": [],
+      "historical_unknown": null
+    },
+    "ms": 0.21233299776213244,
+    "v3": 1.700971013084791,
+    "static": 0.010761958001239691,
+    "ridge": 0.7758249966940862,
+    "route": 0.010761958001239691,
+    "actual": 1.877737791997788,
+    "samples": [
+      1.8613868329994148,
+      1.8814327920044889,
+      1.877737791997788,
+      1.8904485410021152,
+      1.8655234999969252
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "family": "scaled_ridge",
+    "group": "sklearn",
+    "name": "scaled_ridge_14500",
+    "detail": {
+      "seconds": 0.7876664664221493,
+      "mode": "model",
+      "phases_s": {
+        "data": 0.011887843384950731,
+        "preprocess": 0.0029884079389982314,
+        "fit": 0.015999622202297257,
+        "predict": 0.00046765141467201626,
+        "startup_import": 0.7563229169973056,
+        "python": 2.448392550699461e-08
+      },
+      "work": {
+        "call": 9
+      },
+      "fits": [
+        {
+          "model": "Ridge",
+          "base": "Ridge",
+          "train_rows": 11600,
+          "samples_per_member": 11600,
+          "features_per_member": 44,
+          "features_per_split_or_fit": 44,
+          "members": 1
+        }
+      ],
+      "unresolved": [],
+      "historical_unknown": null
+    },
+    "ms": 0.13241700071375817,
+    "v3": 0.7876664664221493,
+    "static": 0.8522597812738241,
+    "ridge": 0.7759132070603104,
+    "route": 0.7759132070603104,
+    "actual": 0.7999718339997344,
+    "samples": [
+      0.823647165998409,
+      0.7915614999947138,
+      0.7999718339997344,
+      0.8108613329968648,
+      0.7935841660000733
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "family": "csv_bag",
+    "group": "sklearn",
+    "name": "csv_bag_85",
+    "detail": {
+      "seconds": 3.021726803389226,
+      "mode": "model",
+      "phases_s": {
+        "data": 0.006497016467954135,
+        "fit": 2.243329115930438,
+        "predict": 0.01557762988183337,
+        "startup_import": 0.7563229169973056,
+        "python": 1.241116949921926e-07
+      },
+      "work": {
+        "call": 11,
+        "index": 2
+      },
+      "fits": [
+        {
+          "model": "BaggingClassifier",
+          "base": "DecisionTreeClassifier",
+          "train_rows": 9800,
+          "samples_per_member": 8330,
+          "features_per_member": 28,
+          "features_per_split_or_fit": 28,
+          "members": 23
+        }
+      ],
+      "unresolved": [],
+      "historical_unknown": null
+    },
+    "ms": 0.8890419994713739,
+    "v3": 3.021726803389226,
+    "static": 0.7981146948410242,
+    "ridge": 0.8270299181966052,
+    "route": 0.8270299181966052,
+    "actual": 2.0609262919970206,
+    "samples": [
+      2.0666556659998605,
+      2.04594558399549,
+      2.0341140829987125,
+      2.077483959001256,
+      2.0609262919970206
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "family": "extra_reg",
+    "group": "sklearn",
+    "name": "extra_reg_2100",
+    "detail": {
+      "seconds": 0.8564966419274855,
+      "mode": "model",
+      "phases_s": {
+        "data": 0.0006260682409629226,
+        "fit": 0.09887034939043195,
+        "predict": 0.0006772882557318856,
+        "startup_import": 0.7563229169973056,
+        "python": 1.9043053172106918e-08
+      },
+      "work": {
+        "call": 7
+      },
+      "fits": [
+        {
+          "model": "ExtraTreesRegressor",
+          "base": "ExtraTree",
+          "train_rows": 1680,
+          "samples_per_member": 1680,
+          "features_per_member": 16,
+          "features_per_split_or_fit": 16,
+          "members": 10
+        }
+      ],
+      "unresolved": [],
+      "historical_unknown": null
+    },
+    "ms": 0.13629200111608952,
+    "v3": 0.8564966419274855,
+    "static": 0.7912220164105893,
+    "ridge": 0.7759132070603104,
+    "route": 0.7759132070603104,
+    "actual": 0.8810183749956195,
+    "samples": [
+      0.8893772919982439,
+      0.8925419160004822,
+      0.8802367919997778,
+      0.8810183749956195,
+      0.8753081659961026
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "family": "isolation",
+    "group": "sklearn",
+    "name": "isolation_14500",
+    "detail": {
+      "seconds": 0.7845002155658227,
+      "mode": "model",
+      "phases_s": {
+        "data": 0.011887843384950731,
+        "fit": 0.00225989370035273,
+        "predict": 0.014029542440160489,
+        "startup_import": 0.7563229169973056,
+        "python": 1.9043053172106918e-08
+      },
+      "work": {
+        "call": 7
+      },
+      "fits": [
+        {
+          "model": "IsolationForest",
+          "base": "ExtraTree",
+          "train_rows": 11600,
+          "samples_per_member": 256,
+          "features_per_member": 44,
+          "features_per_split_or_fit": 1,
+          "members": 30
+        }
+      ],
+      "unresolved": [],
+      "historical_unknown": null
+    },
+    "ms": 0.12262500240467489,
+    "v3": 0.7845002155658227,
+    "static": 2.0215654647985777,
+    "ridge": 0.7759132070603104,
+    "route": 0.7759132070603104,
+    "actual": 0.899055750000116,
+    "samples": [
+      0.9144221250026021,
+      0.8843109160006861,
+      0.899055750000116,
+      0.8988198750012089,
+      0.909223208000185
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "family": "extra_reg",
+    "group": "sklearn",
+    "name": "extra_reg_7200",
+    "detail": {
+      "seconds": 1.832058954995318,
+      "mode": "model",
+      "phases_s": {
+        "data": 0.003756409445777535,
+        "fit": 1.0677997734166649,
+        "predict": 0.00417983609251678,
+        "startup_import": 0.7563229169973056,
+        "python": 1.9043053172106918e-08
+      },
+      "work": {
+        "call": 7
+      },
+      "fits": [
+        {
+          "model": "ExtraTreesRegressor",
+          "base": "ExtraTree",
+          "train_rows": 5760,
+          "samples_per_member": 5760,
+          "features_per_member": 28,
+          "features_per_split_or_fit": 28,
+          "members": 18
+        }
+      ],
+      "unresolved": [],
+      "historical_unknown": null
+    },
+    "ms": 0.12533299741335213,
+    "v3": 1.832058954995318,
+    "static": 1.0109842526136055,
+    "ridge": 0.7759132070603104,
+    "route": 0.7759132070603104,
+    "actual": 0.9870315000007395,
+    "samples": [
+      0.9870315000007395,
+      0.9768872080021538,
+      1.0012935420018039,
+      0.9795108749967767,
+      0.9952987919969019
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "family": "block_order",
+    "group": "Python",
+    "name": "block_order_155000",
+    "detail": {
+      "seconds": 0.022032809257537634,
+      "mode": "model",
+      "phases_s": {
+        "startup_import": 0.011587542001507245,
+        "python": 0.010445267256030389
+      },
+      "work": {
+        "call": 4,
+        "loop": 155000,
+        "arithmetic": 155001,
+        "mod": 155000,
+        "sort": 2672495.84694013,
+        "index": 1
+      },
+      "fits": [],
+      "unresolved": [],
+      "historical_unknown": null
+    },
+    "ms": 0.09558299643686041,
+    "v3": 0.022032809257537634,
+    "static": 0.01489779539866444,
+    "ridge": 0.7758249966940862,
+    "route": 0.01489779539866444,
+    "actual": 0.023879957996541634,
+    "samples": [
+      0.02408829100022558,
+      0.024059082999883685,
+      0.02374904199677985,
+      0.0238432499972987,
+      0.023879957996541634
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "family": "cross_moment",
+    "group": "Python",
+    "name": "cross_moment_155000",
+    "detail": {
+      "seconds": 0.3500975834305894,
+      "mode": "model",
+      "phases_s": {
+        "startup_import": 0.011587542001507245,
+        "python": 0.33851004142908214
+      },
+      "work": {
+        "call": 155004,
+        "loop": 5735000,
+        "arithmetic": 33480000,
+        "mod": 11160000
+      },
+      "fits": [],
+      "unresolved": [],
+      "historical_unknown": null
+    },
+    "ms": 0.17025000124704093,
+    "v3": 0.3500975834305894,
+    "static": 0.010761958001239691,
+    "ridge": 0.7758249966940862,
+    "route": 0.010761958001239691,
+    "actual": 0.38033687500137603,
+    "samples": [
+      0.37483437500486616,
+      0.38033687500137603,
+      0.39672895900002914,
+      0.37715354099782417,
+      0.3831582499988144
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "family": "scaled_ridge",
+    "group": "sklearn",
+    "name": "scaled_ridge_7200",
+    "detail": {
+      "seconds": 0.7663115434734872,
+      "mode": "model",
+      "phases_s": {
+        "data": 0.003756409445777535,
+        "preprocess": 0.000944299436523579,
+        "fit": 0.005055679993703961,
+        "predict": 0.00023221311625093221,
+        "startup_import": 0.7563229169973056,
+        "python": 2.448392550699461e-08
+      },
+      "work": {
+        "call": 9
+      },
+      "fits": [
+        {
+          "model": "Ridge",
+          "base": "Ridge",
+          "train_rows": 5760,
+          "samples_per_member": 5760,
+          "features_per_member": 28,
+          "features_per_split_or_fit": 28,
+          "members": 1
+        }
+      ],
+      "unresolved": [],
+      "historical_unknown": null
+    },
+    "ms": 0.13483400107361376,
+    "v3": 0.7663115434734872,
+    "static": 0.7943890500097769,
+    "ridge": 0.7759132070603104,
+    "route": 0.7759132070603104,
+    "actual": 0.7905773329985095,
+    "samples": [
+      0.7886518329978571,
+      0.7921629580014269,
+      0.7870711249997839,
+      0.7905773329985095,
+      0.819556874994305
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "family": "class_distance",
+    "group": "Python",
+    "name": "class_distance_450000",
+    "detail": {
+      "seconds": 1.6273267653063002,
+      "mode": "model",
+      "phases_s": {
+        "startup_import": 0.011587542001507245,
+        "python": 1.615739223304793
+      },
+      "work": {
+        "call": 450005,
+        "loop": 28350000,
+        "arithmetic": 111600000,
+        "mod": 111600000
+      },
+      "fits": [],
+      "unresolved": [],
+      "historical_unknown": null
+    },
+    "ms": 0.12479099677875638,
+    "v3": 1.6273267653063002,
+    "static": 0.010761958001239691,
+    "ridge": 0.7758249966940862,
+    "route": 0.010761958001239691,
+    "actual": 1.4474187919986434,
+    "samples": [
+      1.4561533749947557,
+      1.4474187919986434,
+      1.446923292001884,
+      1.437687375000678,
+      1.4525398330006283
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "family": "opaque_svr",
+    "group": "sklearn",
+    "name": "opaque_svr_2100",
+    "detail": {
+      "seconds": 0.7578593464391788,
+      "mode": "model",
+      "phases_s": {
+        "data": 0.0006260682409629226,
+        "fit": 0.0008426133322839935,
+        "predict": 6.772882557318856e-05,
+        "startup_import": 0.7563229169973056,
+        "python": 1.9043053172106918e-08
+      },
+      "work": {
+        "call": 7
+      },
+      "fits": [
+        {
+          "model": "LinearSVR",
+          "base": "LinearSVR",
+          "train_rows": 1680,
+          "samples_per_member": 1680,
+          "features_per_member": 16,
+          "features_per_split_or_fit": 16,
+          "members": 1
+        }
+      ],
+      "unresolved": [
+        "Nepoznat trošak fit: LinearSVR"
+      ],
+      "historical_unknown": {
+        "count": 20,
+        "median_ape_pct": 2.9740046385784478,
+        "p90_ape_pct": 4.9974970099333715
+      }
+    },
+    "ms": 0.15620799968019128,
+    "v3": 0.7578593464391788,
+    "static": 0.7721106750043691,
+    "ridge": 0.7759132070603104,
+    "route": 0.7759132070603104,
+    "actual": 0.7881331669996143,
+    "samples": [
+      0.7881331669996143,
+      0.80532854199555,
+      0.7901979590023984,
+      0.7875018330014427,
+      0.7859899579998455
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "family": "mixture_diag",
+    "group": "sklearn",
+    "name": "mixture_diag_2100",
+    "detail": {
+      "seconds": 0.7578593464391788,
+      "mode": "model",
+      "phases_s": {
+        "data": 0.0006260682409629226,
+        "fit": 0.0008426133322839935,
+        "predict": 6.772882557318856e-05,
+        "startup_import": 0.7563229169973056,
+        "python": 1.9043053172106918e-08
+      },
+      "work": {
+        "call": 7
+      },
+      "fits": [
+        {
+          "model": "GaussianMixture",
+          "base": "GaussianMixture",
+          "train_rows": 1680,
+          "samples_per_member": 1680,
+          "features_per_member": 16,
+          "features_per_split_or_fit": 16,
+          "members": 1
+        }
+      ],
+      "unresolved": [
+        "Nepoznat trošak fit: GaussianMixture"
+      ],
+      "historical_unknown": {
+        "count": 20,
+        "median_ape_pct": 2.9740046385784478,
+        "p90_ape_pct": 4.9974970099333715
+      }
+    },
+    "ms": 0.12720799713861197,
+    "v3": 0.7578593464391788,
+    "static": 0.7721106750043691,
+    "ridge": 0.7759132070603104,
+    "route": 0.7759132070603104,
+    "actual": 0.8997670840035425,
+    "samples": [
+      0.9077691660058917,
+      0.8997670840035425,
+      0.9125078750003013,
+      0.8964685000028112,
+      0.8907545839974773
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "family": "isolation",
+    "group": "sklearn",
+    "name": "isolation_2100",
+    "detail": {
+      "seconds": 0.7583795904371711,
+      "mode": "model",
+      "phases_s": {
+        "data": 0.0006260682409629226,
+        "fit": 0.0007532979001175767,
+        "predict": 0.0006772882557318856,
+        "startup_import": 0.7563229169973056,
+        "python": 1.9043053172106918e-08
+      },
+      "work": {
+        "call": 7
+      },
+      "fits": [
+        {
+          "model": "IsolationForest",
+          "base": "ExtraTree",
+          "train_rows": 1680,
+          "samples_per_member": 256,
+          "features_per_member": 16,
+          "features_per_split_or_fit": 1,
+          "members": 10
+        }
+      ],
+      "unresolved": [],
+      "historical_unknown": null
+    },
+    "ms": 0.12495899864006788,
+    "v3": 0.7583795904371711,
+    "static": 0.7912220164105893,
+    "ridge": 0.7759132070603104,
+    "route": 0.7759132070603104,
+    "actual": 0.8718395000032615,
+    "samples": [
+      0.8782670000000508,
+      0.8679595409994363,
+      0.8747745000000577,
+      0.8638669159990968,
+      0.8718395000032615
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "family": "latent_pls",
+    "group": "sklearn",
+    "name": "latent_pls_2100",
+    "detail": {
+      "seconds": 0.7578593464391788,
+      "mode": "model",
+      "phases_s": {
+        "data": 0.0006260682409629226,
+        "fit": 0.0008426133322839935,
+        "predict": 6.772882557318856e-05,
+        "startup_import": 0.7563229169973056,
+        "python": 1.9043053172106918e-08
+      },
+      "work": {
+        "call": 7
+      },
+      "fits": [
+        {
+          "model": "PLSRegression",
+          "base": "PLSRegression",
+          "train_rows": 1680,
+          "samples_per_member": 1680,
+          "features_per_member": 16,
+          "features_per_split_or_fit": 16,
+          "members": 1
+        }
+      ],
+      "unresolved": [
+        "Nepoznat trošak fit: PLSRegression"
+      ],
+      "historical_unknown": {
+        "count": 20,
+        "median_ape_pct": 2.9740046385784478,
+        "p90_ape_pct": 4.9974970099333715
+      }
+    },
+    "ms": 0.14408300194190815,
+    "v3": 0.7578593464391788,
+    "static": 0.7721106750043691,
+    "ridge": 0.7759132070603104,
+    "route": 0.7759132070603104,
+    "actual": 0.7557441249955446,
+    "samples": [
+      0.7752159169976949,
+      0.7608667500026058,
+      0.748515209001198,
+      0.7396489159946213,
+      0.7557441249955446
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "family": "mixture_diag",
+    "group": "sklearn",
+    "name": "mixture_diag_7200",
+    "detail": {
+      "seconds": 0.7653672385960911,
+      "mode": "model",
+      "phases_s": {
+        "data": 0.003756409445777535,
+        "fit": 0.005055679993703961,
+        "predict": 0.00023221311625093221,
+        "startup_import": 0.7563229169973056,
+        "python": 1.9043053172106918e-08
+      },
+      "work": {
+        "call": 7
+      },
+      "fits": [
+        {
+          "model": "GaussianMixture",
+          "base": "GaussianMixture",
+          "train_rows": 5760,
+          "samples_per_member": 5760,
+          "features_per_member": 28,
+          "features_per_split_or_fit": 28,
+          "members": 1
+        }
+      ],
+      "unresolved": [
+        "Nepoznat trošak fit: GaussianMixture"
+      ],
+      "historical_unknown": {
+        "count": 20,
+        "median_ape_pct": 2.9740046385784478,
+        "p90_ape_pct": 4.9974970099333715
+      }
+    },
+    "ms": 0.12608300312422216,
+    "v3": 0.7653672385960911,
+    "static": 0.7943890500097769,
+    "ridge": 0.7759132070603104,
+    "route": 0.7759132070603104,
+    "actual": 0.9166602499972214,
+    "samples": [
+      0.9240931660024216,
+      0.9158000410025124,
+      0.9166602499972214,
+      0.924787459000072,
+      0.916220750004868
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "family": "isolation",
+    "group": "sklearn",
+    "name": "isolation_7200",
+    "detail": {
+      "seconds": 0.7656151177988647,
+      "mode": "model",
+      "phases_s": {
+        "data": 0.003756409445777535,
+        "fit": 0.001355936220211638,
+        "predict": 0.00417983609251678,
+        "startup_import": 0.7563229169973056,
+        "python": 1.9043053172106918e-08
+      },
+      "work": {
+        "call": 7
+      },
+      "fits": [
+        {
+          "model": "IsolationForest",
+          "base": "ExtraTree",
+          "train_rows": 5760,
+          "samples_per_member": 256,
+          "features_per_member": 28,
+          "features_per_split_or_fit": 1,
+          "members": 18
+        }
+      ],
+      "unresolved": [],
+      "historical_unknown": null
+    },
+    "ms": 0.12304200208745897,
+    "v3": 0.7656151177988647,
+    "static": 1.0109842526136055,
+    "ridge": 0.7759132070603104,
+    "route": 0.7759132070603104,
+    "actual": 0.8765449169950443,
+    "samples": [
+      0.8779392920041573,
+      0.8765449169950443,
+      0.8762311660029809,
+      0.8708582910039695,
+      0.8824932080024155
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "family": "scratch_space",
+    "group": "Python",
+    "name": "scratch_space_19000",
+    "detail": {
+      "seconds": 0.014456055357474525,
+      "mode": "model",
+      "phases_s": {
+        "startup_import": 0.011587542001507245,
+        "python": 0.0028685133559672804
+      },
+      "work": {
+        "call": 3,
+        "loop": 19000,
+        "allocate": 361000,
+        "arithmetic": 38000,
+        "index": 38000,
+        "mod": 38000
+      },
+      "fits": [],
+      "unresolved": [],
+      "historical_unknown": null
+    },
+    "ms": 0.10037500032922253,
+    "v3": 0.014456055357474525,
+    "static": 0.011268931617698208,
+    "ridge": 0.7758249966940862,
+    "route": 0.011268931617698208,
+    "actual": 0.013848999995389022,
+    "samples": [
+      0.014762042002985254,
+      0.013860374994692393,
+      0.013848999995389022,
+      0.01365141600399511,
+      0.01362074999633478
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  }
+]

@@ -1,0 +1,3586 @@
+[
+  {
+    "name": "brier_score_70000.py",
+    "family": "brier_score",
+    "group": "Python",
+    "n": 70000,
+    "d": 24,
+    "fingerprint": "c8099906bbb3dab5b43ad78fe9ccc783949aaa1bb88550c6573405193abf6a0b",
+    "static": 0.012629755535560545,
+    "ms": 0.08141699800034985,
+    "ridge": 0.7758249966940862,
+    "constant": 0.8566498749969469,
+    "startup": 0.010761958001239691,
+    "actual": 0.014692750002723187,
+    "samples": [
+      0.01585750000231201,
+      0.014896375003445428,
+      0.014544999998179264,
+      0.014692750002723187,
+      0.014684041998407338
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "run_length_encoding_30000.py",
+    "family": "run_length_encoding",
+    "group": "Python",
+    "n": 30000,
+    "d": 12,
+    "fingerprint": "b4fdc0564b44dd90cd4d5fa20b102ebdf9b68e7a03ceea7fa4941f6bf608e288",
+    "static": 0.011562442658805771,
+    "ms": 0.1337080029770732,
+    "ridge": 0.7758249966940862,
+    "constant": 0.8566498749969469,
+    "startup": 0.010761958001239691,
+    "actual": 0.013408165999862831,
+    "samples": [
+      0.012871291000919882,
+      0.013408165999862831,
+      0.013323457998922095,
+      0.013474291998136323,
+      0.013437000001431443
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "Perceptron_6500.py",
+    "family": "Perceptron",
+    "group": "sklearn",
+    "n": 6500,
+    "d": 36,
+    "fingerprint": "2ca83c163c809560ff2951d64f66149cb394e7e7025a96351dfc67ffc906ab99",
+    "static": 0.7986855937608197,
+    "ms": 0.1499170030001551,
+    "ridge": 0.8221525443674818,
+    "constant": 0.8566498749969469,
+    "startup": 0.7676550000032876,
+    "actual": 0.7786432499997318,
+    "samples": [
+      0.8249455419936567,
+      0.8065596250016824,
+      0.7783597910020035,
+      0.762140917002398,
+      0.7786432499997318
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "hamming_distance_120000.py",
+    "family": "hamming_distance",
+    "group": "Python",
+    "n": 120000,
+    "d": 32,
+    "fingerprint": "cf641c757f1842c30575309f06d22858400c4943aecb00a5f7c9f44d0f6e5c17",
+    "static": 0.11642593279996233,
+    "ms": 0.09354199573863298,
+    "ridge": 0.7758249966940862,
+    "constant": 0.8566498749969469,
+    "startup": 0.010761958001239691,
+    "actual": 0.21056966699688928,
+    "samples": [
+      0.20819433400174603,
+      0.20753433299978497,
+      0.21175962499546586,
+      0.21056966699688928,
+      0.21148845800053095
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "ema_filter_12000.py",
+    "family": "ema_filter",
+    "group": "Python",
+    "n": 12000,
+    "d": 16,
+    "fingerprint": "b8c499ab43557900cc4d2ced6ec4a311c38e69d49192e8c1dcc5f834dcc960e7",
+    "static": 0.011082151864266122,
+    "ms": 0.07620899850735441,
+    "ridge": 0.7758249966940862,
+    "constant": 0.8566498749969469,
+    "startup": 0.010761958001239691,
+    "actual": 0.01159304100292502,
+    "samples": [
+      0.012767541003995575,
+      0.011649790998490062,
+      0.011561666004126891,
+      0.01159304100292502,
+      0.011411125000449829
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "confusion_matrix_120000.py",
+    "family": "confusion_matrix",
+    "group": "Python",
+    "n": 120000,
+    "d": 32,
+    "fingerprint": "4853a43c2ae800c351162adf1b56cdc59df1a6b2d41120d13eb79d0d2c17c6e7",
+    "static": 0.013964750481805416,
+    "ms": 0.10591700265649706,
+    "ridge": 0.7758249966940862,
+    "constant": 0.8566498749969469,
+    "startup": 0.010761958001239691,
+    "actual": 0.017205208001541905,
+    "samples": [
+      0.01747270800115075,
+      0.01727641700563254,
+      0.017205208001541905,
+      0.017128209001384676,
+      0.016977708000922576
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "l1_distance_30000.py",
+    "family": "l1_distance",
+    "group": "Python",
+    "n": 30000,
+    "d": 12,
+    "fingerprint": "e6288249ae140162df4d7a425580ff310afbfc29e96faec1a017e03793de1b4c",
+    "static": 0.021168258549598737,
+    "ms": 0.09354200301459059,
+    "ridge": 0.7758249966940862,
+    "constant": 0.8566498749969469,
+    "startup": 0.010761958001239691,
+    "actual": 0.03066558299906319,
+    "samples": [
+      0.030646666993561666,
+      0.03066558299906319,
+      0.030383707999135368,
+      0.030825290996290278,
+      0.030747584001801442
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "Perceptron_12000.py",
+    "family": "Perceptron",
+    "group": "sklearn",
+    "n": 12000,
+    "d": 50,
+    "fingerprint": "2b3a34c9acb557b972adaadc41ae42783dfd314505369ade20df1de2ccef7256",
+    "static": 0.8472206250226009,
+    "ms": 0.16450000111944973,
+    "ridge": 0.8764487148239909,
+    "constant": 0.8566498749969469,
+    "startup": 0.7676550000032876,
+    "actual": 0.786232917002053,
+    "samples": [
+      0.786232917002053,
+      0.7956024169980083,
+      0.7825853750036913,
+      0.7738632500040694,
+      0.8224600829998963
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "BernoulliNB_750.py",
+    "family": "BernoulliNB",
+    "group": "sklearn",
+    "n": 750,
+    "d": 12,
+    "fingerprint": "850340f8a50a0ef84ea79141fd852166b9489eb9ee63d937507ac143657a62d5",
+    "static": 0.7688484843785772,
+    "ms": 0.14658299915026873,
+    "ridge": 0.7725946841288044,
+    "constant": 0.8566498749969469,
+    "startup": 0.7676550000032876,
+    "actual": 0.7407880419996218,
+    "samples": [
+      0.7473544590029633,
+      0.76868325000396,
+      0.7407880419996218,
+      0.7302383749993169,
+      0.7324235000050976
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "moving_average_120000.py",
+    "family": "moving_average",
+    "group": "Python",
+    "n": 120000,
+    "d": 32,
+    "fingerprint": "9f48a2a638c9ed3f83f59387cb87c5f2d6c539b20304f99735379dd2aad7c5c0",
+    "static": 0.013963896631504012,
+    "ms": 0.12133300333516672,
+    "ridge": 0.7758249966940862,
+    "constant": 0.8566498749969469,
+    "startup": 0.010761958001239691,
+    "actual": 0.017541375003929716,
+    "samples": [
+      0.01838875000248663,
+      0.017655916999501642,
+      0.017499291003332473,
+      0.017541375003929716,
+      0.017312500000116415
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "feature_hashing_250000.py",
+    "family": "feature_hashing",
+    "group": "Python",
+    "n": 250000,
+    "d": 48,
+    "fingerprint": "5665ecb5cd8abbc6d7fe223ae246a67bd3b8de6866add817afa3374045dbcf6d",
+    "static": 0.01743266348095703,
+    "ms": 0.09016600233735517,
+    "ridge": 0.7758249966940862,
+    "constant": 0.8566498749969469,
+    "startup": 0.010761958001239691,
+    "actual": 0.02542304099915782,
+    "samples": [
+      0.025439500001084525,
+      0.025509209001029376,
+      0.024911041000450496,
+      0.02542304099915782,
+      0.025140292003925424
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "online_variance_70000.py",
+    "family": "online_variance",
+    "group": "Python",
+    "n": 70000,
+    "d": 24,
+    "fingerprint": "e920022d63fb6f3e8fda1747cb44f2f05f6938a7ced9a49231d3dbe650e762af",
+    "static": 0.012629755535560545,
+    "ms": 0.11583299783524126,
+    "ridge": 0.7758249966940862,
+    "constant": 0.8566498749969469,
+    "startup": 0.010761958001239691,
+    "actual": 0.016139041996211745,
+    "samples": [
+      0.016139041996211745,
+      0.016121833999932278,
+      0.01665741699980572,
+      0.016081708003184758,
+      0.01628474999597529
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "one_hot_3000.py",
+    "family": "one_hot",
+    "group": "Python",
+    "n": 3000,
+    "d": 8,
+    "fingerprint": "56bada705a79b9a589c3547ccf5877ac8233b4484f66883442ec3e8b679edada",
+    "static": 0.010842006466996299,
+    "ms": 0.09100000170292333,
+    "ridge": 0.7758249966940862,
+    "constant": 0.8566498749969469,
+    "startup": 0.010761958001239691,
+    "actual": 0.011169375000463333,
+    "samples": [
+      0.011169375000463333,
+      0.010952459000691306,
+      0.011154209001688287,
+      0.01123491700127488,
+      0.011264499997196253
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "IsolationForest_6500.py",
+    "family": "IsolationForest",
+    "group": "sklearn",
+    "n": 6500,
+    "d": 36,
+    "fingerprint": "d2dfb59e1b09ac3af1dbe748d556ca84e641d34e012930fe4420cf8478598294",
+    "static": 1.1536105055906227,
+    "ms": 0.17020800441969186,
+    "ridge": 0.8221525443674818,
+    "constant": 0.8566498749969469,
+    "startup": 0.7676550000032876,
+    "actual": 0.8712612499948591,
+    "samples": [
+      0.8829067920014495,
+      0.8642707079998218,
+      0.861640165996505,
+      0.8712612499948591,
+      0.8834258749993751
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "one_hot_30000.py",
+    "family": "one_hot",
+    "group": "Python",
+    "n": 30000,
+    "d": 12,
+    "fingerprint": "b26532cccfd51ef1130acd85fb54d210df5801643e07e90deb4ec817e94d04a6",
+    "static": 0.011562442658805771,
+    "ms": 0.08562499715480953,
+    "ridge": 0.7758249966940862,
+    "constant": 0.8566498749969469,
+    "startup": 0.010761958001239691,
+    "actual": 0.014026916993316263,
+    "samples": [
+      0.01500487500015879,
+      0.014321165996079799,
+      0.014026916993316263,
+      0.01394037499994738,
+      0.01396958399709547
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "ema_filter_30000.py",
+    "family": "ema_filter",
+    "group": "Python",
+    "n": 30000,
+    "d": 12,
+    "fingerprint": "c7e2faeb4737ae090503d44c819af5f62d356be02da1c6048b1a5684eb7b2e46",
+    "static": 0.011562442658805771,
+    "ms": 0.08758300100453198,
+    "ridge": 0.7758249966940862,
+    "constant": 0.8566498749969469,
+    "startup": 0.010761958001239691,
+    "actual": 0.012090750002244022,
+    "samples": [
+      0.012176583004475106,
+      0.011999333997664507,
+      0.011858958001539577,
+      0.012090750002244022,
+      0.012150167000072543
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "l1_distance_70000.py",
+    "family": "l1_distance",
+    "group": "Python",
+    "n": 70000,
+    "d": 24,
+    "fingerprint": "12325110866d692443c1f06e9039daa6a22abf2fbc3b7d588f04f497ee23323e",
+    "static": 0.05745689635926106,
+    "ms": 0.10208300227532163,
+    "ridge": 0.7758249966940862,
+    "constant": 0.8566498749969469,
+    "startup": 0.010761958001239691,
+    "actual": 0.0982189170026686,
+    "samples": [
+      0.0982189170026686,
+      0.09731741699943086,
+      0.09770541599573335,
+      0.09825691700098105,
+      0.09839720799936913
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "ExtraTreesClassifier_12000.py",
+    "family": "ExtraTreesClassifier",
+    "group": "sklearn",
+    "n": 12000,
+    "d": 50,
+    "fingerprint": "fd7ae1c933aebc636662ed6ca80740c464b85b05f64c2df6eda6fe5bd504b6df",
+    "static": 2.326074424313447,
+    "ms": 0.1790000023902394,
+    "ridge": 0.8764487148239909,
+    "constant": 0.8566498749969469,
+    "startup": 0.7676550000032876,
+    "actual": 1.1319061249960214,
+    "samples": [
+      1.1319061249960214,
+      1.133831500002998,
+      1.1233022079977673,
+      1.128854834001686,
+      1.1447995410053409
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "RidgeClassifier_750.py",
+    "family": "RidgeClassifier",
+    "group": "sklearn",
+    "n": 750,
+    "d": 12,
+    "fingerprint": "26e81dce754e0a7563f40c506c039616e279b56a252308cc7620260edd631e0c",
+    "static": 0.7688484843785772,
+    "ms": 0.1588750019436702,
+    "ridge": 0.7725946841288044,
+    "constant": 0.8566498749969469,
+    "startup": 0.7676550000032876,
+    "actual": 0.777411959003075,
+    "samples": [
+      0.777411959003075,
+      0.7923864160038647,
+      0.7755750409996836,
+      0.7940272909982014,
+      0.7680699999982608
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "online_variance_3000.py",
+    "family": "online_variance",
+    "group": "Python",
+    "n": 3000,
+    "d": 8,
+    "fingerprint": "3ca00fc7785a39734cad0065c12d52c73beef5c858ff632fbe5d4cf935b73cc0",
+    "static": 0.010842006466996299,
+    "ms": 0.11137500405311584,
+    "ridge": 0.7758249966940862,
+    "constant": 0.8566498749969469,
+    "startup": 0.010761958001239691,
+    "actual": 0.011195250001037493,
+    "samples": [
+      0.012137666999478824,
+      0.011246040994592477,
+      0.011195250001037493,
+      0.011077458002546337,
+      0.011087082995800301
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "hamming_distance_30000.py",
+    "family": "hamming_distance",
+    "group": "Python",
+    "n": 30000,
+    "d": 12,
+    "fingerprint": "f59fed0854f7d21c4f28dd7e4d0ad0c42370633a7f9da188c66546e255e61768",
+    "static": 0.021168258549598737,
+    "ms": 0.09724999836180359,
+    "ridge": 0.7758249966940862,
+    "constant": 0.8566498749969469,
+    "startup": 0.010761958001239691,
+    "actual": 0.03187324999453267,
+    "samples": [
+      0.031815750000532717,
+      0.03167537499393802,
+      0.032475792002514936,
+      0.0318793749975157,
+      0.03187324999453267
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "hinge_loss_30000.py",
+    "family": "hinge_loss",
+    "group": "Python",
+    "n": 30000,
+    "d": 12,
+    "fingerprint": "195316ac28ae9dec2bb0ed601f9532b8f4f329e5beb6e227479f76460dc7bfe5",
+    "static": 0.011562442658805771,
+    "ms": 0.09683399548521265,
+    "ridge": 0.7758249966940862,
+    "constant": 0.8566498749969469,
+    "startup": 0.010761958001239691,
+    "actual": 0.014263208002375904,
+    "samples": [
+      0.014507292005873751,
+      0.014263208002375904,
+      0.014600333000998944,
+      0.014218125004845206,
+      0.014041249996807892
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "dot_product_3000.py",
+    "family": "dot_product",
+    "group": "Python",
+    "n": 3000,
+    "d": 8,
+    "fingerprint": "3fb5043fbd83839050744fbe777c7799118a9f3e4ed3d852ed86e7cf80320d96",
+    "static": 0.011482607655624514,
+    "ms": 0.1156250000349246,
+    "ridge": 0.7758249966940862,
+    "constant": 0.8566498749969469,
+    "startup": 0.010761958001239691,
+    "actual": 0.011954583998885937,
+    "samples": [
+      0.012105041998438537,
+      0.011850417002278846,
+      0.011954583998885937,
+      0.0119049589993665,
+      0.01207612500002142
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "moving_average_30000.py",
+    "family": "moving_average",
+    "group": "Python",
+    "n": 30000,
+    "d": 12,
+    "fingerprint": "e57a2fd2f0b2dea59f6aba00791061bfa79cc1128ce7d7ca85dd116117cb6ed8",
+    "static": 0.011562442658805771,
+    "ms": 0.12116599828004837,
+    "ridge": 0.7758249966940862,
+    "constant": 0.8566498749969469,
+    "startup": 0.010761958001239691,
+    "actual": 0.012804582998796832,
+    "samples": [
+      0.012539917006506585,
+      0.012804582998796832,
+      0.013028957997448742,
+      0.012647916002606507,
+      0.012877832996309735
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "histogram_3000.py",
+    "family": "histogram",
+    "group": "Python",
+    "n": 3000,
+    "d": 8,
+    "fingerprint": "3e11842645fc1de48888c5fd8d8716427af75d619c0a87316acabf6507afb473",
+    "static": 0.010842006466996299,
+    "ms": 0.0995840018731542,
+    "ridge": 0.7758249966940862,
+    "constant": 0.8566498749969469,
+    "startup": 0.010761958001239691,
+    "actual": 0.011345749997417443,
+    "samples": [
+      0.011345749997417443,
+      0.011165083000378218,
+      0.011706291996233631,
+      0.01137587500124937,
+      0.011012249997293111
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "rank_percentile_12000.py",
+    "family": "rank_percentile",
+    "group": "Python",
+    "n": 12000,
+    "d": 16,
+    "fingerprint": "1b4ceb04e43aa8853acd01d18d8b76d9137986d558e8a3094f7a6310d9363ef8",
+    "static": 0.011082151864266122,
+    "ms": 0.0771670020185411,
+    "ridge": 0.7758249966940862,
+    "constant": 0.8566498749969469,
+    "startup": 0.010761958001239691,
+    "actual": 0.011754749997635372,
+    "samples": [
+      0.011877249999088235,
+      0.011706208999385126,
+      0.011754749997635372,
+      0.01169491699693026,
+      0.011843042004329618
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "brier_score_12000.py",
+    "family": "brier_score",
+    "group": "Python",
+    "n": 12000,
+    "d": 16,
+    "fingerprint": "53074cc807534fdd3b3e19858b96e4c9eab456707ce8bffe2e05bd58ed27e43d",
+    "static": 0.011082151864266122,
+    "ms": 0.08320799679495394,
+    "ridge": 0.7758249966940862,
+    "constant": 0.8566498749969469,
+    "startup": 0.010761958001239691,
+    "actual": 0.01167837499815505,
+    "samples": [
+      0.011701625000569038,
+      0.01167837499815505,
+      0.011667167003906798,
+      0.011634582995611709,
+      0.011874625000928063
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "hinge_loss_12000.py",
+    "family": "hinge_loss",
+    "group": "Python",
+    "n": 12000,
+    "d": 16,
+    "fingerprint": "90ef551d2dfef32aec200000f266a71b482ea8db7c7a9e81dd55e41580c3ac8c",
+    "static": 0.011082151864266122,
+    "ms": 0.10504200326977298,
+    "ridge": 0.7758249966940862,
+    "constant": 0.8566498749969469,
+    "startup": 0.010761958001239691,
+    "actual": 0.012192499998491257,
+    "samples": [
+      0.012192499998491257,
+      0.012012125000183005,
+      0.012273332999029662,
+      0.012252041000465397,
+      0.012113457996747456
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "rank_percentile_70000.py",
+    "family": "rank_percentile",
+    "group": "Python",
+    "n": 70000,
+    "d": 24,
+    "fingerprint": "73f5d4b484b1d50b77b40db19208083625eed63cd60fbd0dfa103c5e72f34b3d",
+    "static": 0.012629755535560545,
+    "ms": 0.08387499838136137,
+    "ridge": 0.7758249966940862,
+    "constant": 0.8566498749969469,
+    "startup": 0.010761958001239691,
+    "actual": 0.015914125004201196,
+    "samples": [
+      0.015885458000411745,
+      0.016027042001951486,
+      0.015914125004201196,
+      0.015785040995979216,
+      0.016100542001368012
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "moving_average_12000.py",
+    "family": "moving_average",
+    "group": "Python",
+    "n": 12000,
+    "d": 16,
+    "fingerprint": "9c155b9d379310f6004d68367397c5d1f9a81db766531ce16d52a2efb7b8174d",
+    "static": 0.011082151864266122,
+    "ms": 0.11779199849115685,
+    "ridge": 0.7758249966940862,
+    "constant": 0.8566498749969469,
+    "startup": 0.010761958001239691,
+    "actual": 0.011629167005594354,
+    "samples": [
+      0.011857666999276262,
+      0.011634874994342681,
+      0.011595249998208601,
+      0.011629167005594354,
+      0.01155220800137613
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "reservoir_sampling_30000.py",
+    "family": "reservoir_sampling",
+    "group": "Python",
+    "n": 30000,
+    "d": 12,
+    "fingerprint": "7b17d06c43f959e3aa7f4b571cbc077fef8396708380bfa12afcf118a588aceb",
+    "static": 0.011562122464942745,
+    "ms": 0.11862500105053186,
+    "ridge": 0.7758249966940862,
+    "constant": 0.8566498749969469,
+    "startup": 0.010761958001239691,
+    "actual": 0.01699141699646134,
+    "samples": [
+      0.017172667001432274,
+      0.016703499997674953,
+      0.01699141699646134,
+      0.01710162500239676,
+      0.016975541002466343
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "Perceptron_2200.py",
+    "family": "Perceptron",
+    "group": "sklearn",
+    "n": 2200,
+    "d": 24,
+    "fingerprint": "9ad4c89aa1e16fff369e352e652f72960097cbfc4d395768dc9e4e7614a68126",
+    "static": 0.7746567750049871,
+    "ms": 0.16799999866634607,
+    "ridge": 0.7853079702569359,
+    "constant": 0.8566498749969469,
+    "startup": 0.7676550000032876,
+    "actual": 0.7986124589951942,
+    "samples": [
+      0.7986124589951942,
+      0.7909775419975631,
+      0.7898868339980254,
+      0.8130677500012098,
+      0.8012054999999236
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "l1_distance_3000.py",
+    "family": "l1_distance",
+    "group": "Python",
+    "n": 3000,
+    "d": 8,
+    "fingerprint": "1dedfa1cb33abbeb2fe51affff8e76233af4e552e636fe55127dfd3ea8b500f2",
+    "static": 0.011482394193049163,
+    "ms": 0.09549999958835542,
+    "ridge": 0.7758249966940862,
+    "constant": 0.8566498749969469,
+    "startup": 0.010761958001239691,
+    "actual": 0.01262249999854248,
+    "samples": [
+      0.013829124996846076,
+      0.013254042001790367,
+      0.01262249999854248,
+      0.01258149999921443,
+      0.012563958000100683
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "hamming_distance_12000.py",
+    "family": "hamming_distance",
+    "group": "Python",
+    "n": 12000,
+    "d": 16,
+    "fingerprint": "1f2b14bbb243d6a633b7571608e5e38b8d90f6c643c7718d15213ed6d1e28bb8",
+    "static": 0.01620525367268904,
+    "ms": 0.09199999476550147,
+    "ridge": 0.7758249966940862,
+    "constant": 0.8566498749969469,
+    "startup": 0.010761958001239691,
+    "actual": 0.02200466600334039,
+    "samples": [
+      0.021722707999288104,
+      0.022103499999502674,
+      0.02200466600334039,
+      0.02175712499592919,
+      0.022095790998719167
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "run_length_encoding_250000.py",
+    "family": "run_length_encoding",
+    "group": "Python",
+    "n": 250000,
+    "d": 48,
+    "fingerprint": "7600478bd7bd2f815eebbeb185499eb66ce6a18da3d098b92a5280c40300cb94",
+    "static": 0.01743266348095703,
+    "ms": 0.13112500164425,
+    "ridge": 0.7758249966940862,
+    "constant": 0.8566498749969469,
+    "startup": 0.010761958001239691,
+    "actual": 0.026803207998455036,
+    "samples": [
+      0.026927541999612004,
+      0.026998625005944632,
+      0.026803207998455036,
+      0.026695957996707875,
+      0.026659167000616435
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "log_loss_250000.py",
+    "family": "log_loss",
+    "group": "Python",
+    "n": 250000,
+    "d": 48,
+    "fingerprint": "afb07fb2cf5ed4a5f64b07f343d1a7c82378fe7e8c7818ff43137c45cecdc998",
+    "static": 0.01743266348095703,
+    "ms": 0.1049999991664663,
+    "ridge": 0.7758249966940862,
+    "constant": 0.8566498749969469,
+    "startup": 0.010761958001239691,
+    "actual": 0.02973345800273819,
+    "samples": [
+      0.02973345800273819,
+      0.029627541996887885,
+      0.03007029199943645,
+      0.029692708994843997,
+      0.029833957996743266
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "histogram_70000.py",
+    "family": "histogram",
+    "group": "Python",
+    "n": 70000,
+    "d": 24,
+    "fingerprint": "76fa6fd546ad81d157a3971a0c08b2716209d4f606cec06a3c8ffe06c3ebf0de",
+    "static": 0.012629755535560545,
+    "ms": 0.0875409969012253,
+    "ridge": 0.7758249966940862,
+    "constant": 0.8566498749969469,
+    "startup": 0.010761958001239691,
+    "actual": 0.014917959000740666,
+    "samples": [
+      0.014917959000740666,
+      0.014979207997384947,
+      0.014865375000226777,
+      0.015235208993544802,
+      0.014760625002963934
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "hamming_distance_3000.py",
+    "family": "hamming_distance",
+    "group": "Python",
+    "n": 3000,
+    "d": 8,
+    "fingerprint": "e2ebfb44fdc844128fed097446bf817ab78774a006934e31a861a24c062e9fb8",
+    "static": 0.011482394193049163,
+    "ms": 0.10045800445368513,
+    "ridge": 0.7758249966940862,
+    "constant": 0.8566498749969469,
+    "startup": 0.010761958001239691,
+    "actual": 0.012534832996607292,
+    "samples": [
+      0.012435666998499073,
+      0.012722791005217005,
+      0.012600334004673641,
+      0.0122579590024543,
+      0.012534832996607292
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "one_hot_120000.py",
+    "family": "one_hot",
+    "group": "Python",
+    "n": 120000,
+    "d": 32,
+    "fingerprint": "8d953e02faeb20f8f76e27ab43c750d59b41adc5abba96f380016c5599bb35cf",
+    "static": 0.013963896631504012,
+    "ms": 0.08750000415602699,
+    "ridge": 0.7758249966940862,
+    "constant": 0.8566498749969469,
+    "startup": 0.010761958001239691,
+    "actual": 0.033708416995068546,
+    "samples": [
+      0.033708416995068546,
+      0.03491383399523329,
+      0.0336808749998454,
+      0.033110582997323945,
+      0.03545112499705283
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "ema_filter_70000.py",
+    "family": "ema_filter",
+    "group": "Python",
+    "n": 70000,
+    "d": 24,
+    "fingerprint": "e5feb4a59683d411984629b8d9e6e03079f689d96b71fa46621a3947dcc91f3d",
+    "static": 0.012629755535560545,
+    "ms": 0.07566699787275866,
+    "ridge": 0.7758249966940862,
+    "constant": 0.8566498749969469,
+    "startup": 0.010761958001239691,
+    "actual": 0.013742582996201236,
+    "samples": [
+      0.013742582996201236,
+      0.013909917004639283,
+      0.013705792000109795,
+      0.013866375003999565,
+      0.013675041001988575
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "l1_distance_12000.py",
+    "family": "l1_distance",
+    "group": "Python",
+    "n": 12000,
+    "d": 16,
+    "fingerprint": "fdef08a5b5b594462e38b99d9716f0ee2e1af9ca6ca89ed0e8a7ed7fa7baa848",
+    "static": 0.01620525367268904,
+    "ms": 0.09045799379236996,
+    "ridge": 0.7758249966940862,
+    "constant": 0.8566498749969469,
+    "startup": 0.010761958001239691,
+    "actual": 0.02145433399709873,
+    "samples": [
+      0.021694333001505584,
+      0.02145433399709873,
+      0.021134583999810275,
+      0.021411750007246155,
+      0.0216511660037213
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "histogram_30000.py",
+    "family": "histogram",
+    "group": "Python",
+    "n": 30000,
+    "d": 12,
+    "fingerprint": "1e5a5ab5195aaa16378e8d309da48ccf84a0c114f28e69f0c7c19dbd7123e030",
+    "static": 0.011562442658805771,
+    "ms": 0.0912910036277026,
+    "ridge": 0.7758249966940862,
+    "constant": 0.8566498749969469,
+    "startup": 0.010761958001239691,
+    "actual": 0.01275033300044015,
+    "samples": [
+      0.012684749999607448,
+      0.012712541996734217,
+      0.012902791000669822,
+      0.01275033300044015,
+      0.013036416996328626
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "QuadraticDiscriminantAnalysis_12000.py",
+    "family": "QuadraticDiscriminantAnalysis",
+    "group": "sklearn",
+    "n": 12000,
+    "d": 50,
+    "fingerprint": "cbafa0023027a798fd8b574de6f1c022ff4be84215723dc7d20d04adf7fbd709",
+    "static": 0.8472206250226009,
+    "ms": 0.1657920001889579,
+    "ridge": 0.8764487148239909,
+    "constant": 0.8566498749969469,
+    "startup": 0.7676550000032876,
+    "actual": 0.8074095830015722,
+    "samples": [
+      0.8015768330005812,
+      0.8188544160002493,
+      0.7897799170023063,
+      0.8074095830015722,
+      0.8175354589984636
+    ],
+    "warnings": [
+      "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/sklearn/discriminant_analysis.py:1024: LinAlgWarning: The covariance matrix of class 0 is not full rank. Increasing the value of parameter `reg_param` might help reducing the collinearity.\n  warnings.warn(\n/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/sklearn/discriminant_analysis.py:1024: LinAlgWarning: The covariance matrix of class 1 is not full rank. Increasing the value of parameter `reg_param` might help reducing the collinearity.\n  warnings.warn(\n",
+      "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/sklearn/discriminant_analysis.py:1024: LinAlgWarning: The covariance matrix of class 0 is not full rank. Increasing the value of parameter `reg_param` might help reducing the collinearity.\n  warnings.warn(\n/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/sklearn/discriminant_analysis.py:1024: LinAlgWarning: The covariance matrix of class 1 is not full rank. Increasing the value of parameter `reg_param` might help reducing the collinearity.\n  warnings.warn(\n",
+      "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/sklearn/discriminant_analysis.py:1024: LinAlgWarning: The covariance matrix of class 0 is not full rank. Increasing the value of parameter `reg_param` might help reducing the collinearity.\n  warnings.warn(\n/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/sklearn/discriminant_analysis.py:1024: LinAlgWarning: The covariance matrix of class 1 is not full rank. Increasing the value of parameter `reg_param` might help reducing the collinearity.\n  warnings.warn(\n",
+      "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/sklearn/discriminant_analysis.py:1024: LinAlgWarning: The covariance matrix of class 0 is not full rank. Increasing the value of parameter `reg_param` might help reducing the collinearity.\n  warnings.warn(\n/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/sklearn/discriminant_analysis.py:1024: LinAlgWarning: The covariance matrix of class 1 is not full rank. Increasing the value of parameter `reg_param` might help reducing the collinearity.\n  warnings.warn(\n",
+      "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/sklearn/discriminant_analysis.py:1024: LinAlgWarning: The covariance matrix of class 0 is not full rank. Increasing the value of parameter `reg_param` might help reducing the collinearity.\n  warnings.warn(\n/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/sklearn/discriminant_analysis.py:1024: LinAlgWarning: The covariance matrix of class 1 is not full rank. Increasing the value of parameter `reg_param` might help reducing the collinearity.\n  warnings.warn(\n"
+    ]
+  },
+  {
+    "name": "histogram_250000.py",
+    "family": "histogram",
+    "group": "Python",
+    "n": 250000,
+    "d": 48,
+    "fingerprint": "d7fdcb905191c926b119e8179f1465ff57187d48a114bf635f66cfde9330b952",
+    "static": 0.01743266348095703,
+    "ms": 0.08704199717612937,
+    "ridge": 0.7758249966940862,
+    "constant": 0.8566498749969469,
+    "startup": 0.010761958001239691,
+    "actual": 0.024711042002309114,
+    "samples": [
+      0.02504654199583456,
+      0.024711042002309114,
+      0.024694374995306134,
+      0.024405832999036647,
+      0.024712458995054476
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "rank_percentile_3000.py",
+    "family": "rank_percentile",
+    "group": "Python",
+    "n": 3000,
+    "d": 8,
+    "fingerprint": "15b1cafa76878c1f687cfd36026b58096ba3881ecd96d129bd48c16fbd0b4e41",
+    "static": 0.010842006466996299,
+    "ms": 0.08008300210349262,
+    "ridge": 0.7758249966940862,
+    "constant": 0.8566498749969469,
+    "startup": 0.010761958001239691,
+    "actual": 0.011262083004112355,
+    "samples": [
+      0.011262083004112355,
+      0.011441875001764856,
+      0.01122274999943329,
+      0.011118125003122259,
+      0.011518416999024339
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "moving_average_3000.py",
+    "family": "moving_average",
+    "group": "Python",
+    "n": 3000,
+    "d": 8,
+    "fingerprint": "3ab1263c4b1085a28b79f22a8093caaa49841aa39f936db0070c14559f570ae3",
+    "static": 0.010842006466996299,
+    "ms": 0.13374999980442226,
+    "ridge": 0.7758249966940862,
+    "constant": 0.8566498749969469,
+    "startup": 0.010761958001239691,
+    "actual": 0.011357250004948583,
+    "samples": [
+      0.011175333995197434,
+      0.011256666999543086,
+      0.011397125002986286,
+      0.011357250004948583,
+      0.011387541999283712
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "log_loss_30000.py",
+    "family": "log_loss",
+    "group": "Python",
+    "n": 30000,
+    "d": 12,
+    "fingerprint": "968724e3ce93c584cda02063c7b596748f0a4bc2043b2609412f9a4588f30edd",
+    "static": 0.011562442658805771,
+    "ms": 0.10808299703057855,
+    "ridge": 0.7758249966940862,
+    "constant": 0.8566498749969469,
+    "startup": 0.010761958001239691,
+    "actual": 0.014951582998037338,
+    "samples": [
+      0.01406358299573185,
+      0.013859582999430131,
+      0.015497332999075297,
+      0.015418041999510024,
+      0.014951582998037338
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "feature_hashing_3000.py",
+    "family": "feature_hashing",
+    "group": "Python",
+    "n": 3000,
+    "d": 8,
+    "fingerprint": "63d1e5e8f4c6eecec1b231afbd83a343d454d6d4032979d1638ee670c5a31dcf",
+    "static": 0.010842006466996299,
+    "ms": 0.09345800208393484,
+    "ridge": 0.7758249966940862,
+    "constant": 0.8566498749969469,
+    "startup": 0.010761958001239691,
+    "actual": 0.011818958999356255,
+    "samples": [
+      0.011850584000058006,
+      0.01168912499997532,
+      0.012546750003821217,
+      0.011818958999356255,
+      0.011571583003387786
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "Perceptron_750.py",
+    "family": "Perceptron",
+    "group": "sklearn",
+    "n": 750,
+    "d": 12,
+    "fingerprint": "e28bdafa9c24114b35fa334bc03bb2810c072ee6e60b10c92f0c1be4098a91f6",
+    "static": 0.7688484843785772,
+    "ms": 0.15520799934165552,
+    "ridge": 0.7725946841288044,
+    "constant": 0.8566498749969469,
+    "startup": 0.7676550000032876,
+    "actual": 0.7856265420050477,
+    "samples": [
+      0.7770889160019578,
+      0.7883089160022791,
+      0.7856265420050477,
+      0.8001308340026299,
+      0.7759236250058166
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "online_variance_120000.py",
+    "family": "online_variance",
+    "group": "Python",
+    "n": 120000,
+    "d": 32,
+    "fingerprint": "72778a5715fadaa0bc3ab99c3bafa7d6248fe0c0aadbd72fb52e2f49a905d345",
+    "static": 0.013963896631504012,
+    "ms": 0.11287500092294067,
+    "ridge": 0.7758249966940862,
+    "constant": 0.8566498749969469,
+    "startup": 0.010761958001239691,
+    "actual": 0.02038462500058813,
+    "samples": [
+      0.021033333003288135,
+      0.020271875000617,
+      0.02038462500058813,
+      0.020145208000030834,
+      0.02062237500649644
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "ema_filter_120000.py",
+    "family": "ema_filter",
+    "group": "Python",
+    "n": 120000,
+    "d": 32,
+    "fingerprint": "a9c11cb337ac3a6007afda91e39ee84a5daf47d9798337354cf2b9d454864db5",
+    "static": 0.013963896631504012,
+    "ms": 0.08054100180743262,
+    "ridge": 0.7758249966940862,
+    "constant": 0.8566498749969469,
+    "startup": 0.010761958001239691,
+    "actual": 0.01602450000063982,
+    "samples": [
+      0.015954582995618694,
+      0.016200749996642116,
+      0.01602450000063982,
+      0.016157750003912952,
+      0.015616000004229136
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "dot_product_120000.py",
+    "family": "dot_product",
+    "group": "Python",
+    "n": 120000,
+    "d": 32,
+    "fingerprint": "042c41dc53172c318c17b200b904082468bb5157d9c4f48f8172baef33e11d7e",
+    "static": 0.11642678665026374,
+    "ms": 0.10279200068907812,
+    "ridge": 0.7758249966940862,
+    "constant": 0.8566498749969469,
+    "startup": 0.010761958001239691,
+    "actual": 0.13742141599504976,
+    "samples": [
+      0.1387022920025629,
+      0.1375342079991242,
+      0.13673712500167312,
+      0.13713995800208068,
+      0.13742141599504976
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "online_variance_250000.py",
+    "family": "online_variance",
+    "group": "Python",
+    "n": 250000,
+    "d": 48,
+    "fingerprint": "d8a6f6ee052617be54dd1a7ab239b8499b2c158c0d8497dc900553c49bf4debc",
+    "static": 0.01743266348095703,
+    "ms": 0.11254200217081234,
+    "ridge": 0.7758249966940862,
+    "constant": 0.8566498749969469,
+    "startup": 0.010761958001239691,
+    "actual": 0.029654958001628984,
+    "samples": [
+      0.02977162500610575,
+      0.029707166999287438,
+      0.02955775000009453,
+      0.029654958001628984,
+      0.029572917002951726
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "RidgeClassifier_2200.py",
+    "family": "RidgeClassifier",
+    "group": "sklearn",
+    "n": 2200,
+    "d": 24,
+    "fingerprint": "3724fe7abc8e67c3ddc096d363263eb1057d3261cec5823da21825138d6c0884",
+    "static": 0.7746567750049871,
+    "ms": 0.15574999997625127,
+    "ridge": 0.7853079702569359,
+    "constant": 0.8566498749969469,
+    "startup": 0.7676550000032876,
+    "actual": 0.7814976250010659,
+    "samples": [
+      0.7952538750032545,
+      0.7835974170011468,
+      0.780624250000983,
+      0.7814976250010659,
+      0.7790222080002422
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "histogram_120000.py",
+    "family": "histogram",
+    "group": "Python",
+    "n": 120000,
+    "d": 32,
+    "fingerprint": "b66d429b2050eb53483e30c29c30842b7527be3d1f53c83e101e2411830eceb7",
+    "static": 0.013963896631504012,
+    "ms": 0.08641600288683549,
+    "ridge": 0.7758249966940862,
+    "constant": 0.8566498749969469,
+    "startup": 0.010761958001239691,
+    "actual": 0.018952833001094405,
+    "samples": [
+      0.01854250000178581,
+      0.01993291700637201,
+      0.030680625000968575,
+      0.018357958004344255,
+      0.018952833001094405
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "BernoulliNB_6500.py",
+    "family": "BernoulliNB",
+    "group": "sklearn",
+    "n": 6500,
+    "d": 36,
+    "fingerprint": "50b6a27f43cba725573614fd52c32cd9c09477c7ce2af6554d342ab6c63e03e4",
+    "static": 0.7986855937608197,
+    "ms": 0.14599999849451706,
+    "ridge": 0.8221525443674818,
+    "constant": 0.8566498749969469,
+    "startup": 0.7676550000032876,
+    "actual": 0.7479329589987174,
+    "samples": [
+      0.7411493330000667,
+      0.7479329589987174,
+      0.7531197909993352,
+      0.7474776660019415,
+      0.7574904169960064
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "ExtraTreesClassifier_2200.py",
+    "family": "ExtraTreesClassifier",
+    "group": "sklearn",
+    "n": 2200,
+    "d": 24,
+    "fingerprint": "842487eea98f048ff3f4f5f5f9020ba636f997ca2b16c55fa53c81baa9037c9b",
+    "static": 0.8247102882117542,
+    "ms": 0.17608399502933025,
+    "ridge": 0.7853079702569359,
+    "constant": 0.8566498749969469,
+    "startup": 0.7676550000032876,
+    "actual": 0.8741564579977421,
+    "samples": [
+      0.8741564579977421,
+      0.8663102499995148,
+      0.8757787919967086,
+      0.8700789579961565,
+      0.8764102919958532
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "dot_product_12000.py",
+    "family": "dot_product",
+    "group": "Python",
+    "n": 12000,
+    "d": 16,
+    "fingerprint": "dbcb5d7e3748668d32ee5f6a24fc1ab4493d0b2e7cad2c8f298852c17d29ecd3",
+    "static": 0.01620568059783974,
+    "ms": 0.10104199463967234,
+    "ridge": 0.7758249966940862,
+    "constant": 0.8566498749969469,
+    "startup": 0.010761958001239691,
+    "actual": 0.019109542001388036,
+    "samples": [
+      0.034294874996703584,
+      0.018758499994874,
+      0.018471707997377962,
+      0.019109542001388036,
+      0.01953266599593917
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "brier_score_3000.py",
+    "family": "brier_score",
+    "group": "Python",
+    "n": 3000,
+    "d": 8,
+    "fingerprint": "fe3e39c82d618f055cb5680aba4365e16d39882dc32966671b83139b62fbde80",
+    "static": 0.010842006466996299,
+    "ms": 0.08420899393968284,
+    "ridge": 0.7758249966940862,
+    "constant": 0.8566498749969469,
+    "startup": 0.010761958001239691,
+    "actual": 0.012555542001791764,
+    "samples": [
+      0.013330916997801978,
+      0.012920791996293701,
+      0.012452582996047568,
+      0.012100749998353422,
+      0.012555542001791764
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "log_loss_12000.py",
+    "family": "log_loss",
+    "group": "Python",
+    "n": 12000,
+    "d": 16,
+    "fingerprint": "c086aa9fbcdc3aafb456f641368d64a2fd2ae8cbea1c44b353c40379d144a3fc",
+    "static": 0.011082151864266122,
+    "ms": 0.1046659963321872,
+    "ridge": 0.7758249966940862,
+    "constant": 0.8566498749969469,
+    "startup": 0.010761958001239691,
+    "actual": 0.013149457998224534,
+    "samples": [
+      0.013449333004246,
+      0.013149457998224534,
+      0.01349245899473317,
+      0.012771708999935072,
+      0.012823124998249114
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "confusion_matrix_30000.py",
+    "family": "confusion_matrix",
+    "group": "Python",
+    "n": 30000,
+    "d": 12,
+    "fingerprint": "cb84dae62a7054f79099f1ecd2b48171c39bac4df3d2dd191c152503add632c4",
+    "static": 0.011562762852668797,
+    "ms": 0.10108300193678588,
+    "ridge": 0.7758249966940862,
+    "constant": 0.8566498749969469,
+    "startup": 0.010761958001239691,
+    "actual": 0.012899291999929119,
+    "samples": [
+      0.013087207997159567,
+      0.012729082998703234,
+      0.012983957996766549,
+      0.012899291999929119,
+      0.012733041003230028
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "run_length_encoding_3000.py",
+    "family": "run_length_encoding",
+    "group": "Python",
+    "n": 3000,
+    "d": 8,
+    "fingerprint": "22b9afbbb5e144e1131ff4c05cc15eafa08bed9eb7556e3cc0cac5c5d4310e60",
+    "static": 0.010842006466996299,
+    "ms": 0.1617500020074658,
+    "ridge": 0.7758249966940862,
+    "constant": 0.8566498749969469,
+    "startup": 0.010761958001239691,
+    "actual": 0.011380000003555324,
+    "samples": [
+      0.011576207994949073,
+      0.011385083002096508,
+      0.011313875002088025,
+      0.011380000003555324,
+      0.011206541996216401
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "l1_distance_250000.py",
+    "family": "l1_distance",
+    "group": "Python",
+    "n": 250000,
+    "d": 48,
+    "fingerprint": "21f51ddd038d1e73ca40ee347e0005d273249cd0d9098348cf71c6f70a44b616",
+    "static": 0.3376265265073893,
+    "ms": 0.09766699804458767,
+    "ridge": 0.7758249966940862,
+    "constant": 0.8566498749969469,
+    "startup": 0.010761958001239691,
+    "actual": 0.6145660420006607,
+    "samples": [
+      0.6157306250024703,
+      0.6145660420006607,
+      0.6241215419941,
+      0.6130394159990828,
+      0.6140023750049295
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "RidgeClassifier_6500.py",
+    "family": "RidgeClassifier",
+    "group": "sklearn",
+    "n": 6500,
+    "d": 36,
+    "fingerprint": "3a1def2387a827855e185383543b255806c954b9c483bfe906ca3da6c6fcced3",
+    "static": 0.7986855937608197,
+    "ms": 0.14891599857946858,
+    "ridge": 0.8221525443674818,
+    "constant": 0.8566498749969469,
+    "startup": 0.7676550000032876,
+    "actual": 0.7945779580040835,
+    "samples": [
+      0.7868208340005367,
+      0.826136707997648,
+      0.7813088330003666,
+      0.8045325000057346,
+      0.7945779580040835
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "BernoulliNB_12000.py",
+    "family": "BernoulliNB",
+    "group": "sklearn",
+    "n": 12000,
+    "d": 50,
+    "fingerprint": "150f4b3e68d7e612055a572c41530b78b2830bf616638db2dea55b4c44eacf9a",
+    "static": 0.8472206250226009,
+    "ms": 0.1549580047139898,
+    "ridge": 0.8764487148239909,
+    "constant": 0.8566498749969469,
+    "startup": 0.7676550000032876,
+    "actual": 0.7577486660011346,
+    "samples": [
+      0.7538061249942984,
+      0.757823667001503,
+      0.7617427090008277,
+      0.7544640410051215,
+      0.7577486660011346
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "IsolationForest_2200.py",
+    "family": "IsolationForest",
+    "group": "sklearn",
+    "n": 2200,
+    "d": 24,
+    "fingerprint": "49511dd4c3df5a951841bf6cc788bd220a696b75f55c3207be59867a51f6f7f9",
+    "static": 0.8247102882117542,
+    "ms": 0.1711670047370717,
+    "ridge": 0.7853079702569359,
+    "constant": 0.8566498749969469,
+    "startup": 0.7676550000032876,
+    "actual": 0.88889566600119,
+    "samples": [
+      0.86435808299575,
+      0.8903127919984399,
+      0.8667984169951524,
+      0.88889566600119,
+      0.9189261670035194
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "brier_score_30000.py",
+    "family": "brier_score",
+    "group": "Python",
+    "n": 30000,
+    "d": 12,
+    "fingerprint": "b8a514fd5bd228b3ffada791b9e0c826f055d9561251986b6845f01985316e5f",
+    "static": 0.011562442658805771,
+    "ms": 0.08208300278056413,
+    "ridge": 0.7758249966940862,
+    "constant": 0.8566498749969469,
+    "startup": 0.010761958001239691,
+    "actual": 0.013846708003256936,
+    "samples": [
+      0.01448425000126008,
+      0.013441000002785586,
+      0.013846708003256936,
+      0.013205041002947837,
+      0.013989999999466818
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "reservoir_sampling_3000.py",
+    "family": "reservoir_sampling",
+    "group": "Python",
+    "n": 3000,
+    "d": 8,
+    "fingerprint": "abce66e9318c9d461178fe46a00595f350dee2f5fc0cb45dbeb661d2781ef87f",
+    "static": 0.010841793004420949,
+    "ms": 0.12104199413442984,
+    "ridge": 0.7758249966940862,
+    "constant": 0.8566498749969469,
+    "startup": 0.010761958001239691,
+    "actual": 0.014219333999790251,
+    "samples": [
+      0.014362542002345435,
+      0.014219333999790251,
+      0.014320458998554386,
+      0.013785582996206358,
+      0.013603040999441873
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "feature_hashing_120000.py",
+    "family": "feature_hashing",
+    "group": "Python",
+    "n": 120000,
+    "d": 32,
+    "fingerprint": "286ac878141965ff14d0b3a36e206f195e9f06764ac726d19f257455dda2e2ed",
+    "static": 0.013963896631504012,
+    "ms": 0.10279200068907812,
+    "ridge": 0.7758249966940862,
+    "constant": 0.8566498749969469,
+    "startup": 0.010761958001239691,
+    "actual": 0.018390666002233047,
+    "samples": [
+      0.017998874995100778,
+      0.018390666002233047,
+      0.017986457998631522,
+      0.01862391699978616,
+      0.01844724999682512
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "histogram_12000.py",
+    "family": "histogram",
+    "group": "Python",
+    "n": 12000,
+    "d": 16,
+    "fingerprint": "8b8c7ef48b82377fd3ef2d6e6cb8af65bbcd4de441a71f496449c77ecbe6d740",
+    "static": 0.011082151864266122,
+    "ms": 0.11583300511119887,
+    "ridge": 0.7758249966940862,
+    "constant": 0.8566498749969469,
+    "startup": 0.010761958001239691,
+    "actual": 0.011941917000513058,
+    "samples": [
+      0.012034665996907279,
+      0.011849624999740627,
+      0.012001417002466042,
+      0.011941917000513058,
+      0.011825249996036291
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "brier_score_120000.py",
+    "family": "brier_score",
+    "group": "Python",
+    "n": 120000,
+    "d": 32,
+    "fingerprint": "8875a28a1a7759424b98472b46a01f33f75f2b1606f76e4831ae7d77f0609e2d",
+    "static": 0.013963896631504012,
+    "ms": 0.0809580014902167,
+    "ridge": 0.7758249966940862,
+    "constant": 0.8566498749969469,
+    "startup": 0.010761958001239691,
+    "actual": 0.01831687500089174,
+    "samples": [
+      0.018497375000151806,
+      0.018441375003021676,
+      0.018241999998281244,
+      0.01820216699707089,
+      0.01831687500089174
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "moving_average_70000.py",
+    "family": "moving_average",
+    "group": "Python",
+    "n": 70000,
+    "d": 24,
+    "fingerprint": "1a0ee91c3cd41bcac4846bcbe7ee59cb61e1acb0e72c855c4087d6cd1402b2de",
+    "static": 0.012629755535560545,
+    "ms": 0.11608399654505774,
+    "ridge": 0.7758249966940862,
+    "constant": 0.8566498749969469,
+    "startup": 0.010761958001239691,
+    "actual": 0.015199791996565182,
+    "samples": [
+      0.0152766659957706,
+      0.015199791996565182,
+      0.01503187499474734,
+      0.015246458999172319,
+      0.0149950409977464
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "confusion_matrix_70000.py",
+    "family": "confusion_matrix",
+    "group": "Python",
+    "n": 70000,
+    "d": 24,
+    "fingerprint": "1a0d7a3e8defa277d55d1ca9260d44e1ab52e0033a1907364353b66bedfa6752",
+    "static": 0.012630395923286599,
+    "ms": 0.10162500257138163,
+    "ridge": 0.7758249966940862,
+    "constant": 0.8566498749969469,
+    "startup": 0.010761958001239691,
+    "actual": 0.015059666999150068,
+    "samples": [
+      0.015134000001125969,
+      0.015148792001127731,
+      0.014860124996630475,
+      0.014588749996619299,
+      0.015059666999150068
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "dot_product_30000.py",
+    "family": "dot_product",
+    "group": "Python",
+    "n": 30000,
+    "d": 12,
+    "fingerprint": "e8aafc7cc1879aef88e381cdbd76486e856054613e012bfc0f867472996f88e8",
+    "static": 0.021168578743461765,
+    "ms": 0.10633400233928114,
+    "ridge": 0.7758249966940862,
+    "constant": 0.8566498749969469,
+    "startup": 0.010761958001239691,
+    "actual": 0.0238432499972987,
+    "samples": [
+      0.023741334000078496,
+      0.024194124998757616,
+      0.024177416999009438,
+      0.02378208300069673,
+      0.0238432499972987
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "log_loss_120000.py",
+    "family": "log_loss",
+    "group": "Python",
+    "n": 120000,
+    "d": 32,
+    "fingerprint": "11c669d9f641f5710cd1ecddd6d3c75ea11566005a39b86fa8e25e9d42d3e7ac",
+    "static": 0.013963896631504012,
+    "ms": 0.10070799908135086,
+    "ridge": 0.7758249966940862,
+    "constant": 0.8566498749969469,
+    "startup": 0.010761958001239691,
+    "actual": 0.020533083996269852,
+    "samples": [
+      0.020374916995933745,
+      0.020533083996269852,
+      0.020113500002480578,
+      0.020626875004381873,
+      0.02075758299906738
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "hinge_loss_250000.py",
+    "family": "hinge_loss",
+    "group": "Python",
+    "n": 250000,
+    "d": 48,
+    "fingerprint": "d0eb3fbbab69e31092193ad3d702b25088f83ea1766c012bf54976b5ecad0972",
+    "static": 0.01743266348095703,
+    "ms": 0.09416700049769133,
+    "ridge": 0.7758249966940862,
+    "constant": 0.8566498749969469,
+    "startup": 0.010761958001239691,
+    "actual": 0.03625379200093448,
+    "samples": [
+      0.036239249995560385,
+      0.036408874999324325,
+      0.03645516599499388,
+      0.03625379200093448,
+      0.03618612499849405
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "one_hot_70000.py",
+    "family": "one_hot",
+    "group": "Python",
+    "n": 70000,
+    "d": 24,
+    "fingerprint": "deb28e805cd4ce0362cb22c88fa716032203890de92c444dde9f5e15f6eae35b",
+    "static": 0.012629755535560545,
+    "ms": 0.09154200233751908,
+    "ridge": 0.7758249966940862,
+    "constant": 0.8566498749969469,
+    "startup": 0.010761958001239691,
+    "actual": 0.022262665996095166,
+    "samples": [
+      0.02233058300043922,
+      0.022000375000061467,
+      0.022262665996095166,
+      0.02243816700502066,
+      0.022135916995466687
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "BernoulliNB_2200.py",
+    "family": "BernoulliNB",
+    "group": "sklearn",
+    "n": 2200,
+    "d": 24,
+    "fingerprint": "291b77a06df10bc6fbc6091ec081a44b044b5d5491cb11ba0265f67ea51bab66",
+    "static": 0.7746567750049871,
+    "ms": 0.1548750005895272,
+    "ridge": 0.7853079702569359,
+    "constant": 0.8566498749969469,
+    "startup": 0.7676550000032876,
+    "actual": 0.7445032079995144,
+    "samples": [
+      0.7494695830027922,
+      0.7445032079995144,
+      0.7428416250040755,
+      0.74205291600083,
+      0.7463448329945095
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "feature_hashing_30000.py",
+    "family": "feature_hashing",
+    "group": "Python",
+    "n": 30000,
+    "d": 12,
+    "fingerprint": "d9755890fdff6ddacc9fb716a8141bd148ce89a932813d0dbbc76b7c47b174ad",
+    "static": 0.011562442658805771,
+    "ms": 0.09025000326801091,
+    "ridge": 0.7758249966940862,
+    "constant": 0.8566498749969469,
+    "startup": 0.010761958001239691,
+    "actual": 0.012813042005291209,
+    "samples": [
+      0.014009042002726346,
+      0.013086582999676466,
+      0.012813042005291209,
+      0.012728499998047482,
+      0.012791875000402797
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "feature_hashing_70000.py",
+    "family": "feature_hashing",
+    "group": "Python",
+    "n": 70000,
+    "d": 24,
+    "fingerprint": "43ee1e88432ac47821711f494c688a19c69aeb62888f03d2d7b6e29e69c45840",
+    "static": 0.012629755535560545,
+    "ms": 0.10325000039301813,
+    "ridge": 0.7758249966940862,
+    "constant": 0.8566498749969469,
+    "startup": 0.010761958001239691,
+    "actual": 0.015451375002157874,
+    "samples": [
+      0.015233582998916972,
+      0.015385250000690576,
+      0.015634165996743832,
+      0.015451375002157874,
+      0.015479375004360918
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "confusion_matrix_3000.py",
+    "family": "confusion_matrix",
+    "group": "Python",
+    "n": 3000,
+    "d": 8,
+    "fingerprint": "b78021edf88b29c8af2effe55be3acf228613dd5d02acf5a4f26c71cd55cdfac",
+    "static": 0.01084221992957165,
+    "ms": 0.13233299978310242,
+    "ridge": 0.7758249966940862,
+    "constant": 0.8566498749969469,
+    "startup": 0.010761958001239691,
+    "actual": 0.011447458993643522,
+    "samples": [
+      0.011551084004167933,
+      0.011447458993643522,
+      0.011175792002177332,
+      0.011482124995382037,
+      0.0112826669937931
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "ema_filter_3000.py",
+    "family": "ema_filter",
+    "group": "Python",
+    "n": 3000,
+    "d": 8,
+    "fingerprint": "243dba17cccbd50d66ce7075181da093a17e670375be6021815ea274a32f7845",
+    "static": 0.010842006466996299,
+    "ms": 0.07737499981885776,
+    "ridge": 0.7758249966940862,
+    "constant": 0.8566498749969469,
+    "startup": 0.010761958001239691,
+    "actual": 0.011513916004332714,
+    "samples": [
+      0.011432958002842497,
+      0.011649457999737933,
+      0.01148687500244705,
+      0.011630125001829583,
+      0.011513916004332714
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "QuadraticDiscriminantAnalysis_2200.py",
+    "family": "QuadraticDiscriminantAnalysis",
+    "group": "sklearn",
+    "n": 2200,
+    "d": 24,
+    "fingerprint": "b8a66a68c862aca6cb1454313b626b70c12721622bef016d2bfd3b3dd85e4c5c",
+    "static": 0.7746567750049871,
+    "ms": 0.1973750040633604,
+    "ridge": 0.7853079702569359,
+    "constant": 0.8566498749969469,
+    "startup": 0.7676550000032876,
+    "actual": 0.7888837909995345,
+    "samples": [
+      0.7846457080013352,
+      0.7888837909995345,
+      0.8019685420003952,
+      0.7778935419992195,
+      0.7933674590021838
+    ],
+    "warnings": [
+      "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/sklearn/discriminant_analysis.py:1024: LinAlgWarning: The covariance matrix of class 0 is not full rank. Increasing the value of parameter `reg_param` might help reducing the collinearity.\n  warnings.warn(\n/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/sklearn/discriminant_analysis.py:1024: LinAlgWarning: The covariance matrix of class 1 is not full rank. Increasing the value of parameter `reg_param` might help reducing the collinearity.\n  warnings.warn(\n",
+      "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/sklearn/discriminant_analysis.py:1024: LinAlgWarning: The covariance matrix of class 0 is not full rank. Increasing the value of parameter `reg_param` might help reducing the collinearity.\n  warnings.warn(\n/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/sklearn/discriminant_analysis.py:1024: LinAlgWarning: The covariance matrix of class 1 is not full rank. Increasing the value of parameter `reg_param` might help reducing the collinearity.\n  warnings.warn(\n",
+      "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/sklearn/discriminant_analysis.py:1024: LinAlgWarning: The covariance matrix of class 0 is not full rank. Increasing the value of parameter `reg_param` might help reducing the collinearity.\n  warnings.warn(\n/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/sklearn/discriminant_analysis.py:1024: LinAlgWarning: The covariance matrix of class 1 is not full rank. Increasing the value of parameter `reg_param` might help reducing the collinearity.\n  warnings.warn(\n",
+      "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/sklearn/discriminant_analysis.py:1024: LinAlgWarning: The covariance matrix of class 0 is not full rank. Increasing the value of parameter `reg_param` might help reducing the collinearity.\n  warnings.warn(\n/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/sklearn/discriminant_analysis.py:1024: LinAlgWarning: The covariance matrix of class 1 is not full rank. Increasing the value of parameter `reg_param` might help reducing the collinearity.\n  warnings.warn(\n",
+      "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/sklearn/discriminant_analysis.py:1024: LinAlgWarning: The covariance matrix of class 0 is not full rank. Increasing the value of parameter `reg_param` might help reducing the collinearity.\n  warnings.warn(\n/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/sklearn/discriminant_analysis.py:1024: LinAlgWarning: The covariance matrix of class 1 is not full rank. Increasing the value of parameter `reg_param` might help reducing the collinearity.\n  warnings.warn(\n"
+    ]
+  },
+  {
+    "name": "IsolationForest_12000.py",
+    "family": "IsolationForest",
+    "group": "sklearn",
+    "n": 12000,
+    "d": 50,
+    "fingerprint": "858988684fb4940b5d2b2a85c3e42f6794c6dca9d64d9b9fd9ac816db20a3496",
+    "static": 2.326074424313447,
+    "ms": 0.16799999866634607,
+    "ridge": 0.8764487148239909,
+    "constant": 0.8566498749969469,
+    "startup": 0.7676550000032876,
+    "actual": 0.8917419170029461,
+    "samples": [
+      0.8951535829983186,
+      0.8905920000033802,
+      0.8917419170029461,
+      0.8895707080009743,
+      0.9236751249991357
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "rank_percentile_120000.py",
+    "family": "rank_percentile",
+    "group": "Python",
+    "n": 120000,
+    "d": 32,
+    "fingerprint": "55493b867fd81a3179f21235882d224b2815db2b69f176c622628486cc232d8a",
+    "static": 0.013963896631504012,
+    "ms": 0.076457996328827,
+    "ridge": 0.7758249966940862,
+    "constant": 0.8566498749969469,
+    "startup": 0.010761958001239691,
+    "actual": 0.02048804199876031,
+    "samples": [
+      0.021041291001893114,
+      0.02048804199876031,
+      0.020531624999421183,
+      0.020485875000304077,
+      0.020431541997822933
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "QuadraticDiscriminantAnalysis_750.py",
+    "family": "QuadraticDiscriminantAnalysis",
+    "group": "sklearn",
+    "n": 750,
+    "d": 12,
+    "fingerprint": "a3e0302a71f75bb4076fa02630e9dcc29f315922951b23b018ceb819f103c21d",
+    "static": 0.7688484843785772,
+    "ms": 0.1600420000613667,
+    "ridge": 0.7725946841288044,
+    "constant": 0.8566498749969469,
+    "startup": 0.7676550000032876,
+    "actual": 0.7883571669954108,
+    "samples": [
+      0.7921090839954559,
+      0.7934773749948363,
+      0.7854212090023793,
+      0.7883571669954108,
+      0.7763832080017892
+    ],
+    "warnings": [
+      "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/sklearn/discriminant_analysis.py:1024: LinAlgWarning: The covariance matrix of class 0 is not full rank. Increasing the value of parameter `reg_param` might help reducing the collinearity.\n  warnings.warn(\n/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/sklearn/discriminant_analysis.py:1024: LinAlgWarning: The covariance matrix of class 1 is not full rank. Increasing the value of parameter `reg_param` might help reducing the collinearity.\n  warnings.warn(\n",
+      "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/sklearn/discriminant_analysis.py:1024: LinAlgWarning: The covariance matrix of class 0 is not full rank. Increasing the value of parameter `reg_param` might help reducing the collinearity.\n  warnings.warn(\n/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/sklearn/discriminant_analysis.py:1024: LinAlgWarning: The covariance matrix of class 1 is not full rank. Increasing the value of parameter `reg_param` might help reducing the collinearity.\n  warnings.warn(\n",
+      "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/sklearn/discriminant_analysis.py:1024: LinAlgWarning: The covariance matrix of class 0 is not full rank. Increasing the value of parameter `reg_param` might help reducing the collinearity.\n  warnings.warn(\n/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/sklearn/discriminant_analysis.py:1024: LinAlgWarning: The covariance matrix of class 1 is not full rank. Increasing the value of parameter `reg_param` might help reducing the collinearity.\n  warnings.warn(\n",
+      "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/sklearn/discriminant_analysis.py:1024: LinAlgWarning: The covariance matrix of class 0 is not full rank. Increasing the value of parameter `reg_param` might help reducing the collinearity.\n  warnings.warn(\n/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/sklearn/discriminant_analysis.py:1024: LinAlgWarning: The covariance matrix of class 1 is not full rank. Increasing the value of parameter `reg_param` might help reducing the collinearity.\n  warnings.warn(\n",
+      "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/sklearn/discriminant_analysis.py:1024: LinAlgWarning: The covariance matrix of class 0 is not full rank. Increasing the value of parameter `reg_param` might help reducing the collinearity.\n  warnings.warn(\n/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/sklearn/discriminant_analysis.py:1024: LinAlgWarning: The covariance matrix of class 1 is not full rank. Increasing the value of parameter `reg_param` might help reducing the collinearity.\n  warnings.warn(\n"
+    ]
+  },
+  {
+    "name": "online_variance_12000.py",
+    "family": "online_variance",
+    "group": "Python",
+    "n": 12000,
+    "d": 16,
+    "fingerprint": "06d1c8585faa7ba9c5e08dd1299756752b0d04b8ecf9a765cccedba828463c6e",
+    "static": 0.011082151864266122,
+    "ms": 0.11124999582534656,
+    "ridge": 0.7758249966940862,
+    "constant": 0.8566498749969469,
+    "startup": 0.010761958001239691,
+    "actual": 0.012118333994294517,
+    "samples": [
+      0.012861833005445078,
+      0.012222292003571056,
+      0.012118333994294517,
+      0.012094207995687611,
+      0.01199679199635284
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "run_length_encoding_70000.py",
+    "family": "run_length_encoding",
+    "group": "Python",
+    "n": 70000,
+    "d": 24,
+    "fingerprint": "3a439439d6ed210d552a472840e106b5588ca3802663bf29140d142245a41cb2",
+    "static": 0.012629755535560545,
+    "ms": 0.13412500265985727,
+    "ridge": 0.7758249966940862,
+    "constant": 0.8566498749969469,
+    "startup": 0.010761958001239691,
+    "actual": 0.015785499999765307,
+    "samples": [
+      0.01568754199979594,
+      0.015978958006598987,
+      0.015763667004648596,
+      0.015785499999765307,
+      0.01597820899769431
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "feature_hashing_12000.py",
+    "family": "feature_hashing",
+    "group": "Python",
+    "n": 12000,
+    "d": 16,
+    "fingerprint": "f3e2718282cd74e3312f91ea6e5c336a3c2171992cdc50033519b5dded4ab9d9",
+    "static": 0.011082151864266122,
+    "ms": 0.10049999400507659,
+    "ridge": 0.7758249966940862,
+    "constant": 0.8566498749969469,
+    "startup": 0.010761958001239691,
+    "actual": 0.011879541998496279,
+    "samples": [
+      0.012733957999444101,
+      0.012055250001139939,
+      0.011867375003930647,
+      0.01181087500299327,
+      0.011879541998496279
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "BaggingClassifier_750.py",
+    "family": "BaggingClassifier",
+    "group": "sklearn",
+    "n": 750,
+    "d": 12,
+    "fingerprint": "94170d24781db959d862439fad2c86335652f34af9bc213c302f7a20fba447c3",
+    "static": 0.7728300138382064,
+    "ms": 0.15662499936297536,
+    "ridge": 0.7725946841288044,
+    "constant": 0.8566498749969469,
+    "startup": 0.7676550000032876,
+    "actual": 0.8791314999980386,
+    "samples": [
+      0.8791314999980386,
+      0.8689722089984571,
+      0.9004371669943794,
+      0.875391875000787,
+      0.8795169170043664
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "RidgeClassifier_12000.py",
+    "family": "RidgeClassifier",
+    "group": "sklearn",
+    "n": 12000,
+    "d": 50,
+    "fingerprint": "073df2994d5fa55ffa0584aac10d97f2ff631ccddaf76a8f03f76a65dc5df9bd",
+    "static": 0.8472206250226009,
+    "ms": 0.14562500291503966,
+    "ridge": 0.8764487148239909,
+    "constant": 0.8566498749969469,
+    "startup": 0.7676550000032876,
+    "actual": 0.7969304590005777,
+    "samples": [
+      0.7938556669978425,
+      0.8050031250022585,
+      0.8015748749967315,
+      0.7950290829976439,
+      0.7969304590005777
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "online_variance_30000.py",
+    "family": "online_variance",
+    "group": "Python",
+    "n": 30000,
+    "d": 12,
+    "fingerprint": "29ce09ec82154c5c080e4fe53133c2f084a59eb6b1325a0560b289afb1ff33af",
+    "static": 0.011562442658805771,
+    "ms": 0.1119579974329099,
+    "ridge": 0.7758249966940862,
+    "constant": 0.8566498749969469,
+    "startup": 0.010761958001239691,
+    "actual": 0.01352125000266824,
+    "samples": [
+      0.014363041002070531,
+      0.013952499997685663,
+      0.013507124996976927,
+      0.01352125000266824,
+      0.013404332996287849
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "hinge_loss_3000.py",
+    "family": "hinge_loss",
+    "group": "Python",
+    "n": 3000,
+    "d": 8,
+    "fingerprint": "0da4316927cf6456c470c479f6a774ce0b9111469bae403e11a01c7c0c98d93b",
+    "static": 0.010842006466996299,
+    "ms": 0.12304200208745897,
+    "ridge": 0.7758249966940862,
+    "constant": 0.8566498749969469,
+    "startup": 0.010761958001239691,
+    "actual": 0.011618541997449938,
+    "samples": [
+      0.011687166996125598,
+      0.011618541997449938,
+      0.011591499998758081,
+      0.011654290996375494,
+      0.011555459001101553
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "BernoulliRBM_750.py",
+    "family": "BernoulliRBM",
+    "group": "sklearn",
+    "n": 750,
+    "d": 12,
+    "fingerprint": "c2a004edb80dfd77446b4c07477022c549fb79bd51580f47cb7227f86573a175",
+    "static": 0.7688484843785772,
+    "ms": 0.16487499669892713,
+    "ridge": 0.7725946841288044,
+    "constant": 0.8566498749969469,
+    "startup": 0.7676550000032876,
+    "actual": 0.753685374998895,
+    "samples": [
+      0.7507574999981443,
+      0.7472635839949362,
+      0.753685374998895,
+      0.7542444170030649,
+      0.7708091669992427
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "BaggingClassifier_2200.py",
+    "family": "BaggingClassifier",
+    "group": "sklearn",
+    "n": 2200,
+    "d": 24,
+    "fingerprint": "8c5f30638686d61be0e543e7959bd3b5867a8470b70a25b2b7ab4de8fe5bb5d3",
+    "static": 0.8247102882117542,
+    "ms": 0.16408300143666565,
+    "ridge": 0.7853079702569359,
+    "constant": 0.8566498749969469,
+    "startup": 0.7676550000032876,
+    "actual": 1.0739232920022914,
+    "samples": [
+      1.0666482500018901,
+      1.0696950839992496,
+      1.0795429159988998,
+      1.0739232920022914,
+      1.0784260420041392
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "log_loss_70000.py",
+    "family": "log_loss",
+    "group": "Python",
+    "n": 70000,
+    "d": 24,
+    "fingerprint": "090e9829e3b47571fe579b7d3602885dbd9537b25d6cbada74cbd37e2cb74147",
+    "static": 0.012629755535560545,
+    "ms": 0.10420800390420482,
+    "ridge": 0.7758249966940862,
+    "constant": 0.8566498749969469,
+    "startup": 0.010761958001239691,
+    "actual": 0.01708758400491206,
+    "samples": [
+      0.017763250005373266,
+      0.017193667001265567,
+      0.01708758400491206,
+      0.016884666998521425,
+      0.016918583001825027
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "ExtraTreesClassifier_6500.py",
+    "family": "ExtraTreesClassifier",
+    "group": "sklearn",
+    "n": 6500,
+    "d": 36,
+    "fingerprint": "984449cfcf6fa9b7352f5302cc298dddd0162c6a3c3d88692b2ee311cf987ea4",
+    "static": 1.1536105055906227,
+    "ms": 0.17204200412379578,
+    "ridge": 0.8221525443674818,
+    "constant": 0.8566498749969469,
+    "startup": 0.7676550000032876,
+    "actual": 0.9466408329972182,
+    "samples": [
+      0.9532452909988933,
+      0.9477758330031065,
+      0.9409915840005851,
+      0.9466408329972182,
+      0.9433679159992607
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "ema_filter_250000.py",
+    "family": "ema_filter",
+    "group": "Python",
+    "n": 250000,
+    "d": 48,
+    "fingerprint": "f2ae5957a2c1dc6aed842d1beb72ee4a619005a6536bab6f32cc9adddcad04c2",
+    "static": 0.01743266348095703,
+    "ms": 0.07566699787275866,
+    "ridge": 0.7758249966940862,
+    "constant": 0.8566498749969469,
+    "startup": 0.010761958001239691,
+    "actual": 0.021027167000283953,
+    "samples": [
+      0.021532499995373655,
+      0.02090666699950816,
+      0.021196959001827054,
+      0.020888334001938347,
+      0.021027167000283953
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "BaggingClassifier_12000.py",
+    "family": "BaggingClassifier",
+    "group": "sklearn",
+    "n": 12000,
+    "d": 50,
+    "fingerprint": "7ff77a77035f4af941563ae9699cf561dc02022e996eb8a0fd336b454ac84bee",
+    "static": 2.326074424313447,
+    "ms": 0.1663330040173605,
+    "ridge": 0.8764487148239909,
+    "constant": 0.8566498749969469,
+    "startup": 0.7676550000032876,
+    "actual": 11.689710749997175,
+    "samples": [
+      11.737163958001474,
+      11.704389250000531,
+      11.689710749997175,
+      11.68269966700609,
+      11.669309875003819
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "rank_percentile_250000.py",
+    "family": "rank_percentile",
+    "group": "Python",
+    "n": 250000,
+    "d": 48,
+    "fingerprint": "940e6e971ddb571d27567b910fcd4f99feeb3e3aba8187b88f48640cf19c655b",
+    "static": 0.01743266348095703,
+    "ms": 0.07550000009359792,
+    "ridge": 0.7758249966940862,
+    "constant": 0.8566498749969469,
+    "startup": 0.010761958001239691,
+    "actual": 0.03170737499749521,
+    "samples": [
+      0.03170737499749521,
+      0.03106895800010534,
+      0.03112745900580194,
+      0.03171708300214959,
+      0.031826541999180336
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "moving_average_250000.py",
+    "family": "moving_average",
+    "group": "Python",
+    "n": 250000,
+    "d": 48,
+    "fingerprint": "214282260e5a1607455a07cc995c19410c77954b82d7bd0358460084cd751ff6",
+    "static": 0.01743266348095703,
+    "ms": 0.1354589985567145,
+    "ridge": 0.7758249966940862,
+    "constant": 0.8566498749969469,
+    "startup": 0.010761958001239691,
+    "actual": 0.025093625001318287,
+    "samples": [
+      0.025997208002081607,
+      0.025453458998526912,
+      0.02469816699885996,
+      0.025093625001318287,
+      0.024664832999405917
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "run_length_encoding_12000.py",
+    "family": "run_length_encoding",
+    "group": "Python",
+    "n": 12000,
+    "d": 16,
+    "fingerprint": "d84f10f4c11a4a5a3026a5ec372ad9373b934a43fb958b273812f4614ee0ffb1",
+    "static": 0.011082151864266122,
+    "ms": 0.12545899517135695,
+    "ridge": 0.7758249966940862,
+    "constant": 0.8566498749969469,
+    "startup": 0.010761958001239691,
+    "actual": 0.012217750001582317,
+    "samples": [
+      0.012383959001454059,
+      0.012217750001582317,
+      0.012089167001249734,
+      0.012076708000677172,
+      0.012475249997805804
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "reservoir_sampling_12000.py",
+    "family": "reservoir_sampling",
+    "group": "Python",
+    "n": 12000,
+    "d": 16,
+    "fingerprint": "8f5c4033ef436498b1211eddb8dc195e221d8eac537723f9d3b4f06700ed1027",
+    "static": 0.011081724939115422,
+    "ms": 0.1214580042869784,
+    "ridge": 0.7758249966940862,
+    "constant": 0.8566498749969469,
+    "startup": 0.010761958001239691,
+    "actual": 0.015014582997537218,
+    "samples": [
+      0.014998582999396604,
+      0.01529520900658099,
+      0.015475875006814022,
+      0.015014582997537218,
+      0.014788916996621992
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "dot_product_250000.py",
+    "family": "dot_product",
+    "group": "Python",
+    "n": 250000,
+    "d": 48,
+    "fingerprint": "87eedc66b288543a37cd7165c5b29287a82cd9eb8df88891ed5f0a9b3ddde67c",
+    "static": 0.33762780728284136,
+    "ms": 0.10558299982221797,
+    "ridge": 0.7758249966940862,
+    "constant": 0.8566498749969469,
+    "startup": 0.010761958001239691,
+    "actual": 0.40039137500571087,
+    "samples": [
+      0.39458895799907623,
+      0.4021403750011814,
+      0.40039137500571087,
+      0.40459879199624993,
+      0.39324875000602333
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "QuadraticDiscriminantAnalysis_6500.py",
+    "family": "QuadraticDiscriminantAnalysis",
+    "group": "sklearn",
+    "n": 6500,
+    "d": 36,
+    "fingerprint": "db14504076389e7dd15ab5143a9b3d79f3d45a74cba611d73711e9f2a7d8ef30",
+    "static": 0.7986855937608197,
+    "ms": 0.14945899602025747,
+    "ridge": 0.8221525443674818,
+    "constant": 0.8566498749969469,
+    "startup": 0.7676550000032876,
+    "actual": 0.800329249999777,
+    "samples": [
+      0.8280789170021308,
+      0.7931523750012275,
+      0.800329249999777,
+      0.8138342919992283,
+      0.7923152089933865
+    ],
+    "warnings": [
+      "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/sklearn/discriminant_analysis.py:1024: LinAlgWarning: The covariance matrix of class 0 is not full rank. Increasing the value of parameter `reg_param` might help reducing the collinearity.\n  warnings.warn(\n/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/sklearn/discriminant_analysis.py:1024: LinAlgWarning: The covariance matrix of class 1 is not full rank. Increasing the value of parameter `reg_param` might help reducing the collinearity.\n  warnings.warn(\n",
+      "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/sklearn/discriminant_analysis.py:1024: LinAlgWarning: The covariance matrix of class 0 is not full rank. Increasing the value of parameter `reg_param` might help reducing the collinearity.\n  warnings.warn(\n/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/sklearn/discriminant_analysis.py:1024: LinAlgWarning: The covariance matrix of class 1 is not full rank. Increasing the value of parameter `reg_param` might help reducing the collinearity.\n  warnings.warn(\n",
+      "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/sklearn/discriminant_analysis.py:1024: LinAlgWarning: The covariance matrix of class 0 is not full rank. Increasing the value of parameter `reg_param` might help reducing the collinearity.\n  warnings.warn(\n/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/sklearn/discriminant_analysis.py:1024: LinAlgWarning: The covariance matrix of class 1 is not full rank. Increasing the value of parameter `reg_param` might help reducing the collinearity.\n  warnings.warn(\n",
+      "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/sklearn/discriminant_analysis.py:1024: LinAlgWarning: The covariance matrix of class 0 is not full rank. Increasing the value of parameter `reg_param` might help reducing the collinearity.\n  warnings.warn(\n/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/sklearn/discriminant_analysis.py:1024: LinAlgWarning: The covariance matrix of class 1 is not full rank. Increasing the value of parameter `reg_param` might help reducing the collinearity.\n  warnings.warn(\n",
+      "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/sklearn/discriminant_analysis.py:1024: LinAlgWarning: The covariance matrix of class 0 is not full rank. Increasing the value of parameter `reg_param` might help reducing the collinearity.\n  warnings.warn(\n/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/sklearn/discriminant_analysis.py:1024: LinAlgWarning: The covariance matrix of class 1 is not full rank. Increasing the value of parameter `reg_param` might help reducing the collinearity.\n  warnings.warn(\n"
+    ]
+  },
+  {
+    "name": "hamming_distance_250000.py",
+    "family": "hamming_distance",
+    "group": "Python",
+    "n": 250000,
+    "d": 48,
+    "fingerprint": "c077e1dacb5699a36a28d8244fc1b6207d22c4a0ee09631c4138b143fbe7a35a",
+    "static": 0.3376265265073893,
+    "ms": 0.1009580009849742,
+    "ridge": 0.7758249966940862,
+    "constant": 0.8566498749969469,
+    "startup": 0.010761958001239691,
+    "actual": 0.6129175000023679,
+    "samples": [
+      0.6074964159997762,
+      0.6129175000023679,
+      0.6141452090014354,
+      0.625094832998002,
+      0.6098518330036313
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "l1_distance_120000.py",
+    "family": "l1_distance",
+    "group": "Python",
+    "n": 120000,
+    "d": 32,
+    "fingerprint": "b160878a01f1295dce8dcf7f95092d603afda8a7b22f7dce74ca64dce4bdce8a",
+    "static": 0.11642593279996233,
+    "ms": 0.11791600263677537,
+    "ridge": 0.7758249966940862,
+    "constant": 0.8566498749969469,
+    "startup": 0.010761958001239691,
+    "actual": 0.20869266700174194,
+    "samples": [
+      0.20869266700174194,
+      0.20983599999453872,
+      0.20878370800346602,
+      0.20853720800369047,
+      0.20733416599978227
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "reservoir_sampling_250000.py",
+    "family": "reservoir_sampling",
+    "group": "Python",
+    "n": 250000,
+    "d": 48,
+    "fingerprint": "a1bc16c042d0af44264e0d544514d3615786c68f5be83dfae542b19aa1fbc59e",
+    "static": 0.017431382705504924,
+    "ms": 0.1250830027856864,
+    "ridge": 0.7758249966940862,
+    "constant": 0.8566498749969469,
+    "startup": 0.010761958001239691,
+    "actual": 0.0468978339995374,
+    "samples": [
+      0.04748108400235651,
+      0.0468978339995374,
+      0.04741387500689598,
+      0.04670950000581797,
+      0.046855749998940155
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "reservoir_sampling_70000.py",
+    "family": "reservoir_sampling",
+    "group": "Python",
+    "n": 70000,
+    "d": 24,
+    "fingerprint": "eb7ff7e8ac326c10303576e181b90cdda28f271f9d0f3aa67a011b8273997a9b",
+    "static": 0.012629115147834493,
+    "ms": 0.11795800674008206,
+    "ridge": 0.7758249966940862,
+    "constant": 0.8566498749969469,
+    "startup": 0.010761958001239691,
+    "actual": 0.022714916995028034,
+    "samples": [
+      0.023107000000891276,
+      0.022702791000483558,
+      0.022785207998822443,
+      0.022714916995028034,
+      0.022619249997660518
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "IsolationForest_750.py",
+    "family": "IsolationForest",
+    "group": "sklearn",
+    "n": 750,
+    "d": 12,
+    "fingerprint": "c246d6c458d19fda014f9e703fa4b0937bcbd076c93c45bea8d7714c7f4a3124",
+    "static": 0.7728300138382064,
+    "ms": 0.16783300088718534,
+    "ridge": 0.7725946841288044,
+    "constant": 0.8566498749969469,
+    "startup": 0.7676550000032876,
+    "actual": 0.8663533750004717,
+    "samples": [
+      0.8663533750004717,
+      0.8593895829981193,
+      0.8612388330002432,
+      0.8731031249990338,
+      0.8842071249964647
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "BernoulliRBM_6500.py",
+    "family": "BernoulliRBM",
+    "group": "sklearn",
+    "n": 6500,
+    "d": 36,
+    "fingerprint": "3c9fa7d646c01178d558bc952386fd498e4fa00902d7d8a9971e54a854182e34",
+    "static": 0.7986855937608197,
+    "ms": 0.19058400357607752,
+    "ridge": 0.8221525443674818,
+    "constant": 0.8566498749969469,
+    "startup": 0.7676550000032876,
+    "actual": 0.8146669159978046,
+    "samples": [
+      0.8119464999981574,
+      0.8175568329970702,
+      0.81123933300114,
+      0.8261381669944967,
+      0.8146669159978046
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "hinge_loss_120000.py",
+    "family": "hinge_loss",
+    "group": "Python",
+    "n": 120000,
+    "d": 32,
+    "fingerprint": "cb48df8694ac3e31158f9c080d85d542216b56e62764599b3c519276b228afba",
+    "static": 0.013963896631504012,
+    "ms": 0.09595799929229543,
+    "ridge": 0.7758249966940862,
+    "constant": 0.8566498749969469,
+    "startup": 0.010761958001239691,
+    "actual": 0.02382016699993983,
+    "samples": [
+      0.024655375003931113,
+      0.024045333004323766,
+      0.02382016699993983,
+      0.023517250003351364,
+      0.023615666999830864
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "log_loss_3000.py",
+    "family": "log_loss",
+    "group": "Python",
+    "n": 3000,
+    "d": 8,
+    "fingerprint": "e311ba2473d434b515a0c5a7d7c76d36a0751075a2e6774c16b9a284690c0dda",
+    "static": 0.010842006466996299,
+    "ms": 0.10487500549061224,
+    "ridge": 0.7758249966940862,
+    "constant": 0.8566498749969469,
+    "startup": 0.010761958001239691,
+    "actual": 0.012206916006107349,
+    "samples": [
+      0.012619667002581991,
+      0.012610083002073225,
+      0.012101250002160668,
+      0.011977709000348113,
+      0.012206916006107349
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "hamming_distance_70000.py",
+    "family": "hamming_distance",
+    "group": "Python",
+    "n": 70000,
+    "d": 24,
+    "fingerprint": "55b227d9c49efdac33b1cfe0044bf7e4989da84ad64b254fc0747ca13855308d",
+    "static": 0.05745689635926106,
+    "ms": 0.10695800301618874,
+    "ridge": 0.7758249966940862,
+    "constant": 0.8566498749969469,
+    "startup": 0.010761958001239691,
+    "actual": 0.1009916670009261,
+    "samples": [
+      0.10141608399862889,
+      0.10148483300145017,
+      0.10032354199938709,
+      0.10097612500248943,
+      0.1009916670009261
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "brier_score_250000.py",
+    "family": "brier_score",
+    "group": "Python",
+    "n": 250000,
+    "d": 48,
+    "fingerprint": "87c5713d82af49d0dddedc8afc52f5cab8608f57f6455272af02f888a6511468",
+    "static": 0.01743266348095703,
+    "ms": 0.0900410013855435,
+    "ridge": 0.7758249966940862,
+    "constant": 0.8566498749969469,
+    "startup": 0.010761958001239691,
+    "actual": 0.025987666995206382,
+    "samples": [
+      0.02611241699923994,
+      0.026107999998203013,
+      0.025987666995206382,
+      0.02598487499926705,
+      0.025869874996715225
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "dot_product_70000.py",
+    "family": "dot_product",
+    "group": "Python",
+    "n": 70000,
+    "d": 24,
+    "fingerprint": "28e9e53e2a4991a0baa8516d10034096f96e68ca5ccd11dcb2d74d342447744a",
+    "static": 0.05745753674698711,
+    "ms": 0.11416599591029808,
+    "ridge": 0.7758249966940862,
+    "constant": 0.8566498749969469,
+    "startup": 0.010761958001239691,
+    "actual": 0.06757854099851102,
+    "samples": [
+      0.06707070800621295,
+      0.06757854099851102,
+      0.06766200000129174,
+      0.06721987500350224,
+      0.06764875000226311
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "BaggingClassifier_6500.py",
+    "family": "BaggingClassifier",
+    "group": "sklearn",
+    "n": 6500,
+    "d": 36,
+    "fingerprint": "c4ffacb66fbc49a02a21a876707df35f22cbaa966d70fb5ebd37d707c72cf9a5",
+    "static": 1.1536105055906227,
+    "ms": 0.16479199985042214,
+    "ridge": 0.8221525443674818,
+    "constant": 0.8566498749969469,
+    "startup": 0.7676550000032876,
+    "actual": 3.0036497909968602,
+    "samples": [
+      3.013347790998523,
+      3.0182885829999577,
+      3.0036497909968602,
+      2.991302000002179,
+      2.9946280000003753
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "ExtraTreesClassifier_750.py",
+    "family": "ExtraTreesClassifier",
+    "group": "sklearn",
+    "n": 750,
+    "d": 12,
+    "fingerprint": "0c8740193beb5491421b45438fc2482fecb371d6e29f0f059deb4de92683f4df",
+    "static": 0.7728300138382064,
+    "ms": 0.16450000111944973,
+    "ridge": 0.7725946841288044,
+    "constant": 0.8566498749969469,
+    "startup": 0.7676550000032876,
+    "actual": 0.8729314169977442,
+    "samples": [
+      0.8798580830043647,
+      0.8755267910019029,
+      0.8729314169977442,
+      0.8643399590000627,
+      0.864974957999948
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "rank_percentile_30000.py",
+    "family": "rank_percentile",
+    "group": "Python",
+    "n": 30000,
+    "d": 12,
+    "fingerprint": "5de3e2d96105908f551328b5babfd99f807ec6972f6f5277fe5aab6b88df5d9d",
+    "static": 0.011562442658805771,
+    "ms": 0.07604099664604291,
+    "ridge": 0.7758249966940862,
+    "constant": 0.8566498749969469,
+    "startup": 0.010761958001239691,
+    "actual": 0.013579915997979697,
+    "samples": [
+      0.014427292000618763,
+      0.013611999995191582,
+      0.013579915997979697,
+      0.01333958299801452,
+      0.01335533300152747
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "confusion_matrix_12000.py",
+    "family": "confusion_matrix",
+    "group": "Python",
+    "n": 12000,
+    "d": 16,
+    "fingerprint": "44f03f8b67cf0d9b70d821a1d258a458cc777e768cb1a48dd62628fb799f8401",
+    "static": 0.011082578789416824,
+    "ms": 0.10500000644242391,
+    "ridge": 0.7758249966940862,
+    "constant": 0.8566498749969469,
+    "startup": 0.010761958001239691,
+    "actual": 0.012114041004679166,
+    "samples": [
+      0.012004250005702488,
+      0.011942917000851594,
+      0.012268083999515511,
+      0.012114041004679166,
+      0.012145416003477294
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "BernoulliRBM_2200.py",
+    "family": "BernoulliRBM",
+    "group": "sklearn",
+    "n": 2200,
+    "d": 24,
+    "fingerprint": "b71b530309799dfd5de2d38a38a219ca727e6b71ffad9a85f6b72a8250c58207",
+    "static": 0.7746567750049871,
+    "ms": 0.1777500001480803,
+    "ridge": 0.7853079702569359,
+    "constant": 0.8566498749969469,
+    "startup": 0.7676550000032876,
+    "actual": 0.76939449999918,
+    "samples": [
+      0.7630908330029342,
+      0.76939449999918,
+      0.7624117500017746,
+      0.7836694579964387,
+      0.7873843339984887
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "confusion_matrix_250000.py",
+    "family": "confusion_matrix",
+    "group": "Python",
+    "n": 250000,
+    "d": 48,
+    "fingerprint": "db3054c4aa424096a02355718142747b1b7d322a96271df74b856df4ad5e914a",
+    "static": 0.017433944256409137,
+    "ms": 0.1021249991026707,
+    "ridge": 0.7758249966940862,
+    "constant": 0.8566498749969469,
+    "startup": 0.010761958001239691,
+    "actual": 0.02564833300129976,
+    "samples": [
+      0.026727417003712617,
+      0.025419875004445203,
+      0.02568004200293217,
+      0.02564833300129976,
+      0.025127499997324776
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "BernoulliRBM_12000.py",
+    "family": "BernoulliRBM",
+    "group": "sklearn",
+    "n": 12000,
+    "d": 50,
+    "fingerprint": "b722f56229a51228eb5209bb8ecf81b009a7c8798ddb75faf796e2dfc0021368",
+    "static": 0.8472206250226009,
+    "ms": 0.16770799993537366,
+    "ridge": 0.8764487148239909,
+    "constant": 0.8566498749969469,
+    "startup": 0.7676550000032876,
+    "actual": 0.930975249997573,
+    "samples": [
+      0.930975249997573,
+      0.9754140410004766,
+      0.9249060000001919,
+      0.9093717499999912,
+      0.9445093340036692
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "one_hot_12000.py",
+    "family": "one_hot",
+    "group": "Python",
+    "n": 12000,
+    "d": 16,
+    "fingerprint": "3edf471ece79f27edfd3e6d82d5721592c51ba84ef70a7d1e6b3511c90d325d2",
+    "static": 0.011082151864266122,
+    "ms": 0.08762499783188105,
+    "ridge": 0.7758249966940862,
+    "constant": 0.8566498749969469,
+    "startup": 0.010761958001239691,
+    "actual": 0.014039417001185939,
+    "samples": [
+      0.01436916700185975,
+      0.014039417001185939,
+      0.014140708000923041,
+      0.013580333004938439,
+      0.013547291004215367
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "one_hot_250000.py",
+    "family": "one_hot",
+    "group": "Python",
+    "n": 250000,
+    "d": 48,
+    "fingerprint": "e654cd1efa38b515646a1760c92246bf0bc1374e748a6c772682d76c7283c879",
+    "static": 0.01743266348095703,
+    "ms": 0.0959169992711395,
+    "ridge": 0.7758249966940862,
+    "constant": 0.8566498749969469,
+    "startup": 0.010761958001239691,
+    "actual": 0.07594583299942315,
+    "samples": [
+      0.07596404099604115,
+      0.07594583299942315,
+      0.07605862499622162,
+      0.07556220800324809,
+      0.07557283300411655
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "run_length_encoding_120000.py",
+    "family": "run_length_encoding",
+    "group": "Python",
+    "n": 120000,
+    "d": 32,
+    "fingerprint": "8ab350277f272d0f0354893ed7dd02650c0dd41e38bd383ba1bf4ba1dfbb0dab",
+    "static": 0.013963896631504012,
+    "ms": 0.12812500062864274,
+    "ridge": 0.7758249966940862,
+    "constant": 0.8566498749969469,
+    "startup": 0.010761958001239691,
+    "actual": 0.019396083000174258,
+    "samples": [
+      0.019576541999413166,
+      0.019396083000174258,
+      0.0192736250028247,
+      0.019184917000529822,
+      0.04050837500108173
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "hinge_loss_70000.py",
+    "family": "hinge_loss",
+    "group": "Python",
+    "n": 70000,
+    "d": 24,
+    "fingerprint": "385a60fb4d13d6b16b66b7b955db4e17e49a4f9f110741440e462b5ec4e88fbe",
+    "static": 0.012629755535560545,
+    "ms": 0.09750000026542693,
+    "ridge": 0.7758249966940862,
+    "constant": 0.8566498749969469,
+    "startup": 0.010761958001239691,
+    "actual": 0.019566041002690326,
+    "samples": [
+      0.020112582998990547,
+      0.01982441699510673,
+      0.019566041002690326,
+      0.019239959001424722,
+      0.018793666997225955
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "reservoir_sampling_120000.py",
+    "family": "reservoir_sampling",
+    "group": "Python",
+    "n": 120000,
+    "d": 32,
+    "fingerprint": "ab61bdf35a1a30642efa40ce2ba46d8a08048942e010bb2a2b956255166e6d8b",
+    "static": 0.01396304278120261,
+    "ms": 0.11487499432405457,
+    "ridge": 0.7758249966940862,
+    "constant": 0.8566498749969469,
+    "startup": 0.010761958001239691,
+    "actual": 0.03086862499912968,
+    "samples": [
+      0.029598959001305047,
+      0.031311374994402286,
+      0.030927915999200195,
+      0.030812083001364954,
+      0.03086862499912968
+    ],
+    "warnings": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  }
+]

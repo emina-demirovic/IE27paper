@@ -1,0 +1,590 @@
+{
+  "overhead": {
+    "python": {
+      "durations": [
+        0.01180204199772561,
+        0.022317249997286126,
+        0.011478874999738764,
+        0.011468583004898392,
+        0.011374957997759338
+      ],
+      "median": 0.011478874999738764,
+      "warnings": [
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    "imports": {
+      "durations": [
+        0.7845219590017223,
+        0.8017329169961158,
+        0.7634660830008215,
+        0.7626870000021881,
+        0.7676550000032876
+      ],
+      "median": 0.7676550000032876,
+      "warnings": [
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    }
+  },
+  "train_logreg_0": {
+    "durations": [
+      0.7713582080032211,
+      0.8049158330031787,
+      0.77184275000036
+    ],
+    "warnings": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "train_logreg_1": {
+    "durations": [
+      0.7789330420055194,
+      0.7719294160051504,
+      0.7747554579982534
+    ],
+    "warnings": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "train_logreg_2": {
+    "durations": [
+      0.7755942079966189,
+      0.7874127499962924,
+      0.7772747499984689
+    ],
+    "warnings": [
+      "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/sklearn/linear_model/_logistic.py:473: ConvergenceWarning: lbfgs failed to converge after 30 iteration(s) (status=1):\nSTOP: TOTAL NO. OF ITERATIONS REACHED LIMIT\n\nIncrease the number of iterations to improve the convergence (max_iter=30).\nYou might also want to scale the data as shown in:\n    https://scikit-learn.org/stable/modules/preprocessing.html\nPlease also refer to the documentation for alternative solver options:\n    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression\n  n_iter_i = _check_optimize_result(\n",
+      "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/sklearn/linear_model/_logistic.py:473: ConvergenceWarning: lbfgs failed to converge after 30 iteration(s) (status=1):\nSTOP: TOTAL NO. OF ITERATIONS REACHED LIMIT\n\nIncrease the number of iterations to improve the convergence (max_iter=30).\nYou might also want to scale the data as shown in:\n    https://scikit-learn.org/stable/modules/preprocessing.html\nPlease also refer to the documentation for alternative solver options:\n    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression\n  n_iter_i = _check_optimize_result(\n",
+      "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/sklearn/linear_model/_logistic.py:473: ConvergenceWarning: lbfgs failed to converge after 30 iteration(s) (status=1):\nSTOP: TOTAL NO. OF ITERATIONS REACHED LIMIT\n\nIncrease the number of iterations to improve the convergence (max_iter=30).\nYou might also want to scale the data as shown in:\n    https://scikit-learn.org/stable/modules/preprocessing.html\nPlease also refer to the documentation for alternative solver options:\n    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression\n  n_iter_i = _check_optimize_result(\n"
+    ]
+  },
+  "train_logreg_3": {
+    "durations": [
+      0.8022662500006845,
+      0.7700531249938649,
+      0.7823889999999665
+    ],
+    "warnings": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "train_logreg_4": {
+    "durations": [
+      0.7887515839975094,
+      0.7842129170021508,
+      0.7812151660036761
+    ],
+    "warnings": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "train_logreg_5": {
+    "durations": [
+      0.7995874580010423,
+      0.7923090000040247,
+      0.8065611249985523
+    ],
+    "warnings": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "train_tree_0": {
+    "durations": [
+      0.8463635000007343,
+      0.8330642090004403,
+      0.8397205000001122
+    ],
+    "warnings": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "train_tree_1": {
+    "durations": [
+      0.8621800000037183,
+      0.8577805419990909,
+      0.853455832999316
+    ],
+    "warnings": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "train_tree_2": {
+    "durations": [
+      0.8555192079948029,
+      0.8655388750048587,
+      0.8504157499992289
+    ],
+    "warnings": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "train_tree_3": {
+    "durations": [
+      0.8581410420010798,
+      0.8439971249972587,
+      0.8513678750023246
+    ],
+    "warnings": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "train_tree_4": {
+    "durations": [
+      0.8531307499943068,
+      0.852803750000021,
+      0.8656079590000445
+    ],
+    "warnings": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "train_tree_5": {
+    "durations": [
+      0.983953292001388,
+      0.9958644169964828,
+      1.0006111250040703
+    ],
+    "warnings": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "train_forest_0": {
+    "durations": [
+      0.8791125830030069,
+      0.882814332995622,
+      0.8901126669952646
+    ],
+    "warnings": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "train_forest_1": {
+    "durations": [
+      0.9730187090026448,
+      0.9526603750055074,
+      0.9698914170003263
+    ],
+    "warnings": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "train_forest_2": {
+    "durations": [
+      0.904953541001305,
+      0.9068886669992935,
+      0.9116185419989051
+    ],
+    "warnings": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "train_forest_3": {
+    "durations": [
+      0.9579347499966389,
+      0.9884562500010361,
+      0.9751085829993826
+    ],
+    "warnings": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "train_forest_4": {
+    "durations": [
+      0.9383347920011147,
+      0.9738434169994434,
+      0.9362101670049015
+    ],
+    "warnings": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "train_forest_5": {
+    "durations": [
+      1.1364722910002456,
+      1.131080250001105,
+      1.130674917003489
+    ],
+    "warnings": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "train_sgd_0": {
+    "durations": [
+      0.7900562089998857,
+      0.7996818749961676,
+      0.7778698749971227
+    ],
+    "warnings": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "train_sgd_1": {
+    "durations": [
+      0.7914147919946117,
+      0.7826749580053729,
+      0.7939663750003092
+    ],
+    "warnings": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "train_sgd_2": {
+    "durations": [
+      0.7859474159995443,
+      0.7950981659960235,
+      0.7889461250015302
+    ],
+    "warnings": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "train_sgd_3": {
+    "durations": [
+      0.788684999999532,
+      0.7877500000031432,
+      0.7961407500042696
+    ],
+    "warnings": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "train_sgd_4": {
+    "durations": [
+      0.8075557080010185,
+      0.7826843340008054,
+      0.7838033340012771
+    ],
+    "warnings": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "train_sgd_5": {
+    "durations": [
+      0.831683125004929,
+      0.8280863750042045,
+      0.8067091249977238
+    ],
+    "warnings": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "train_svm_0": {
+    "durations": [
+      0.8145235839983798,
+      0.8231408330029808,
+      0.7929870419975487
+    ],
+    "warnings": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "train_svm_1": {
+    "durations": [
+      0.9553479999958654,
+      0.9613336670008721,
+      0.9436592499987455
+    ],
+    "warnings": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "train_svm_2": {
+    "durations": [
+      0.8643071250044159,
+      0.848365041994839,
+      0.8389082080029766
+    ],
+    "warnings": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "train_svm_3": {
+    "durations": [
+      1.2539990829973249,
+      1.2495723749962053,
+      1.2550167500012321
+    ],
+    "warnings": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "train_svm_4": {
+    "durations": [
+      0.8459824160017888,
+      0.8402371249976568,
+      0.8493600410001818
+    ],
+    "warnings": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "train_svm_5": {
+    "durations": [
+      1.5634044589969562,
+      1.5584607080018031,
+      1.5691737079978338
+    ],
+    "warnings": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "train_kmeans_0": {
+    "durations": [
+      0.9280639170028735,
+      0.913198750000447,
+      0.9169521250005346
+    ],
+    "warnings": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "train_kmeans_1": {
+    "durations": [
+      0.9216481670009671,
+      0.9335138749956968,
+      0.8971631249951315
+    ],
+    "warnings": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "train_kmeans_2": {
+    "durations": [
+      0.9175550410000142,
+      0.9171694169999682,
+      0.9032257500002743
+    ],
+    "warnings": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "train_kmeans_3": {
+    "durations": [
+      0.9160540409939131,
+      0.9221822500039707,
+      0.9831810830000904
+    ],
+    "warnings": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "train_kmeans_4": {
+    "durations": [
+      0.9118988330010325,
+      0.8954394169995794,
+      0.887096250000468
+    ],
+    "warnings": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "train_kmeans_5": {
+    "durations": [
+      0.9279964170054882,
+      0.9213940409972565,
+      0.9199337909958558
+    ],
+    "warnings": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "train_mlp_0": {
+    "durations": [
+      0.8030275409983005,
+      0.7853472499991767,
+      0.7936489159983466
+    ],
+    "warnings": [
+      "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/sklearn/neural_network/_multilayer_perceptron.py:781: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (30) reached and the optimization hasn't converged yet.\n  warnings.warn(\n",
+      "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/sklearn/neural_network/_multilayer_perceptron.py:781: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (30) reached and the optimization hasn't converged yet.\n  warnings.warn(\n",
+      "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/sklearn/neural_network/_multilayer_perceptron.py:781: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (30) reached and the optimization hasn't converged yet.\n  warnings.warn(\n"
+    ]
+  },
+  "train_mlp_1": {
+    "durations": [
+      0.9277553749998333,
+      0.9302113750018179,
+      0.9293350840016501
+    ],
+    "warnings": [
+      "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/sklearn/neural_network/_multilayer_perceptron.py:781: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (30) reached and the optimization hasn't converged yet.\n  warnings.warn(\n",
+      "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/sklearn/neural_network/_multilayer_perceptron.py:781: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (30) reached and the optimization hasn't converged yet.\n  warnings.warn(\n",
+      "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/sklearn/neural_network/_multilayer_perceptron.py:781: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (30) reached and the optimization hasn't converged yet.\n  warnings.warn(\n"
+    ]
+  },
+  "train_mlp_2": {
+    "durations": [
+      0.7964684999969904,
+      0.786536542000249,
+      0.7933966249984223
+    ],
+    "warnings": [
+      "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/sklearn/neural_network/_multilayer_perceptron.py:781: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (30) reached and the optimization hasn't converged yet.\n  warnings.warn(\n",
+      "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/sklearn/neural_network/_multilayer_perceptron.py:781: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (30) reached and the optimization hasn't converged yet.\n  warnings.warn(\n",
+      "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/sklearn/neural_network/_multilayer_perceptron.py:781: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (30) reached and the optimization hasn't converged yet.\n  warnings.warn(\n"
+    ]
+  },
+  "train_mlp_3": {
+    "durations": [
+      0.9183976249987609,
+      0.9177115830025286,
+      0.921557292000216
+    ],
+    "warnings": [
+      "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/sklearn/neural_network/_multilayer_perceptron.py:781: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (120) reached and the optimization hasn't converged yet.\n  warnings.warn(\n",
+      "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/sklearn/neural_network/_multilayer_perceptron.py:781: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (120) reached and the optimization hasn't converged yet.\n  warnings.warn(\n",
+      "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/sklearn/neural_network/_multilayer_perceptron.py:781: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (120) reached and the optimization hasn't converged yet.\n  warnings.warn(\n"
+    ]
+  },
+  "train_mlp_4": {
+    "durations": [
+      0.9238979169967934,
+      0.8982058749970747,
+      0.8746010000031674
+    ],
+    "warnings": [
+      "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/sklearn/neural_network/_multilayer_perceptron.py:781: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (30) reached and the optimization hasn't converged yet.\n  warnings.warn(\n/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/sklearn/neural_network/_multilayer_perceptron.py:781: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (30) reached and the optimization hasn't converged yet.\n  warnings.warn(\n/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/sklearn/neural_network/_multilayer_perceptron.py:781: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (30) reached and the optimization hasn't converged yet.\n  warnings.warn(\n",
+      "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/sklearn/neural_network/_multilayer_perceptron.py:781: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (30) reached and the optimization hasn't converged yet.\n  warnings.warn(\n/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/sklearn/neural_network/_multilayer_perceptron.py:781: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (30) reached and the optimization hasn't converged yet.\n  warnings.warn(\n/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/sklearn/neural_network/_multilayer_perceptron.py:781: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (30) reached and the optimization hasn't converged yet.\n  warnings.warn(\n",
+      "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/sklearn/neural_network/_multilayer_perceptron.py:781: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (30) reached and the optimization hasn't converged yet.\n  warnings.warn(\n/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/sklearn/neural_network/_multilayer_perceptron.py:781: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (30) reached and the optimization hasn't converged yet.\n  warnings.warn(\n/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/sklearn/neural_network/_multilayer_perceptron.py:781: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (30) reached and the optimization hasn't converged yet.\n  warnings.warn(\n"
+    ]
+  },
+  "train_mlp_5": {
+    "durations": [
+      1.0320292920005159,
+      1.0365152079975815,
+      1.041017333001946
+    ],
+    "warnings": [
+      "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/sklearn/neural_network/_multilayer_perceptron.py:781: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (30) reached and the optimization hasn't converged yet.\n  warnings.warn(\n",
+      "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/sklearn/neural_network/_multilayer_perceptron.py:781: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (30) reached and the optimization hasn't converged yet.\n  warnings.warn(\n",
+      "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/sklearn/neural_network/_multilayer_perceptron.py:781: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (30) reached and the optimization hasn't converged yet.\n  warnings.warn(\n"
+    ]
+  },
+  "train_forest_dugi": {
+    "durations": [
+      44.495289624996076,
+      40.09294720799517,
+      41.627586375005194
+    ],
+    "warnings": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "train_mlp_dugi": {
+    "durations": [
+      3.55975029199908,
+      3.1240026250015944,
+      3.132940208000946
+    ],
+    "warnings": [
+      "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/sklearn/neural_network/_multilayer_perceptron.py:781: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (150) reached and the optimization hasn't converged yet.\n  warnings.warn(\n",
+      "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/sklearn/neural_network/_multilayer_perceptron.py:781: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (150) reached and the optimization hasn't converged yet.\n  warnings.warn(\n",
+      "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/sklearn/neural_network/_multilayer_perceptron.py:781: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (150) reached and the optimization hasn't converged yet.\n  warnings.warn(\n"
+    ]
+  },
+  "train_logreg_cv": {
+    "durations": [
+      0.7911184580007102,
+      0.8011862499988638,
+      0.7770874159978121
+    ],
+    "warnings": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "train_logreg_scaler": {
+    "durations": [
+      0.7813489170002867,
+      0.7652006249991246,
+      0.7729593750045751
+    ],
+    "warnings": [
+      "",
+      "",
+      ""
+    ]
+  }
+}

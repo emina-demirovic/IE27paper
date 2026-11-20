@@ -1,0 +1,1282 @@
+[
+  {
+    "config": {
+      "name": "test_logreg_novi",
+      "algorithm": "logreg",
+      "n": 5000,
+      "d": 40,
+      "scenario": "novi parametri",
+      "iterations": 60,
+      "trees": 50,
+      "depth": 10,
+      "clusters": 12,
+      "folds": 1,
+      "repeats": 1,
+      "scaled": false
+    },
+    "lofo": {
+      "seconds": 0.9050929842279039,
+      "mode": "model",
+      "lower_s": 0.6700405710771044,
+      "upper_s": 1.2226025489496883,
+      "confidence": "low",
+      "reasons": [
+        "Cela porodica algoritma nedostaje u kalibraciji."
+      ],
+      "profile": {
+        "family": "logreg",
+        "n": 5000.0,
+        "d": 40.0,
+        "jobs": 1.0,
+        "work": 9000000.0,
+        "generation": 8000000.0,
+        "scaled": false,
+        "parameters": {
+          "max_iter": 60
+        },
+        "reasons": [],
+        "supported": true
+      },
+      "overhead_s": 0.7676550000032876,
+      "compute_s": 0.13743798422461628,
+      "interval_kind": "empirical_LOFO_not_guaranteed"
+    },
+    "known": {
+      "seconds": 0.782002089292475,
+      "mode": "model",
+      "lower_s": 0.5887847589581572,
+      "upper_s": 1.0386261844479148,
+      "confidence": "medium",
+      "reasons": [],
+      "profile": {
+        "family": "logreg",
+        "n": 5000.0,
+        "d": 40.0,
+        "jobs": 1.0,
+        "work": 9000000.0,
+        "generation": 8000000.0,
+        "scaled": false,
+        "parameters": {
+          "max_iter": 60
+        },
+        "reasons": [],
+        "supported": true
+      },
+      "overhead_s": 0.7676550000032876,
+      "compute_s": 0.014347089289187376,
+      "interval_kind": "empirical_LOFO_not_guaranteed"
+    },
+    "v1": 3.694444024488408,
+    "constant": 0.9025472709981841,
+    "old_frozen": 0.8691402223690742,
+    "estimate_ms": 0.34954099828610197
+  },
+  {
+    "config": {
+      "name": "test_logreg_veci",
+      "algorithm": "logreg",
+      "n": 22000,
+      "d": 80,
+      "scenario": "ekstrapolacija",
+      "iterations": 120,
+      "trees": 100,
+      "depth": 12,
+      "clusters": 16,
+      "folds": 1,
+      "repeats": 1,
+      "scaled": false
+    },
+    "lofo": {
+      "seconds": 1.5381837713763482,
+      "mode": "model",
+      "lower_s": 0.5693589225386285,
+      "upper_s": 4.1555672895686335,
+      "confidence": "low",
+      "reasons": [
+        "Cela porodica algoritma nedostaje u kalibraciji.",
+        "Van trening opsega: n"
+      ],
+      "profile": {
+        "family": "logreg",
+        "n": 22000.0,
+        "d": 80.0,
+        "jobs": 1.0,
+        "work": 158400000.0,
+        "generation": 140800000.0,
+        "scaled": false,
+        "parameters": {
+          "max_iter": 120
+        },
+        "reasons": [],
+        "supported": true
+      },
+      "overhead_s": 0.7676550000032876,
+      "compute_s": 0.7705287713730606,
+      "interval_kind": "empirical_LOFO_not_guaranteed"
+    },
+    "known": {
+      "seconds": 0.8081650947223,
+      "mode": "model",
+      "lower_s": 0.3042417002523503,
+      "upper_s": 2.146749836678441,
+      "confidence": "low",
+      "reasons": [
+        "Van trening opsega: n"
+      ],
+      "profile": {
+        "family": "logreg",
+        "n": 22000.0,
+        "d": 80.0,
+        "jobs": 1.0,
+        "work": 158400000.0,
+        "generation": 140800000.0,
+        "scaled": false,
+        "parameters": {
+          "max_iter": 120
+        },
+        "reasons": [],
+        "supported": true
+      },
+      "overhead_s": 0.7676550000032876,
+      "compute_s": 0.04051009471901246,
+      "interval_kind": "empirical_LOFO_not_guaranteed"
+    },
+    "v1": 10.86291156291538,
+    "constant": 0.9025472709981841,
+    "old_frozen": 0.9988213457891122,
+    "estimate_ms": 0.33850000181701034
+  },
+  {
+    "config": {
+      "name": "test_tree_novi",
+      "algorithm": "tree",
+      "n": 5000,
+      "d": 40,
+      "scenario": "novi parametri",
+      "iterations": 60,
+      "trees": 50,
+      "depth": 10,
+      "clusters": 12,
+      "folds": 1,
+      "repeats": 1,
+      "scaled": false
+    },
+    "lofo": {
+      "seconds": 0.8124440953649966,
+      "mode": "model",
+      "lower_s": 0.5991513711632902,
+      "upper_s": 1.1016671910670737,
+      "confidence": "low",
+      "reasons": [
+        "Cela porodica algoritma nedostaje u kalibraciji."
+      ],
+      "profile": {
+        "family": "tree",
+        "n": 5000.0,
+        "d": 40.0,
+        "jobs": 1.0,
+        "work": 1500000.0,
+        "generation": 8000000.0,
+        "scaled": false,
+        "parameters": {
+          "max_depth": 10
+        },
+        "reasons": [],
+        "supported": true
+      },
+      "overhead_s": 0.7676550000032876,
+      "compute_s": 0.04478909536170905,
+      "interval_kind": "empirical_LOFO_not_guaranteed"
+    },
+    "known": {
+      "seconds": 0.9001232751885164,
+      "mode": "model",
+      "lower_s": 0.6777205238594718,
+      "upper_s": 1.1955103645409217,
+      "confidence": "medium",
+      "reasons": [],
+      "profile": {
+        "family": "tree",
+        "n": 5000.0,
+        "d": 40.0,
+        "jobs": 1.0,
+        "work": 1500000.0,
+        "generation": 8000000.0,
+        "scaled": false,
+        "parameters": {
+          "max_depth": 10
+        },
+        "reasons": [],
+        "supported": true
+      },
+      "overhead_s": 0.7676550000032876,
+      "compute_s": 0.13246827518522886,
+      "interval_kind": "empirical_LOFO_not_guaranteed"
+    },
+    "v1": 4.165789035732866,
+    "constant": 0.8891268749976007,
+    "old_frozen": 1.0165683258588394,
+    "estimate_ms": 0.3365419979672879
+  },
+  {
+    "config": {
+      "name": "test_tree_veci",
+      "algorithm": "tree",
+      "n": 22000,
+      "d": 80,
+      "scenario": "ekstrapolacija",
+      "iterations": 120,
+      "trees": 100,
+      "depth": 12,
+      "clusters": 16,
+      "folds": 1,
+      "repeats": 1,
+      "scaled": false
+    },
+    "lofo": {
+      "seconds": 1.0252092740964227,
+      "mode": "model",
+      "lower_s": 0.37802942122942884,
+      "upper_s": 2.7803498793164607,
+      "confidence": "low",
+      "reasons": [
+        "Cela porodica algoritma nedostaje u kalibraciji.",
+        "Van trening opsega: n"
+      ],
+      "profile": {
+        "family": "tree",
+        "n": 22000.0,
+        "d": 80.0,
+        "jobs": 1.0,
+        "work": 15840000.0,
+        "generation": 140800000.0,
+        "scaled": false,
+        "parameters": {
+          "max_depth": 12
+        },
+        "reasons": [],
+        "supported": true
+      },
+      "overhead_s": 0.7676550000032876,
+      "compute_s": 0.25755427409313514,
+      "interval_kind": "empirical_LOFO_not_guaranteed"
+    },
+    "known": {
+      "seconds": 1.0408565331071655,
+      "mode": "model",
+      "lower_s": 0.3918406813401226,
+      "upper_s": 2.7648541208294772,
+      "confidence": "low",
+      "reasons": [
+        "Van trening opsega: n"
+      ],
+      "profile": {
+        "family": "tree",
+        "n": 22000.0,
+        "d": 80.0,
+        "jobs": 1.0,
+        "work": 15840000.0,
+        "generation": 140800000.0,
+        "scaled": false,
+        "parameters": {
+          "max_depth": 12
+        },
+        "reasons": [],
+        "supported": true
+      },
+      "overhead_s": 0.7676550000032876,
+      "compute_s": 0.27320153310387796,
+      "interval_kind": "empirical_LOFO_not_guaranteed"
+    },
+    "v1": 10.59425239903985,
+    "constant": 0.8891268749976007,
+    "old_frozen": 1.168246638676148,
+    "estimate_ms": 0.33724999957485124
+  },
+  {
+    "config": {
+      "name": "test_forest_novi",
+      "algorithm": "forest",
+      "n": 5000,
+      "d": 40,
+      "scenario": "novi parametri",
+      "iterations": 60,
+      "trees": 50,
+      "depth": 10,
+      "clusters": 12,
+      "folds": 1,
+      "repeats": 1,
+      "scaled": false
+    },
+    "lofo": {
+      "seconds": 0.8323491827879899,
+      "mode": "model",
+      "lower_s": 0.6599185979093434,
+      "upper_s": 1.0498342739281443,
+      "confidence": "low",
+      "reasons": [
+        "Cela porodica algoritma nedostaje u kalibraciji."
+      ],
+      "profile": {
+        "family": "forest",
+        "n": 5000.0,
+        "d": 40.0,
+        "jobs": 1.0,
+        "work": 11858541.225631423,
+        "generation": 8000000.0,
+        "scaled": false,
+        "parameters": {
+          "n_estimators": 50,
+          "max_depth": 10
+        },
+        "reasons": [],
+        "supported": true
+      },
+      "overhead_s": 0.7676550000032876,
+      "compute_s": 0.06469418278470229,
+      "interval_kind": "empirical_LOFO_not_guaranteed"
+    },
+    "known": {
+      "seconds": 1.345714269494213,
+      "mode": "model",
+      "lower_s": 1.0132147504971214,
+      "upper_s": 1.7873278041321687,
+      "confidence": "medium",
+      "reasons": [],
+      "profile": {
+        "family": "forest",
+        "n": 5000.0,
+        "d": 40.0,
+        "jobs": 1.0,
+        "work": 11858541.225631423,
+        "generation": 8000000.0,
+        "scaled": false,
+        "parameters": {
+          "n_estimators": 50,
+          "max_depth": 10
+        },
+        "reasons": [],
+        "supported": true
+      },
+      "overhead_s": 0.7676550000032876,
+      "compute_s": 0.5780592694909255,
+      "interval_kind": "empirical_LOFO_not_guaranteed"
+    },
+    "v1": 1.4187335522621896,
+    "constant": 0.848365041994839,
+    "old_frozen": 1.3251342294029487,
+    "estimate_ms": 0.34412500099278986
+  },
+  {
+    "config": {
+      "name": "test_forest_veci",
+      "algorithm": "forest",
+      "n": 22000,
+      "d": 80,
+      "scenario": "ekstrapolacija",
+      "iterations": 120,
+      "trees": 100,
+      "depth": 12,
+      "clusters": 16,
+      "folds": 1,
+      "repeats": 1,
+      "scaled": false
+    },
+    "lofo": {
+      "seconds": 1.0055234723643511,
+      "mode": "model",
+      "lower_s": 0.39860893346767134,
+      "upper_s": 2.536514785757214,
+      "confidence": "low",
+      "reasons": [
+        "Cela porodica algoritma nedostaje u kalibraciji.",
+        "Van trening opsega: n"
+      ],
+      "profile": {
+        "family": "forest",
+        "n": 22000.0,
+        "d": 80.0,
+        "jobs": 1.0,
+        "work": 177096583.81798333,
+        "generation": 140800000.0,
+        "scaled": false,
+        "parameters": {
+          "n_estimators": 100,
+          "max_depth": 12
+        },
+        "reasons": [],
+        "supported": true
+      },
+      "overhead_s": 0.7676550000032876,
+      "compute_s": 0.23786847236106357,
+      "interval_kind": "empirical_LOFO_not_guaranteed"
+    },
+    "known": {
+      "seconds": 5.201134641520129,
+      "mode": "model",
+      "lower_s": 1.958018302091139,
+      "upper_s": 13.815908426560537,
+      "confidence": "low",
+      "reasons": [
+        "Van trening opsega: n"
+      ],
+      "profile": {
+        "family": "forest",
+        "n": 22000.0,
+        "d": 80.0,
+        "jobs": 1.0,
+        "work": 177096583.81798333,
+        "generation": 140800000.0,
+        "scaled": false,
+        "parameters": {
+          "n_estimators": 100,
+          "max_depth": 12
+        },
+        "reasons": [],
+        "supported": true
+      },
+      "overhead_s": 0.7676550000032876,
+      "compute_s": 4.433479641516842,
+      "interval_kind": "empirical_LOFO_not_guaranteed"
+    },
+    "v1": 2.14583711700394,
+    "constant": 0.848365041994839,
+    "old_frozen": 1.5228524929564538,
+    "estimate_ms": 0.34345799940638244
+  },
+  {
+    "config": {
+      "name": "test_sgd_novi",
+      "algorithm": "sgd",
+      "n": 5000,
+      "d": 40,
+      "scenario": "novi parametri",
+      "iterations": 60,
+      "trees": 50,
+      "depth": 10,
+      "clusters": 12,
+      "folds": 1,
+      "repeats": 1,
+      "scaled": false
+    },
+    "lofo": {
+      "seconds": 0.8745962907906645,
+      "mode": "model",
+      "lower_s": 0.6729246329156663,
+      "upper_s": 1.1367077893263142,
+      "confidence": "low",
+      "reasons": [
+        "Cela porodica algoritma nedostaje u kalibraciji."
+      ],
+      "profile": {
+        "family": "sgd",
+        "n": 5000.0,
+        "d": 40.0,
+        "jobs": 1.0,
+        "work": 9000000.0,
+        "generation": 8000000.0,
+        "scaled": false,
+        "parameters": {
+          "max_iter": 60
+        },
+        "reasons": [],
+        "supported": true
+      },
+      "overhead_s": 0.7676550000032876,
+      "compute_s": 0.10694129078737691,
+      "interval_kind": "empirical_LOFO_not_guaranteed"
+    },
+    "known": {
+      "seconds": 0.7997469297534041,
+      "mode": "model",
+      "lower_s": 0.602145198471806,
+      "upper_s": 1.0621942237075628,
+      "confidence": "medium",
+      "reasons": [],
+      "profile": {
+        "family": "sgd",
+        "n": 5000.0,
+        "d": 40.0,
+        "jobs": 1.0,
+        "work": 9000000.0,
+        "generation": 8000000.0,
+        "scaled": false,
+        "parameters": {
+          "max_iter": 60
+        },
+        "reasons": [],
+        "supported": true
+      },
+      "overhead_s": 0.7676550000032876,
+      "compute_s": 0.032091929750116543,
+      "interval_kind": "empirical_LOFO_not_guaranteed"
+    },
+    "v1": 3.5070450030567395,
+    "constant": 0.8968226459983271,
+    "old_frozen": 0.8959059708096225,
+    "estimate_ms": 0.3395829990040511
+  },
+  {
+    "config": {
+      "name": "test_sgd_veci",
+      "algorithm": "sgd",
+      "n": 22000,
+      "d": 80,
+      "scenario": "ekstrapolacija",
+      "iterations": 120,
+      "trees": 100,
+      "depth": 12,
+      "clusters": 16,
+      "folds": 1,
+      "repeats": 1,
+      "scaled": false
+    },
+    "lofo": {
+      "seconds": 1.3937923445073992,
+      "mode": "model",
+      "lower_s": 0.536200079776464,
+      "upper_s": 3.623007852623419,
+      "confidence": "low",
+      "reasons": [
+        "Cela porodica algoritma nedostaje u kalibraciji.",
+        "Van trening opsega: n"
+      ],
+      "profile": {
+        "family": "sgd",
+        "n": 22000.0,
+        "d": 80.0,
+        "jobs": 1.0,
+        "work": 158400000.0,
+        "generation": 140800000.0,
+        "scaled": false,
+        "parameters": {
+          "max_iter": 120
+        },
+        "reasons": [],
+        "supported": true
+      },
+      "overhead_s": 0.7676550000032876,
+      "compute_s": 0.6261373445041116,
+      "interval_kind": "empirical_LOFO_not_guaranteed"
+    },
+    "known": {
+      "seconds": 0.8348051517369754,
+      "mode": "model",
+      "lower_s": 0.3142706117877457,
+      "upper_s": 2.21751450892033,
+      "confidence": "low",
+      "reasons": [
+        "Van trening opsega: n"
+      ],
+      "profile": {
+        "family": "sgd",
+        "n": 22000.0,
+        "d": 80.0,
+        "jobs": 1.0,
+        "work": 158400000.0,
+        "generation": 140800000.0,
+        "scaled": false,
+        "parameters": {
+          "max_iter": 120
+        },
+        "reasons": [],
+        "supported": true
+      },
+      "overhead_s": 0.7676550000032876,
+      "compute_s": 0.06715015173368788,
+      "interval_kind": "empirical_LOFO_not_guaranteed"
+    },
+    "v1": 10.261370518160062,
+    "constant": 0.8968226459983271,
+    "old_frozen": 1.0295807102626262,
+    "estimate_ms": 0.3440830041654408
+  },
+  {
+    "config": {
+      "name": "test_svm_novi",
+      "algorithm": "svm",
+      "n": 5000,
+      "d": 40,
+      "scenario": "novi parametri",
+      "iterations": 60,
+      "trees": 50,
+      "depth": 10,
+      "clusters": 12,
+      "folds": 1,
+      "repeats": 1,
+      "scaled": false
+    },
+    "lofo": {
+      "seconds": 0.9401889813867866,
+      "mode": "model",
+      "lower_s": 0.702864239348992,
+      "upper_s": 1.2576473111505315,
+      "confidence": "low",
+      "reasons": [
+        "Cela porodica algoritma nedostaje u kalibraciji."
+      ],
+      "profile": {
+        "family": "svm",
+        "n": 5000.0,
+        "d": 40.0,
+        "jobs": 1.0,
+        "work": 562500000.0,
+        "generation": 8000000.0,
+        "scaled": false,
+        "parameters": {
+          "C": 1.0
+        },
+        "reasons": [],
+        "supported": true
+      },
+      "overhead_s": 0.7676550000032876,
+      "compute_s": 0.17253398138349907,
+      "interval_kind": "empirical_LOFO_not_guaranteed"
+    },
+    "known": {
+      "seconds": 0.9647211102297877,
+      "mode": "model",
+      "lower_s": 0.72635750482765,
+      "upper_s": 1.2813068142578459,
+      "confidence": "medium",
+      "reasons": [],
+      "profile": {
+        "family": "svm",
+        "n": 5000.0,
+        "d": 40.0,
+        "jobs": 1.0,
+        "work": 562500000.0,
+        "generation": 8000000.0,
+        "scaled": false,
+        "parameters": {
+          "C": 1.0
+        },
+        "reasons": [],
+        "supported": true
+      },
+      "overhead_s": 0.7676550000032876,
+      "compute_s": 0.1970661102265001,
+      "interval_kind": "empirical_LOFO_not_guaranteed"
+    },
+    "v1": 3.4218263527570327,
+    "constant": 0.8566498749969469,
+    "old_frozen": 1.0120155403237627,
+    "estimate_ms": 0.33399999665562063
+  },
+  {
+    "config": {
+      "name": "test_svm_veci",
+      "algorithm": "svm",
+      "n": 22000,
+      "d": 80,
+      "scenario": "ekstrapolacija",
+      "iterations": 120,
+      "trees": 100,
+      "depth": 12,
+      "clusters": 16,
+      "folds": 1,
+      "repeats": 1,
+      "scaled": false
+    },
+    "lofo": {
+      "seconds": 1.8154195961603832,
+      "mode": "model",
+      "lower_s": 0.678583528852051,
+      "upper_s": 4.856805639975515,
+      "confidence": "low",
+      "reasons": [
+        "Cela porodica algoritma nedostaje u kalibraciji.",
+        "Van trening opsega: n, work"
+      ],
+      "profile": {
+        "family": "svm",
+        "n": 22000.0,
+        "d": 80.0,
+        "jobs": 1.0,
+        "work": 21780000000.0,
+        "generation": 140800000.0,
+        "scaled": false,
+        "parameters": {
+          "C": 1.0
+        },
+        "reasons": [],
+        "supported": true
+      },
+      "overhead_s": 0.7676550000032876,
+      "compute_s": 1.0477645961570956,
+      "interval_kind": "empirical_LOFO_not_guaranteed"
+    },
+    "known": {
+      "seconds": 1.9875327825863376,
+      "mode": "model",
+      "lower_s": 0.7482262684076137,
+      "upper_s": 5.279534719173183,
+      "confidence": "low",
+      "reasons": [
+        "Van trening opsega: n, work"
+      ],
+      "profile": {
+        "family": "svm",
+        "n": 22000.0,
+        "d": 80.0,
+        "jobs": 1.0,
+        "work": 21780000000.0,
+        "generation": 140800000.0,
+        "scaled": false,
+        "parameters": {
+          "C": 1.0
+        },
+        "reasons": [],
+        "supported": true
+      },
+      "overhead_s": 0.7676550000032876,
+      "compute_s": 1.21987778258305,
+      "interval_kind": "empirical_LOFO_not_guaranteed"
+    },
+    "v1": 9.618774518018181,
+    "constant": 0.8566498749969469,
+    "old_frozen": 1.1630145492408674,
+    "estimate_ms": 0.3345419972902164
+  },
+  {
+    "config": {
+      "name": "test_kmeans_novi",
+      "algorithm": "kmeans",
+      "n": 5000,
+      "d": 40,
+      "scenario": "novi parametri",
+      "iterations": 60,
+      "trees": 50,
+      "depth": 10,
+      "clusters": 12,
+      "folds": 1,
+      "repeats": 1,
+      "scaled": false
+    },
+    "lofo": {
+      "seconds": 0.9149734222823658,
+      "mode": "model",
+      "lower_s": 0.6951738604820117,
+      "upper_s": 1.2042690484688716,
+      "confidence": "low",
+      "reasons": [
+        "Cela porodica algoritma nedostaje u kalibraciji."
+      ],
+      "profile": {
+        "family": "kmeans",
+        "n": 5000.0,
+        "d": 40.0,
+        "jobs": 1.0,
+        "work": 324000000.0,
+        "generation": 8000000.0,
+        "scaled": false,
+        "parameters": {
+          "n_clusters": 12,
+          "max_iter": 60,
+          "n_init": 3
+        },
+        "reasons": [],
+        "supported": true
+      },
+      "overhead_s": 0.7676550000032876,
+      "compute_s": 0.1473184222790782,
+      "interval_kind": "empirical_LOFO_not_guaranteed"
+    },
+    "known": {
+      "seconds": 0.920157183971565,
+      "mode": "model",
+      "lower_s": 0.692804447950377,
+      "upper_s": 1.2221186594851736,
+      "confidence": "medium",
+      "reasons": [],
+      "profile": {
+        "family": "kmeans",
+        "n": 5000.0,
+        "d": 40.0,
+        "jobs": 1.0,
+        "work": 324000000.0,
+        "generation": 8000000.0,
+        "scaled": false,
+        "parameters": {
+          "n_clusters": 12,
+          "max_iter": 60,
+          "n_init": 3
+        },
+        "reasons": [],
+        "supported": true
+      },
+      "overhead_s": 0.7676550000032876,
+      "compute_s": 0.15250218396827742,
+      "interval_kind": "empirical_LOFO_not_guaranteed"
+    },
+    "v1": 4.885313129090373,
+    "constant": 0.8498664584985818,
+    "old_frozen": 1.0120155403237627,
+    "estimate_ms": 0.3430420038057491
+  },
+  {
+    "config": {
+      "name": "test_kmeans_veci",
+      "algorithm": "kmeans",
+      "n": 22000,
+      "d": 80,
+      "scenario": "ekstrapolacija",
+      "iterations": 120,
+      "trees": 100,
+      "depth": 12,
+      "clusters": 16,
+      "folds": 1,
+      "repeats": 1,
+      "scaled": false
+    },
+    "lofo": {
+      "seconds": 1.8098138853090864,
+      "mode": "model",
+      "lower_s": 0.6875256017086795,
+      "upper_s": 4.764079026755203,
+      "confidence": "low",
+      "reasons": [
+        "Cela porodica algoritma nedostaje u kalibraciji.",
+        "Van trening opsega: n"
+      ],
+      "profile": {
+        "family": "kmeans",
+        "n": 22000.0,
+        "d": 80.0,
+        "jobs": 1.0,
+        "work": 7603200000.0,
+        "generation": 140800000.0,
+        "scaled": false,
+        "parameters": {
+          "n_clusters": 16,
+          "max_iter": 120,
+          "n_init": 3
+        },
+        "reasons": [],
+        "supported": true
+      },
+      "overhead_s": 0.7676550000032876,
+      "compute_s": 1.0421588853057988,
+      "interval_kind": "empirical_LOFO_not_guaranteed"
+    },
+    "known": {
+      "seconds": 0.9247980160337552,
+      "mode": "model",
+      "lower_s": 0.3481493108593004,
+      "upper_s": 2.456564881168492,
+      "confidence": "low",
+      "reasons": [
+        "Van trening opsega: n"
+      ],
+      "profile": {
+        "family": "kmeans",
+        "n": 22000.0,
+        "d": 80.0,
+        "jobs": 1.0,
+        "work": 7603200000.0,
+        "generation": 140800000.0,
+        "scaled": false,
+        "parameters": {
+          "n_clusters": 16,
+          "max_iter": 120,
+          "n_init": 3
+        },
+        "reasons": [],
+        "supported": true
+      },
+      "overhead_s": 0.7676550000032876,
+      "compute_s": 0.15714301603046765,
+      "interval_kind": "empirical_LOFO_not_guaranteed"
+    },
+    "v1": 14.741475870365138,
+    "constant": 0.8498664584985818,
+    "old_frozen": 1.1630145492408674,
+    "estimate_ms": 0.3439170031924732
+  },
+  {
+    "config": {
+      "name": "test_mlp_novi",
+      "algorithm": "mlp",
+      "n": 5000,
+      "d": 40,
+      "scenario": "novi parametri",
+      "iterations": 60,
+      "trees": 50,
+      "depth": 10,
+      "clusters": 12,
+      "folds": 1,
+      "repeats": 1,
+      "scaled": false
+    },
+    "lofo": {
+      "seconds": 0.9964752067260059,
+      "mode": "model",
+      "lower_s": 0.7389027578704903,
+      "upper_s": 1.343834255648665,
+      "confidence": "low",
+      "reasons": [
+        "Cela porodica algoritma nedostaje u kalibraciji."
+      ],
+      "profile": {
+        "family": "mlp",
+        "n": 5000.0,
+        "d": 40.0,
+        "jobs": 1.0,
+        "work": 1044000000.0,
+        "generation": 8000000.0,
+        "scaled": false,
+        "parameters": {
+          "max_iter": 60,
+          "hidden_layer_sizes": [
+            64,
+            32
+          ]
+        },
+        "reasons": [],
+        "supported": true
+      },
+      "overhead_s": 0.7676550000032876,
+      "compute_s": 0.2288202067227183,
+      "interval_kind": "empirical_LOFO_not_guaranteed"
+    },
+    "known": {
+      "seconds": 0.9363991585693595,
+      "mode": "model",
+      "lower_s": 0.7050333501867114,
+      "upper_s": 1.243690648019974,
+      "confidence": "medium",
+      "reasons": [],
+      "profile": {
+        "family": "mlp",
+        "n": 5000.0,
+        "d": 40.0,
+        "jobs": 1.0,
+        "work": 1044000000.0,
+        "generation": 8000000.0,
+        "scaled": false,
+        "parameters": {
+          "max_iter": 60,
+          "hidden_layer_sizes": [
+            64,
+            32
+          ]
+        },
+        "reasons": [],
+        "supported": true
+      },
+      "overhead_s": 0.7676550000032876,
+      "compute_s": 0.16874415856607194,
+      "interval_kind": "empirical_LOFO_not_guaranteed"
+    },
+    "v1": 3.432955922610796,
+    "constant": 0.8531307499943068,
+    "old_frozen": 1.0120155403237627,
+    "estimate_ms": 0.3577919997042045
+  },
+  {
+    "config": {
+      "name": "test_mlp_veci",
+      "algorithm": "mlp",
+      "n": 22000,
+      "d": 80,
+      "scenario": "ekstrapolacija",
+      "iterations": 120,
+      "trees": 100,
+      "depth": 12,
+      "clusters": 16,
+      "folds": 1,
+      "repeats": 1,
+      "scaled": false
+    },
+    "lofo": {
+      "seconds": 1.9309614826910628,
+      "mode": "model",
+      "lower_s": 0.71591985192986,
+      "upper_s": 5.208141997439355,
+      "confidence": "low",
+      "reasons": [
+        "Cela porodica algoritma nedostaje u kalibraciji.",
+        "Van trening opsega: n, work"
+      ],
+      "profile": {
+        "family": "mlp",
+        "n": 22000.0,
+        "d": 80.0,
+        "jobs": 1.0,
+        "work": 14256000000.0,
+        "generation": 140800000.0,
+        "scaled": false,
+        "parameters": {
+          "max_iter": 120,
+          "hidden_layer_sizes": [
+            64,
+            32
+          ]
+        },
+        "reasons": [],
+        "supported": true
+      },
+      "overhead_s": 0.7676550000032876,
+      "compute_s": 1.1633064826877753,
+      "interval_kind": "empirical_LOFO_not_guaranteed"
+    },
+    "known": {
+      "seconds": 2.0994654556507566,
+      "mode": "model",
+      "lower_s": 0.7903644243231585,
+      "upper_s": 5.576864372717044,
+      "confidence": "low",
+      "reasons": [
+        "Van trening opsega: n"
+      ],
+      "profile": {
+        "family": "mlp",
+        "n": 22000.0,
+        "d": 80.0,
+        "jobs": 1.0,
+        "work": 14256000000.0,
+        "generation": 140800000.0,
+        "scaled": false,
+        "parameters": {
+          "max_iter": 120,
+          "hidden_layer_sizes": [
+            64,
+            32
+          ]
+        },
+        "reasons": [],
+        "supported": true
+      },
+      "overhead_s": 0.7676550000032876,
+      "compute_s": 1.331810455647469,
+      "interval_kind": "empirical_LOFO_not_guaranteed"
+    },
+    "v1": 9.914091036148628,
+    "constant": 0.8531307499943068,
+    "old_frozen": 1.1630145492408674,
+    "estimate_ms": 0.3529579989844933
+  },
+  {
+    "config": {
+      "name": "test_logreg_cv5",
+      "algorithm": "logreg",
+      "n": 9000,
+      "d": 40,
+      "scenario": "novi tok",
+      "iterations": 100,
+      "trees": 20,
+      "depth": 8,
+      "clusters": 8,
+      "folds": 5,
+      "repeats": 1,
+      "scaled": true
+    },
+    "lofo": {
+      "seconds": 1.6943039956020893,
+      "mode": "model",
+      "lower_s": 0.6271468437907951,
+      "upper_s": 4.577342703602614,
+      "confidence": "low",
+      "reasons": [
+        "Cela porodica algoritma nedostaje u kalibraciji.",
+        "Van trening opsega: jobs"
+      ],
+      "profile": {
+        "family": "logreg",
+        "n": 9000.0,
+        "d": 40.0,
+        "jobs": 5.0,
+        "work": 144000000.0,
+        "generation": 14400000.0,
+        "scaled": true,
+        "parameters": {
+          "max_iter": 100
+        },
+        "reasons": [],
+        "supported": true
+      },
+      "overhead_s": 0.7676550000032876,
+      "compute_s": 0.9266489955988018,
+      "interval_kind": "empirical_LOFO_not_guaranteed"
+    },
+    "known": {
+      "seconds": 0.8204454328204827,
+      "mode": "model",
+      "lower_s": 0.3088647543375414,
+      "upper_s": 2.179370416283761,
+      "confidence": "low",
+      "reasons": [
+        "Van trening opsega: jobs"
+      ],
+      "profile": {
+        "family": "logreg",
+        "n": 9000.0,
+        "d": 40.0,
+        "jobs": 5.0,
+        "work": 144000000.0,
+        "generation": 14400000.0,
+        "scaled": true,
+        "parameters": {
+          "max_iter": 100
+        },
+        "reasons": [],
+        "supported": true
+      },
+      "overhead_s": 0.7676550000032876,
+      "compute_s": 0.05279043281719509,
+      "interval_kind": "empirical_LOFO_not_guaranteed"
+    },
+    "v1": 2.310417328516394,
+    "constant": 0.9025472709981841,
+    "old_frozen": 1.1141033711420476,
+    "estimate_ms": 0.3427920019021258
+  },
+  {
+    "config": {
+      "name": "test_boost_nikad",
+      "algorithm": "boost",
+      "n": 15000,
+      "d": 60,
+      "scenario": "potpuno izostavljena porodica",
+      "iterations": 180,
+      "trees": 20,
+      "depth": 8,
+      "clusters": 8,
+      "folds": 1,
+      "repeats": 1,
+      "scaled": false
+    },
+    "lofo": {
+      "seconds": 1.2478692919693504,
+      "mode": "model",
+      "lower_s": 0.9395453418138717,
+      "upper_s": 1.6573737323137854,
+      "confidence": "low",
+      "reasons": [
+        "Cela porodica algoritma nedostaje u kalibraciji."
+      ],
+      "profile": {
+        "family": "boost",
+        "n": 15000.0,
+        "d": 60.0,
+        "jobs": 1.0,
+        "work": 972000000.0,
+        "generation": 54000000.0,
+        "scaled": false,
+        "parameters": {
+          "max_iter": 180,
+          "max_depth": 8
+        },
+        "reasons": [],
+        "supported": true
+      },
+      "overhead_s": 0.7676550000032876,
+      "compute_s": 0.4802142919660628,
+      "interval_kind": "empirical_LOFO_not_guaranteed"
+    },
+    "known": {
+      "seconds": 1.2478692919693504,
+      "mode": "model",
+      "lower_s": 0.9395453418138717,
+      "upper_s": 1.6573737323137854,
+      "confidence": "low",
+      "reasons": [
+        "Cela porodica algoritma nedostaje u kalibraciji."
+      ],
+      "profile": {
+        "family": "boost",
+        "n": 15000.0,
+        "d": 60.0,
+        "jobs": 1.0,
+        "work": 972000000.0,
+        "generation": 54000000.0,
+        "scaled": false,
+        "parameters": {
+          "max_iter": 180,
+          "max_depth": 8
+        },
+        "reasons": [],
+        "supported": true
+      },
+      "overhead_s": 0.7676550000032876,
+      "compute_s": 0.4802142919660628,
+      "interval_kind": "empirical_LOFO_not_guaranteed"
+    },
+    "v1": 2.751686142103233,
+    "constant": 0.8566498749969469,
+    "old_frozen": 1.0504728403434993,
+    "estimate_ms": 0.34054200659738854
+  },
+  {
+    "config": {
+      "name": "test_pca_nikad",
+      "algorithm": "pca",
+      "n": 10000,
+      "d": 200,
+      "scenario": "potpuno izostavljena porodica",
+      "iterations": 100,
+      "trees": 20,
+      "depth": 8,
+      "clusters": 8,
+      "folds": 1,
+      "repeats": 1,
+      "scaled": false
+    },
+    "lofo": {
+      "seconds": 1.2372964179577925,
+      "mode": "model",
+      "lower_s": 0.46579240847437486,
+      "upper_s": 3.2866624660230066,
+      "confidence": "low",
+      "reasons": [
+        "Cela porodica algoritma nedostaje u kalibraciji.",
+        "Van trening opsega: d"
+      ],
+      "profile": {
+        "family": "pca",
+        "n": 10000.0,
+        "d": 200.0,
+        "jobs": 1.0,
+        "work": 300000000.0,
+        "generation": 400000000.0,
+        "scaled": false,
+        "parameters": {},
+        "reasons": [],
+        "supported": true
+      },
+      "overhead_s": 0.7676550000032876,
+      "compute_s": 0.469641417954505,
+      "interval_kind": "empirical_LOFO_not_guaranteed"
+    },
+    "known": {
+      "seconds": 1.2372964179577925,
+      "mode": "model",
+      "lower_s": 0.46579240847437486,
+      "upper_s": 3.2866624660230066,
+      "confidence": "low",
+      "reasons": [
+        "Cela porodica algoritma nedostaje u kalibraciji.",
+        "Van trening opsega: d"
+      ],
+      "profile": {
+        "family": "pca",
+        "n": 10000.0,
+        "d": 200.0,
+        "jobs": 1.0,
+        "work": 300000000.0,
+        "generation": 400000000.0,
+        "scaled": false,
+        "parameters": {},
+        "reasons": [],
+        "supported": true
+      },
+      "overhead_s": 0.7676550000032876,
+      "compute_s": 0.469641417954505,
+      "interval_kind": "empirical_LOFO_not_guaranteed"
+    },
+    "v1": 2.308236218689045,
+    "constant": 0.8566498749969469,
+    "old_frozen": 1.0394969803951841,
+    "estimate_ms": 0.3433340025367215
+  }
+]
