@@ -1,141 +1,27 @@
-using Contracts;
-using Coordinator.Services;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Testing;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
-using Microsoft.AspNetCore.Hosting.Server;
-using Microsoft.AspNetCore.Hosting.Server.Features;
-using Microsoft.Data.Sqlite;
-using Microsoft.Extensions.Logging.Console;
-using System.Net;
 using System.Net.Http.Json;
-using Worker;
-using Worker.Execution;
+using Contracts;
+using Scheduling;
 
 namespace SchedulingV1;
 
-internal sealed class CoordinatorHost(BatchObservation observation, string database)
-    : WebApplicationFactory<ExperimentRegistry>
-{
-    protected override void ConfigureWebHost(IWebHostBuilder builder)
-    {
-        builder.UseContentRoot(Path.GetFullPath("../../src/Coordinator"))
-            .UseEnvironment("SchedulingV1")
-            .UseSetting("Coordinator:DatabasePath", database)
-            .UseSetting("Coordinator:SchedulingInterval", Platform.PollInterval)
-            .UseSetting("Raft:AutomaticElectionEnabled", "false")
-            .UseSetting("Raft:ClientCommandReplicationEnabled", "false")
-            .ConfigureLogging(logging =>
-            {
-                logging.ClearProviders();
-                logging.AddSimpleConsole();
-                logging.AddFilter<ConsoleLoggerProvider>(null, LogLevel.Error);
-            })
-            .ConfigureServices(services =>
-            {
-                services.AddSingleton<IPendingExperimentPolicy>(observation);
-                services.Configure<MvcOptions>(options => options.Filters.Add(observation));
-            });
-    }
-}
-
 internal static class Platform
 {
-    public const string PollInterval = "00:00:00.020";
-
-    private sealed class WorkerHttpClientFactory(HttpClient client) : IHttpClientFactory
-    {
-        public HttpClient CreateClient(string name) => client;
-    }
-
-    public static async Task<double> RunAsync(BatchTask[] order, string scenario, string policy,
+    public static Task<double> RunAsync(BatchTask[] order, string scenario, string policy,
         string runId, string directory, int millisecondsPerSecond, bool inProcess, CancellationToken token)
     {
         var tasks = order.ToDictionary(task => task.Id);
         var observation = new BatchObservation(tasks, policy);
-        var temporary = Directory.CreateTempSubdirectory("scheduling-v1-");
-        try
+        var requests = order.Select(task => new CreateExperimentRequest
         {
-            await using var host = new CoordinatorHost(observation, Path.Combine(temporary.FullName, "batch.db"));
-            if (!inProcess)
-                host.UseKestrel(options => options.Listen(IPAddress.Loopback, 0));
-
-            host.StartServer();
-            using var client = inProcess ? host.CreateClient() : new HttpClient
-            {
-                BaseAddress = new Uri(host.Services.GetRequiredService<IServer>()
-                    .Features.Get<IServerAddressesFeature>()!.Addresses.Single())
-            };
-            var workerIds = Enumerable.Range(1, Workload.WorkerCount).Select(i => $"worker-{i:D2}").ToArray();
-            var workers = new List<WorkerService>();
-            var factory = new WorkerHttpClientFactory(client);
-            var executor = new KnownDurationExecutor(tasks, millisecondsPerSecond);
-            try
-            {
-                foreach (var id in workerIds)
-                {
-                    var configuration = new ConfigurationBuilder().AddInMemoryCollection(new Dictionary<string, string?>
-                    {
-                        ["Worker:Id"] = id,
-                        ["Worker:CoordinatorBaseUrl"] = client.BaseAddress!.GetLeftPart(UriPartial.Authority),
-                        ["Worker:ExperimentPollingInterval"] = PollInterval
-                    }).Build();
-                    var worker = new WorkerService(host.Services.GetRequiredService<ILogger<WorkerService>>(),
-                        factory, configuration, executor);
-                    workers.Add(worker);
-                    await worker.StartAsync(token);
-                }
-                foreach (var task in order)
-                {
-                    using var response = await client.PostAsJsonAsync("/api/experiments", new CreateExperimentRequest
-                    {
-                        Name = task.Id, Algorithm = "scheduling-v1-delay", Environment = "local",
-                        MaxSteps = 1, Priority = 1, TimeoutSeconds = 120
-                    }, token);
-                    response.EnsureSuccessStatusCode();
-                }
-
-                using (var setup = CancellationTokenSource.CreateLinkedTokenSource(token))
-                {
-                    setup.CancelAfter(TimeSpan.FromSeconds(30));
-                    while (true)
-                    {
-                        var registered = await client.GetFromJsonAsync<WorkerStatusResponse[]>("/api/workers", setup.Token);
-                        if (registered!.Where(w => w.IsOnline).Select(w => w.WorkerId).ToHashSet().SetEquals(workerIds))
-                            break;
-                        await Task.Delay(20, setup.Token);
-                    }
-                }
-
-                var batch = await client.GetFromJsonAsync<ExperimentResponse[]>("/api/experiments", token);
-                if (batch!.Length != 115 || !tasks.Keys.ToHashSet().SetEquals(batch.Select(t => t.Name)) ||
-                    batch.Any(t => t.Status != ExperimentStatus.Pending || t.Priority != 1 || t.Attempt != 0))
-                    throw new InvalidOperationException("Expected the entire untouched batch at the release barrier.");
-
-                observation.Release();
-                await observation.Finished.WaitAsync(TimeSpan.FromSeconds(90 + 2 * Workload.IdealMakespan(order, policy)
-                    * millisecondsPerSecond / 1000.0), token);
-            }
-            finally
-            {
-                await Task.WhenAll(workers.Select(worker => worker.StopAsync(CancellationToken.None)));
-                foreach (var worker in workers)
-                    worker.Dispose();
-            }
-
-            return await ValidateAndExport(client, observation, tasks, workerIds, directory, runId,
-                scenario, policy, millisecondsPerSecond, token);
-        }
-        finally
-        {
-            // Release idle SQLite handles before removing the per-run database.
-            using var connection = new SqliteConnection($"Data Source={Path.Combine(temporary.FullName, "batch.db")}");
-            SqliteConnection.ClearPool(connection);
-            temporary.Delete(recursive: true);
-        }
+            Name = task.Id, Algorithm = "scheduling-v1-delay", Environment = "local",
+            MaxSteps = 1, Priority = 1, TimeoutSeconds = 120
+        }).ToArray();
+        var deadline = TimeSpan.FromSeconds(90 + 2 * Workload.IdealMakespan(order, policy)
+            * millisecondsPerSecond / 1000.0);
+        return LocalBatch.RunAsync(requests, new KnownDurationExecutor(tasks, millisecondsPerSecond),
+            observation, observation, inProcess, deadline,
+            (client, _, workers) => ValidateAndExport(client, observation, tasks, workers, directory,
+                runId, scenario, policy, millisecondsPerSecond, token), token);
     }
 
     private static async Task<double> ValidateAndExport(HttpClient client, BatchObservation observation,
