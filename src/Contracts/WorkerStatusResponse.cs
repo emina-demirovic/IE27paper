@@ -4,6 +4,8 @@ public sealed class WorkerStatusResponse
 {
     public string WorkerId { get; set; } = string.Empty;
 
+    public string? HostId { get; set; }
+
     public DateTimeOffset RegisteredAtUtc { get; set; }
 
     public DateTimeOffset LastHeartbeatAtUtc { get; set; }

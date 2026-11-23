@@ -1,3 +1,4 @@
+using Coordinator.ResourceMonitoring;
 using Coordinator.Services;
 using Coordinator.Commands;
 using Coordinator.Data;
@@ -105,6 +106,7 @@ builder.Services.AddSingleton<
     RaftElectionService>();
 
 builder.Services.AddSingleton<WorkerRegistry>();
+builder.Services.AddSingleton<HostResourceRegistry>();
 builder.Services.AddSingleton<ExperimentRegistry>();
 builder.Services.AddSingleton<CoordinatorCommandProcessor>();
 

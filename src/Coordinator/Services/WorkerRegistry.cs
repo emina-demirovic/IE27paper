@@ -11,7 +11,7 @@ public sealed class WorkerRegistry
     private readonly ConcurrentDictionary<string, WorkerStatusResponse> _workers =
         new();
 
-    public WorkerStatusResponse Register(string workerId)
+    public WorkerStatusResponse Register(string workerId, string? hostId = null)
     {
         var now = DateTimeOffset.UtcNow;
 
@@ -20,6 +20,7 @@ public sealed class WorkerRegistry
             _ => new WorkerStatusResponse
             {
                 WorkerId = workerId,
+                HostId = hostId,
                 RegisteredAtUtc = now,
                 LastHeartbeatAtUtc = now,
                 IsOnline = true
@@ -27,6 +28,7 @@ public sealed class WorkerRegistry
             (_, existingWorker) => new WorkerStatusResponse
             {
                 WorkerId = existingWorker.WorkerId,
+                HostId = hostId,
                 RegisteredAtUtc = existingWorker.RegisteredAtUtc,
                 LastHeartbeatAtUtc = now,
                 IsOnline = true
@@ -35,22 +37,24 @@ public sealed class WorkerRegistry
 
     public WorkerStatusResponse? Heartbeat(string workerId)
     {
-        if (!_workers.TryGetValue(workerId, out var existingWorker))
+        while (_workers.TryGetValue(workerId, out var existingWorker))
         {
-            return null;
+            var updatedWorker = new WorkerStatusResponse
+            {
+                WorkerId = existingWorker.WorkerId,
+                HostId = existingWorker.HostId,
+                RegisteredAtUtc = existingWorker.RegisteredAtUtc,
+                LastHeartbeatAtUtc = DateTimeOffset.UtcNow,
+                IsOnline = true
+            };
+
+            if (_workers.TryUpdate(workerId, updatedWorker, existingWorker))
+            {
+                return updatedWorker;
+            }
         }
 
-        var updatedWorker = new WorkerStatusResponse
-        {
-            WorkerId = existingWorker.WorkerId,
-            RegisteredAtUtc = existingWorker.RegisteredAtUtc,
-            LastHeartbeatAtUtc = DateTimeOffset.UtcNow,
-            IsOnline = true
-        };
-
-        _workers[workerId] = updatedWorker;
-
-        return updatedWorker;
+        return null;
     }
 
     public WorkerStatusResponse? GetFirstOnline()
@@ -64,6 +68,7 @@ public sealed class WorkerRegistry
             .Select(worker => new WorkerStatusResponse
             {
                 WorkerId = worker.WorkerId,
+                HostId = worker.HostId,
                 RegisteredAtUtc = worker.RegisteredAtUtc,
                 LastHeartbeatAtUtc = worker.LastHeartbeatAtUtc,
                 IsOnline = true
@@ -82,6 +87,7 @@ public sealed class WorkerRegistry
             .Select(worker => new WorkerStatusResponse
             {
                 WorkerId = worker.WorkerId,
+                HostId = worker.HostId,
                 RegisteredAtUtc = worker.RegisteredAtUtc,
                 LastHeartbeatAtUtc = worker.LastHeartbeatAtUtc,
                 IsOnline = true
@@ -97,6 +103,7 @@ public sealed class WorkerRegistry
             .Select(worker => new WorkerStatusResponse
             {
                 WorkerId = worker.WorkerId,
+                HostId = worker.HostId,
                 RegisteredAtUtc = worker.RegisteredAtUtc,
                 LastHeartbeatAtUtc = worker.LastHeartbeatAtUtc,
                 IsOnline = now - worker.LastHeartbeatAtUtc <= OnlineTimeout

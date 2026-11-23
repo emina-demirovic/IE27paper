@@ -2,7 +2,10 @@ using System.Net;
 using System.Diagnostics;
 using System.Net.Http.Json;
 using Contracts;
+using Contracts.ResourceMonitoring;
 using Worker.Execution;
+using Worker.ResourceMonitoring;
+
 namespace Worker;
 
 public sealed class WorkerService(
@@ -57,7 +60,8 @@ public sealed class WorkerService(
     {
         var request = new WorkerRegistrationRequest
         {
-            WorkerId = WorkerId
+            WorkerId = WorkerId,
+            HostId = configuration["Worker:HostId"]
         };
 
         try
@@ -120,14 +124,20 @@ public sealed class WorkerService(
         HttpClient client,
         CancellationToken stoppingToken)
     {
+        var monitor = CreateResourceMonitor();
+        var heartbeatUrl = $"{CoordinatorBaseUrl}/api/workers/{WorkerId}/heartbeat";
+
         while (!stoppingToken.IsCancellationRequested)
         {
             try
             {
-                var response = await client.PostAsync(
-                    $"{CoordinatorBaseUrl}/api/workers/{WorkerId}/heartbeat",
-                    content: null,
-                    stoppingToken);
+                var sample = CollectHostResources(monitor);
+                using var response = sample is null
+                    ? await client.PostAsync(heartbeatUrl, content: null, stoppingToken)
+                    : await client.PostAsJsonAsync(
+                        heartbeatUrl,
+                        new WorkerHeartbeatRequest(sample),
+                        stoppingToken);
 
                 if (response.StatusCode == HttpStatusCode.NotFound)
                 {
@@ -172,6 +182,46 @@ public sealed class WorkerService(
             {
                 break;
             }
+        }
+    }
+
+    private IHostResourceMonitor? CreateResourceMonitor()
+    {
+        if (!configuration.GetValue<bool>("Worker:ResourceMonitor:Enabled"))
+        {
+            return null;
+        }
+
+        if (string.IsNullOrWhiteSpace(configuration["Worker:HostId"]))
+        {
+            logger.LogWarning("Resource monitoring requires a configured Worker:HostId.");
+            return null;
+        }
+
+        if (OperatingSystem.IsMacOS())
+        {
+            return new MacHostResourceMonitor();
+        }
+
+        if (OperatingSystem.IsWindows())
+        {
+            return new WindowsHostResourceMonitor();
+        }
+
+        logger.LogWarning("Resource monitoring is supported on macOS and Windows.");
+        return null;
+    }
+
+    private HostResourceSample? CollectHostResources(IHostResourceMonitor? monitor)
+    {
+        try
+        {
+            return monitor?.Collect();
+        }
+        catch (Exception exception)
+        {
+            logger.LogWarning(exception, "Could not collect host resources.");
+            return null;
         }
     }
 
