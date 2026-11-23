@@ -5,7 +5,8 @@ using Microsoft.EntityFrameworkCore;
 namespace Coordinator.Services;
 
 public sealed class ExperimentRegistry(
-    IDbContextFactory<CoordinatorDbContext> dbContextFactory)
+    IDbContextFactory<CoordinatorDbContext> dbContextFactory,
+    IPendingExperimentPolicy? pendingPolicy = null)
 {
 
     
@@ -345,16 +346,15 @@ public sealed class ExperimentRegistry(
         using var dbContext =
             dbContextFactory.CreateDbContext();
 
-        var experiment = dbContext.Experiments
+        var pending = dbContext.Experiments
             .AsNoTracking()
-            .Where(experiment =>
-                experiment.Status == ExperimentStatus.Pending)
-            .AsEnumerable()
-            .OrderByDescending(experiment =>
-                experiment.Priority)
-            .ThenBy(experiment =>
-                experiment.CreatedAtUtc)
-            .FirstOrDefault();
+            .Where(experiment => experiment.Status == ExperimentStatus.Pending)
+            .AsEnumerable();
+
+        var experiment = pendingPolicy is null
+            ? pending.OrderByDescending(task => task.Priority)
+                .ThenBy(task => task.CreatedAtUtc).FirstOrDefault()
+            : pendingPolicy.SelectNext(pending);
 
         return experiment is null
             ? null

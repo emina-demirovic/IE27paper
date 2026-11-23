@@ -10,6 +10,10 @@
 *.userosscache
 *.sln.docstates
 *.env
+.env.*
+!.env.example
+!.env.sample
+!.env.template
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
@@ -431,3 +435,15 @@ FodyWeavers.xsd
 *.db
 *.db-shm
 *.db-wal
+*.db-journal
+
+.DS_Store
+
+# Local SDK, CLI state, and test launcher output
+/.dotnet/
+/.dotnet-home/
+/test-results/
+
+# Timestamped scheduling snapshots if copied into the checkout
+/scheduling-v1-[0-9]*.zip
+/scheduling-v1-[0-9]*/
