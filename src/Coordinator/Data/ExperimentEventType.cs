@@ -9,5 +9,8 @@ public enum ExperimentEventType
     Requeued,
     RecoveredOnStartup,
     CancelRequested,
-    Cancelled
+    Cancelled,
+    DatasetTaskAnalysis,
+    DatasetAssignment,
+    DatasetDuration
 }

@@ -738,7 +738,10 @@ public sealed class ExperimentRegistry(
         return dbContext.ExperimentEvents
             .AsNoTracking()
             .Where(experimentEvent =>
-                experimentEvent.ExperimentId == experimentId)
+                experimentEvent.ExperimentId == experimentId &&
+                experimentEvent.Type != ExperimentEventType.DatasetTaskAnalysis &&
+                experimentEvent.Type != ExperimentEventType.DatasetAssignment &&
+                experimentEvent.Type != ExperimentEventType.DatasetDuration)
             .AsEnumerable()
             .OrderBy(experimentEvent =>
                 experimentEvent.OccurredAtUtc)

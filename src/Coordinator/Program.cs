@@ -1,4 +1,5 @@
 using Coordinator.ResourceMonitoring;
+using Coordinator.ExperimentDataset;
 using Coordinator.Services;
 using Coordinator.Commands;
 using Coordinator.Data;
@@ -110,6 +111,15 @@ builder.Services.AddSingleton<HostResourceRegistry>();
 builder.Services.AddSingleton<ExperimentRegistry>();
 builder.Services.AddSingleton<CoordinatorCommandProcessor>();
 
+var datasetConfigured = !string.IsNullOrWhiteSpace(builder.Configuration["Coordinator:ExperimentCsvPath"]);
+var datasetEnabled = datasetConfigured &&
+    !builder.Configuration.GetValue<bool>("Raft:ClientCommandReplicationEnabled");
+if (datasetEnabled)
+{
+    builder.Services.AddSingleton<ExperimentCsvDataset>();
+    builder.Services.AddHostedService(services => services.GetRequiredService<ExperimentCsvDataset>());
+}
+
 builder.Services.AddSingleton<ExperimentSchedulerService>();
 
 builder.Services.AddHostedService(
@@ -134,6 +144,10 @@ builder.Services.AddHostedService(
 builder.Services.AddOpenApi();
 
 var app = builder.Build();
+if (datasetConfigured && !datasetEnabled)
+{
+    app.Logger.LogWarning("Experiment CSV is available when Raft client command replication is disabled.");
+}
         
 using (var scope = app.Services.CreateScope())
 {

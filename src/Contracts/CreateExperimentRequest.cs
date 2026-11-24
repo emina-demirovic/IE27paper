@@ -1,3 +1,5 @@
+using System.Text.Json;
+
 namespace Contracts;
 
 public sealed class CreateExperimentRequest
@@ -14,6 +16,8 @@ public sealed class CreateExperimentRequest
     public int MaxSteps { get; set; }
 
     public int Priority { get; set; }
+
+    public JsonElement? TaskAnalysis { get; set; }
 
     public int TimeoutSeconds { get; set; } = 300;
 }

@@ -1,12 +1,14 @@
 using Contracts;
 using Coordinator.Data;
+using Coordinator.ExperimentDataset;
 using Coordinator.Services;
 using Microsoft.EntityFrameworkCore;
 
 namespace Coordinator.Commands;
 
 public sealed class CoordinatorCommandProcessor(
-    IDbContextFactory<CoordinatorDbContext> dbContextFactory)
+    IDbContextFactory<CoordinatorDbContext> dbContextFactory,
+    ExperimentCsvDataset? dataset = null)
 {
     public void Apply(CoordinatorCommand command)
     {
@@ -141,6 +143,12 @@ public sealed class CoordinatorCommandProcessor(
 
         dbContext.Experiments.Add(experiment);
         dbContext.ExperimentEvents.Add(createdEvent);
+        if (command.TaskAnalysisJson is { } taskAnalysis)
+        {
+            dbContext.ExperimentEvents.Add(CreateEvent(
+                Guid.NewGuid(), experiment.Id, ExperimentEventType.DatasetTaskAnalysis,
+                command.OccurredAtUtc, null, 0, taskAnalysis));
+        }
         dbContext.AppliedCommands.Add(
             appliedCommandEntity);
 
@@ -173,6 +181,8 @@ public sealed class CoordinatorCommandProcessor(
                 previousResult,
                 WasAlreadyApplied: true);
         }
+
+        var assignment = dataset?.CaptureAssignment(command.WorkerId);
 
         var updatedRows = dbContext.Experiments
             .Where(experiment =>
@@ -236,6 +246,14 @@ public sealed class CoordinatorCommandProcessor(
                 command.Attempt,
                 $"Experiment was assigned to worker " +
                 $"'{command.WorkerId}'."));
+
+        if (assignment is not null)
+        {
+            dbContext.ExperimentEvents.Add(CreateEvent(
+                Guid.NewGuid(), command.ExperimentId, ExperimentEventType.DatasetAssignment,
+                assignment.CapturedAtUtc, command.WorkerId, command.Attempt,
+                System.Text.Json.JsonSerializer.Serialize(assignment)));
+        }
 
         AddAppliedCommand(
             dbContext,
@@ -338,6 +356,14 @@ public sealed class CoordinatorCommandProcessor(
                 command.WorkerId,
                 command.Attempt,
                 eventDetails));
+
+        if (dataset is not null && command.ExecutionDurationMs is long duration)
+        {
+            dbContext.ExperimentEvents.Add(CreateEvent(
+                Guid.NewGuid(), command.ExperimentId, ExperimentEventType.DatasetDuration,
+                command.OccurredAtUtc, command.WorkerId, command.Attempt,
+                duration.ToString(System.Globalization.CultureInfo.InvariantCulture)));
+        }
 
         AddAppliedCommand(
             dbContext,

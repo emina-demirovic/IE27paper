@@ -70,6 +70,12 @@ public sealed class ExperimentsController : ControllerBase
                 "TimeoutSeconds must be between 1 and 86400.");
         }
 
+        if (request.TaskAnalysis is { } analysis &&
+            !ExperimentDataset.ExperimentCsvDataset.IsAnalysisRecord(analysis))
+        {
+            return BadRequest("TaskAnalysis must be a Task Analyzer v1 JSON record.");
+        }
+
         var occurredAtUtc =
             DateTimeOffset.UtcNow;
 
@@ -85,7 +91,8 @@ public sealed class ExperimentsController : ControllerBase
             MaxSteps: request.MaxSteps,
             Priority: request.Priority,
             TimeoutSeconds: request.TimeoutSeconds,
-            SimulateFailure: request.SimulateFailure);
+            SimulateFailure: request.SimulateFailure,
+            TaskAnalysisJson: request.TaskAnalysis?.GetRawText());
 
         if (!_raftOptions.Value.ClientCommandReplicationEnabled)
         {

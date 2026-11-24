@@ -12,7 +12,8 @@ public sealed record CreateExperimentCommand(
     int MaxSteps,
     int Priority,
     int TimeoutSeconds,
-    bool SimulateFailure)
+    bool SimulateFailure,
+    string? TaskAnalysisJson = null)
     : CoordinatorCommand(
         CommandId,
         OccurredAtUtc);

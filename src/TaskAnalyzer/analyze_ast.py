@@ -12,6 +12,18 @@ from pathlib import Path, PurePosixPath
 
 TRACKED_LIBRARIES = {"numpy", "scipy", "pandas", "sklearn", "gymnasium"}
 MAX_NUMPY_HEADER_BYTES = 16 * 1024
+ARITHMETIC_OPERATORS = {
+    ast.Add: "add",
+    ast.Sub: "subtract",
+    ast.Mult: "multiply",
+    ast.MatMult: "matrixMultiply",
+    ast.Div: "divide",
+    ast.FloorDiv: "floorDivide",
+    ast.Mod: "modulo",
+    ast.Pow: "power",
+    ast.UAdd: "unaryPlus",
+    ast.USub: "unaryMinus",
+}
 
 
 def git_output(repository: Path, *arguments: str) -> bytes:
@@ -25,12 +37,17 @@ def git_output(repository: Path, *arguments: str) -> bytes:
 
 def extract_structure(tree: ast.AST) -> dict:
     node_counts = Counter()
+    arithmetic_counts = Counter()
     max_loop_depth = 0
     pending = [(tree, 0)]
 
     while pending:
         node, loop_depth = pending.pop()
         node_counts[type(node)] += 1
+        if isinstance(node, (ast.BinOp, ast.AugAssign, ast.UnaryOp)):
+            operator = ARITHMETIC_OPERATORS.get(type(node.op))
+            if operator is not None:
+                arithmetic_counts[operator] += 1
 
         if isinstance(node, (ast.For, ast.AsyncFor, ast.While)):
             loop_depth += 1
@@ -48,6 +65,9 @@ def extract_structure(tree: ast.AST) -> dict:
         "generatorExpressionCount": node_counts[ast.GeneratorExp],
         "maxSyntacticLoopDepth": max_loop_depth,
         "callCount": node_counts[ast.Call],
+        "arithmeticOperatorCounts": {
+            name: arithmetic_counts[name] for name in ARITHMETIC_OPERATORS.values()
+        },
     }
 
 
@@ -92,18 +112,21 @@ def dotted_name(node: ast.AST) -> str:
 
 def inspect_calls(tree: ast.AST) -> dict:
     imports = defaultdict(set)
+    import_targets = set()
     rebound = set()
     nodes = list(ast.walk(tree))
 
     for node in nodes:
         if isinstance(node, ast.Import):
             for alias in node.names:
+                import_targets.add(alias.name)
                 root = alias.name.split(".")[0]
                 imports[alias.asname or root].add(alias.name if alias.asname else root)
         elif isinstance(node, ast.ImportFrom):
             for alias in node.names:
                 prefix = "." * node.level + (node.module or "")
                 target = f"{prefix}.{alias.name}" if node.module else prefix + alias.name
+                import_targets.add(target)
                 imports[alias.asname or alias.name].add(target)
         elif isinstance(node, ast.Name) and isinstance(node.ctx, (ast.Store, ast.Del)):
             rebound.add(node.id)
@@ -147,12 +170,8 @@ def inspect_calls(tree: ast.AST) -> dict:
             })
 
     return {
-        "libraries": sorted({
-            target.split(".")[0]
-            for targets in imports.values()
-            for target in targets
-            if target.split(".")[0] in TRACKED_LIBRARIES
-        }),
+        "imports": sorted(import_targets),
+        "libraries": sorted({target.split(".")[0] for target in import_targets} & TRACKED_LIBRARIES),
         "libraryCallCounts": dict(sorted(library_calls.items())),
         "unresolvedCallCount": unresolved_call_count,
         "dynamicImportCount": dynamic_import_count,
