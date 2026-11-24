@@ -43,6 +43,11 @@ def main() -> int:
 
         return run_random_forest(args)
 
+    if args.algorithm.casefold() == "numeric-matmul":
+        from numeric_matmul import run_matrix_multiplication
+
+        return run_matrix_multiplication(args)
+
     print(
         f"Starting {args.algorithm} on {args.environment} "
         f"with seed={args.seed} and max_steps={args.max_steps}.",
