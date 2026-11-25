@@ -58,7 +58,8 @@ internal static class LocalBatch
     public static async Task<T> RunAsync<T>(CreateExperimentRequest[] requests, IExperimentExecutor executor,
         IPendingExperimentPolicy policy, CompletionClock clock, bool inProcess, TimeSpan deadline,
         Func<HttpClient, IServiceProvider, string[], Task<T>> export, CancellationToken token,
-        Action<IServiceCollection>? configure = null, Action<IServiceProvider>? prepare = null)
+        Action<IServiceCollection>? configure = null, Action<IServiceProvider>? prepare = null,
+        Func<CancellationToken, Task>? warmup = null, Action? released = null, Action? finished = null)
     {
         var temporary = Directory.CreateTempSubdirectory("scheduling-");
         try
@@ -116,8 +117,11 @@ internal static class LocalBatch
                     batch.Any(t => t.Status != ExperimentStatus.Pending || t.Priority != 1 || t.Attempt != 0))
                     throw new InvalidOperationException("Expected the entire untouched batch at the release barrier.");
 
+                if (warmup != null) await warmup(token);
                 clock.Release();
+                released?.Invoke();
                 await clock.Finished.WaitAsync(deadline, token);
+                finished?.Invoke();
             }
             finally
             {

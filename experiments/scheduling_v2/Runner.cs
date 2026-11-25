@@ -31,7 +31,9 @@ internal static class Runner
             throw new InvalidDataException("Manifest content changed after freezing.");
         using var manifest = JsonDocument.Parse(bytes);
         var jobs = manifest.RootElement.GetProperty("jobs").Deserialize<Job[]>(Json)!;
-        if (policy is not ("LPT-K" or "LPT-KP") || budget <= 0 || jobs.Length == 0 ||
+        var options = args.Length == 8 ? JsonSerializer.Deserialize<CpuOptions>(File.ReadAllText(args[7]), Json) : null;
+        bool validPolicy = options == null ? policy is "LPT-K" or "LPT-KP" : policy is "LPT-KP" or "CPU-LPT-KP";
+        if (!validPolicy || budget <= 0 || jobs.Length == 0 ||
             jobs.Any(j => string.IsNullOrWhiteSpace(j.TaskId) || j.P is not (1 or 2 or 4) ||
                           j.P > budget || j.N <= 0 || j.R <= 0 || j.Seed < 0 || !double.IsFinite(j.K) || j.K <= 0) ||
             jobs.Select(j => j.TaskId).Distinct().Count() != jobs.Length ||
@@ -39,7 +41,9 @@ internal static class Runner
             throw new InvalidDataException("Invalid manifest, arrival indices, policy, or P exceeding B.");
 
         var clock = new CompletionClock(jobs.Length);
-        var admission = new Admission(jobs, budget, policy == "LPT-KP", clock);
+        using var cpu = options == null ? null : new CpuExperiment(options,
+            new CpuPolicy(options, budget, policy == "CPU-LPT-KP", options.LogicalCpus), clock);
+        var admission = new Admission(jobs, budget, policy != "LPT-K", clock, cpu);
         var config = new ConfigurationBuilder().AddInMemoryCollection(new Dictionary<string, string?>
         {
             ["Worker:Executor:PythonCommand"] = args[6],
@@ -53,8 +57,8 @@ internal static class Runner
         using var stop = new CancellationTokenSource();
         Console.CancelKeyPress += (_, e) => { e.Cancel = true; stop.Cancel(); };
         await LocalBatch.RunAsync(requests, new PythonProcessExperimentExecutor(config), admission, clock,
-            inProcess, TimeSpan.FromSeconds(120 + jobs.Sum(j => 4 * j.K + 2)),
-            async (client, _, workers) =>
+            inProcess, TimeSpan.FromSeconds(120 + jobs.Sum(j => 4 * j.K + 2 + (options?.Grace ?? 0))),
+            async (client, services, workers) =>
             {
                 var batch = (await client.GetFromJsonAsync<ExperimentResponse[]>("/api/experiments", stop.Token))!;
                 var events = admission.Events().Select(e => new
@@ -69,9 +73,11 @@ internal static class Runner
                     metrics = t.MetricsJson == null ? (JsonElement?)null : JsonSerializer.Deserialize<JsonElement>(t.MetricsJson)
                 });
                 File.WriteAllText(output, JsonSerializer.Serialize(new { manifest_id = digest, policy, budget,
-                    workers, events, tasks = rows }, Json));
+                    workers, events, tasks = rows, cpu = cpu?.Report(services) }, Json));
                 return true;
             }, stop.Token, services => services.ConfigureDbContext<CoordinatorDbContext>(
-                options => options.AddInterceptors(new ClockInterceptor())), admission.Prepare);
+                options => options.AddInterceptors(new ClockInterceptor(cpu))), admission.Prepare,
+            cpu == null ? null : cpu.Sampler.Warmup, cpu == null ? null : cpu.Release,
+            cpu == null ? null : cpu.Sampler.Stop);
     }
 }

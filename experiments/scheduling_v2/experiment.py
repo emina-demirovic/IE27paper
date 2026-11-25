@@ -34,7 +34,11 @@ def export(raw, manifest, run_id, directory):
     over = last = 0.
     active = {}
     dispatch = {}
-    for e in raw["events"]:
+    cpu = raw.get("cpu")
+    decisions = {row["seq"]: row for row in cpu["dispatch"]} if cpu else {}
+    changed = overrides = 0
+    solo_worker = None
+    for seq, e in enumerate(raw["events"], 1):
         task, worker, delta = e["task_id"], e["worker_id"], e["delta"]
         t = e["time_s"]
         if t < last or worker not in raw["workers"] or abs(delta) != jobs[task]["p"] or e["attempt"] != 1:
@@ -44,9 +48,24 @@ def export(raw, manifest, run_id, directory):
         if delta > 0:
             if worker in active or task in dispatch or t > by_id[task]["completion_s"]:
                 raise ValueError(f"Duplicate/overlapping assignment: {e}")
-            eligible = (j for j in pending.values() if raw["policy"] == "LPT-K"
-                        or j["p"] <= raw["budget"] - reserved)
-            expected = min(eligible, key=lambda j: (-j["k"], j["arrival_index"]), default=None)
+            budget = raw["budget"]
+            ranked = sorted(pending.values(), key=lambda j: (-j["k"], j["arrival_index"]))
+            if cpu:
+                info = decisions.pop(seq)
+                budget = info["effective"]
+                if (not 1 <= budget <= raw["budget"] or solo_worker is not None or
+                        ((info["fallback"] or raw["policy"] == "LPT-KP") and budget != raw["budget"])):
+                    raise ValueError(f"Invalid CPU admission at {task}")
+                if info["solo"]:
+                    if reserved or any(j["p"] <= budget for j in ranked):
+                        raise ValueError(f"Unnecessary progress override at {task}")
+                    overrides += 1
+                    solo_worker = worker
+                    budget = raw["budget"]
+                fixed = next(j for j in ranked if j["p"] <= raw["budget"] - reserved)
+                changed += fixed["task_id"] != task
+            expected = next((j for j in ranked if raw["policy"] == "LPT-K"
+                             or j["p"] <= budget - reserved), None)
             if expected is None or task != expected["task_id"]:
                 raise ValueError(f"Incorrect dispatch order or admission at {task}")
             del pending[task]
@@ -54,12 +73,14 @@ def export(raw, manifest, run_id, directory):
             active[worker] = task
         elif active.pop(worker, None) != task or by_id[task]["worker_id"] != worker:
             raise ValueError(f"Unmatched release: {e}")
+        if delta < 0 and worker == solo_worker:
+            solo_worker = None
         last = t
         reserved += delta
         peak = max(peak, reserved)
-    if active or reserved or len(dispatch) != len(jobs):
+    if decisions or active or reserved or len(dispatch) != len(jobs):
         raise ValueError("Reservation ledger did not balance")
-    if raw["policy"] == "LPT-KP" and peak > raw["budget"]:
+    if raw["policy"] != "LPT-K" and peak > raw["budget"]:
         raise ValueError("Admission exceeded budget")
 
     common = dict(policy=raw["policy"], run_id=run_id, manifest_id=raw["manifest_id"])
@@ -84,6 +105,10 @@ def export(raw, manifest, run_id, directory):
                 any(m[k] != j[k] for k in ("seed", "n", "r")) or not math.isfinite(m["checksum"])):
             raise ValueError(f"{task} backend, limit, checksum, or fixed work differs from manifest")
         checksums[task] = m["checksum"]
+    if cpu:
+        common.update(changed_admissions=changed + len(cpu["deferred"]), different_task=changed,
+                      deferred_decisions=len(cpu["deferred"]), progress_overrides=overrides,
+                      fallback_dispatches=sum(d["fallback"] is not None for d in cpu["dispatch"]))
     return dict(**common, makespan_s=makespan, budget=raw["budget"], peak_reserved_p=peak,
                 fraction_over_budget=over/makespan, completed_tasks=len(checksums),
                 tasks_per_minute=60*len(checksums)/makespan), checksums

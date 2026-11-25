@@ -12,7 +12,8 @@ internal class CompletionClock(int count) : IAsyncResourceFilter
     private readonly ConcurrentDictionary<Guid, long> _completion = new();
     private readonly TaskCompletionSource _finished = new(TaskCreationOptions.RunContinuationsAsynchronously);
     public Task Finished => _finished.Task;
-    public bool Released => Volatile.Read(ref _start) != 0;
+    public long StartTicks => Volatile.Read(ref _start);
+    public bool Released => StartTicks != 0;
     public void Release() => Interlocked.Exchange(ref _start, Stopwatch.GetTimestamp());
     public double Seconds(long ticks) => Stopwatch.GetElapsedTime(_start, ticks).TotalSeconds;
     public double Completion(Guid id) => Seconds(_completion[id]);

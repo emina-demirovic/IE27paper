@@ -10,9 +10,11 @@ CREATE VIEW v2_load AS
 SELECT COALESCE(SUM(t.p), 0) AS reserved FROM Experiments e JOIN v2_tasks t ON t.name=e.Name
 WHERE e.Status=1;
 
+CREATE VIEW v2_capacity AS SELECT * FROM v2_config;
+
 CREATE VIEW v2_next AS
 SELECT e.Id, t.name FROM Experiments e JOIN v2_tasks t ON t.name=e.Name
-CROSS JOIN v2_config cfg CROSS JOIN v2_load l
+CROSS JOIN v2_capacity cfg CROSS JOIN v2_load l
 WHERE e.Status=0 AND (cfg.constrained=0 OR t.p <= cfg.budget-l.reserved)
 ORDER BY t.k DESC, t.arrival LIMIT 1;
 

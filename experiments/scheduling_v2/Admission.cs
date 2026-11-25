@@ -13,10 +13,13 @@ namespace SchedulingV2;
 internal record Job(string TaskId, int ArrivalIndex, int N, int R, int Seed, int P, double K);
 internal record Reservation(string Task, string Worker, int Attempt, long Ticks, int Delta);
 
-internal sealed class ClockInterceptor : DbConnectionInterceptor
+internal sealed class ClockInterceptor(CpuExperiment? cpu = null) : DbConnectionInterceptor
 {
-    private static void Install(DbConnection connection) =>
+    private void Install(DbConnection connection)
+    {
         ((SqliteConnection)connection).CreateFunction("v2_ticks", Stopwatch.GetTimestamp);
+        cpu?.Bind((SqliteConnection)connection);
+    }
 
     public override void ConnectionOpened(DbConnection connection, ConnectionEndEventData eventData) =>
         Install(connection);
@@ -29,7 +32,7 @@ internal sealed class ClockInterceptor : DbConnectionInterceptor
     }
 }
 
-internal sealed class Admission(Job[] jobs, int budget, bool constrained, CompletionClock clock)
+internal sealed class Admission(Job[] jobs, int budget, bool constrained, CompletionClock clock, CpuExperiment? cpu = null)
     : IPendingExperimentPolicy
 {
     private IDbContextFactory<CoordinatorDbContext> _factory = null!;
@@ -43,6 +46,7 @@ internal sealed class Admission(Job[] jobs, int budget, bool constrained, Comple
         db.Database.ExecuteSql($"INSERT INTO v2_config VALUES ({budget},{constrained})");
         foreach (var j in jobs)
             db.Database.ExecuteSql($"INSERT INTO v2_tasks VALUES ({j.TaskId},{j.ArrivalIndex},{j.K},{j.P})");
+        cpu?.Prepare(db);
         tx.Commit();
     }
 
@@ -51,7 +55,8 @@ internal sealed class Admission(Job[] jobs, int budget, bool constrained, Comple
         if (!clock.Released)
             return null;
         using var db = _factory.CreateDbContext();
-        var name = db.Database.SqlQueryRaw<string>("SELECT name AS Value FROM v2_next").AsEnumerable().SingleOrDefault();
+        var name = cpu != null ? cpu.Select(db) : db.Database
+            .SqlQueryRaw<string>("SELECT name AS Value FROM v2_next").AsEnumerable().SingleOrDefault();
         return name == null ? null : pending.FirstOrDefault(e => e.Name == name);
     }
 
