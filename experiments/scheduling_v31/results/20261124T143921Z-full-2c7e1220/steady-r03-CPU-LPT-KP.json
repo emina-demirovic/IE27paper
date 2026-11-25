@@ -1,0 +1,6772 @@
+{
+  "manifest_id": "6b71d2bdfe544092000ffae9b0c9ee2e84c1bee1a02e7e394180fc5623ab1cfc",
+  "policy": "CPU-LPT-KP",
+  "budget": 12,
+  "workers": [
+    "worker-01",
+    "worker-02",
+    "worker-03",
+    "worker-04",
+    "worker-05",
+    "worker-06",
+    "worker-07",
+    "worker-08",
+    "worker-09",
+    "worker-10"
+  ],
+  "events": [
+    {
+      "task_id": "matrix-109",
+      "worker_id": "worker-01",
+      "attempt": 1,
+      "time_s": 0.0389797,
+      "delta": 4
+    },
+    {
+      "task_id": "matrix-106",
+      "worker_id": "worker-02",
+      "attempt": 1,
+      "time_s": 0.0437524,
+      "delta": 2
+    },
+    {
+      "task_id": "matrix-108",
+      "worker_id": "worker-03",
+      "attempt": 1,
+      "time_s": 0.0455221,
+      "delta": 2
+    },
+    {
+      "task_id": "matrix-082",
+      "worker_id": "worker-04",
+      "attempt": 1,
+      "time_s": 0.0470915,
+      "delta": 1
+    },
+    {
+      "task_id": "matrix-109",
+      "worker_id": "worker-01",
+      "attempt": 1,
+      "time_s": 8.4311983,
+      "delta": -4
+    },
+    {
+      "task_id": "matrix-110",
+      "worker_id": "worker-01",
+      "attempt": 1,
+      "time_s": 8.4488583,
+      "delta": 4
+    },
+    {
+      "task_id": "matrix-082",
+      "worker_id": "worker-04",
+      "attempt": 1,
+      "time_s": 11.5327434,
+      "delta": -1
+    },
+    {
+      "task_id": "matrix-083",
+      "worker_id": "worker-04",
+      "attempt": 1,
+      "time_s": 11.5429512,
+      "delta": 1
+    },
+    {
+      "task_id": "matrix-106",
+      "worker_id": "worker-02",
+      "attempt": 1,
+      "time_s": 16.0709722,
+      "delta": -2
+    },
+    {
+      "task_id": "matrix-108",
+      "worker_id": "worker-03",
+      "attempt": 1,
+      "time_s": 16.0735782,
+      "delta": -2
+    },
+    {
+      "task_id": "matrix-114",
+      "worker_id": "worker-02",
+      "attempt": 1,
+      "time_s": 16.0974235,
+      "delta": 4
+    },
+    {
+      "task_id": "matrix-110",
+      "worker_id": "worker-01",
+      "attempt": 1,
+      "time_s": 17.3873171,
+      "delta": -4
+    },
+    {
+      "task_id": "matrix-107",
+      "worker_id": "worker-09",
+      "attempt": 1,
+      "time_s": 17.3923744,
+      "delta": 2
+    },
+    {
+      "task_id": "matrix-091",
+      "worker_id": "worker-10",
+      "attempt": 1,
+      "time_s": 17.3948513,
+      "delta": 2
+    },
+    {
+      "task_id": "matrix-083",
+      "worker_id": "worker-04",
+      "attempt": 1,
+      "time_s": 23.7302198,
+      "delta": -1
+    },
+    {
+      "task_id": "matrix-085",
+      "worker_id": "worker-01",
+      "attempt": 1,
+      "time_s": 23.746687,
+      "delta": 1
+    },
+    {
+      "task_id": "matrix-091",
+      "worker_id": "worker-10",
+      "attempt": 1,
+      "time_s": 23.8704622,
+      "delta": -2
+    },
+    {
+      "task_id": "matrix-095",
+      "worker_id": "worker-07",
+      "attempt": 1,
+      "time_s": 23.8730409,
+      "delta": 2
+    },
+    {
+      "task_id": "matrix-114",
+      "worker_id": "worker-02",
+      "attempt": 1,
+      "time_s": 24.9328416,
+      "delta": -4
+    },
+    {
+      "task_id": "matrix-115",
+      "worker_id": "worker-03",
+      "attempt": 1,
+      "time_s": 24.9362739,
+      "delta": 4
+    },
+    {
+      "task_id": "matrix-095",
+      "worker_id": "worker-07",
+      "attempt": 1,
+      "time_s": 30.3287082,
+      "delta": -2
+    },
+    {
+      "task_id": "matrix-089",
+      "worker_id": "worker-02",
+      "attempt": 1,
+      "time_s": 30.3571701,
+      "delta": 2
+    },
+    {
+      "task_id": "matrix-107",
+      "worker_id": "worker-09",
+      "attempt": 1,
+      "time_s": 33.756087,
+      "delta": -2
+    },
+    {
+      "task_id": "matrix-115",
+      "worker_id": "worker-03",
+      "attempt": 1,
+      "time_s": 33.7587295,
+      "delta": -4
+    },
+    {
+      "task_id": "matrix-113",
+      "worker_id": "worker-09",
+      "attempt": 1,
+      "time_s": 33.9150186,
+      "delta": 4
+    },
+    {
+      "task_id": "matrix-090",
+      "worker_id": "worker-10",
+      "attempt": 1,
+      "time_s": 33.9172235,
+      "delta": 2
+    },
+    {
+      "task_id": "matrix-085",
+      "worker_id": "worker-01",
+      "attempt": 1,
+      "time_s": 35.7296021,
+      "delta": -1
+    },
+    {
+      "task_id": "matrix-081",
+      "worker_id": "worker-01",
+      "attempt": 1,
+      "time_s": 35.7525887,
+      "delta": 1
+    },
+    {
+      "task_id": "matrix-089",
+      "worker_id": "worker-02",
+      "attempt": 1,
+      "time_s": 36.7681232,
+      "delta": -2
+    },
+    {
+      "task_id": "matrix-088",
+      "worker_id": "worker-02",
+      "attempt": 1,
+      "time_s": 36.7920111,
+      "delta": 2
+    },
+    {
+      "task_id": "matrix-090",
+      "worker_id": "worker-10",
+      "attempt": 1,
+      "time_s": 40.5373827,
+      "delta": -2
+    },
+    {
+      "task_id": "matrix-094",
+      "worker_id": "worker-03",
+      "attempt": 1,
+      "time_s": 40.560454,
+      "delta": 2
+    },
+    {
+      "task_id": "matrix-113",
+      "worker_id": "worker-09",
+      "attempt": 1,
+      "time_s": 42.7274682,
+      "delta": -4
+    },
+    {
+      "task_id": "matrix-111",
+      "worker_id": "worker-04",
+      "attempt": 1,
+      "time_s": 42.7310394,
+      "delta": 4
+    },
+    {
+      "task_id": "matrix-088",
+      "worker_id": "worker-02",
+      "attempt": 1,
+      "time_s": 43.2462725,
+      "delta": -2
+    },
+    {
+      "task_id": "matrix-087",
+      "worker_id": "worker-02",
+      "attempt": 1,
+      "time_s": 43.2558961,
+      "delta": 2
+    },
+    {
+      "task_id": "matrix-094",
+      "worker_id": "worker-03",
+      "attempt": 1,
+      "time_s": 47.1613955,
+      "delta": -2
+    },
+    {
+      "task_id": "matrix-092",
+      "worker_id": "worker-03",
+      "attempt": 1,
+      "time_s": 47.1748785,
+      "delta": 2
+    },
+    {
+      "task_id": "matrix-081",
+      "worker_id": "worker-01",
+      "attempt": 1,
+      "time_s": 47.944709,
+      "delta": -1
+    },
+    {
+      "task_id": "matrix-084",
+      "worker_id": "worker-07",
+      "attempt": 1,
+      "time_s": 47.9474282,
+      "delta": 1
+    },
+    {
+      "task_id": "matrix-087",
+      "worker_id": "worker-02",
+      "attempt": 1,
+      "time_s": 49.8025059,
+      "delta": -2
+    },
+    {
+      "task_id": "matrix-093",
+      "worker_id": "worker-01",
+      "attempt": 1,
+      "time_s": 49.823524,
+      "delta": 2
+    },
+    {
+      "task_id": "matrix-111",
+      "worker_id": "worker-04",
+      "attempt": 1,
+      "time_s": 51.6667966,
+      "delta": -4
+    },
+    {
+      "task_id": "matrix-112",
+      "worker_id": "worker-05",
+      "attempt": 1,
+      "time_s": 51.6699082,
+      "delta": 4
+    },
+    {
+      "task_id": "matrix-092",
+      "worker_id": "worker-03",
+      "attempt": 1,
+      "time_s": 53.662807,
+      "delta": -2
+    },
+    {
+      "task_id": "matrix-086",
+      "worker_id": "worker-02",
+      "attempt": 1,
+      "time_s": 53.6758751,
+      "delta": 2
+    },
+    {
+      "task_id": "matrix-093",
+      "worker_id": "worker-01",
+      "attempt": 1,
+      "time_s": 56.2416461,
+      "delta": -2
+    },
+    {
+      "task_id": "matrix-003",
+      "worker_id": "worker-01",
+      "attempt": 1,
+      "time_s": 56.2626586,
+      "delta": 1
+    },
+    {
+      "task_id": "matrix-034",
+      "worker_id": "worker-03",
+      "attempt": 1,
+      "time_s": 56.2648146,
+      "delta": 1
+    },
+    {
+      "task_id": "matrix-034",
+      "worker_id": "worker-03",
+      "attempt": 1,
+      "time_s": 59.5445788,
+      "delta": -1
+    },
+    {
+      "task_id": "matrix-003",
+      "worker_id": "worker-01",
+      "attempt": 1,
+      "time_s": 59.5574901,
+      "delta": -1
+    },
+    {
+      "task_id": "matrix-065",
+      "worker_id": "worker-01",
+      "attempt": 1,
+      "time_s": 59.568394,
+      "delta": 2
+    },
+    {
+      "task_id": "matrix-084",
+      "worker_id": "worker-07",
+      "attempt": 1,
+      "time_s": 60.1671177,
+      "delta": -1
+    },
+    {
+      "task_id": "matrix-040",
+      "worker_id": "worker-03",
+      "attempt": 1,
+      "time_s": 60.1881305,
+      "delta": 1
+    },
+    {
+      "task_id": "matrix-086",
+      "worker_id": "worker-02",
+      "attempt": 1,
+      "time_s": 60.2580576,
+      "delta": -2
+    },
+    {
+      "task_id": "matrix-062",
+      "worker_id": "worker-02",
+      "attempt": 1,
+      "time_s": 60.2685985,
+      "delta": 2
+    },
+    {
+      "task_id": "matrix-112",
+      "worker_id": "worker-05",
+      "attempt": 1,
+      "time_s": 60.5010354,
+      "delta": -4
+    },
+    {
+      "task_id": "matrix-103",
+      "worker_id": "worker-04",
+      "attempt": 1,
+      "time_s": 60.512107,
+      "delta": 4
+    },
+    {
+      "task_id": "matrix-065",
+      "worker_id": "worker-01",
+      "attempt": 1,
+      "time_s": 61.5074015,
+      "delta": -2
+    },
+    {
+      "task_id": "matrix-019",
+      "worker_id": "worker-07",
+      "attempt": 1,
+      "time_s": 61.5097851,
+      "delta": 1
+    },
+    {
+      "task_id": "matrix-013",
+      "worker_id": "worker-08",
+      "attempt": 1,
+      "time_s": 61.5119392,
+      "delta": 1
+    },
+    {
+      "task_id": "matrix-062",
+      "worker_id": "worker-02",
+      "attempt": 1,
+      "time_s": 62.3772437,
+      "delta": -2
+    },
+    {
+      "task_id": "matrix-006",
+      "worker_id": "worker-01",
+      "attempt": 1,
+      "time_s": 62.4005366,
+      "delta": 1
+    },
+    {
+      "task_id": "matrix-042",
+      "worker_id": "worker-02",
+      "attempt": 1,
+      "time_s": 62.4029602,
+      "delta": 1
+    },
+    {
+      "task_id": "matrix-040",
+      "worker_id": "worker-03",
+      "attempt": 1,
+      "time_s": 63.5091494,
+      "delta": -1
+    },
+    {
+      "task_id": "matrix-059",
+      "worker_id": "worker-03",
+      "attempt": 1,
+      "time_s": 63.520323,
+      "delta": 1
+    },
+    {
+      "task_id": "matrix-103",
+      "worker_id": "worker-04",
+      "attempt": 1,
+      "time_s": 64.4209961,
+      "delta": -4
+    },
+    {
+      "task_id": "matrix-102",
+      "worker_id": "worker-04",
+      "attempt": 1,
+      "time_s": 64.434391,
+      "delta": 4
+    },
+    {
+      "task_id": "matrix-019",
+      "worker_id": "worker-07",
+      "attempt": 1,
+      "time_s": 64.6763333,
+      "delta": -1
+    },
+    {
+      "task_id": "matrix-002",
+      "worker_id": "worker-05",
+      "attempt": 1,
+      "time_s": 64.6972207,
+      "delta": 1
+    },
+    {
+      "task_id": "matrix-013",
+      "worker_id": "worker-08",
+      "attempt": 1,
+      "time_s": 64.9070042,
+      "delta": -1
+    },
+    {
+      "task_id": "matrix-038",
+      "worker_id": "worker-06",
+      "attempt": 1,
+      "time_s": 64.9209949,
+      "delta": 1
+    },
+    {
+      "task_id": "matrix-006",
+      "worker_id": "worker-01",
+      "attempt": 1,
+      "time_s": 65.6637111,
+      "delta": -1
+    },
+    {
+      "task_id": "matrix-056",
+      "worker_id": "worker-01",
+      "attempt": 1,
+      "time_s": 65.6780172,
+      "delta": 1
+    },
+    {
+      "task_id": "matrix-042",
+      "worker_id": "worker-02",
+      "attempt": 1,
+      "time_s": 65.6861295,
+      "delta": -1
+    },
+    {
+      "task_id": "matrix-020",
+      "worker_id": "worker-02",
+      "attempt": 1,
+      "time_s": 65.7229967,
+      "delta": 1
+    },
+    {
+      "task_id": "matrix-059",
+      "worker_id": "worker-03",
+      "attempt": 1,
+      "time_s": 66.8046516,
+      "delta": -1
+    },
+    {
+      "task_id": "matrix-023",
+      "worker_id": "worker-03",
+      "attempt": 1,
+      "time_s": 66.8080924,
+      "delta": 1
+    },
+    {
+      "task_id": "matrix-002",
+      "worker_id": "worker-05",
+      "attempt": 1,
+      "time_s": 68.0096366,
+      "delta": -1
+    },
+    {
+      "task_id": "matrix-030",
+      "worker_id": "worker-05",
+      "attempt": 1,
+      "time_s": 68.0123951,
+      "delta": 1
+    },
+    {
+      "task_id": "matrix-038",
+      "worker_id": "worker-06",
+      "attempt": 1,
+      "time_s": 68.1561166,
+      "delta": -1
+    },
+    {
+      "task_id": "matrix-049",
+      "worker_id": "worker-06",
+      "attempt": 1,
+      "time_s": 68.1710809,
+      "delta": 1
+    },
+    {
+      "task_id": "matrix-102",
+      "worker_id": "worker-04",
+      "attempt": 1,
+      "time_s": 68.2666842,
+      "delta": -4
+    },
+    {
+      "task_id": "matrix-097",
+      "worker_id": "worker-08",
+      "attempt": 1,
+      "time_s": 68.2698055,
+      "delta": 4
+    },
+    {
+      "task_id": "matrix-056",
+      "worker_id": "worker-01",
+      "attempt": 1,
+      "time_s": 68.8211492,
+      "delta": -1
+    },
+    {
+      "task_id": "matrix-026",
+      "worker_id": "worker-01",
+      "attempt": 1,
+      "time_s": 68.8441476,
+      "delta": 1
+    },
+    {
+      "task_id": "matrix-020",
+      "worker_id": "worker-02",
+      "attempt": 1,
+      "time_s": 68.8967299,
+      "delta": -1
+    },
+    {
+      "task_id": "matrix-011",
+      "worker_id": "worker-07",
+      "attempt": 1,
+      "time_s": 68.8993408,
+      "delta": 1
+    },
+    {
+      "task_id": "matrix-023",
+      "worker_id": "worker-03",
+      "attempt": 1,
+      "time_s": 69.9815095,
+      "delta": -1
+    },
+    {
+      "task_id": "matrix-033",
+      "worker_id": "worker-02",
+      "attempt": 1,
+      "time_s": 69.9926298,
+      "delta": 1
+    },
+    {
+      "task_id": "matrix-030",
+      "worker_id": "worker-05",
+      "attempt": 1,
+      "time_s": 71.2841691,
+      "delta": -1
+    },
+    {
+      "task_id": "matrix-051",
+      "worker_id": "worker-03",
+      "attempt": 1,
+      "time_s": 71.2948295,
+      "delta": 1
+    },
+    {
+      "task_id": "matrix-049",
+      "worker_id": "worker-06",
+      "attempt": 1,
+      "time_s": 71.421983,
+      "delta": -1
+    },
+    {
+      "task_id": "matrix-027",
+      "worker_id": "worker-04",
+      "attempt": 1,
+      "time_s": 71.4437438,
+      "delta": 1
+    },
+    {
+      "task_id": "matrix-026",
+      "worker_id": "worker-01",
+      "attempt": 1,
+      "time_s": 72.0845514,
+      "delta": -1
+    },
+    {
+      "task_id": "matrix-041",
+      "worker_id": "worker-06",
+      "attempt": 1,
+      "time_s": 72.0867235,
+      "delta": 1
+    },
+    {
+      "task_id": "matrix-011",
+      "worker_id": "worker-07",
+      "attempt": 1,
+      "time_s": 72.1445562,
+      "delta": -1
+    },
+    {
+      "task_id": "matrix-048",
+      "worker_id": "worker-01",
+      "attempt": 1,
+      "time_s": 72.1670081,
+      "delta": 1
+    },
+    {
+      "task_id": "matrix-097",
+      "worker_id": "worker-08",
+      "attempt": 1,
+      "time_s": 72.297929,
+      "delta": -4
+    },
+    {
+      "task_id": "matrix-098",
+      "worker_id": "worker-05",
+      "attempt": 1,
+      "time_s": 72.301291,
+      "delta": 4
+    },
+    {
+      "task_id": "matrix-033",
+      "worker_id": "worker-02",
+      "attempt": 1,
+      "time_s": 73.1199499,
+      "delta": -1
+    },
+    {
+      "task_id": "matrix-029",
+      "worker_id": "worker-02",
+      "attempt": 1,
+      "time_s": 73.1401047,
+      "delta": 1
+    },
+    {
+      "task_id": "matrix-051",
+      "worker_id": "worker-03",
+      "attempt": 1,
+      "time_s": 74.4571166,
+      "delta": -1
+    },
+    {
+      "task_id": "matrix-012",
+      "worker_id": "worker-03",
+      "attempt": 1,
+      "time_s": 74.477334,
+      "delta": 1
+    },
+    {
+      "task_id": "matrix-027",
+      "worker_id": "worker-04",
+      "attempt": 1,
+      "time_s": 74.5767092,
+      "delta": -1
+    },
+    {
+      "task_id": "matrix-047",
+      "worker_id": "worker-04",
+      "attempt": 1,
+      "time_s": 74.5903054,
+      "delta": 1
+    },
+    {
+      "task_id": "matrix-041",
+      "worker_id": "worker-06",
+      "attempt": 1,
+      "time_s": 75.3897445,
+      "delta": -1
+    },
+    {
+      "task_id": "matrix-054",
+      "worker_id": "worker-06",
+      "attempt": 1,
+      "time_s": 75.4014418,
+      "delta": 1
+    },
+    {
+      "task_id": "matrix-048",
+      "worker_id": "worker-01",
+      "attempt": 1,
+      "time_s": 75.4610922,
+      "delta": -1
+    },
+    {
+      "task_id": "matrix-046",
+      "worker_id": "worker-01",
+      "attempt": 1,
+      "time_s": 75.4748636,
+      "delta": 1
+    },
+    {
+      "task_id": "matrix-098",
+      "worker_id": "worker-05",
+      "attempt": 1,
+      "time_s": 76.1648665,
+      "delta": -4
+    },
+    {
+      "task_id": "matrix-099",
+      "worker_id": "worker-05",
+      "attempt": 1,
+      "time_s": 76.1861153,
+      "delta": 4
+    },
+    {
+      "task_id": "matrix-029",
+      "worker_id": "worker-02",
+      "attempt": 1,
+      "time_s": 76.4019537,
+      "delta": -1
+    },
+    {
+      "task_id": "matrix-007",
+      "worker_id": "worker-02",
+      "attempt": 1,
+      "time_s": 76.4247174,
+      "delta": 1
+    },
+    {
+      "task_id": "matrix-012",
+      "worker_id": "worker-03",
+      "attempt": 1,
+      "time_s": 77.6493405,
+      "delta": -1
+    },
+    {
+      "task_id": "matrix-016",
+      "worker_id": "worker-09",
+      "attempt": 1,
+      "time_s": 77.6527081,
+      "delta": 1
+    },
+    {
+      "task_id": "matrix-047",
+      "worker_id": "worker-04",
+      "attempt": 1,
+      "time_s": 77.8127179,
+      "delta": -1
+    },
+    {
+      "task_id": "matrix-015",
+      "worker_id": "worker-03",
+      "attempt": 1,
+      "time_s": 77.8390258,
+      "delta": 1
+    },
+    {
+      "task_id": "matrix-054",
+      "worker_id": "worker-06",
+      "attempt": 1,
+      "time_s": 78.597953,
+      "delta": -1
+    },
+    {
+      "task_id": "matrix-005",
+      "worker_id": "worker-04",
+      "attempt": 1,
+      "time_s": 78.6057102,
+      "delta": 1
+    },
+    {
+      "task_id": "matrix-046",
+      "worker_id": "worker-01",
+      "attempt": 1,
+      "time_s": 78.686012,
+      "delta": -1
+    },
+    {
+      "task_id": "matrix-021",
+      "worker_id": "worker-08",
+      "attempt": 1,
+      "time_s": 78.6887517,
+      "delta": 1
+    },
+    {
+      "task_id": "matrix-007",
+      "worker_id": "worker-02",
+      "attempt": 1,
+      "time_s": 79.7951431,
+      "delta": -1
+    },
+    {
+      "task_id": "matrix-053",
+      "worker_id": "worker-01",
+      "attempt": 1,
+      "time_s": 79.7997315,
+      "delta": 1
+    },
+    {
+      "task_id": "matrix-099",
+      "worker_id": "worker-05",
+      "attempt": 1,
+      "time_s": 79.9604976,
+      "delta": -4
+    },
+    {
+      "task_id": "matrix-096",
+      "worker_id": "worker-02",
+      "attempt": 1,
+      "time_s": 79.9742155,
+      "delta": 4
+    },
+    {
+      "task_id": "matrix-016",
+      "worker_id": "worker-09",
+      "attempt": 1,
+      "time_s": 80.8390457,
+      "delta": -1
+    },
+    {
+      "task_id": "matrix-050",
+      "worker_id": "worker-05",
+      "attempt": 1,
+      "time_s": 80.8633259,
+      "delta": 1
+    },
+    {
+      "task_id": "matrix-015",
+      "worker_id": "worker-03",
+      "attempt": 1,
+      "time_s": 80.9960258,
+      "delta": -1
+    },
+    {
+      "task_id": "matrix-017",
+      "worker_id": "worker-03",
+      "attempt": 1,
+      "time_s": 81.0184675,
+      "delta": 1
+    },
+    {
+      "task_id": "matrix-005",
+      "worker_id": "worker-04",
+      "attempt": 1,
+      "time_s": 81.7534776,
+      "delta": -1
+    },
+    {
+      "task_id": "matrix-018",
+      "worker_id": "worker-04",
+      "attempt": 1,
+      "time_s": 81.7649652,
+      "delta": 1
+    },
+    {
+      "task_id": "matrix-021",
+      "worker_id": "worker-08",
+      "attempt": 1,
+      "time_s": 81.8705266,
+      "delta": -1
+    },
+    {
+      "task_id": "matrix-058",
+      "worker_id": "worker-08",
+      "attempt": 1,
+      "time_s": 81.8733768,
+      "delta": 1
+    },
+    {
+      "task_id": "matrix-053",
+      "worker_id": "worker-01",
+      "attempt": 1,
+      "time_s": 83.0521207,
+      "delta": -1
+    },
+    {
+      "task_id": "matrix-032",
+      "worker_id": "worker-01",
+      "attempt": 1,
+      "time_s": 83.0759744,
+      "delta": 1
+    },
+    {
+      "task_id": "matrix-096",
+      "worker_id": "worker-02",
+      "attempt": 1,
+      "time_s": 83.7275364,
+      "delta": -4
+    },
+    {
+      "task_id": "matrix-104",
+      "worker_id": "worker-02",
+      "attempt": 1,
+      "time_s": 83.746909,
+      "delta": 4
+    },
+    {
+      "task_id": "matrix-050",
+      "worker_id": "worker-05",
+      "attempt": 1,
+      "time_s": 84.0190445,
+      "delta": -1
+    },
+    {
+      "task_id": "matrix-010",
+      "worker_id": "worker-05",
+      "attempt": 1,
+      "time_s": 84.0316832,
+      "delta": 1
+    },
+    {
+      "task_id": "matrix-017",
+      "worker_id": "worker-03",
+      "attempt": 1,
+      "time_s": 84.1589084,
+      "delta": -1
+    },
+    {
+      "task_id": "matrix-060",
+      "worker_id": "worker-07",
+      "attempt": 1,
+      "time_s": 84.1613621,
+      "delta": 1
+    },
+    {
+      "task_id": "matrix-018",
+      "worker_id": "worker-04",
+      "attempt": 1,
+      "time_s": 84.9066831,
+      "delta": -1
+    },
+    {
+      "task_id": "matrix-028",
+      "worker_id": "worker-09",
+      "attempt": 1,
+      "time_s": 84.908852,
+      "delta": 1
+    },
+    {
+      "task_id": "matrix-058",
+      "worker_id": "worker-08",
+      "attempt": 1,
+      "time_s": 85.0348712,
+      "delta": -1
+    },
+    {
+      "task_id": "matrix-037",
+      "worker_id": "worker-06",
+      "attempt": 1,
+      "time_s": 85.037359,
+      "delta": 1
+    },
+    {
+      "task_id": "matrix-032",
+      "worker_id": "worker-01",
+      "attempt": 1,
+      "time_s": 86.2604039,
+      "delta": -1
+    },
+    {
+      "task_id": "matrix-014",
+      "worker_id": "worker-01",
+      "attempt": 1,
+      "time_s": 86.2830387,
+      "delta": 1
+    },
+    {
+      "task_id": "matrix-010",
+      "worker_id": "worker-05",
+      "attempt": 1,
+      "time_s": 87.3344776,
+      "delta": -1
+    },
+    {
+      "task_id": "matrix-001",
+      "worker_id": "worker-03",
+      "attempt": 1,
+      "time_s": 87.3525981,
+      "delta": 1
+    },
+    {
+      "task_id": "matrix-060",
+      "worker_id": "worker-07",
+      "attempt": 1,
+      "time_s": 87.437005,
+      "delta": -1
+    },
+    {
+      "task_id": "matrix-045",
+      "worker_id": "worker-04",
+      "attempt": 1,
+      "time_s": 87.4432505,
+      "delta": 1
+    },
+    {
+      "task_id": "matrix-104",
+      "worker_id": "worker-02",
+      "attempt": 1,
+      "time_s": 87.533692,
+      "delta": -4
+    },
+    {
+      "task_id": "matrix-100",
+      "worker_id": "worker-02",
+      "attempt": 1,
+      "time_s": 87.556252,
+      "delta": 4
+    },
+    {
+      "task_id": "matrix-028",
+      "worker_id": "worker-09",
+      "attempt": 1,
+      "time_s": 88.109381,
+      "delta": -1
+    },
+    {
+      "task_id": "matrix-024",
+      "worker_id": "worker-05",
+      "attempt": 1,
+      "time_s": 88.1234782,
+      "delta": 1
+    },
+    {
+      "task_id": "matrix-037",
+      "worker_id": "worker-06",
+      "attempt": 1,
+      "time_s": 88.2477264,
+      "delta": -1
+    },
+    {
+      "task_id": "matrix-022",
+      "worker_id": "worker-06",
+      "attempt": 1,
+      "time_s": 88.253086,
+      "delta": 1
+    },
+    {
+      "task_id": "matrix-014",
+      "worker_id": "worker-01",
+      "attempt": 1,
+      "time_s": 89.4219069,
+      "delta": -1
+    },
+    {
+      "task_id": "matrix-039",
+      "worker_id": "worker-01",
+      "attempt": 1,
+      "time_s": 89.4317,
+      "delta": 1
+    },
+    {
+      "task_id": "matrix-001",
+      "worker_id": "worker-03",
+      "attempt": 1,
+      "time_s": 90.6158144,
+      "delta": -1
+    },
+    {
+      "task_id": "matrix-004",
+      "worker_id": "worker-03",
+      "attempt": 1,
+      "time_s": 90.6433682,
+      "delta": 1
+    },
+    {
+      "task_id": "matrix-045",
+      "worker_id": "worker-04",
+      "attempt": 1,
+      "time_s": 90.7179852,
+      "delta": -1
+    },
+    {
+      "task_id": "matrix-057",
+      "worker_id": "worker-04",
+      "attempt": 1,
+      "time_s": 90.7253753,
+      "delta": 1
+    },
+    {
+      "task_id": "matrix-100",
+      "worker_id": "worker-02",
+      "attempt": 1,
+      "time_s": 91.3721319,
+      "delta": -4
+    },
+    {
+      "task_id": "matrix-101",
+      "worker_id": "worker-02",
+      "attempt": 1,
+      "time_s": 91.3839894,
+      "delta": 4
+    },
+    {
+      "task_id": "matrix-022",
+      "worker_id": "worker-06",
+      "attempt": 1,
+      "time_s": 91.4580786,
+      "delta": -1
+    },
+    {
+      "task_id": "matrix-052",
+      "worker_id": "worker-06",
+      "attempt": 1,
+      "time_s": 91.478597,
+      "delta": 1
+    },
+    {
+      "task_id": "matrix-024",
+      "worker_id": "worker-05",
+      "attempt": 1,
+      "time_s": 91.5243241,
+      "delta": -1
+    },
+    {
+      "task_id": "matrix-036",
+      "worker_id": "worker-05",
+      "attempt": 1,
+      "time_s": 91.536825,
+      "delta": 1
+    },
+    {
+      "task_id": "matrix-039",
+      "worker_id": "worker-01",
+      "attempt": 1,
+      "time_s": 92.6130295,
+      "delta": -1
+    },
+    {
+      "task_id": "matrix-025",
+      "worker_id": "worker-01",
+      "attempt": 1,
+      "time_s": 92.628561,
+      "delta": 1
+    },
+    {
+      "task_id": "matrix-004",
+      "worker_id": "worker-03",
+      "attempt": 1,
+      "time_s": 93.8347147,
+      "delta": -1
+    },
+    {
+      "task_id": "matrix-044",
+      "worker_id": "worker-03",
+      "attempt": 1,
+      "time_s": 93.8635486,
+      "delta": 1
+    },
+    {
+      "task_id": "matrix-057",
+      "worker_id": "worker-04",
+      "attempt": 1,
+      "time_s": 93.9241379,
+      "delta": -1
+    },
+    {
+      "task_id": "matrix-009",
+      "worker_id": "worker-10",
+      "attempt": 1,
+      "time_s": 93.9265883,
+      "delta": 1
+    },
+    {
+      "task_id": "matrix-052",
+      "worker_id": "worker-06",
+      "attempt": 1,
+      "time_s": 94.7316818,
+      "delta": -1
+    },
+    {
+      "task_id": "matrix-008",
+      "worker_id": "worker-08",
+      "attempt": 1,
+      "time_s": 94.7339962,
+      "delta": 1
+    },
+    {
+      "task_id": "matrix-036",
+      "worker_id": "worker-05",
+      "attempt": 1,
+      "time_s": 94.8510773,
+      "delta": -1
+    },
+    {
+      "task_id": "matrix-055",
+      "worker_id": "worker-04",
+      "attempt": 1,
+      "time_s": 94.8616222,
+      "delta": 1
+    },
+    {
+      "task_id": "matrix-101",
+      "worker_id": "worker-02",
+      "attempt": 1,
+      "time_s": 95.1641023,
+      "delta": -4
+    },
+    {
+      "task_id": "matrix-105",
+      "worker_id": "worker-02",
+      "attempt": 1,
+      "time_s": 95.1783942,
+      "delta": 4
+    },
+    {
+      "task_id": "matrix-025",
+      "worker_id": "worker-01",
+      "attempt": 1,
+      "time_s": 95.8012564,
+      "delta": -1
+    },
+    {
+      "task_id": "matrix-043",
+      "worker_id": "worker-01",
+      "attempt": 1,
+      "time_s": 95.8245854,
+      "delta": 1
+    },
+    {
+      "task_id": "matrix-044",
+      "worker_id": "worker-03",
+      "attempt": 1,
+      "time_s": 97.0525365,
+      "delta": -1
+    },
+    {
+      "task_id": "matrix-031",
+      "worker_id": "worker-09",
+      "attempt": 1,
+      "time_s": 97.0551385,
+      "delta": 1
+    },
+    {
+      "task_id": "matrix-009",
+      "worker_id": "worker-10",
+      "attempt": 1,
+      "time_s": 97.1286185,
+      "delta": -1
+    },
+    {
+      "task_id": "matrix-035",
+      "worker_id": "worker-03",
+      "attempt": 1,
+      "time_s": 97.1434501,
+      "delta": 1
+    },
+    {
+      "task_id": "matrix-008",
+      "worker_id": "worker-08",
+      "attempt": 1,
+      "time_s": 97.953781,
+      "delta": -1
+    },
+    {
+      "task_id": "matrix-055",
+      "worker_id": "worker-04",
+      "attempt": 1,
+      "time_s": 98.0565634,
+      "delta": -1
+    },
+    {
+      "task_id": "matrix-061",
+      "worker_id": "worker-04",
+      "attempt": 1,
+      "time_s": 98.0589028,
+      "delta": 2
+    },
+    {
+      "task_id": "matrix-043",
+      "worker_id": "worker-01",
+      "attempt": 1,
+      "time_s": 99.0086248,
+      "delta": -1
+    },
+    {
+      "task_id": "matrix-105",
+      "worker_id": "worker-02",
+      "attempt": 1,
+      "time_s": 99.0465158,
+      "delta": -4
+    },
+    {
+      "task_id": "matrix-078",
+      "worker_id": "worker-01",
+      "attempt": 1,
+      "time_s": 99.0572414,
+      "delta": 4
+    },
+    {
+      "task_id": "matrix-061",
+      "worker_id": "worker-04",
+      "attempt": 1,
+      "time_s": 99.8162653,
+      "delta": -2
+    },
+    {
+      "task_id": "matrix-069",
+      "worker_id": "worker-02",
+      "attempt": 1,
+      "time_s": 99.839782,
+      "delta": 2
+    },
+    {
+      "task_id": "matrix-031",
+      "worker_id": "worker-09",
+      "attempt": 1,
+      "time_s": 100.1018968,
+      "delta": -1
+    },
+    {
+      "task_id": "matrix-075",
+      "worker_id": "worker-04",
+      "attempt": 1,
+      "time_s": 100.1147311,
+      "delta": 2
+    },
+    {
+      "task_id": "matrix-035",
+      "worker_id": "worker-03",
+      "attempt": 1,
+      "time_s": 100.1717005,
+      "delta": -1
+    },
+    {
+      "task_id": "matrix-078",
+      "worker_id": "worker-01",
+      "attempt": 1,
+      "time_s": 100.2557255,
+      "delta": -4
+    },
+    {
+      "task_id": "matrix-080",
+      "worker_id": "worker-01",
+      "attempt": 1,
+      "time_s": 100.2611229,
+      "delta": 4
+    },
+    {
+      "task_id": "matrix-080",
+      "worker_id": "worker-01",
+      "attempt": 1,
+      "time_s": 101.4167487,
+      "delta": -4
+    },
+    {
+      "task_id": "matrix-070",
+      "worker_id": "worker-01",
+      "attempt": 1,
+      "time_s": 101.4185665,
+      "delta": 2
+    },
+    {
+      "task_id": "matrix-072",
+      "worker_id": "worker-03",
+      "attempt": 1,
+      "time_s": 101.420084,
+      "delta": 2
+    },
+    {
+      "task_id": "matrix-069",
+      "worker_id": "worker-02",
+      "attempt": 1,
+      "time_s": 101.511534,
+      "delta": -2
+    },
+    {
+      "task_id": "matrix-068",
+      "worker_id": "worker-02",
+      "attempt": 1,
+      "time_s": 101.5232525,
+      "delta": 2
+    },
+    {
+      "task_id": "matrix-075",
+      "worker_id": "worker-04",
+      "attempt": 1,
+      "time_s": 101.7239726,
+      "delta": -2
+    },
+    {
+      "task_id": "matrix-063",
+      "worker_id": "worker-04",
+      "attempt": 1,
+      "time_s": 101.7370112,
+      "delta": 2
+    },
+    {
+      "task_id": "matrix-070",
+      "worker_id": "worker-01",
+      "attempt": 1,
+      "time_s": 103.150356,
+      "delta": -2
+    },
+    {
+      "task_id": "matrix-073",
+      "worker_id": "worker-01",
+      "attempt": 1,
+      "time_s": 103.1556938,
+      "delta": 2
+    },
+    {
+      "task_id": "matrix-072",
+      "worker_id": "worker-03",
+      "attempt": 1,
+      "time_s": 103.1639967,
+      "delta": -2
+    },
+    {
+      "task_id": "matrix-067",
+      "worker_id": "worker-03",
+      "attempt": 1,
+      "time_s": 103.2051265,
+      "delta": 2
+    },
+    {
+      "task_id": "matrix-068",
+      "worker_id": "worker-02",
+      "attempt": 1,
+      "time_s": 103.2558893,
+      "delta": -2
+    },
+    {
+      "task_id": "matrix-074",
+      "worker_id": "worker-10",
+      "attempt": 1,
+      "time_s": 103.2576555,
+      "delta": 2
+    },
+    {
+      "task_id": "matrix-063",
+      "worker_id": "worker-04",
+      "attempt": 1,
+      "time_s": 103.4090485,
+      "delta": -2
+    },
+    {
+      "task_id": "matrix-066",
+      "worker_id": "worker-02",
+      "attempt": 1,
+      "time_s": 103.4115364,
+      "delta": 2
+    },
+    {
+      "task_id": "matrix-073",
+      "worker_id": "worker-01",
+      "attempt": 1,
+      "time_s": 104.8791412,
+      "delta": -2
+    },
+    {
+      "task_id": "matrix-064",
+      "worker_id": "worker-01",
+      "attempt": 1,
+      "time_s": 104.8852105,
+      "delta": 2
+    },
+    {
+      "task_id": "matrix-067",
+      "worker_id": "worker-03",
+      "attempt": 1,
+      "time_s": 104.9356446,
+      "delta": -2
+    },
+    {
+      "task_id": "matrix-071",
+      "worker_id": "worker-03",
+      "attempt": 1,
+      "time_s": 104.9606927,
+      "delta": 2
+    },
+    {
+      "task_id": "matrix-074",
+      "worker_id": "worker-10",
+      "attempt": 1,
+      "time_s": 104.9670295,
+      "delta": -2
+    },
+    {
+      "task_id": "matrix-066",
+      "worker_id": "worker-02",
+      "attempt": 1,
+      "time_s": 105.1215213,
+      "delta": -2
+    },
+    {
+      "task_id": "matrix-079",
+      "worker_id": "worker-04",
+      "attempt": 1,
+      "time_s": 105.122988,
+      "delta": 4
+    },
+    {
+      "task_id": "matrix-079",
+      "worker_id": "worker-04",
+      "attempt": 1,
+      "time_s": 106.2390516,
+      "delta": -4
+    },
+    {
+      "task_id": "matrix-076",
+      "worker_id": "worker-02",
+      "attempt": 1,
+      "time_s": 106.2603231,
+      "delta": 4
+    },
+    {
+      "task_id": "matrix-064",
+      "worker_id": "worker-01",
+      "attempt": 1,
+      "time_s": 106.5475392,
+      "delta": -2
+    },
+    {
+      "task_id": "matrix-071",
+      "worker_id": "worker-03",
+      "attempt": 1,
+      "time_s": 106.643765,
+      "delta": -2
+    },
+    {
+      "task_id": "matrix-077",
+      "worker_id": "worker-01",
+      "attempt": 1,
+      "time_s": 106.6501574,
+      "delta": 4
+    },
+    {
+      "task_id": "matrix-076",
+      "worker_id": "worker-02",
+      "attempt": 1,
+      "time_s": 107.3095929,
+      "delta": -4
+    },
+    {
+      "task_id": "matrix-077",
+      "worker_id": "worker-01",
+      "attempt": 1,
+      "time_s": 107.6049214,
+      "delta": -4
+    }
+  ],
+  "tasks": [
+    {
+      "task_id": "matrix-003",
+      "experiment_id": "49f6d858-e842-4d7d-b461-e59862d47bf8",
+      "worker_id": "worker-01",
+      "attempt": 1,
+      "status": "Completed",
+      "completion_s": 59.5564115,
+      "process_ms": 3274,
+      "result_message": "Python process completed successfully.",
+      "metrics": {
+        "n": 768,
+        "r": 47,
+        "seed": 1958173573,
+        "requested_p": 1,
+        "verified_p": 1,
+        "compute_s": 3.035721749998629,
+        "warmup_s": 0.0,
+        "checksum": 147667.78405246488,
+        "numpy": "2.4.6",
+        "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+        "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+        "operation": "cblas_dgemm"
+      }
+    },
+    {
+      "task_id": "matrix-078",
+      "experiment_id": "7697c4ba-6c28-4aa9-9e06-dc103246cdc5",
+      "worker_id": "worker-01",
+      "attempt": 1,
+      "status": "Completed",
+      "completion_s": 100.1021509,
+      "process_ms": 1022,
+      "result_message": "Python process completed successfully.",
+      "metrics": {
+        "n": 768,
+        "r": 47,
+        "seed": 801921739,
+        "requested_p": 4,
+        "verified_p": 4,
+        "compute_s": 0.8012778330012225,
+        "warmup_s": 0.0,
+        "checksum": 147293.83571296162,
+        "numpy": "2.4.6",
+        "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+        "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+        "operation": "cblas_dgemm"
+      }
+    },
+    {
+      "task_id": "matrix-065",
+      "experiment_id": "628c7f67-703f-4300-9fa6-7f42c4dbbd75",
+      "worker_id": "worker-01",
+      "attempt": 1,
+      "status": "Completed",
+      "completion_s": 61.5061672,
+      "process_ms": 1916,
+      "result_message": "Python process completed successfully.",
+      "metrics": {
+        "n": 768,
+        "r": 47,
+        "seed": 1150684065,
+        "requested_p": 2,
+        "verified_p": 2,
+        "compute_s": 1.6555050000024494,
+        "warmup_s": 0.0,
+        "checksum": 147521.7841604708,
+        "numpy": "2.4.6",
+        "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+        "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+        "operation": "cblas_dgemm"
+      }
+    },
+    {
+      "task_id": "matrix-034",
+      "experiment_id": "8767aa78-d4f7-44f7-ab3d-3a147b46ce1a",
+      "worker_id": "worker-03",
+      "attempt": 1,
+      "status": "Completed",
+      "completion_s": 59.5428185,
+      "process_ms": 3258,
+      "result_message": "Python process completed successfully.",
+      "metrics": {
+        "n": 768,
+        "r": 47,
+        "seed": 935263858,
+        "requested_p": 1,
+        "verified_p": 1,
+        "compute_s": 3.0398898330167867,
+        "warmup_s": 0.0,
+        "checksum": 147348.12867834116,
+        "numpy": "2.4.6",
+        "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+        "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+        "operation": "cblas_dgemm"
+      }
+    },
+    {
+      "task_id": "matrix-062",
+      "experiment_id": "dbf47220-57f5-439a-b178-fc9d96856ff7",
+      "worker_id": "worker-02",
+      "attempt": 1,
+      "status": "Completed",
+      "completion_s": 62.3761195,
+      "process_ms": 2065,
+      "result_message": "Python process completed successfully.",
+      "metrics": {
+        "n": 768,
+        "r": 47,
+        "seed": 558856545,
+        "requested_p": 2,
+        "verified_p": 2,
+        "compute_s": 1.8303772080107592,
+        "warmup_s": 0.0,
+        "checksum": 147433.6582353189,
+        "numpy": "2.4.6",
+        "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+        "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+        "operation": "cblas_dgemm"
+      }
+    },
+    {
+      "task_id": "matrix-103",
+      "experiment_id": "387b73c5-c91f-4dab-8543-17d9cf3ae954",
+      "worker_id": "worker-04",
+      "attempt": 1,
+      "status": "Completed",
+      "completion_s": 64.420025,
+      "process_ms": 3901,
+      "result_message": "Python process completed successfully.",
+      "metrics": {
+        "n": 1536,
+        "r": 23,
+        "seed": 205779597,
+        "requested_p": 4,
+        "verified_p": 4,
+        "compute_s": 3.661120208998909,
+        "warmup_s": 0.0,
+        "checksum": 589767.1720080664,
+        "numpy": "2.4.6",
+        "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+        "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+        "operation": "cblas_dgemm"
+      }
+    },
+    {
+      "task_id": "matrix-082",
+      "experiment_id": "3a417aee-6fd1-40e2-8ff2-2b096e24ac71",
+      "worker_id": "worker-04",
+      "attempt": 1,
+      "status": "Completed",
+      "completion_s": 11.5307623,
+      "process_ms": 11473,
+      "result_message": "Python process completed successfully.",
+      "metrics": {
+        "n": 1536,
+        "r": 23,
+        "seed": 1809768693,
+        "requested_p": 1,
+        "verified_p": 1,
+        "compute_s": 11.290997500007506,
+        "warmup_s": 0.0,
+        "checksum": 590083.7241723122,
+        "numpy": "2.4.6",
+        "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+        "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+        "operation": "cblas_dgemm"
+      }
+    },
+    {
+      "task_id": "matrix-040",
+      "experiment_id": "bf84c436-6f59-4237-8048-cc869a916666",
+      "worker_id": "worker-03",
+      "attempt": 1,
+      "status": "Completed",
+      "completion_s": 63.5079647,
+      "process_ms": 3297,
+      "result_message": "Python process completed successfully.",
+      "metrics": {
+        "n": 768,
+        "r": 47,
+        "seed": 2066475779,
+        "requested_p": 1,
+        "verified_p": 1,
+        "compute_s": 3.053166915982729,
+        "warmup_s": 0.0,
+        "checksum": 147217.1849588392,
+        "numpy": "2.4.6",
+        "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+        "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+        "operation": "cblas_dgemm"
+      }
+    },
+    {
+      "task_id": "matrix-019",
+      "experiment_id": "88197f0f-cdc5-4650-917b-dbcecf5c462e",
+      "worker_id": "worker-07",
+      "attempt": 1,
+      "status": "Completed",
+      "completion_s": 64.6749317,
+      "process_ms": 3134,
+      "result_message": "Python process completed successfully.",
+      "metrics": {
+        "n": 768,
+        "r": 47,
+        "seed": 1620563447,
+        "requested_p": 1,
+        "verified_p": 1,
+        "compute_s": 2.9304532499809284,
+        "warmup_s": 0.0,
+        "checksum": 147571.09234379308,
+        "numpy": "2.4.6",
+        "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+        "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+        "operation": "cblas_dgemm"
+      }
+    },
+    {
+      "task_id": "matrix-091",
+      "experiment_id": "ff34a72a-c7a4-4acd-ad2c-2862a759412e",
+      "worker_id": "worker-10",
+      "attempt": 1,
+      "status": "Completed",
+      "completion_s": 23.8682262,
+      "process_ms": 6427,
+      "result_message": "Python process completed successfully.",
+      "metrics": {
+        "n": 1536,
+        "r": 23,
+        "seed": 1576442159,
+        "requested_p": 2,
+        "verified_p": 2,
+        "compute_s": 6.170426957978634,
+        "warmup_s": 0.0,
+        "checksum": 590311.1157779443,
+        "numpy": "2.4.6",
+        "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+        "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+        "operation": "cblas_dgemm"
+      }
+    },
+    {
+      "task_id": "matrix-095",
+      "experiment_id": "011c157f-3f6e-4c56-86be-5ccadfa66da5",
+      "worker_id": "worker-07",
+      "attempt": 1,
+      "status": "Completed",
+      "completion_s": 30.3275158,
+      "process_ms": 6429,
+      "result_message": "Python process completed successfully.",
+      "metrics": {
+        "n": 1536,
+        "r": 23,
+        "seed": 2011789818,
+        "requested_p": 2,
+        "verified_p": 2,
+        "compute_s": 6.1771264580020215,
+        "warmup_s": 0.0,
+        "checksum": 589569.2625325001,
+        "numpy": "2.4.6",
+        "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+        "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+        "operation": "cblas_dgemm"
+      }
+    },
+    {
+      "task_id": "matrix-089",
+      "experiment_id": "c185281d-4b78-4c8c-b36b-90c421561e78",
+      "worker_id": "worker-02",
+      "attempt": 1,
+      "status": "Completed",
+      "completion_s": 36.7669235,
+      "process_ms": 6401,
+      "result_message": "Python process completed successfully.",
+      "metrics": {
+        "n": 1536,
+        "r": 23,
+        "seed": 1653054034,
+        "requested_p": 2,
+        "verified_p": 2,
+        "compute_s": 6.126257083000382,
+        "warmup_s": 0.0,
+        "checksum": 589756.2791449984,
+        "numpy": "2.4.6",
+        "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+        "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+        "operation": "cblas_dgemm"
+      }
+    },
+    {
+      "task_id": "matrix-013",
+      "experiment_id": "8f78c942-be6f-416a-8248-893c2f169975",
+      "worker_id": "worker-08",
+      "attempt": 1,
+      "status": "Completed",
+      "completion_s": 64.9056032,
+      "process_ms": 3366,
+      "result_message": "Python process completed successfully.",
+      "metrics": {
+        "n": 768,
+        "r": 47,
+        "seed": 2007988446,
+        "requested_p": 1,
+        "verified_p": 1,
+        "compute_s": 3.1419620419910643,
+        "warmup_s": 0.0,
+        "checksum": 147625.26927505262,
+        "numpy": "2.4.6",
+        "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+        "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+        "operation": "cblas_dgemm"
+      }
+    },
+    {
+      "task_id": "matrix-109",
+      "experiment_id": "b772ec04-5b33-4d1b-87dd-523ad585ea0c",
+      "worker_id": "worker-01",
+      "attempt": 1,
+      "status": "Completed",
+      "completion_s": 8.420865,
+      "process_ms": 8353,
+      "result_message": "Python process completed successfully.",
+      "metrics": {
+        "n": 2304,
+        "r": 18,
+        "seed": 1207308234,
+        "requested_p": 4,
+        "verified_p": 4,
+        "compute_s": 8.163471583975479,
+        "warmup_s": 0.0,
+        "checksum": 1326908.8745965865,
+        "numpy": "2.4.6",
+        "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+        "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+        "operation": "cblas_dgemm"
+      }
+    },
+    {
+      "task_id": "matrix-106",
+      "experiment_id": "a5d82d3a-f9d5-4041-8e23-9566cd11d2d2",
+      "worker_id": "worker-02",
+      "attempt": 1,
+      "status": "Completed",
+      "completion_s": 16.0697327,
+      "process_ms": 16013,
+      "result_message": "Python process completed successfully.",
+      "metrics": {
+        "n": 2304,
+        "r": 18,
+        "seed": 816880358,
+        "requested_p": 2,
+        "verified_p": 2,
+        "compute_s": 15.776548458001344,
+        "warmup_s": 0.0,
+        "checksum": 1326948.595592201,
+        "numpy": "2.4.6",
+        "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+        "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+        "operation": "cblas_dgemm"
+      }
+    },
+    {
+      "task_id": "matrix-090",
+      "experiment_id": "f21f9ddb-bfc7-45a1-b2a5-ebfd229545db",
+      "worker_id": "worker-10",
+      "attempt": 1,
+      "status": "Completed",
+      "completion_s": 40.5364703,
+      "process_ms": 6601,
+      "result_message": "Python process completed successfully.",
+      "metrics": {
+        "n": 1536,
+        "r": 23,
+        "seed": 1865376179,
+        "requested_p": 2,
+        "verified_p": 2,
+        "compute_s": 6.332836542016594,
+        "warmup_s": 0.0,
+        "checksum": 589717.8472758057,
+        "numpy": "2.4.6",
+        "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+        "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+        "operation": "cblas_dgemm"
+      }
+    },
+    {
+      "task_id": "matrix-006",
+      "experiment_id": "93a85eb5-6a46-4d9f-b321-8e8cec963c49",
+      "worker_id": "worker-01",
+      "attempt": 1,
+      "status": "Completed",
+      "completion_s": 65.6627934,
+      "process_ms": 3254,
+      "result_message": "Python process completed successfully.",
+      "metrics": {
+        "n": 768,
+        "r": 47,
+        "seed": 438016941,
+        "requested_p": 1,
+        "verified_p": 1,
+        "compute_s": 3.0434335420140997,
+        "warmup_s": 0.0,
+        "checksum": 147633.44222090134,
+        "numpy": "2.4.6",
+        "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+        "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+        "operation": "cblas_dgemm"
+      }
+    },
+    {
+      "task_id": "matrix-110",
+      "experiment_id": "af18540a-0a9b-4c34-897b-922ce688cf8b",
+      "worker_id": "worker-01",
+      "attempt": 1,
+      "status": "Completed",
+      "completion_s": 17.383597,
+      "process_ms": 8923,
+      "result_message": "Python process completed successfully.",
+      "metrics": {
+        "n": 2304,
+        "r": 18,
+        "seed": 784208806,
+        "requested_p": 4,
+        "verified_p": 4,
+        "compute_s": 8.615121000009822,
+        "warmup_s": 0.0,
+        "checksum": 1327101.1139473247,
+        "numpy": "2.4.6",
+        "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+        "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+        "operation": "cblas_dgemm"
+      }
+    },
+    {
+      "task_id": "matrix-042",
+      "experiment_id": "b12e3246-f0d2-47b3-8fb1-2b66282da363",
+      "worker_id": "worker-02",
+      "attempt": 1,
+      "status": "Completed",
+      "completion_s": 65.6850385,
+      "process_ms": 3239,
+      "result_message": "Python process completed successfully.",
+      "metrics": {
+        "n": 768,
+        "r": 47,
+        "seed": 36073338,
+        "requested_p": 1,
+        "verified_p": 1,
+        "compute_s": 3.0342860000091605,
+        "warmup_s": 0.0,
+        "checksum": 147609.6865126511,
+        "numpy": "2.4.6",
+        "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+        "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+        "operation": "cblas_dgemm"
+      }
+    },
+    {
+      "task_id": "matrix-061",
+      "experiment_id": "e773c631-eb66-4e54-832e-3c04d0c37ca6",
+      "worker_id": "worker-04",
+      "attempt": 1,
+      "status": "Completed",
+      "completion_s": 99.814818,
+      "process_ms": 1722,
+      "result_message": "Python process completed successfully.",
+      "metrics": {
+        "n": 768,
+        "r": 47,
+        "seed": 2126627181,
+        "requested_p": 2,
+        "verified_p": 2,
+        "compute_s": 1.513296791992616,
+        "warmup_s": 0.0,
+        "checksum": 147290.03695694046,
+        "numpy": "2.4.6",
+        "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+        "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+        "operation": "cblas_dgemm"
+      }
+    },
+    {
+      "task_id": "matrix-059",
+      "experiment_id": "be9735f6-ea01-4962-a77e-389f3e130f9a",
+      "worker_id": "worker-03",
+      "attempt": 1,
+      "status": "Completed",
+      "completion_s": 66.8033231,
+      "process_ms": 3260,
+      "result_message": "Python process completed successfully.",
+      "metrics": {
+        "n": 768,
+        "r": 47,
+        "seed": 825915338,
+        "requested_p": 1,
+        "verified_p": 1,
+        "compute_s": 3.0376035000081174,
+        "warmup_s": 0.0,
+        "checksum": 147832.59449952835,
+        "numpy": "2.4.6",
+        "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+        "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+        "operation": "cblas_dgemm"
+      }
+    },
+    {
+      "task_id": "matrix-102",
+      "experiment_id": "27d4edfe-6163-4f7d-b898-a99825bb9b90",
+      "worker_id": "worker-04",
+      "attempt": 1,
+      "status": "Completed",
+      "completion_s": 68.2656031,
+      "process_ms": 3800,
+      "result_message": "Python process completed successfully.",
+      "metrics": {
+        "n": 1536,
+        "r": 23,
+        "seed": 26276944,
+        "requested_p": 4,
+        "verified_p": 4,
+        "compute_s": 3.5408945420058444,
+        "warmup_s": 0.0,
+        "checksum": 589685.9585763703,
+        "numpy": "2.4.6",
+        "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+        "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+        "operation": "cblas_dgemm"
+      }
+    },
+    {
+      "task_id": "matrix-002",
+      "experiment_id": "ad1b1a91-bc96-4e0f-af4b-527cdb856847",
+      "worker_id": "worker-05",
+      "attempt": 1,
+      "status": "Completed",
+      "completion_s": 68.0084269,
+      "process_ms": 3308,
+      "result_message": "Python process completed successfully.",
+      "metrics": {
+        "n": 768,
+        "r": 47,
+        "seed": 1810542448,
+        "requested_p": 1,
+        "verified_p": 1,
+        "compute_s": 3.0764029580168426,
+        "warmup_s": 0.0,
+        "checksum": 147440.80029536446,
+        "numpy": "2.4.6",
+        "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+        "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+        "operation": "cblas_dgemm"
+      }
+    },
+    {
+      "task_id": "matrix-083",
+      "experiment_id": "abed0452-48a1-468f-b6eb-4edc816082d2",
+      "worker_id": "worker-04",
+      "attempt": 1,
+      "status": "Completed",
+      "completion_s": 23.7290561,
+      "process_ms": 12163,
+      "result_message": "Python process completed successfully.",
+      "metrics": {
+        "n": 1536,
+        "r": 23,
+        "seed": 1376630090,
+        "requested_p": 1,
+        "verified_p": 1,
+        "compute_s": 11.907423708005808,
+        "warmup_s": 0.0,
+        "checksum": 589756.242780809,
+        "numpy": "2.4.6",
+        "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+        "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+        "operation": "cblas_dgemm"
+      }
+    },
+    {
+      "task_id": "matrix-038",
+      "experiment_id": "4c3133c0-cf10-49e6-9e7a-f49573c5fd97",
+      "worker_id": "worker-06",
+      "attempt": 1,
+      "status": "Completed",
+      "completion_s": 68.1549907,
+      "process_ms": 3218,
+      "result_message": "Python process completed successfully.",
+      "metrics": {
+        "n": 768,
+        "r": 47,
+        "seed": 523704477,
+        "requested_p": 1,
+        "verified_p": 1,
+        "compute_s": 3.0074870829994325,
+        "warmup_s": 0.0,
+        "checksum": 147340.12357694423,
+        "numpy": "2.4.6",
+        "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+        "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+        "operation": "cblas_dgemm"
+      }
+    },
+    {
+      "task_id": "matrix-056",
+      "experiment_id": "218d4977-fe8c-4143-a64a-766c201cb87e",
+      "worker_id": "worker-01",
+      "attempt": 1,
+      "status": "Completed",
+      "completion_s": 68.8200177,
+      "process_ms": 3125,
+      "result_message": "Python process completed successfully.",
+      "metrics": {
+        "n": 768,
+        "r": 47,
+        "seed": 2144168942,
+        "requested_p": 1,
+        "verified_p": 1,
+        "compute_s": 2.911576500016963,
+        "warmup_s": 0.0,
+        "checksum": 147427.99598781014,
+        "numpy": "2.4.6",
+        "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+        "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+        "operation": "cblas_dgemm"
+      }
+    },
+    {
+      "task_id": "matrix-020",
+      "experiment_id": "030b54e3-ea55-406c-a83e-382f32e877ef",
+      "worker_id": "worker-02",
+      "attempt": 1,
+      "status": "Completed",
+      "completion_s": 68.8950804,
+      "process_ms": 3158,
+      "result_message": "Python process completed successfully.",
+      "metrics": {
+        "n": 768,
+        "r": 47,
+        "seed": 719915703,
+        "requested_p": 1,
+        "verified_p": 1,
+        "compute_s": 2.908545749989571,
+        "warmup_s": 0.0,
+        "checksum": 147199.24922279606,
+        "numpy": "2.4.6",
+        "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+        "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+        "operation": "cblas_dgemm"
+      }
+    },
+    {
+      "task_id": "matrix-023",
+      "experiment_id": "c2cf8ad6-f47a-47f1-8cc0-e0b01aca783d",
+      "worker_id": "worker-03",
+      "attempt": 1,
+      "status": "Completed",
+      "completion_s": 69.9804305,
+      "process_ms": 3144,
+      "result_message": "Python process completed successfully.",
+      "metrics": {
+        "n": 768,
+        "r": 47,
+        "seed": 1303245290,
+        "requested_p": 1,
+        "verified_p": 1,
+        "compute_s": 2.9290312090015505,
+        "warmup_s": 0.0,
+        "checksum": 147555.9651587002,
+        "numpy": "2.4.6",
+        "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+        "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+        "operation": "cblas_dgemm"
+      }
+    },
+    {
+      "task_id": "matrix-069",
+      "experiment_id": "177fbee2-d392-423c-8dfb-4eeca76219d2",
+      "worker_id": "worker-02",
+      "attempt": 1,
+      "status": "Completed",
+      "completion_s": 101.5099078,
+      "process_ms": 1645,
+      "result_message": "Python process completed successfully.",
+      "metrics": {
+        "n": 768,
+        "r": 47,
+        "seed": 348282966,
+        "requested_p": 2,
+        "verified_p": 2,
+        "compute_s": 1.4205962500127498,
+        "warmup_s": 0.0,
+        "checksum": 147579.50105074432,
+        "numpy": "2.4.6",
+        "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+        "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+        "operation": "cblas_dgemm"
+      }
+    },
+    {
+      "task_id": "matrix-030",
+      "experiment_id": "7da69022-14aa-474a-bb0d-e2307ab434a4",
+      "worker_id": "worker-05",
+      "attempt": 1,
+      "status": "Completed",
+      "completion_s": 71.2828727,
+      "process_ms": 3242,
+      "result_message": "Python process completed successfully.",
+      "metrics": {
+        "n": 768,
+        "r": 47,
+        "seed": 861586606,
+        "requested_p": 1,
+        "verified_p": 1,
+        "compute_s": 3.0098822920117527,
+        "warmup_s": 0.0,
+        "checksum": 147862.07633178256,
+        "numpy": "2.4.6",
+        "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+        "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+        "operation": "cblas_dgemm"
+      }
+    },
+    {
+      "task_id": "matrix-088",
+      "experiment_id": "2cac4810-d24a-40a7-b101-6f4d949917f1",
+      "worker_id": "worker-02",
+      "attempt": 1,
+      "status": "Completed",
+      "completion_s": 43.2449861,
+      "process_ms": 6442,
+      "result_message": "Python process completed successfully.",
+      "metrics": {
+        "n": 1536,
+        "r": 23,
+        "seed": 237830581,
+        "requested_p": 2,
+        "verified_p": 2,
+        "compute_s": 6.1891082920192275,
+        "warmup_s": 0.0,
+        "checksum": 589773.8383311626,
+        "numpy": "2.4.6",
+        "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+        "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+        "operation": "cblas_dgemm"
+      }
+    },
+    {
+      "task_id": "matrix-097",
+      "experiment_id": "5d688186-f2cb-45b1-8f6c-456c96e74c8e",
+      "worker_id": "worker-08",
+      "attempt": 1,
+      "status": "Completed",
+      "completion_s": 72.1442385,
+      "process_ms": 3841,
+      "result_message": "Python process completed successfully.",
+      "metrics": {
+        "n": 1536,
+        "r": 23,
+        "seed": 888884828,
+        "requested_p": 4,
+        "verified_p": 4,
+        "compute_s": 3.577969750011107,
+        "warmup_s": 0.0,
+        "checksum": 589782.9485144636,
+        "numpy": "2.4.6",
+        "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+        "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+        "operation": "cblas_dgemm"
+      }
+    },
+    {
+      "task_id": "matrix-094",
+      "experiment_id": "bf96566b-466c-4d57-bd7b-f0d3ee0b1bb4",
+      "worker_id": "worker-03",
+      "attempt": 1,
+      "status": "Completed",
+      "completion_s": 47.1602244,
+      "process_ms": 6590,
+      "result_message": "Python process completed successfully.",
+      "metrics": {
+        "n": 1536,
+        "r": 23,
+        "seed": 1071089760,
+        "requested_p": 2,
+        "verified_p": 2,
+        "compute_s": 6.307952292001573,
+        "warmup_s": 0.0,
+        "checksum": 590011.6627388853,
+        "numpy": "2.4.6",
+        "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+        "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+        "operation": "cblas_dgemm"
+      }
+    },
+    {
+      "task_id": "matrix-049",
+      "experiment_id": "222763bc-21a1-407f-a559-9904154511c0",
+      "worker_id": "worker-06",
+      "attempt": 1,
+      "status": "Completed",
+      "completion_s": 71.4206585,
+      "process_ms": 3228,
+      "result_message": "Python process completed successfully.",
+      "metrics": {
+        "n": 768,
+        "r": 47,
+        "seed": 883527264,
+        "requested_p": 1,
+        "verified_p": 1,
+        "compute_s": 2.982967792020645,
+        "warmup_s": 0.0,
+        "checksum": 147686.21379725653,
+        "numpy": "2.4.6",
+        "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+        "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+        "operation": "cblas_dgemm"
+      }
+    },
+    {
+      "task_id": "matrix-098",
+      "experiment_id": "143ada29-6d25-48b6-b31e-f957b9b3e0f2",
+      "worker_id": "worker-05",
+      "attempt": 1,
+      "status": "Completed",
+      "completion_s": 76.163657,
+      "process_ms": 3860,
+      "result_message": "Python process completed successfully.",
+      "metrics": {
+        "n": 1536,
+        "r": 23,
+        "seed": 1463402352,
+        "requested_p": 4,
+        "verified_p": 4,
+        "compute_s": 3.6089415419846773,
+        "warmup_s": 0.0,
+        "checksum": 589979.346208887,
+        "numpy": "2.4.6",
+        "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+        "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+        "operation": "cblas_dgemm"
+      }
+    },
+    {
+      "task_id": "matrix-026",
+      "experiment_id": "8856870c-a1f4-47d1-a6be-e7c728daf9a3",
+      "worker_id": "worker-01",
+      "attempt": 1,
+      "status": "Completed",
+      "completion_s": 72.0828989,
+      "process_ms": 3237,
+      "result_message": "Python process completed successfully.",
+      "metrics": {
+        "n": 768,
+        "r": 47,
+        "seed": 2134252242,
+        "requested_p": 1,
+        "verified_p": 1,
+        "compute_s": 3.0186632919940166,
+        "warmup_s": 0.0,
+        "checksum": 147452.49556179746,
+        "numpy": "2.4.6",
+        "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+        "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+        "operation": "cblas_dgemm"
+      }
+    },
+    {
+      "task_id": "matrix-011",
+      "experiment_id": "cac59510-d5d0-4fcf-b23b-b91cd67b6695",
+      "worker_id": "worker-07",
+      "attempt": 1,
+      "status": "Completed",
+      "completion_s": 72.1403867,
+      "process_ms": 3221,
+      "result_message": "Python process completed successfully.",
+      "metrics": {
+        "n": 768,
+        "r": 47,
+        "seed": 1898656778,
+        "requested_p": 1,
+        "verified_p": 1,
+        "compute_s": 2.9991795829846524,
+        "warmup_s": 0.0,
+        "checksum": 147471.8580808208,
+        "numpy": "2.4.6",
+        "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+        "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+        "operation": "cblas_dgemm"
+      }
+    },
+    {
+      "task_id": "matrix-033",
+      "experiment_id": "fd02f360-a84d-4bbe-b788-2d3d63874587",
+      "worker_id": "worker-02",
+      "attempt": 1,
+      "status": "Completed",
+      "completion_s": 73.1187392,
+      "process_ms": 3112,
+      "result_message": "Python process completed successfully.",
+      "metrics": {
+        "n": 768,
+        "r": 47,
+        "seed": 1160646918,
+        "requested_p": 1,
+        "verified_p": 1,
+        "compute_s": 2.8947271249780897,
+        "warmup_s": 0.0,
+        "checksum": 147666.5630474222,
+        "numpy": "2.4.6",
+        "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+        "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+        "operation": "cblas_dgemm"
+      }
+    },
+    {
+      "task_id": "matrix-051",
+      "experiment_id": "531f03c1-d048-41dd-babb-ea4a13722e0f",
+      "worker_id": "worker-03",
+      "attempt": 1,
+      "status": "Completed",
+      "completion_s": 74.455805,
+      "process_ms": 3138,
+      "result_message": "Python process completed successfully.",
+      "metrics": {
+        "n": 768,
+        "r": 47,
+        "seed": 2090951695,
+        "requested_p": 1,
+        "verified_p": 1,
+        "compute_s": 2.9212917090044357,
+        "warmup_s": 0.0,
+        "checksum": 147344.55957441183,
+        "numpy": "2.4.6",
+        "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+        "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+        "operation": "cblas_dgemm"
+      }
+    },
+    {
+      "task_id": "matrix-099",
+      "experiment_id": "d3420e85-be6f-4534-afba-ea3d1c6bf882",
+      "worker_id": "worker-05",
+      "attempt": 1,
+      "status": "Completed",
+      "completion_s": 79.959108,
+      "process_ms": 3769,
+      "result_message": "Python process completed successfully.",
+      "metrics": {
+        "n": 1536,
+        "r": 23,
+        "seed": 222694553,
+        "requested_p": 4,
+        "verified_p": 4,
+        "compute_s": 3.511640290991636,
+        "warmup_s": 0.0,
+        "checksum": 590126.756171152,
+        "numpy": "2.4.6",
+        "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+        "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+        "operation": "cblas_dgemm"
+      }
+    },
+    {
+      "task_id": "matrix-027",
+      "experiment_id": "e815dc29-0ab9-4600-8628-27963bcbe4c0",
+      "worker_id": "worker-04",
+      "attempt": 1,
+      "status": "Completed",
+      "completion_s": 74.575312,
+      "process_ms": 3103,
+      "result_message": "Python process completed successfully.",
+      "metrics": {
+        "n": 768,
+        "r": 47,
+        "seed": 564247903,
+        "requested_p": 1,
+        "verified_p": 1,
+        "compute_s": 2.890904583997326,
+        "warmup_s": 0.0,
+        "checksum": 147391.53102449994,
+        "numpy": "2.4.6",
+        "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+        "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+        "operation": "cblas_dgemm"
+      }
+    },
+    {
+      "task_id": "matrix-087",
+      "experiment_id": "f01bcbcd-13f7-411c-90c2-7b707df688da",
+      "worker_id": "worker-02",
+      "attempt": 1,
+      "status": "Completed",
+      "completion_s": 49.8013945,
+      "process_ms": 6526,
+      "result_message": "Python process completed successfully.",
+      "metrics": {
+        "n": 1536,
+        "r": 23,
+        "seed": 1034623593,
+        "requested_p": 2,
+        "verified_p": 2,
+        "compute_s": 6.272081541013904,
+        "warmup_s": 0.0,
+        "checksum": 589176.1643502318,
+        "numpy": "2.4.6",
+        "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+        "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+        "operation": "cblas_dgemm"
+      }
+    },
+    {
+      "task_id": "matrix-075",
+      "experiment_id": "09d305bc-be9b-44f9-b1fc-90ca030c1e5d",
+      "worker_id": "worker-04",
+      "attempt": 1,
+      "status": "Completed",
+      "completion_s": 101.7226022,
+      "process_ms": 1599,
+      "result_message": "Python process completed successfully.",
+      "metrics": {
+        "n": 768,
+        "r": 47,
+        "seed": 284705784,
+        "requested_p": 2,
+        "verified_p": 2,
+        "compute_s": 1.3804720419866499,
+        "warmup_s": 0.0,
+        "checksum": 147257.44746505265,
+        "numpy": "2.4.6",
+        "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+        "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+        "operation": "cblas_dgemm"
+      }
+    },
+    {
+      "task_id": "matrix-080",
+      "experiment_id": "e02724e7-e0cd-4801-8a16-d91eef48c389",
+      "worker_id": "worker-01",
+      "attempt": 1,
+      "status": "Completed",
+      "completion_s": 101.4155849,
+      "process_ms": 1134,
+      "result_message": "Python process completed successfully.",
+      "metrics": {
+        "n": 768,
+        "r": 47,
+        "seed": 1590015002,
+        "requested_p": 4,
+        "verified_p": 4,
+        "compute_s": 0.9114488330087624,
+        "warmup_s": 0.0,
+        "checksum": 147665.39842348752,
+        "numpy": "2.4.6",
+        "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+        "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+        "operation": "cblas_dgemm"
+      }
+    },
+    {
+      "task_id": "matrix-041",
+      "experiment_id": "6574fd55-c80a-465a-b874-2cf1025ca265",
+      "worker_id": "worker-06",
+      "attempt": 1,
+      "status": "Completed",
+      "completion_s": 75.3883347,
+      "process_ms": 3272,
+      "result_message": "Python process completed successfully.",
+      "metrics": {
+        "n": 768,
+        "r": 47,
+        "seed": 388410529,
+        "requested_p": 1,
+        "verified_p": 1,
+        "compute_s": 3.046362249995582,
+        "warmup_s": 0.0,
+        "checksum": 147452.50009143451,
+        "numpy": "2.4.6",
+        "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+        "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+        "operation": "cblas_dgemm"
+      }
+    },
+    {
+      "task_id": "matrix-108",
+      "experiment_id": "16467fa1-8062-42b0-aefa-5f9f4b278001",
+      "worker_id": "worker-03",
+      "attempt": 1,
+      "status": "Completed",
+      "completion_s": 16.0727789,
+      "process_ms": 16013,
+      "result_message": "Python process completed successfully.",
+      "metrics": {
+        "n": 2304,
+        "r": 18,
+        "seed": 2004233371,
+        "requested_p": 2,
+        "verified_p": 2,
+        "compute_s": 15.817840375006199,
+        "warmup_s": 0.0,
+        "checksum": 1326818.8509007897,
+        "numpy": "2.4.6",
+        "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+        "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+        "operation": "cblas_dgemm"
+      }
+    },
+    {
+      "task_id": "matrix-048",
+      "experiment_id": "2dbf1b2b-ddd1-45a0-8182-8ab94eeb6d6a",
+      "worker_id": "worker-01",
+      "attempt": 1,
+      "status": "Completed",
+      "completion_s": 75.4598642,
+      "process_ms": 3275,
+      "result_message": "Python process completed successfully.",
+      "metrics": {
+        "n": 768,
+        "r": 47,
+        "seed": 1407306532,
+        "requested_p": 1,
+        "verified_p": 1,
+        "compute_s": 3.0422788750147447,
+        "warmup_s": 0.0,
+        "checksum": 147338.27147913113,
+        "numpy": "2.4.6",
+        "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+        "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+        "operation": "cblas_dgemm"
+      }
+    },
+    {
+      "task_id": "matrix-092",
+      "experiment_id": "2762ef08-419c-4909-9577-549c62800148",
+      "worker_id": "worker-03",
+      "attempt": 1,
+      "status": "Completed",
+      "completion_s": 53.6594636,
+      "process_ms": 6468,
+      "result_message": "Python process completed successfully.",
+      "metrics": {
+        "n": 1536,
+        "r": 23,
+        "seed": 1524916362,
+        "requested_p": 2,
+        "verified_p": 2,
+        "compute_s": 6.2268068339908496,
+        "warmup_s": 0.0,
+        "checksum": 589768.1508904095,
+        "numpy": "2.4.6",
+        "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+        "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+        "operation": "cblas_dgemm"
+      }
+    },
+    {
+      "task_id": "matrix-114",
+      "experiment_id": "12b4f1e5-24df-4d7f-bf23-17d3625e1d97",
+      "worker_id": "worker-02",
+      "attempt": 1,
+      "status": "Completed",
+      "completion_s": 24.9316625,
+      "process_ms": 8811,
+      "result_message": "Python process completed successfully.",
+      "metrics": {
+        "n": 2304,
+        "r": 18,
+        "seed": 1879128861,
+        "requested_p": 4,
+        "verified_p": 4,
+        "compute_s": 8.500713084009476,
+        "warmup_s": 0.0,
+        "checksum": 1327804.4884482094,
+        "numpy": "2.4.6",
+        "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+        "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+        "operation": "cblas_dgemm"
+      }
+    },
+    {
+      "task_id": "matrix-029",
+      "experiment_id": "8f457c8c-0e7e-4d7d-bd54-c4f09a156479",
+      "worker_id": "worker-02",
+      "attempt": 1,
+      "status": "Completed",
+      "completion_s": 76.4007863,
+      "process_ms": 3233,
+      "result_message": "Python process completed successfully.",
+      "metrics": {
+        "n": 768,
+        "r": 47,
+        "seed": 738614994,
+        "requested_p": 1,
+        "verified_p": 1,
+        "compute_s": 3.0141253330220934,
+        "warmup_s": 0.0,
+        "checksum": 147345.9207982557,
+        "numpy": "2.4.6",
+        "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+        "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+        "operation": "cblas_dgemm"
+      }
+    },
+    {
+      "task_id": "matrix-012",
+      "experiment_id": "b067d063-c7a9-456c-bf47-e9ea1970783f",
+      "worker_id": "worker-03",
+      "attempt": 1,
+      "status": "Completed",
+      "completion_s": 77.6481244,
+      "process_ms": 3159,
+      "result_message": "Python process completed successfully.",
+      "metrics": {
+        "n": 768,
+        "r": 47,
+        "seed": 383968521,
+        "requested_p": 1,
+        "verified_p": 1,
+        "compute_s": 2.941336041985778,
+        "warmup_s": 0.0,
+        "checksum": 147422.98315656628,
+        "numpy": "2.4.6",
+        "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+        "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+        "operation": "cblas_dgemm"
+      }
+    },
+    {
+      "task_id": "matrix-096",
+      "experiment_id": "50ef5332-c8c9-492d-b8ef-73fc6bab06b8",
+      "worker_id": "worker-02",
+      "attempt": 1,
+      "status": "Completed",
+      "completion_s": 83.7261785,
+      "process_ms": 3748,
+      "result_message": "Python process completed successfully.",
+      "metrics": {
+        "n": 1536,
+        "r": 23,
+        "seed": 1180750498,
+        "requested_p": 4,
+        "verified_p": 4,
+        "compute_s": 3.48881337500643,
+        "warmup_s": 0.0,
+        "checksum": 589627.2475557852,
+        "numpy": "2.4.6",
+        "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+        "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+        "operation": "cblas_dgemm"
+      }
+    },
+    {
+      "task_id": "matrix-047",
+      "experiment_id": "9bbde70b-55b8-4edd-a351-2f37468b625a",
+      "worker_id": "worker-04",
+      "attempt": 1,
+      "status": "Completed",
+      "completion_s": 77.8108899,
+      "process_ms": 3198,
+      "result_message": "Python process completed successfully.",
+      "metrics": {
+        "n": 768,
+        "r": 47,
+        "seed": 1242035481,
+        "requested_p": 1,
+        "verified_p": 1,
+        "compute_s": 2.9737857920117676,
+        "warmup_s": 0.0,
+        "checksum": 146998.5206604132,
+        "numpy": "2.4.6",
+        "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+        "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+        "operation": "cblas_dgemm"
+      }
+    },
+    {
+      "task_id": "matrix-070",
+      "experiment_id": "4ef45664-852f-4e97-8fd3-fb0508539261",
+      "worker_id": "worker-01",
+      "attempt": 1,
+      "status": "Completed",
+      "completion_s": 103.1488952,
+      "process_ms": 1702,
+      "result_message": "Python process completed successfully.",
+      "metrics": {
+        "n": 768,
+        "r": 47,
+        "seed": 918047672,
+        "requested_p": 2,
+        "verified_p": 2,
+        "compute_s": 1.4912902920041233,
+        "warmup_s": 0.0,
+        "checksum": 147396.877867596,
+        "numpy": "2.4.6",
+        "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+        "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+        "operation": "cblas_dgemm"
+      }
+    },
+    {
+      "task_id": "matrix-085",
+      "experiment_id": "966396a7-49c2-444b-aa4c-f8528a7011d5",
+      "worker_id": "worker-01",
+      "attempt": 1,
+      "status": "Completed",
+      "completion_s": 35.7287083,
+      "process_ms": 11977,
+      "result_message": "Python process completed successfully.",
+      "metrics": {
+        "n": 1536,
+        "r": 23,
+        "seed": 1647455833,
+        "requested_p": 1,
+        "verified_p": 1,
+        "compute_s": 11.711780999990879,
+        "warmup_s": 0.0,
+        "checksum": 589401.3888010785,
+        "numpy": "2.4.6",
+        "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+        "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+        "operation": "cblas_dgemm"
+      }
+    },
+    {
+      "task_id": "matrix-054",
+      "experiment_id": "1f0670eb-d4e1-444d-9c36-879d3ebe4ed2",
+      "worker_id": "worker-06",
+      "attempt": 1,
+      "status": "Completed",
+      "completion_s": 78.5964511,
+      "process_ms": 3172,
+      "result_message": "Python process completed successfully.",
+      "metrics": {
+        "n": 768,
+        "r": 47,
+        "seed": 466130806,
+        "requested_p": 1,
+        "verified_p": 1,
+        "compute_s": 2.9533715000143275,
+        "warmup_s": 0.0,
+        "checksum": 147121.52579822676,
+        "numpy": "2.4.6",
+        "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+        "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+        "operation": "cblas_dgemm"
+      }
+    },
+    {
+      "task_id": "matrix-046",
+      "experiment_id": "b1e37275-df49-46d5-8e18-95ff70c18a24",
+      "worker_id": "worker-01",
+      "attempt": 1,
+      "status": "Completed",
+      "completion_s": 78.6843217,
+      "process_ms": 3184,
+      "result_message": "Python process completed successfully.",
+      "metrics": {
+        "n": 768,
+        "r": 47,
+        "seed": 1336867894,
+        "requested_p": 1,
+        "verified_p": 1,
+        "compute_s": 2.9584950829739682,
+        "warmup_s": 0.0,
+        "checksum": 147529.3550763292,
+        "numpy": "2.4.6",
+        "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+        "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+        "operation": "cblas_dgemm"
+      }
+    },
+    {
+      "task_id": "matrix-007",
+      "experiment_id": "64948b87-b893-41fd-9d5c-71a10e342231",
+      "worker_id": "worker-02",
+      "attempt": 1,
+      "status": "Completed",
+      "completion_s": 79.7936663,
+      "process_ms": 3343,
+      "result_message": "Python process completed successfully.",
+      "metrics": {
+        "n": 768,
+        "r": 47,
+        "seed": 2049146592,
+        "requested_p": 1,
+        "verified_p": 1,
+        "compute_s": 3.0983273749880027,
+        "warmup_s": 0.0,
+        "checksum": 147591.55597601936,
+        "numpy": "2.4.6",
+        "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+        "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+        "operation": "cblas_dgemm"
+      }
+    },
+    {
+      "task_id": "matrix-072",
+      "experiment_id": "8c903f39-2bfe-436b-aeb8-f2716c3b9ce8",
+      "worker_id": "worker-03",
+      "attempt": 1,
+      "status": "Completed",
+      "completion_s": 103.1628529,
+      "process_ms": 1693,
+      "result_message": "Python process completed successfully.",
+      "metrics": {
+        "n": 768,
+        "r": 47,
+        "seed": 740176444,
+        "requested_p": 2,
+        "verified_p": 2,
+        "compute_s": 1.484690666984534,
+        "warmup_s": 0.0,
+        "checksum": 147372.61552952355,
+        "numpy": "2.4.6",
+        "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+        "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+        "operation": "cblas_dgemm"
+      }
+    },
+    {
+      "task_id": "matrix-016",
+      "experiment_id": "66ea62ac-ca28-4f3b-a49f-5b1912ad76fa",
+      "worker_id": "worker-09",
+      "attempt": 1,
+      "status": "Completed",
+      "completion_s": 80.8379488,
+      "process_ms": 3171,
+      "result_message": "Python process completed successfully.",
+      "metrics": {
+        "n": 768,
+        "r": 47,
+        "seed": 806266810,
+        "requested_p": 1,
+        "verified_p": 1,
+        "compute_s": 2.951581375004025,
+        "warmup_s": 0.0,
+        "checksum": 147433.4932774292,
+        "numpy": "2.4.6",
+        "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+        "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+        "operation": "cblas_dgemm"
+      }
+    },
+    {
+      "task_id": "matrix-015",
+      "experiment_id": "4002f8a4-c31d-499b-98ca-07b2823d6415",
+      "worker_id": "worker-03",
+      "attempt": 1,
+      "status": "Completed",
+      "completion_s": 80.9947485,
+      "process_ms": 3147,
+      "result_message": "Python process completed successfully.",
+      "metrics": {
+        "n": 768,
+        "r": 47,
+        "seed": 871214629,
+        "requested_p": 1,
+        "verified_p": 1,
+        "compute_s": 2.9229420839983504,
+        "warmup_s": 0.0,
+        "checksum": 147511.25007060776,
+        "numpy": "2.4.6",
+        "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+        "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+        "operation": "cblas_dgemm"
+      }
+    },
+    {
+      "task_id": "matrix-005",
+      "experiment_id": "08633668-157a-43ba-aef9-43ec93ed0dce",
+      "worker_id": "worker-04",
+      "attempt": 1,
+      "status": "Completed",
+      "completion_s": 81.7524609,
+      "process_ms": 3144,
+      "result_message": "Python process completed successfully.",
+      "metrics": {
+        "n": 768,
+        "r": 47,
+        "seed": 2114796178,
+        "requested_p": 1,
+        "verified_p": 1,
+        "compute_s": 2.936409541987814,
+        "warmup_s": 0.0,
+        "checksum": 147689.90858537867,
+        "numpy": "2.4.6",
+        "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+        "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+        "operation": "cblas_dgemm"
+      }
+    },
+    {
+      "task_id": "matrix-021",
+      "experiment_id": "fa44b911-67bf-45be-ad61-8a99462d9977",
+      "worker_id": "worker-08",
+      "attempt": 1,
+      "status": "Completed",
+      "completion_s": 81.8666959,
+      "process_ms": 3156,
+      "result_message": "Python process completed successfully.",
+      "metrics": {
+        "n": 768,
+        "r": 47,
+        "seed": 766617118,
+        "requested_p": 1,
+        "verified_p": 1,
+        "compute_s": 2.944989457988413,
+        "warmup_s": 0.0,
+        "checksum": 147410.15394128172,
+        "numpy": "2.4.6",
+        "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+        "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+        "operation": "cblas_dgemm"
+      }
+    },
+    {
+      "task_id": "matrix-107",
+      "experiment_id": "f0948e81-42ec-4b0e-ad0c-89041a468cf7",
+      "worker_id": "worker-09",
+      "attempt": 1,
+      "status": "Completed",
+      "completion_s": 33.7548,
+      "process_ms": 16345,
+      "result_message": "Python process completed successfully.",
+      "metrics": {
+        "n": 2304,
+        "r": 18,
+        "seed": 2140857340,
+        "requested_p": 2,
+        "verified_p": 2,
+        "compute_s": 16.0377210410079,
+        "warmup_s": 0.0,
+        "checksum": 1327017.2146838792,
+        "numpy": "2.4.6",
+        "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+        "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+        "operation": "cblas_dgemm"
+      }
+    },
+    {
+      "task_id": "matrix-115",
+      "experiment_id": "ef808d7f-8f94-46ca-8362-5aabca4a1f30",
+      "worker_id": "worker-03",
+      "attempt": 1,
+      "status": "Completed",
+      "completion_s": 33.75744,
+      "process_ms": 8801,
+      "result_message": "Python process completed successfully.",
+      "metrics": {
+        "n": 2304,
+        "r": 18,
+        "seed": 2097576384,
+        "requested_p": 4,
+        "verified_p": 4,
+        "compute_s": 8.483860167005332,
+        "warmup_s": 0.0,
+        "checksum": 1326920.6831696653,
+        "numpy": "2.4.6",
+        "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+        "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+        "operation": "cblas_dgemm"
+      }
+    },
+    {
+      "task_id": "matrix-079",
+      "experiment_id": "a3027c59-cdc0-4f39-b1f5-ba4df64099f1",
+      "worker_id": "worker-04",
+      "attempt": 1,
+      "status": "Completed",
+      "completion_s": 106.2381337,
+      "process_ms": 1093,
+      "result_message": "Python process completed successfully.",
+      "metrics": {
+        "n": 768,
+        "r": 47,
+        "seed": 153735838,
+        "requested_p": 4,
+        "verified_p": 4,
+        "compute_s": 0.8800627920136321,
+        "warmup_s": 0.0,
+        "checksum": 147625.96589303025,
+        "numpy": "2.4.6",
+        "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+        "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+        "operation": "cblas_dgemm"
+      }
+    },
+    {
+      "task_id": "matrix-068",
+      "experiment_id": "6cd960a2-4903-4170-bf5f-5ef8127d82bc",
+      "worker_id": "worker-02",
+      "attempt": 1,
+      "status": "Completed",
+      "completion_s": 103.2546871,
+      "process_ms": 1719,
+      "result_message": "Python process completed successfully.",
+      "metrics": {
+        "n": 768,
+        "r": 47,
+        "seed": 1054111588,
+        "requested_p": 2,
+        "verified_p": 2,
+        "compute_s": 1.503267958003562,
+        "warmup_s": 0.0,
+        "checksum": 147459.65521654708,
+        "numpy": "2.4.6",
+        "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+        "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+        "operation": "cblas_dgemm"
+      }
+    },
+    {
+      "task_id": "matrix-113",
+      "experiment_id": "f01cdc8e-a63a-4f70-8a0c-98d573943437",
+      "worker_id": "worker-09",
+      "attempt": 1,
+      "status": "Completed",
+      "completion_s": 42.7260317,
+      "process_ms": 8791,
+      "result_message": "Python process completed successfully.",
+      "metrics": {
+        "n": 2304,
+        "r": 18,
+        "seed": 1966791304,
+        "requested_p": 4,
+        "verified_p": 4,
+        "compute_s": 8.506502584001282,
+        "warmup_s": 0.0,
+        "checksum": 1326758.3311153874,
+        "numpy": "2.4.6",
+        "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+        "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+        "operation": "cblas_dgemm"
+      }
+    },
+    {
+      "task_id": "matrix-053",
+      "experiment_id": "81b6e6dc-5bd3-4a6c-a6e7-faa4c950913b",
+      "worker_id": "worker-01",
+      "attempt": 1,
+      "status": "Completed",
+      "completion_s": 83.0513738,
+      "process_ms": 3224,
+      "result_message": "Python process completed successfully.",
+      "metrics": {
+        "n": 768,
+        "r": 47,
+        "seed": 553803905,
+        "requested_p": 1,
+        "verified_p": 1,
+        "compute_s": 3.000758540991228,
+        "warmup_s": 0.0,
+        "checksum": 147232.60857936708,
+        "numpy": "2.4.6",
+        "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+        "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+        "operation": "cblas_dgemm"
+      }
+    },
+    {
+      "task_id": "matrix-050",
+      "experiment_id": "ebe4eb89-bf08-42be-a6f3-5369cddedd4b",
+      "worker_id": "worker-05",
+      "attempt": 1,
+      "status": "Completed",
+      "completion_s": 84.0175955,
+      "process_ms": 3127,
+      "result_message": "Python process completed successfully.",
+      "metrics": {
+        "n": 768,
+        "r": 47,
+        "seed": 702094708,
+        "requested_p": 1,
+        "verified_p": 1,
+        "compute_s": 2.89866120897932,
+        "warmup_s": 0.0,
+        "checksum": 147552.4808890429,
+        "numpy": "2.4.6",
+        "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+        "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+        "operation": "cblas_dgemm"
+      }
+    },
+    {
+      "task_id": "matrix-093",
+      "experiment_id": "55aa3ec5-e384-4e7a-9bae-dc6c97951ece",
+      "worker_id": "worker-01",
+      "attempt": 1,
+      "status": "Completed",
+      "completion_s": 56.2405633,
+      "process_ms": 6405,
+      "result_message": "Python process completed successfully.",
+      "metrics": {
+        "n": 1536,
+        "r": 23,
+        "seed": 477289263,
+        "requested_p": 2,
+        "verified_p": 2,
+        "compute_s": 6.154979042010382,
+        "warmup_s": 0.0,
+        "checksum": 589499.9590915369,
+        "numpy": "2.4.6",
+        "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+        "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+        "operation": "cblas_dgemm"
+      }
+    },
+    {
+      "task_id": "matrix-076",
+      "experiment_id": "84c6b7b2-6801-48a0-b695-50275a6c0922",
+      "worker_id": "worker-02",
+      "attempt": 1,
+      "status": "Completed",
+      "completion_s": 107.3083636,
+      "process_ms": 1043,
+      "result_message": "Python process completed successfully.",
+      "metrics": {
+        "n": 768,
+        "r": 47,
+        "seed": 1472972327,
+        "requested_p": 4,
+        "verified_p": 4,
+        "compute_s": 0.8207931669894606,
+        "warmup_s": 0.0,
+        "checksum": 147441.18803837209,
+        "numpy": "2.4.6",
+        "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+        "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+        "operation": "cblas_dgemm"
+      }
+    },
+    {
+      "task_id": "matrix-017",
+      "experiment_id": "76fab4f5-2830-4df4-bf14-ea8c53c9c337",
+      "worker_id": "worker-03",
+      "attempt": 1,
+      "status": "Completed",
+      "completion_s": 84.1578476,
+      "process_ms": 3114,
+      "result_message": "Python process completed successfully.",
+      "metrics": {
+        "n": 768,
+        "r": 47,
+        "seed": 2010328261,
+        "requested_p": 1,
+        "verified_p": 1,
+        "compute_s": 2.8638038329954725,
+        "warmup_s": 0.0,
+        "checksum": 147171.1111844125,
+        "numpy": "2.4.6",
+        "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+        "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+        "operation": "cblas_dgemm"
+      }
+    },
+    {
+      "task_id": "matrix-063",
+      "experiment_id": "9e6af072-3b0a-45e5-b436-5754da4f5b97",
+      "worker_id": "worker-04",
+      "attempt": 1,
+      "status": "Completed",
+      "completion_s": 103.4076466,
+      "process_ms": 1649,
+      "result_message": "Python process completed successfully.",
+      "metrics": {
+        "n": 768,
+        "r": 47,
+        "seed": 650483792,
+        "requested_p": 2,
+        "verified_p": 2,
+        "compute_s": 1.4331659160088748,
+        "warmup_s": 0.0,
+        "checksum": 147368.72985249886,
+        "numpy": "2.4.6",
+        "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+        "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+        "operation": "cblas_dgemm"
+      }
+    },
+    {
+      "task_id": "matrix-018",
+      "experiment_id": "75ec190a-e699-470f-8c0d-9a9bda90488a",
+      "worker_id": "worker-04",
+      "attempt": 1,
+      "status": "Completed",
+      "completion_s": 84.90329,
+      "process_ms": 3109,
+      "result_message": "Python process completed successfully.",
+      "metrics": {
+        "n": 768,
+        "r": 47,
+        "seed": 455238739,
+        "requested_p": 1,
+        "verified_p": 1,
+        "compute_s": 2.8966034589975607,
+        "warmup_s": 0.0,
+        "checksum": 147331.19088293274,
+        "numpy": "2.4.6",
+        "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+        "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+        "operation": "cblas_dgemm"
+      }
+    },
+    {
+      "task_id": "matrix-081",
+      "experiment_id": "9dc5727d-da22-4c8b-97f1-d71b31fae891",
+      "worker_id": "worker-01",
+      "attempt": 1,
+      "status": "Completed",
+      "completion_s": 47.943573,
+      "process_ms": 12159,
+      "result_message": "Python process completed successfully.",
+      "metrics": {
+        "n": 1536,
+        "r": 23,
+        "seed": 849377595,
+        "requested_p": 1,
+        "verified_p": 1,
+        "compute_s": 11.904986041976372,
+        "warmup_s": 0.0,
+        "checksum": 589863.5368319746,
+        "numpy": "2.4.6",
+        "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+        "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+        "operation": "cblas_dgemm"
+      }
+    },
+    {
+      "task_id": "matrix-058",
+      "experiment_id": "09d2022d-ece3-4d72-9c9f-852d03906c05",
+      "worker_id": "worker-08",
+      "attempt": 1,
+      "status": "Completed",
+      "completion_s": 85.0329828,
+      "process_ms": 3124,
+      "result_message": "Python process completed successfully.",
+      "metrics": {
+        "n": 768,
+        "r": 47,
+        "seed": 1911924999,
+        "requested_p": 1,
+        "verified_p": 1,
+        "compute_s": 2.9078740830009338,
+        "warmup_s": 0.0,
+        "checksum": 147567.24326768465,
+        "numpy": "2.4.6",
+        "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+        "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+        "operation": "cblas_dgemm"
+      }
+    },
+    {
+      "task_id": "matrix-104",
+      "experiment_id": "74d31c7a-5274-4323-8713-cfd338284142",
+      "worker_id": "worker-02",
+      "attempt": 1,
+      "status": "Completed",
+      "completion_s": 87.5326757,
+      "process_ms": 3782,
+      "result_message": "Python process completed successfully.",
+      "metrics": {
+        "n": 1536,
+        "r": 23,
+        "seed": 175607941,
+        "requested_p": 4,
+        "verified_p": 4,
+        "compute_s": 3.518645792006282,
+        "warmup_s": 0.0,
+        "checksum": 589704.3166334084,
+        "numpy": "2.4.6",
+        "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+        "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+        "operation": "cblas_dgemm"
+      }
+    },
+    {
+      "task_id": "matrix-032",
+      "experiment_id": "55ae6f05-d67e-49f0-b4b1-7dff159b584a",
+      "worker_id": "worker-01",
+      "attempt": 1,
+      "status": "Completed",
+      "completion_s": 86.2592615,
+      "process_ms": 3159,
+      "result_message": "Python process completed successfully.",
+      "metrics": {
+        "n": 768,
+        "r": 47,
+        "seed": 51826789,
+        "requested_p": 1,
+        "verified_p": 1,
+        "compute_s": 2.940408166992711,
+        "warmup_s": 0.0,
+        "checksum": 147525.38573096367,
+        "numpy": "2.4.6",
+        "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+        "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+        "operation": "cblas_dgemm"
+      }
+    },
+    {
+      "task_id": "matrix-010",
+      "experiment_id": "79187d5e-f3f6-4320-996f-8fb6500748e5",
+      "worker_id": "worker-05",
+      "attempt": 1,
+      "status": "Completed",
+      "completion_s": 87.3333867,
+      "process_ms": 3281,
+      "result_message": "Python process completed successfully.",
+      "metrics": {
+        "n": 768,
+        "r": 47,
+        "seed": 1162402666,
+        "requested_p": 1,
+        "verified_p": 1,
+        "compute_s": 3.066823792003561,
+        "warmup_s": 0.0,
+        "checksum": 147356.16160253345,
+        "numpy": "2.4.6",
+        "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+        "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+        "operation": "cblas_dgemm"
+      }
+    },
+    {
+      "task_id": "matrix-073",
+      "experiment_id": "abb8ea5d-3701-4ec3-a520-33483f9aab4e",
+      "worker_id": "worker-01",
+      "attempt": 1,
+      "status": "Completed",
+      "completion_s": 104.877824,
+      "process_ms": 1695,
+      "result_message": "Python process completed successfully.",
+      "metrics": {
+        "n": 768,
+        "r": 47,
+        "seed": 1981499379,
+        "requested_p": 2,
+        "verified_p": 2,
+        "compute_s": 1.4731892079871614,
+        "warmup_s": 0.0,
+        "checksum": 147356.91095078288,
+        "numpy": "2.4.6",
+        "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+        "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+        "operation": "cblas_dgemm"
+      }
+    },
+    {
+      "task_id": "matrix-060",
+      "experiment_id": "fa77a246-7eb5-4e3f-90ff-a97b6f89192c",
+      "worker_id": "worker-07",
+      "attempt": 1,
+      "status": "Completed",
+      "completion_s": 87.4355808,
+      "process_ms": 3246,
+      "result_message": "Python process completed successfully.",
+      "metrics": {
+        "n": 768,
+        "r": 47,
+        "seed": 521499995,
+        "requested_p": 1,
+        "verified_p": 1,
+        "compute_s": 3.023737584007904,
+        "warmup_s": 0.0,
+        "checksum": 147253.0994046912,
+        "numpy": "2.4.6",
+        "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+        "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+        "operation": "cblas_dgemm"
+      }
+    },
+    {
+      "task_id": "matrix-067",
+      "experiment_id": "ae6aa7b2-8653-4e3f-a473-f27136964d1b",
+      "worker_id": "worker-03",
+      "attempt": 1,
+      "status": "Completed",
+      "completion_s": 104.9346728,
+      "process_ms": 1707,
+      "result_message": "Python process completed successfully.",
+      "metrics": {
+        "n": 768,
+        "r": 47,
+        "seed": 1814362323,
+        "requested_p": 2,
+        "verified_p": 2,
+        "compute_s": 1.4851418749894947,
+        "warmup_s": 0.0,
+        "checksum": 147159.6851619509,
+        "numpy": "2.4.6",
+        "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+        "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+        "operation": "cblas_dgemm"
+      }
+    },
+    {
+      "task_id": "matrix-028",
+      "experiment_id": "e2e50ef6-69d8-4c65-975f-5120221aec79",
+      "worker_id": "worker-09",
+      "attempt": 1,
+      "status": "Completed",
+      "completion_s": 88.1083569,
+      "process_ms": 3179,
+      "result_message": "Python process completed successfully.",
+      "metrics": {
+        "n": 768,
+        "r": 47,
+        "seed": 843347271,
+        "requested_p": 1,
+        "verified_p": 1,
+        "compute_s": 2.9629411249770783,
+        "warmup_s": 0.0,
+        "checksum": 147488.24899008402,
+        "numpy": "2.4.6",
+        "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+        "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+        "operation": "cblas_dgemm"
+      }
+    },
+    {
+      "task_id": "matrix-037",
+      "experiment_id": "0e7d8298-45eb-458f-baed-b60db3e66389",
+      "worker_id": "worker-06",
+      "attempt": 1,
+      "status": "Completed",
+      "completion_s": 88.246316,
+      "process_ms": 3174,
+      "result_message": "Python process completed successfully.",
+      "metrics": {
+        "n": 768,
+        "r": 47,
+        "seed": 158409127,
+        "requested_p": 1,
+        "verified_p": 1,
+        "compute_s": 2.9522547500091605,
+        "warmup_s": 0.0,
+        "checksum": 147308.88471403718,
+        "numpy": "2.4.6",
+        "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+        "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+        "operation": "cblas_dgemm"
+      }
+    },
+    {
+      "task_id": "matrix-014",
+      "experiment_id": "dbbd12b3-1104-48d2-8e05-409c21020e8a",
+      "worker_id": "worker-01",
+      "attempt": 1,
+      "status": "Completed",
+      "completion_s": 89.4204227,
+      "process_ms": 3116,
+      "result_message": "Python process completed successfully.",
+      "metrics": {
+        "n": 768,
+        "r": 47,
+        "seed": 281781798,
+        "requested_p": 1,
+        "verified_p": 1,
+        "compute_s": 2.8898260410060175,
+        "warmup_s": 0.0,
+        "checksum": 147458.59822635946,
+        "numpy": "2.4.6",
+        "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+        "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+        "operation": "cblas_dgemm"
+      }
+    },
+    {
+      "task_id": "matrix-100",
+      "experiment_id": "65c1376b-ec5e-4cb6-8883-b023a1118beb",
+      "worker_id": "worker-02",
+      "attempt": 1,
+      "status": "Completed",
+      "completion_s": 91.3707056,
+      "process_ms": 3788,
+      "result_message": "Python process completed successfully.",
+      "metrics": {
+        "n": 1536,
+        "r": 23,
+        "seed": 448556395,
+        "requested_p": 4,
+        "verified_p": 4,
+        "compute_s": 3.534718459006399,
+        "warmup_s": 0.0,
+        "checksum": 589795.3537618794,
+        "numpy": "2.4.6",
+        "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+        "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+        "operation": "cblas_dgemm"
+      }
+    },
+    {
+      "task_id": "matrix-001",
+      "experiment_id": "c350da85-945f-40b2-81ca-adb408e438a6",
+      "worker_id": "worker-03",
+      "attempt": 1,
+      "status": "Completed",
+      "completion_s": 90.614815,
+      "process_ms": 3251,
+      "result_message": "Python process completed successfully.",
+      "metrics": {
+        "n": 768,
+        "r": 47,
+        "seed": 732265847,
+        "requested_p": 1,
+        "verified_p": 1,
+        "compute_s": 3.0293445420102216,
+        "warmup_s": 0.0,
+        "checksum": 147252.1018753274,
+        "numpy": "2.4.6",
+        "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+        "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+        "operation": "cblas_dgemm"
+      }
+    },
+    {
+      "task_id": "matrix-077",
+      "experiment_id": "d9c5fad3-bc1b-4d54-a963-22a86af06ae0",
+      "worker_id": "worker-01",
+      "attempt": 1,
+      "status": "Completed",
+      "completion_s": 107.6040905,
+      "process_ms": 936,
+      "result_message": "Python process completed successfully.",
+      "metrics": {
+        "n": 768,
+        "r": 47,
+        "seed": 1716900900,
+        "requested_p": 4,
+        "verified_p": 4,
+        "compute_s": 0.7329937910253648,
+        "warmup_s": 0.0,
+        "checksum": 147414.38744177035,
+        "numpy": "2.4.6",
+        "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+        "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+        "operation": "cblas_dgemm"
+      }
+    },
+    {
+      "task_id": "matrix-045",
+      "experiment_id": "ad363822-7eba-4a9b-89ad-3bc3da06bb08",
+      "worker_id": "worker-04",
+      "attempt": 1,
+      "status": "Completed",
+      "completion_s": 90.7168215,
+      "process_ms": 3239,
+      "result_message": "Python process completed successfully.",
+      "metrics": {
+        "n": 768,
+        "r": 47,
+        "seed": 1607884639,
+        "requested_p": 1,
+        "verified_p": 1,
+        "compute_s": 3.0243403339991346,
+        "warmup_s": 0.0,
+        "checksum": 147314.39689031278,
+        "numpy": "2.4.6",
+        "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+        "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+        "operation": "cblas_dgemm"
+      }
+    },
+    {
+      "task_id": "matrix-024",
+      "experiment_id": "178e7035-bd23-40ae-ba31-3f722abf6509",
+      "worker_id": "worker-05",
+      "attempt": 1,
+      "status": "Completed",
+      "completion_s": 91.3714177,
+      "process_ms": 3222,
+      "result_message": "Python process completed successfully.",
+      "metrics": {
+        "n": 768,
+        "r": 47,
+        "seed": 2044492405,
+        "requested_p": 1,
+        "verified_p": 1,
+        "compute_s": 3.009117583016632,
+        "warmup_s": 0.0,
+        "checksum": 147420.50401159533,
+        "numpy": "2.4.6",
+        "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+        "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+        "operation": "cblas_dgemm"
+      }
+    },
+    {
+      "task_id": "matrix-022",
+      "experiment_id": "be989e39-0c26-41b9-8c43-b4fd49247643",
+      "worker_id": "worker-06",
+      "attempt": 1,
+      "status": "Completed",
+      "completion_s": 91.4566902,
+      "process_ms": 3183,
+      "result_message": "Python process completed successfully.",
+      "metrics": {
+        "n": 768,
+        "r": 47,
+        "seed": 877620278,
+        "requested_p": 1,
+        "verified_p": 1,
+        "compute_s": 2.971916415990563,
+        "warmup_s": 0.0,
+        "checksum": 147480.24828694013,
+        "numpy": "2.4.6",
+        "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+        "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+        "operation": "cblas_dgemm"
+      }
+    },
+    {
+      "task_id": "matrix-039",
+      "experiment_id": "0cc668b4-9a9a-475b-b9d9-276f259446ed",
+      "worker_id": "worker-01",
+      "attempt": 1,
+      "status": "Completed",
+      "completion_s": 92.6116867,
+      "process_ms": 3163,
+      "result_message": "Python process completed successfully.",
+      "metrics": {
+        "n": 768,
+        "r": 47,
+        "seed": 38706840,
+        "requested_p": 1,
+        "verified_p": 1,
+        "compute_s": 2.9436455410032067,
+        "warmup_s": 0.0,
+        "checksum": 147457.3000810226,
+        "numpy": "2.4.6",
+        "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+        "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+        "operation": "cblas_dgemm"
+      }
+    },
+    {
+      "task_id": "matrix-101",
+      "experiment_id": "4dc45c73-e353-4ddd-95fb-a6a0b5322b7b",
+      "worker_id": "worker-02",
+      "attempt": 1,
+      "status": "Completed",
+      "completion_s": 95.1627742,
+      "process_ms": 3767,
+      "result_message": "Python process completed successfully.",
+      "metrics": {
+        "n": 1536,
+        "r": 23,
+        "seed": 109591644,
+        "requested_p": 4,
+        "verified_p": 4,
+        "compute_s": 3.512961708009243,
+        "warmup_s": 0.0,
+        "checksum": 590136.256525178,
+        "numpy": "2.4.6",
+        "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+        "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+        "operation": "cblas_dgemm"
+      }
+    },
+    {
+      "task_id": "matrix-004",
+      "experiment_id": "c5b02949-fb43-4282-a533-1bfc91eda5fc",
+      "worker_id": "worker-03",
+      "attempt": 1,
+      "status": "Completed",
+      "completion_s": 93.8339118,
+      "process_ms": 3165,
+      "result_message": "Python process completed successfully.",
+      "metrics": {
+        "n": 768,
+        "r": 47,
+        "seed": 1539460854,
+        "requested_p": 1,
+        "verified_p": 1,
+        "compute_s": 2.946580207993975,
+        "warmup_s": 0.0,
+        "checksum": 147658.43448717985,
+        "numpy": "2.4.6",
+        "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+        "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+        "operation": "cblas_dgemm"
+      }
+    },
+    {
+      "task_id": "matrix-086",
+      "experiment_id": "6cf6476e-453a-4507-a4bb-b961154041a8",
+      "worker_id": "worker-02",
+      "attempt": 1,
+      "status": "Completed",
+      "completion_s": 60.2563499,
+      "process_ms": 6558,
+      "result_message": "Python process completed successfully.",
+      "metrics": {
+        "n": 1536,
+        "r": 23,
+        "seed": 382321111,
+        "requested_p": 2,
+        "verified_p": 2,
+        "compute_s": 6.27308612500201,
+        "warmup_s": 0.0,
+        "checksum": 589555.8815813846,
+        "numpy": "2.4.6",
+        "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+        "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+        "operation": "cblas_dgemm"
+      }
+    },
+    {
+      "task_id": "matrix-084",
+      "experiment_id": "cd6f0d75-0d51-445e-bb29-8f147c2bb863",
+      "worker_id": "worker-07",
+      "attempt": 1,
+      "status": "Completed",
+      "completion_s": 60.1661502,
+      "process_ms": 12193,
+      "result_message": "Python process completed successfully.",
+      "metrics": {
+        "n": 1536,
+        "r": 23,
+        "seed": 935203534,
+        "requested_p": 1,
+        "verified_p": 1,
+        "compute_s": 11.947057582990965,
+        "warmup_s": 0.0,
+        "checksum": 589944.6749249343,
+        "numpy": "2.4.6",
+        "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+        "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+        "operation": "cblas_dgemm"
+      }
+    },
+    {
+      "task_id": "matrix-057",
+      "experiment_id": "21c87fb3-760f-4c47-bbf5-76733c0618d7",
+      "worker_id": "worker-04",
+      "attempt": 1,
+      "status": "Completed",
+      "completion_s": 93.8930316,
+      "process_ms": 3142,
+      "result_message": "Python process completed successfully.",
+      "metrics": {
+        "n": 768,
+        "r": 47,
+        "seed": 1201668136,
+        "requested_p": 1,
+        "verified_p": 1,
+        "compute_s": 2.9272658330155537,
+        "warmup_s": 0.0,
+        "checksum": 147376.7493217369,
+        "numpy": "2.4.6",
+        "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+        "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+        "operation": "cblas_dgemm"
+      }
+    },
+    {
+      "task_id": "matrix-052",
+      "experiment_id": "45819bfd-7b9d-43b4-b07a-7e26c9295c24",
+      "worker_id": "worker-06",
+      "attempt": 1,
+      "status": "Completed",
+      "completion_s": 94.7306953,
+      "process_ms": 3244,
+      "result_message": "Python process completed successfully.",
+      "metrics": {
+        "n": 768,
+        "r": 47,
+        "seed": 1855122204,
+        "requested_p": 1,
+        "verified_p": 1,
+        "compute_s": 3.0149815840122756,
+        "warmup_s": 0.0,
+        "checksum": 147397.98844389964,
+        "numpy": "2.4.6",
+        "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+        "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+        "operation": "cblas_dgemm"
+      }
+    },
+    {
+      "task_id": "matrix-036",
+      "experiment_id": "a122e96a-210d-487c-a230-5ae2ed083286",
+      "worker_id": "worker-05",
+      "attempt": 1,
+      "status": "Completed",
+      "completion_s": 94.8496984,
+      "process_ms": 3294,
+      "result_message": "Python process completed successfully.",
+      "metrics": {
+        "n": 768,
+        "r": 47,
+        "seed": 2095816083,
+        "requested_p": 1,
+        "verified_p": 1,
+        "compute_s": 3.0562682909949217,
+        "warmup_s": 0.0,
+        "checksum": 147434.48412719453,
+        "numpy": "2.4.6",
+        "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+        "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+        "operation": "cblas_dgemm"
+      }
+    },
+    {
+      "task_id": "matrix-111",
+      "experiment_id": "92aeac56-0260-407b-9a5e-dfd95eb81a2f",
+      "worker_id": "worker-04",
+      "attempt": 1,
+      "status": "Completed",
+      "completion_s": 51.665198,
+      "process_ms": 8927,
+      "result_message": "Python process completed successfully.",
+      "metrics": {
+        "n": 2304,
+        "r": 18,
+        "seed": 1107547097,
+        "requested_p": 4,
+        "verified_p": 4,
+        "compute_s": 8.628592290973756,
+        "warmup_s": 0.0,
+        "checksum": 1327014.808144272,
+        "numpy": "2.4.6",
+        "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+        "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+        "operation": "cblas_dgemm"
+      }
+    },
+    {
+      "task_id": "matrix-112",
+      "experiment_id": "a7905866-3123-44f3-81ca-b4d2f813c2bb",
+      "worker_id": "worker-05",
+      "attempt": 1,
+      "status": "Completed",
+      "completion_s": 60.4995798,
+      "process_ms": 8810,
+      "result_message": "Python process completed successfully.",
+      "metrics": {
+        "n": 2304,
+        "r": 18,
+        "seed": 2102475660,
+        "requested_p": 4,
+        "verified_p": 4,
+        "compute_s": 8.511026374995708,
+        "warmup_s": 0.0,
+        "checksum": 1326634.4439390427,
+        "numpy": "2.4.6",
+        "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+        "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+        "operation": "cblas_dgemm"
+      }
+    },
+    {
+      "task_id": "matrix-074",
+      "experiment_id": "1667f8db-d488-4484-b5fb-58f14e0c7f02",
+      "worker_id": "worker-10",
+      "attempt": 1,
+      "status": "Completed",
+      "completion_s": 104.9658195,
+      "process_ms": 1689,
+      "result_message": "Python process completed successfully.",
+      "metrics": {
+        "n": 768,
+        "r": 47,
+        "seed": 1621789060,
+        "requested_p": 2,
+        "verified_p": 2,
+        "compute_s": 1.4746515830047429,
+        "warmup_s": 0.0,
+        "checksum": 147197.22924139688,
+        "numpy": "2.4.6",
+        "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+        "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+        "operation": "cblas_dgemm"
+      }
+    },
+    {
+      "task_id": "matrix-066",
+      "experiment_id": "4930dcd7-c41c-445a-bece-22db96109fd5",
+      "worker_id": "worker-02",
+      "attempt": 1,
+      "status": "Completed",
+      "completion_s": 105.120631,
+      "process_ms": 1700,
+      "result_message": "Python process completed successfully.",
+      "metrics": {
+        "n": 768,
+        "r": 47,
+        "seed": 1421395960,
+        "requested_p": 2,
+        "verified_p": 2,
+        "compute_s": 1.4776532920077443,
+        "warmup_s": 0.0,
+        "checksum": 147558.60889499984,
+        "numpy": "2.4.6",
+        "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+        "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+        "operation": "cblas_dgemm"
+      }
+    },
+    {
+      "task_id": "matrix-025",
+      "experiment_id": "4ffb6ae6-5920-43e1-984e-6bd2a36529e5",
+      "worker_id": "worker-01",
+      "attempt": 1,
+      "status": "Completed",
+      "completion_s": 95.8000403,
+      "process_ms": 3158,
+      "result_message": "Python process completed successfully.",
+      "metrics": {
+        "n": 768,
+        "r": 47,
+        "seed": 639277804,
+        "requested_p": 1,
+        "verified_p": 1,
+        "compute_s": 2.9430422500008717,
+        "warmup_s": 0.0,
+        "checksum": 147401.43832138134,
+        "numpy": "2.4.6",
+        "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+        "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+        "operation": "cblas_dgemm"
+      }
+    },
+    {
+      "task_id": "matrix-064",
+      "experiment_id": "19933968-f2c5-4f6d-b51e-b7e045501e26",
+      "worker_id": "worker-01",
+      "attempt": 1,
+      "status": "Completed",
+      "completion_s": 106.5461886,
+      "process_ms": 1644,
+      "result_message": "Python process completed successfully.",
+      "metrics": {
+        "n": 768,
+        "r": 47,
+        "seed": 547735883,
+        "requested_p": 2,
+        "verified_p": 2,
+        "compute_s": 1.4093521250179037,
+        "warmup_s": 0.0,
+        "checksum": 147603.15978760755,
+        "numpy": "2.4.6",
+        "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+        "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+        "operation": "cblas_dgemm"
+      }
+    },
+    {
+      "task_id": "matrix-044",
+      "experiment_id": "01ebf0d5-30ff-4af1-b6d7-a3783268a72b",
+      "worker_id": "worker-03",
+      "attempt": 1,
+      "status": "Completed",
+      "completion_s": 97.0482126,
+      "process_ms": 3154,
+      "result_message": "Python process completed successfully.",
+      "metrics": {
+        "n": 768,
+        "r": 47,
+        "seed": 808642324,
+        "requested_p": 1,
+        "verified_p": 1,
+        "compute_s": 2.936521374998847,
+        "warmup_s": 0.0,
+        "checksum": 147738.76820603333,
+        "numpy": "2.4.6",
+        "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+        "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+        "operation": "cblas_dgemm"
+      }
+    },
+    {
+      "task_id": "matrix-071",
+      "experiment_id": "69a587a0-5f3f-4e43-b317-e3bfe564684e",
+      "worker_id": "worker-03",
+      "attempt": 1,
+      "status": "Completed",
+      "completion_s": 106.6423053,
+      "process_ms": 1661,
+      "result_message": "Python process completed successfully.",
+      "metrics": {
+        "n": 768,
+        "r": 47,
+        "seed": 817128526,
+        "requested_p": 2,
+        "verified_p": 2,
+        "compute_s": 1.4367342080222443,
+        "warmup_s": 0.0,
+        "checksum": 147629.49809478113,
+        "numpy": "2.4.6",
+        "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+        "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+        "operation": "cblas_dgemm"
+      }
+    },
+    {
+      "task_id": "matrix-009",
+      "experiment_id": "c20b5d5b-47a1-4822-9f4a-f2cf195f38a6",
+      "worker_id": "worker-10",
+      "attempt": 1,
+      "status": "Completed",
+      "completion_s": 97.1272585,
+      "process_ms": 3173,
+      "result_message": "Python process completed successfully.",
+      "metrics": {
+        "n": 768,
+        "r": 47,
+        "seed": 1850418827,
+        "requested_p": 1,
+        "verified_p": 1,
+        "compute_s": 2.9492557080229744,
+        "warmup_s": 0.0,
+        "checksum": 147182.918322808,
+        "numpy": "2.4.6",
+        "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+        "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+        "operation": "cblas_dgemm"
+      }
+    },
+    {
+      "task_id": "matrix-008",
+      "experiment_id": "1e5a0ef8-ee9f-4256-8641-517aef947f7b",
+      "worker_id": "worker-08",
+      "attempt": 1,
+      "status": "Completed",
+      "completion_s": 97.9527507,
+      "process_ms": 3197,
+      "result_message": "Python process completed successfully.",
+      "metrics": {
+        "n": 768,
+        "r": 47,
+        "seed": 344496995,
+        "requested_p": 1,
+        "verified_p": 1,
+        "compute_s": 2.976234417001251,
+        "warmup_s": 0.0,
+        "checksum": 147816.59991566,
+        "numpy": "2.4.6",
+        "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+        "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+        "operation": "cblas_dgemm"
+      }
+    },
+    {
+      "task_id": "matrix-055",
+      "experiment_id": "348ea625-ff96-460b-8b7a-33910ef6745b",
+      "worker_id": "worker-04",
+      "attempt": 1,
+      "status": "Completed",
+      "completion_s": 98.0551814,
+      "process_ms": 3189,
+      "result_message": "Python process completed successfully.",
+      "metrics": {
+        "n": 768,
+        "r": 47,
+        "seed": 538416421,
+        "requested_p": 1,
+        "verified_p": 1,
+        "compute_s": 2.97464741699514,
+        "warmup_s": 0.0,
+        "checksum": 147389.7205556199,
+        "numpy": "2.4.6",
+        "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+        "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+        "operation": "cblas_dgemm"
+      }
+    },
+    {
+      "task_id": "matrix-043",
+      "experiment_id": "0c736207-63b1-4bc2-b30b-ad566adedb77",
+      "worker_id": "worker-01",
+      "attempt": 1,
+      "status": "Completed",
+      "completion_s": 99.0076548,
+      "process_ms": 3180,
+      "result_message": "Python process completed successfully.",
+      "metrics": {
+        "n": 768,
+        "r": 47,
+        "seed": 111016941,
+        "requested_p": 1,
+        "verified_p": 1,
+        "compute_s": 2.960383458994329,
+        "warmup_s": 0.0,
+        "checksum": 147504.073141682,
+        "numpy": "2.4.6",
+        "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+        "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+        "operation": "cblas_dgemm"
+      }
+    },
+    {
+      "task_id": "matrix-031",
+      "experiment_id": "2b1b8f30-a82c-4ac0-9e01-251bd9e9e41f",
+      "worker_id": "worker-09",
+      "attempt": 1,
+      "status": "Completed",
+      "completion_s": 100.1006651,
+      "process_ms": 3011,
+      "result_message": "Python process completed successfully.",
+      "metrics": {
+        "n": 768,
+        "r": 47,
+        "seed": 1292373985,
+        "requested_p": 1,
+        "verified_p": 1,
+        "compute_s": 2.7994447909877636,
+        "warmup_s": 0.0,
+        "checksum": 147226.8224874767,
+        "numpy": "2.4.6",
+        "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+        "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+        "operation": "cblas_dgemm"
+      }
+    },
+    {
+      "task_id": "matrix-105",
+      "experiment_id": "1199eee5-2605-450c-ab03-473540db5f58",
+      "worker_id": "worker-02",
+      "attempt": 1,
+      "status": "Completed",
+      "completion_s": 99.0451767,
+      "process_ms": 3857,
+      "result_message": "Python process completed successfully.",
+      "metrics": {
+        "n": 1536,
+        "r": 23,
+        "seed": 1777866434,
+        "requested_p": 4,
+        "verified_p": 4,
+        "compute_s": 3.5976390420109965,
+        "warmup_s": 0.0,
+        "checksum": 589777.7332806246,
+        "numpy": "2.4.6",
+        "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+        "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+        "operation": "cblas_dgemm"
+      }
+    },
+    {
+      "task_id": "matrix-035",
+      "experiment_id": "18a5f19a-b937-4174-bd52-4a45e3f71f8f",
+      "worker_id": "worker-03",
+      "attempt": 1,
+      "status": "Completed",
+      "completion_s": 100.170253,
+      "process_ms": 3002,
+      "result_message": "Python process completed successfully.",
+      "metrics": {
+        "n": 768,
+        "r": 47,
+        "seed": 1575858390,
+        "requested_p": 1,
+        "verified_p": 1,
+        "compute_s": 2.7923914169950876,
+        "warmup_s": 0.0,
+        "checksum": 147471.09266128702,
+        "numpy": "2.4.6",
+        "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+        "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+        "operation": "cblas_dgemm"
+      }
+    }
+  ],
+  "cpu": {
+    "options": {
+      "interval": 1,
+      "window": 3,
+      "stale": 3,
+      "grace": 2,
+      "condition": "steady",
+      "phase": 10,
+      "load_pid": 18825,
+      "gate": "/var/folders/tz/yhx353f17tj_1s1dj9_gw3x80000gn/T/tmp4k3vcsok/release",
+      "logical_cpus": 10
+    },
+    "logical_cpus": 10,
+    "samples": [
+      {
+        "elapsed_s": -3.0051567,
+        "host_busy": null,
+        "workload_busy": null,
+        "generator_busy": null,
+        "external": null,
+        "smoothed_external": null,
+        "effective_budget": 12,
+        "fallback": "baseline"
+      },
+      {
+        "elapsed_s": -2.0034422,
+        "host_busy": 3.0847112625368878,
+        "workload_busy": 0,
+        "generator_busy": 0.029971863240474208,
+        "external": 3.0847112625368878,
+        "smoothed_external": null,
+        "effective_budget": 12,
+        "fallback": "warming"
+      },
+      {
+        "elapsed_s": -1.0034144,
+        "host_busy": 2.299936291753077,
+        "workload_busy": 0,
+        "generator_busy": 0.029845881602412947,
+        "external": 2.299936291753077,
+        "smoothed_external": null,
+        "effective_budget": 12,
+        "fallback": "warming"
+      },
+      {
+        "elapsed_s": -0.0022215,
+        "host_busy": 2.157426621529332,
+        "workload_busy": 0,
+        "generator_busy": 0.03186748845976518,
+        "external": 2.157426621529332,
+        "smoothed_external": 2.514024725273099,
+        "effective_budget": 9,
+        "fallback": null
+      },
+      {
+        "elapsed_s": 0.9974667,
+        "host_busy": 9.462949601382602,
+        "workload_busy": 5.818212995323975,
+        "generator_busy": 2.408424705980854,
+        "external": 3.6447366060586273,
+        "smoothed_external": 2.7006998397803454,
+        "effective_budget": 9,
+        "fallback": null
+      },
+      {
+        "elapsed_s": 2.0009071,
+        "host_busy": 9.985646380774845,
+        "workload_busy": 6.785690314610644,
+        "generator_busy": 2.2682766561531693,
+        "external": 3.1999560661642015,
+        "smoothed_external": 3.00070643125072,
+        "effective_budget": 9,
+        "fallback": null
+      },
+      {
+        "elapsed_s": 2.9986275,
+        "host_busy": 10.012826239969947,
+        "workload_busy": 6.760832795523957,
+        "generator_busy": 2.254971241272061,
+        "external": 3.25199344444599,
+        "smoothed_external": 3.3655620388896064,
+        "effective_budget": 9,
+        "fallback": null
+      },
+      {
+        "elapsed_s": 3.9960772,
+        "host_busy": 9.945363660928168,
+        "workload_busy": 6.686971408182284,
+        "generator_busy": 2.227260014548436,
+        "external": 3.2583922527458835,
+        "smoothed_external": 3.236780587785358,
+        "effective_budget": 9,
+        "fallback": null
+      },
+      {
+        "elapsed_s": 4.9991857,
+        "host_busy": 9.490498784546864,
+        "workload_busy": 6.265266627023233,
+        "generator_busy": 2.101177199010211,
+        "external": 3.2252321575236307,
+        "smoothed_external": 3.2452059515718346,
+        "effective_budget": 9,
+        "fallback": null
+      },
+      {
+        "elapsed_s": 5.9996131,
+        "host_busy": 9.575908214407178,
+        "workload_busy": 5.910535178318304,
+        "generator_busy": 1.977708216945565,
+        "external": 3.665373036088874,
+        "smoothed_external": 3.3829991487861295,
+        "effective_budget": 9,
+        "fallback": null
+      },
+      {
+        "elapsed_s": 7.0004141,
+        "host_busy": 9.62229254367717,
+        "workload_busy": 6.510828951010241,
+        "generator_busy": 2.1772600979948398,
+        "external": 3.1114635926669294,
+        "smoothed_external": 3.3340229287598113,
+        "effective_budget": 9,
+        "fallback": null
+      },
+      {
+        "elapsed_s": 7.9995206,
+        "host_busy": 9.668639896615108,
+        "workload_busy": 6.47830226090034,
+        "generator_busy": 2.1489448387745944,
+        "external": 3.1903376357147684,
+        "smoothed_external": 3.3223914214901904,
+        "effective_budget": 9,
+        "fallback": null
+      },
+      {
+        "elapsed_s": 8.9982383,
+        "host_busy": 9.862647859621,
+        "workload_busy": 6.175013420543836,
+        "generator_busy": 2.4645338932647234,
+        "external": 3.687634439077163,
+        "smoothed_external": 3.3298118891529533,
+        "effective_budget": 9,
+        "fallback": null
+      },
+      {
+        "elapsed_s": 9.9990011,
+        "host_busy": 9.762554099977471,
+        "workload_busy": 6.689143648472645,
+        "generator_busy": 2.2406921074629724,
+        "external": 3.0734104515048264,
+        "smoothed_external": 3.317127508765586,
+        "effective_budget": 9,
+        "fallback": null
+      },
+      {
+        "elapsed_s": 10.9998842,
+        "host_busy": 9.661467957659397,
+        "workload_busy": 6.821634189846945,
+        "generator_busy": 2.2304848005393096,
+        "external": 2.8398337678124523,
+        "smoothed_external": 3.2002928861314808,
+        "effective_budget": 9,
+        "fallback": null
+      },
+      {
+        "elapsed_s": 11.9986568,
+        "host_busy": 9.661859933062013,
+        "workload_busy": 6.8054020476801975,
+        "generator_busy": 2.2658887117269755,
+        "external": 2.8564578853818157,
+        "smoothed_external": 2.923234034899698,
+        "effective_budget": 9,
+        "fallback": null
+      },
+      {
+        "elapsed_s": 12.9980468,
+        "host_busy": 9.755951130189416,
+        "workload_busy": 6.597915311673455,
+        "generator_busy": 2.181373346074441,
+        "external": 3.1580358185159616,
+        "smoothed_external": 2.9514424905700767,
+        "effective_budget": 9,
+        "fallback": null
+      },
+      {
+        "elapsed_s": 13.9991801,
+        "host_busy": 9.689020402062921,
+        "workload_busy": 6.74922278074485,
+        "generator_busy": 2.223770731340579,
+        "external": 2.939797621318071,
+        "smoothed_external": 2.9847637750719493,
+        "effective_budget": 9,
+        "fallback": null
+      },
+      {
+        "elapsed_s": 14.9978714,
+        "host_busy": 9.662645504194623,
+        "workload_busy": 6.829256739962267,
+        "generator_busy": 2.2970746816358587,
+        "external": 2.8333887642323567,
+        "smoothed_external": 2.97707406802213,
+        "effective_budget": 9,
+        "fallback": null
+      },
+      {
+        "elapsed_s": 16.0024433,
+        "host_busy": 9.765354751146381,
+        "workload_busy": 6.817638412372974,
+        "generator_busy": 2.2729056466313953,
+        "external": 2.9477163387734073,
+        "smoothed_external": 2.9069675747746118,
+        "effective_budget": 9,
+        "fallback": null
+      },
+      {
+        "elapsed_s": 16.9976346,
+        "host_busy": 9.988029437156785,
+        "workload_busy": 6.2006856119019504,
+        "generator_busy": 2.2826195576669503,
+        "external": 3.787343825254834,
+        "smoothed_external": 3.189482976086866,
+        "effective_budget": 9,
+        "fallback": null
+      },
+      {
+        "elapsed_s": 17.9971807,
+        "host_busy": 9.924505725583115,
+        "workload_busy": 6.588074610873332,
+        "generator_busy": 2.194323889712598,
+        "external": 3.336431114709783,
+        "smoothed_external": 3.3571637595793415,
+        "effective_budget": 9,
+        "fallback": null
+      },
+      {
+        "elapsed_s": 18.9995235,
+        "host_busy": 9.72721206030632,
+        "workload_busy": 6.868289200556531,
+        "generator_busy": 2.3217554069414885,
+        "external": 2.8589228597497884,
+        "smoothed_external": 3.327565933238135,
+        "effective_budget": 9,
+        "fallback": null
+      },
+      {
+        "elapsed_s": 20.0002679,
+        "host_busy": 9.692784691087596,
+        "workload_busy": 6.862298330123057,
+        "generator_busy": 2.299951749251193,
+        "external": 2.8304863609645388,
+        "smoothed_external": 3.00861344514137,
+        "effective_budget": 9,
+        "fallback": null
+      },
+      {
+        "elapsed_s": 21.0029796,
+        "host_busy": 9.643848775259828,
+        "workload_busy": 6.854587373751919,
+        "generator_busy": 2.2790361875701635,
+        "external": 2.7892614015079094,
+        "smoothed_external": 2.826223540740745,
+        "effective_budget": 9,
+        "fallback": null
+      },
+      {
+        "elapsed_s": 21.9961391,
+        "host_busy": 9.756741969116264,
+        "workload_busy": 6.9173742402277085,
+        "generator_busy": 2.3037878746687954,
+        "external": 2.839367728888556,
+        "smoothed_external": 2.819705163787001,
+        "effective_budget": 9,
+        "fallback": null
+      },
+      {
+        "elapsed_s": 23.000827,
+        "host_busy": 9.634832867024794,
+        "workload_busy": 6.85388620850979,
+        "generator_busy": 2.2785743960885707,
+        "external": 2.7809466585150044,
+        "smoothed_external": 2.8031919296371566,
+        "effective_budget": 9,
+        "fallback": null
+      },
+      {
+        "elapsed_s": 23.9986935,
+        "host_busy": 9.740782934470149,
+        "workload_busy": 6.794793245869394,
+        "generator_busy": 2.297744676374846,
+        "external": 2.945989688600755,
+        "smoothed_external": 2.855434692001438,
+        "effective_budget": 9,
+        "fallback": null
+      },
+      {
+        "elapsed_s": 24.9986517,
+        "host_busy": 9.86041315129707,
+        "workload_busy": 6.6626399979492525,
+        "generator_busy": 2.254196325826056,
+        "external": 3.1977731533478178,
+        "smoothed_external": 2.9749031668211927,
+        "effective_budget": 9,
+        "fallback": null
+      },
+      {
+        "elapsed_s": 25.9965904,
+        "host_busy": 9.740077221177177,
+        "workload_busy": 6.663865058378161,
+        "generator_busy": 2.3993767937182224,
+        "external": 3.076212162799016,
+        "smoothed_external": 3.0733250015825297,
+        "effective_budget": 9,
+        "fallback": null
+      },
+      {
+        "elapsed_s": 26.9969572,
+        "host_busy": 9.586484636080456,
+        "workload_busy": 6.812408598100402,
+        "generator_busy": 2.259634558674002,
+        "external": 2.7740760379800546,
+        "smoothed_external": 3.0160204513756295,
+        "effective_budget": 9,
+        "fallback": null
+      },
+      {
+        "elapsed_s": 27.9964081,
+        "host_busy": 9.695324672312363,
+        "workload_busy": 6.875072456459754,
+        "generator_busy": 2.294725680010132,
+        "external": 2.8202522158526095,
+        "smoothed_external": 2.890180138877227,
+        "effective_budget": 9,
+        "fallback": null
+      },
+      {
+        "elapsed_s": 28.9987933,
+        "host_busy": 9.617061385197996,
+        "workload_busy": 6.787084487746498,
+        "generator_busy": 2.2687067639599374,
+        "external": 2.8299768974514974,
+        "smoothed_external": 2.8081017170947207,
+        "effective_budget": 9,
+        "fallback": null
+      },
+      {
+        "elapsed_s": 29.9972355,
+        "host_busy": 9.614979176035062,
+        "workload_busy": 6.747209394181852,
+        "generator_busy": 2.2533723204046185,
+        "external": 2.8677697818532097,
+        "smoothed_external": 2.8393329650524386,
+        "effective_budget": 9,
+        "fallback": null
+      },
+      {
+        "elapsed_s": 30.9992211,
+        "host_busy": 9.860422131861846,
+        "workload_busy": 6.690243729408587,
+        "generator_busy": 2.221569074602384,
+        "external": 3.170178402453259,
+        "smoothed_external": 2.9559750272526557,
+        "effective_budget": 9,
+        "fallback": null
+      },
+      {
+        "elapsed_s": 31.998958,
+        "host_busy": 9.602526424708161,
+        "workload_busy": 6.832833093386869,
+        "generator_busy": 2.272564536729604,
+        "external": 2.7696933313212924,
+        "smoothed_external": 2.9358805052092536,
+        "effective_budget": 9,
+        "fallback": null
+      },
+      {
+        "elapsed_s": 32.9977014,
+        "host_busy": 9.642117248751163,
+        "workload_busy": 6.884498666140427,
+        "generator_busy": 2.2976754053485653,
+        "external": 2.7576185826107356,
+        "smoothed_external": 2.899163438795096,
+        "effective_budget": 9,
+        "fallback": null
+      },
+      {
+        "elapsed_s": 33.9978474,
+        "host_busy": 9.468617581834216,
+        "workload_busy": 5.995404879220965,
+        "generator_busy": 2.4737668717034054,
+        "external": 3.4732127026132513,
+        "smoothed_external": 3.0001748721817596,
+        "effective_budget": 9,
+        "fallback": null
+      },
+      {
+        "elapsed_s": 35.0172266,
+        "host_busy": 9.927611817816691,
+        "workload_busy": 6.623951776135102,
+        "generator_busy": 2.4362508593057606,
+        "external": 3.3036600416815896,
+        "smoothed_external": 3.1781637756351926,
+        "effective_budget": 9,
+        "fallback": null
+      },
+      {
+        "elapsed_s": 36.0007516,
+        "host_busy": 9.750641824047694,
+        "workload_busy": 6.861566050685016,
+        "generator_busy": 2.3205490455250284,
+        "external": 2.889075773362678,
+        "smoothed_external": 3.221982839219173,
+        "effective_budget": 9,
+        "fallback": null
+      },
+      {
+        "elapsed_s": 37.0047485,
+        "host_busy": 9.751027094915193,
+        "workload_busy": 6.749856797352335,
+        "generator_busy": 2.297439178424996,
+        "external": 3.001170297562858,
+        "smoothed_external": 3.0646353708690417,
+        "effective_budget": 9,
+        "fallback": null
+      },
+      {
+        "elapsed_s": 37.9974026,
+        "host_busy": 9.701265496340776,
+        "workload_busy": 6.843156830073728,
+        "generator_busy": 2.231446371713281,
+        "external": 2.8581086662670474,
+        "smoothed_external": 2.916118245730861,
+        "effective_budget": 9,
+        "fallback": null
+      },
+      {
+        "elapsed_s": 38.9976432,
+        "host_busy": 9.667674924164439,
+        "workload_busy": 6.792377766480505,
+        "generator_busy": 2.2712505559079634,
+        "external": 2.875297157683934,
+        "smoothed_external": 2.9115253738379465,
+        "effective_budget": 9,
+        "fallback": null
+      },
+      {
+        "elapsed_s": 39.9964907,
+        "host_busy": 9.651122919178324,
+        "workload_busy": 6.827007292571362,
+        "generator_busy": 2.2674637102594017,
+        "external": 2.824115626606962,
+        "smoothed_external": 2.8525071501859807,
+        "effective_budget": 9,
+        "fallback": null
+      },
+      {
+        "elapsed_s": 40.997635,
+        "host_busy": 9.69890251573335,
+        "workload_busy": 6.71554449066043,
+        "generator_busy": 2.312034153854504,
+        "external": 2.9833580250729197,
+        "smoothed_external": 2.8942569364546054,
+        "effective_budget": 9,
+        "fallback": null
+      },
+      {
+        "elapsed_s": 42.0098291,
+        "host_busy": 9.681938442619062,
+        "workload_busy": 6.885089345520754,
+        "generator_busy": 2.2670438753177025,
+        "external": 2.796849097098308,
+        "smoothed_external": 2.868107582926063,
+        "effective_budget": 9,
+        "fallback": null
+      },
+      {
+        "elapsed_s": 42.9998649,
+        "host_busy": 9.767323565484002,
+        "workload_busy": 6.4752302812349285,
+        "generator_busy": 2.4363135403790412,
+        "external": 3.2920932842490735,
+        "smoothed_external": 3.0241001354734336,
+        "effective_budget": 9,
+        "fallback": null
+      },
+      {
+        "elapsed_s": 43.9993612,
+        "host_busy": 9.965019380253684,
+        "workload_busy": 6.656525225089194,
+        "generator_busy": 2.1424955083208803,
+        "external": 3.3084941551644906,
+        "smoothed_external": 3.1324788455039574,
+        "effective_budget": 9,
+        "fallback": null
+      },
+      {
+        "elapsed_s": 44.998604,
+        "host_busy": 9.66732106224393,
+        "workload_busy": 6.8550532484917515,
+        "generator_busy": 2.2774771084141983,
+        "external": 2.812267813752179,
+        "smoothed_external": 3.137618417721914,
+        "effective_budget": 9,
+        "fallback": null
+      },
+      {
+        "elapsed_s": 46.0008653,
+        "host_busy": 9.63820608839641,
+        "workload_busy": 6.854097764135766,
+        "generator_busy": 2.2701745562933198,
+        "external": 2.784108324260645,
+        "smoothed_external": 2.9682900977257716,
+        "effective_budget": 9,
+        "fallback": null
+      },
+      {
+        "elapsed_s": 46.9981632,
+        "host_busy": 9.656091725456012,
+        "workload_busy": 6.744518739084834,
+        "generator_busy": 2.2781629491047637,
+        "external": 2.911572986371178,
+        "smoothed_external": 2.835983041461334,
+        "effective_budget": 9,
+        "fallback": null
+      },
+      {
+        "elapsed_s": 47.9965464,
+        "host_busy": 9.805854104924991,
+        "workload_busy": 6.761267826154678,
+        "generator_busy": 2.2884579371260894,
+        "external": 3.0445862787703133,
+        "smoothed_external": 2.9134225298007124,
+        "effective_budget": 9,
+        "fallback": null
+      },
+      {
+        "elapsed_s": 49.0008274,
+        "host_busy": 9.678567022405844,
+        "workload_busy": 6.884495081671525,
+        "generator_busy": 2.263259296610473,
+        "external": 2.7940719407343186,
+        "smoothed_external": 2.9167437352919365,
+        "effective_budget": 9,
+        "fallback": null
+      },
+      {
+        "elapsed_s": 50.0004946,
+        "host_busy": 9.683222576495577,
+        "workload_busy": 6.747104853161789,
+        "generator_busy": 2.324979003012194,
+        "external": 2.936117723333788,
+        "smoothed_external": 2.9249253142794736,
+        "effective_budget": 9,
+        "fallback": null
+      },
+      {
+        "elapsed_s": 50.9979472,
+        "host_busy": 9.77490058174193,
+        "workload_busy": 6.712367626959595,
+        "generator_busy": 2.213287712452036,
+        "external": 3.062532954782335,
+        "smoothed_external": 2.9309075396168134,
+        "effective_budget": 9,
+        "fallback": null
+      },
+      {
+        "elapsed_s": 51.9969837,
+        "host_busy": 9.78943211784438,
+        "workload_busy": 6.51704513131739,
+        "generator_busy": 2.4890607099940736,
+        "external": 3.272386986526989,
+        "smoothed_external": 3.0903458882143706,
+        "effective_budget": 9,
+        "fallback": null
+      },
+      {
+        "elapsed_s": 53.0009605,
+        "host_busy": 9.601816456482373,
+        "workload_busy": 6.773468821537363,
+        "generator_busy": 2.177843453272703,
+        "external": 2.8283476349450103,
+        "smoothed_external": 3.0544225254181114,
+        "effective_budget": 9,
+        "fallback": null
+      },
+      {
+        "elapsed_s": 54.0004189,
+        "host_busy": 9.795305137270494,
+        "workload_busy": 6.8237106383483805,
+        "generator_busy": 2.3289757065760286,
+        "external": 2.971594498922114,
+        "smoothed_external": 3.0241097067980376,
+        "effective_budget": 9,
+        "fallback": null
+      },
+      {
+        "elapsed_s": 54.9978172,
+        "host_busy": 9.685197979586984,
+        "workload_busy": 6.845266287633895,
+        "generator_busy": 2.2408014347594665,
+        "external": 2.8399316919530895,
+        "smoothed_external": 2.8799579419400714,
+        "effective_budget": 9,
+        "fallback": null
+      },
+      {
+        "elapsed_s": 56.0000026,
+        "host_busy": 9.698805200995428,
+        "workload_busy": 6.875542086212323,
+        "generator_busy": 2.2905103809977456,
+        "external": 2.8232631147831055,
+        "smoothed_external": 2.878263101886103,
+        "effective_budget": 9,
+        "fallback": null
+      },
+      {
+        "elapsed_s": 56.9962733,
+        "host_busy": 9.746348030336186,
+        "workload_busy": 6.728158828869753,
+        "generator_busy": 2.2288802192229036,
+        "external": 3.0181892014664333,
+        "smoothed_external": 2.893794669400876,
+        "effective_budget": 9,
+        "fallback": null
+      },
+      {
+        "elapsed_s": 58.0003021,
+        "host_busy": 9.581399416167429,
+        "workload_busy": 6.839771072613073,
+        "generator_busy": 2.256624154933684,
+        "external": 2.741628343554356,
+        "smoothed_external": 2.861026886601298,
+        "effective_budget": 9,
+        "fallback": null
+      },
+      {
+        "elapsed_s": 59.0018224,
+        "host_busy": 9.595412095007095,
+        "workload_busy": 6.7215158627671565,
+        "generator_busy": 2.2512828746456766,
+        "external": 2.8738962322399386,
+        "smoothed_external": 2.877904592420242,
+        "effective_budget": 9,
+        "fallback": null
+      },
+      {
+        "elapsed_s": 59.9995928,
+        "host_busy": 9.681587034614573,
+        "workload_busy": 6.636523748669083,
+        "generator_busy": 2.2663622245186876,
+        "external": 3.0450632859454903,
+        "smoothed_external": 2.886862620579928,
+        "effective_budget": 9,
+        "fallback": null
+      },
+      {
+        "elapsed_s": 60.9995797,
+        "host_busy": 9.990130870705093,
+        "workload_busy": 6.274346027266307,
+        "generator_busy": 2.2977225584988465,
+        "external": 3.7157848434387857,
+        "smoothed_external": 3.211581453874738,
+        "effective_budget": 9,
+        "fallback": null
+      },
+      {
+        "elapsed_s": 61.9998724,
+        "host_busy": 9.977080706195844,
+        "workload_busy": 6.725213285925872,
+        "generator_busy": 2.226735498859679,
+        "external": 3.2518674202699716,
+        "smoothed_external": 3.3375718498847493,
+        "effective_budget": 9,
+        "fallback": null
+      },
+      {
+        "elapsed_s": 63.0008588,
+        "host_busy": 10.040096448851212,
+        "workload_busy": 6.8732669178455765,
+        "generator_busy": 2.297584287858461,
+        "external": 3.166829531005636,
+        "smoothed_external": 3.378160598238131,
+        "effective_budget": 9,
+        "fallback": null
+      },
+      {
+        "elapsed_s": 63.9966585,
+        "host_busy": 9.750957923654369,
+        "workload_busy": 6.7851235663614675,
+        "generator_busy": 2.237592073411844,
+        "external": 2.965834357292901,
+        "smoothed_external": 3.1281771028561693,
+        "effective_budget": 9,
+        "fallback": null
+      },
+      {
+        "elapsed_s": 64.9969255,
+        "host_busy": 9.797384098463173,
+        "workload_busy": 6.316199283124741,
+        "generator_busy": 2.291328798544103,
+        "external": 3.481184815338432,
+        "smoothed_external": 3.204616234545656,
+        "effective_budget": 9,
+        "fallback": null
+      },
+      {
+        "elapsed_s": 65.9970594,
+        "host_busy": 9.888675906281014,
+        "workload_busy": 6.806986502840612,
+        "generator_busy": 2.251097119762338,
+        "external": 3.081689403440402,
+        "smoothed_external": 3.176236192023912,
+        "effective_budget": 9,
+        "fallback": null
+      },
+      {
+        "elapsed_s": 66.9962814,
+        "host_busy": 9.697545660280593,
+        "workload_busy": 6.895660972135717,
+        "generator_busy": 2.282247608530854,
+        "external": 2.8018846881448756,
+        "smoothed_external": 3.1215863023079033,
+        "effective_budget": 9,
+        "fallback": null
+      },
+      {
+        "elapsed_s": 68.0065097,
+        "host_busy": 9.581993454541276,
+        "workload_busy": 6.925114832140555,
+        "generator_busy": 2.287709268724318,
+        "external": 2.656878622400721,
+        "smoothed_external": 2.8468175713286663,
+        "effective_budget": 9,
+        "fallback": null
+      },
+      {
+        "elapsed_s": 68.9972625,
+        "host_busy": 9.91165505664681,
+        "workload_busy": 6.513317701448846,
+        "generator_busy": 2.456713386696103,
+        "external": 3.398337355197963,
+        "smoothed_external": 2.9523668885811865,
+        "effective_budget": 9,
+        "fallback": null
+      },
+      {
+        "elapsed_s": 69.9982207,
+        "host_busy": 9.73067606618407,
+        "workload_busy": 6.8744144777141605,
+        "generator_busy": 2.2536846443737715,
+        "external": 2.85626158846991,
+        "smoothed_external": 2.9704925220228646,
+        "effective_budget": 9,
+        "fallback": null
+      },
+      {
+        "elapsed_s": 70.9973773,
+        "host_busy": 9.738214183674406,
+        "workload_busy": 6.916460951479188,
+        "generator_busy": 2.294621805159307,
+        "external": 2.821753232195219,
+        "smoothed_external": 3.0254507252876977,
+        "effective_budget": 9,
+        "fallback": null
+      },
+      {
+        "elapsed_s": 71.9975073,
+        "host_busy": 9.808724865765123,
+        "workload_busy": 6.873528399641405,
+        "generator_busy": 2.274612550368462,
+        "external": 2.9351964661237187,
+        "smoothed_external": 2.8710704289296154,
+        "effective_budget": 9,
+        "fallback": null
+      },
+      {
+        "elapsed_s": 72.9977282,
+        "host_busy": 9.907812355035501,
+        "workload_busy": 6.305739234443685,
+        "generator_busy": 2.4809476234314074,
+        "external": 3.6020731205918164,
+        "smoothed_external": 3.119674272970251,
+        "effective_budget": 9,
+        "fallback": null
+      },
+      {
+        "elapsed_s": 73.9967354,
+        "host_busy": 9.669599978862507,
+        "workload_busy": 6.886819150719514,
+        "generator_busy": 2.295780500881295,
+        "external": 2.782780828142993,
+        "smoothed_external": 3.1066834716195095,
+        "effective_budget": 9,
+        "fallback": null
+      },
+      {
+        "elapsed_s": 74.9983698,
+        "host_busy": 9.82394472712896,
+        "workload_busy": 6.84371768718383,
+        "generator_busy": 2.260275448501183,
+        "external": 2.980227039945131,
+        "smoothed_external": 3.1216936628933136,
+        "effective_budget": 9,
+        "fallback": null
+      },
+      {
+        "elapsed_s": 75.9994416,
+        "host_busy": 9.839455056022281,
+        "workload_busy": 6.904089429025612,
+        "generator_busy": 2.2537683864202642,
+        "external": 2.935365626996669,
+        "smoothed_external": 2.899457831694931,
+        "effective_budget": 9,
+        "fallback": null
+      },
+      {
+        "elapsed_s": 76.9979457,
+        "host_busy": 9.764606875424947,
+        "workload_busy": 6.5755804941946225,
+        "generator_busy": 2.391123256279067,
+        "external": 3.189026381230325,
+        "smoothed_external": 3.034873016057375,
+        "effective_budget": 9,
+        "fallback": null
+      },
+      {
+        "elapsed_s": 78.0026109,
+        "host_busy": 9.774400466948576,
+        "workload_busy": 6.944804182859404,
+        "generator_busy": 2.329995770398609,
+        "external": 2.829596284089172,
+        "smoothed_external": 2.9846627641053884,
+        "effective_budget": 9,
+        "fallback": null
+      },
+      {
+        "elapsed_s": 78.9973532,
+        "host_busy": 9.771375940420707,
+        "workload_busy": 6.941542910984009,
+        "generator_busy": 2.2672063927719144,
+        "external": 2.8298330294366982,
+        "smoothed_external": 2.9494852315853985,
+        "effective_budget": 9,
+        "fallback": null
+      },
+      {
+        "elapsed_s": 79.9996932,
+        "host_busy": 9.72723826246583,
+        "workload_busy": 6.8005119686600395,
+        "generator_busy": 2.3211929501632786,
+        "external": 2.9267262938057907,
+        "smoothed_external": 2.862051869110554,
+        "effective_budget": 9,
+        "fallback": null
+      },
+      {
+        "elapsed_s": 80.9961321,
+        "host_busy": 9.804917271376349,
+        "workload_busy": 6.661204548304063,
+        "generator_busy": 2.365762996851037,
+        "external": 3.1437127230722854,
+        "smoothed_external": 2.966757348771592,
+        "effective_budget": 9,
+        "fallback": null
+      },
+      {
+        "elapsed_s": 81.9969487,
+        "host_busy": 9.841963052976759,
+        "workload_busy": 6.956099315965226,
+        "generator_busy": 2.3138647480467425,
+        "external": 2.885863737011533,
+        "smoothed_external": 2.9854342512965366,
+        "effective_budget": 9,
+        "fallback": null
+      },
+      {
+        "elapsed_s": 82.9964028,
+        "host_busy": 9.77533635610632,
+        "workload_busy": 7.015057019627032,
+        "generator_busy": 2.2922184887396924,
+        "external": 2.7602793364792886,
+        "smoothed_external": 2.929951932187702,
+        "effective_budget": 9,
+        "fallback": null
+      },
+      {
+        "elapsed_s": 83.9984318,
+        "host_busy": 9.720278526887485,
+        "workload_busy": 6.641711090701409,
+        "generator_busy": 2.479962861683249,
+        "external": 3.078567436186076,
+        "smoothed_external": 2.908236836558966,
+        "effective_budget": 9,
+        "fallback": null
+      },
+      {
+        "elapsed_s": 85.0032156,
+        "host_busy": 9.842913470553535,
+        "workload_busy": 7.025423031302829,
+        "generator_busy": 2.2622749789556784,
+        "external": 2.8174904392507063,
+        "smoothed_external": 2.885445737305357,
+        "effective_budget": 9,
+        "fallback": null
+      },
+      {
+        "elapsed_s": 86.000098,
+        "host_busy": 9.750398818397281,
+        "workload_busy": 6.859622704037805,
+        "generator_busy": 2.248812581318103,
+        "external": 2.8907761143594763,
+        "smoothed_external": 2.9289446632654195,
+        "effective_budget": 9,
+        "fallback": null
+      },
+      {
+        "elapsed_s": 86.9967031,
+        "host_busy": 9.69290742069676,
+        "workload_busy": 6.934432857885779,
+        "generator_busy": 2.31159570073735,
+        "external": 2.7584745628109806,
+        "smoothed_external": 2.8222470388070544,
+        "effective_budget": 9,
+        "fallback": null
+      },
+      {
+        "elapsed_s": 88.0009746,
+        "host_busy": 9.847935528169842,
+        "workload_busy": 6.588941827212607,
+        "generator_busy": 2.442419449563115,
+        "external": 3.2589937009572347,
+        "smoothed_external": 2.9694147927092303,
+        "effective_budget": 9,
+        "fallback": null
+      },
+      {
+        "elapsed_s": 89.0013122,
+        "host_busy": 9.836679137119816,
+        "workload_busy": 6.940527669525447,
+        "generator_busy": 2.2801645914339472,
+        "external": 2.896151467594369,
+        "smoothed_external": 2.9712065771208613,
+        "effective_budget": 9,
+        "fallback": null
+      },
+      {
+        "elapsed_s": 89.9972839,
+        "host_busy": 9.779395316111213,
+        "workload_busy": 6.907648312127189,
+        "generator_busy": 2.282705400435101,
+        "external": 2.871747003984024,
+        "smoothed_external": 3.0089640575118763,
+        "effective_budget": 9,
+        "fallback": null
+      },
+      {
+        "elapsed_s": 91.0007331,
+        "host_busy": 9.80617751313595,
+        "workload_busy": 6.827269855209111,
+        "generator_busy": 2.235207421083959,
+        "external": 2.9789076579268388,
+        "smoothed_external": 2.9156020431684104,
+        "effective_budget": 9,
+        "fallback": null
+      },
+      {
+        "elapsed_s": 91.996003,
+        "host_busy": 9.916907966367056,
+        "workload_busy": 6.487500149456941,
+        "generator_busy": 2.3471524323871007,
+        "external": 3.429407816910115,
+        "smoothed_external": 3.0933541596069922,
+        "effective_budget": 9,
+        "fallback": null
+      },
+      {
+        "elapsed_s": 92.9958321,
+        "host_busy": 9.771669978388829,
+        "workload_busy": 7.028995755374621,
+        "generator_busy": 2.323345268039623,
+        "external": 2.742674223014208,
+        "smoothed_external": 3.050329899283721,
+        "effective_budget": 9,
+        "fallback": null
+      },
+      {
+        "elapsed_s": 94.0002929,
+        "host_busy": 9.726611531299804,
+        "workload_busy": 6.862776941286955,
+        "generator_busy": 2.334128378462695,
+        "external": 2.863834590012849,
+        "smoothed_external": 3.011972209979058,
+        "effective_budget": 9,
+        "fallback": null
+      },
+      {
+        "elapsed_s": 94.9977826,
+        "host_busy": 9.794587352620807,
+        "workload_busy": 6.8940833424144525,
+        "generator_busy": 2.236592476426915,
+        "external": 2.9005040102063546,
+        "smoothed_external": 2.835670941077804,
+        "effective_budget": 9,
+        "fallback": null
+      },
+      {
+        "elapsed_s": 95.9994707,
+        "host_busy": 9.883316960964073,
+        "workload_busy": 6.53387877096789,
+        "generator_busy": 2.408803897354583,
+        "external": 3.3494381899961834,
+        "smoothed_external": 3.037925596738462,
+        "effective_budget": 9,
+        "fallback": null
+      },
+      {
+        "elapsed_s": 97.0018786,
+        "host_busy": 9.596892601988275,
+        "workload_busy": 6.902004478616454,
+        "generator_busy": 2.2866812123103446,
+        "external": 2.694888123371821,
+        "smoothed_external": 2.981610107858119,
+        "effective_budget": 9,
+        "fallback": null
+      },
+      {
+        "elapsed_s": 98.0052254,
+        "host_busy": 9.906844762635217,
+        "workload_busy": 6.827340273639543,
+        "generator_busy": 2.2589315753633845,
+        "external": 3.0795044889956733,
+        "smoothed_external": 3.041276934121226,
+        "effective_budget": 9,
+        "fallback": null
+      },
+      {
+        "elapsed_s": 98.9989068,
+        "host_busy": 9.801934503372802,
+        "workload_busy": 6.869065250693008,
+        "generator_busy": 2.3046188395999008,
+        "external": 2.9328692526797946,
+        "smoothed_external": 2.9024206216824298,
+        "effective_budget": 9,
+        "fallback": null
+      },
+      {
+        "elapsed_s": 99.9987667,
+        "host_busy": 9.921390978998957,
+        "workload_busy": 6.1828040374594035,
+        "generator_busy": 2.5592513070332594,
+        "external": 3.7385869415395536,
+        "smoothed_external": 3.2503202277383405,
+        "effective_budget": 9,
+        "fallback": null
+      },
+      {
+        "elapsed_s": 100.9958088,
+        "host_busy": 9.909310750272889,
+        "workload_busy": 5.742405628274468,
+        "generator_busy": 2.657122042957508,
+        "external": 4.166905121998421,
+        "smoothed_external": 3.612787105405923,
+        "effective_budget": 8,
+        "fallback": null
+      },
+      {
+        "elapsed_s": 101.999083,
+        "host_busy": 9.997267945020045,
+        "workload_busy": 6.204571072185902,
+        "generator_busy": 2.630111045093939,
+        "external": 3.792696872834143,
+        "smoothed_external": 3.8993963121240394,
+        "effective_budget": 8,
+        "fallback": null
+      },
+      {
+        "elapsed_s": 102.9997683,
+        "host_busy": 10.003144844847139,
+        "workload_busy": 6.933112279821367,
+        "generator_busy": 2.599623769497415,
+        "external": 3.0700325650257714,
+        "smoothed_external": 3.676544853286112,
+        "effective_budget": 8,
+        "fallback": null
+      },
+      {
+        "elapsed_s": 104.0030654,
+        "host_busy": 9.937236929843468,
+        "workload_busy": 6.252301952130431,
+        "generator_busy": 2.6498152673967272,
+        "external": 3.684934977713038,
+        "smoothed_external": 3.5158881385243177,
+        "effective_budget": 8,
+        "fallback": null
+      },
+      {
+        "elapsed_s": 104.9978386,
+        "host_busy": 9.941964660874323,
+        "workload_busy": 6.638251018758166,
+        "generator_busy": 2.649623552383595,
+        "external": 3.303713642116157,
+        "smoothed_external": 3.352893728284988,
+        "effective_budget": 9,
+        "fallback": null
+      },
+      {
+        "elapsed_s": 106.0011671,
+        "host_busy": 9.777456713073876,
+        "workload_busy": 6.070698163233588,
+        "generator_busy": 2.635801788992203,
+        "external": 3.7067585498402886,
+        "smoothed_external": 3.565135723223161,
+        "effective_budget": 8,
+        "fallback": null
+      },
+      {
+        "elapsed_s": 107.0022665,
+        "host_busy": 9.879139861564154,
+        "workload_busy": 5.8829868741957645,
+        "generator_busy": 2.6970359400577624,
+        "external": 3.996152987368389,
+        "smoothed_external": 3.6688750597749453,
+        "effective_budget": 8,
+        "fallback": null
+      },
+      {
+        "elapsed_s": 107.6150586,
+        "host_busy": 9.513830220701596,
+        "workload_busy": 5.353533645424092,
+        "generator_busy": 2.76982839421937,
+        "external": 4.1602965752775045,
+        "smoothed_external": 3.9544027041620606,
+        "effective_budget": 8,
+        "fallback": null
+      }
+    ],
+    "dispatch": [
+      {
+        "seq": 1,
+        "effective": 9,
+        "fallback": null,
+        "solo": false
+      },
+      {
+        "seq": 2,
+        "effective": 9,
+        "fallback": null,
+        "solo": false
+      },
+      {
+        "seq": 3,
+        "effective": 9,
+        "fallback": null,
+        "solo": false
+      },
+      {
+        "seq": 4,
+        "effective": 9,
+        "fallback": null,
+        "solo": false
+      },
+      {
+        "seq": 6,
+        "effective": 9,
+        "fallback": null,
+        "solo": false
+      },
+      {
+        "seq": 8,
+        "effective": 9,
+        "fallback": null,
+        "solo": false
+      },
+      {
+        "seq": 11,
+        "effective": 9,
+        "fallback": null,
+        "solo": false
+      },
+      {
+        "seq": 13,
+        "effective": 9,
+        "fallback": null,
+        "solo": false
+      },
+      {
+        "seq": 14,
+        "effective": 9,
+        "fallback": null,
+        "solo": false
+      },
+      {
+        "seq": 16,
+        "effective": 9,
+        "fallback": null,
+        "solo": false
+      },
+      {
+        "seq": 18,
+        "effective": 9,
+        "fallback": null,
+        "solo": false
+      },
+      {
+        "seq": 20,
+        "effective": 9,
+        "fallback": null,
+        "solo": false
+      },
+      {
+        "seq": 22,
+        "effective": 9,
+        "fallback": null,
+        "solo": false
+      },
+      {
+        "seq": 25,
+        "effective": 9,
+        "fallback": null,
+        "solo": false
+      },
+      {
+        "seq": 26,
+        "effective": 9,
+        "fallback": null,
+        "solo": false
+      },
+      {
+        "seq": 28,
+        "effective": 9,
+        "fallback": null,
+        "solo": false
+      },
+      {
+        "seq": 30,
+        "effective": 9,
+        "fallback": null,
+        "solo": false
+      },
+      {
+        "seq": 32,
+        "effective": 9,
+        "fallback": null,
+        "solo": false
+      },
+      {
+        "seq": 34,
+        "effective": 9,
+        "fallback": null,
+        "solo": false
+      },
+      {
+        "seq": 36,
+        "effective": 9,
+        "fallback": null,
+        "solo": false
+      },
+      {
+        "seq": 38,
+        "effective": 9,
+        "fallback": null,
+        "solo": false
+      },
+      {
+        "seq": 40,
+        "effective": 9,
+        "fallback": null,
+        "solo": false
+      },
+      {
+        "seq": 42,
+        "effective": 9,
+        "fallback": null,
+        "solo": false
+      },
+      {
+        "seq": 44,
+        "effective": 9,
+        "fallback": null,
+        "solo": false
+      },
+      {
+        "seq": 46,
+        "effective": 9,
+        "fallback": null,
+        "solo": false
+      },
+      {
+        "seq": 48,
+        "effective": 9,
+        "fallback": null,
+        "solo": false
+      },
+      {
+        "seq": 49,
+        "effective": 9,
+        "fallback": null,
+        "solo": false
+      },
+      {
+        "seq": 52,
+        "effective": 9,
+        "fallback": null,
+        "solo": false
+      },
+      {
+        "seq": 54,
+        "effective": 9,
+        "fallback": null,
+        "solo": false
+      },
+      {
+        "seq": 56,
+        "effective": 9,
+        "fallback": null,
+        "solo": false
+      },
+      {
+        "seq": 58,
+        "effective": 9,
+        "fallback": null,
+        "solo": false
+      },
+      {
+        "seq": 60,
+        "effective": 9,
+        "fallback": null,
+        "solo": false
+      },
+      {
+        "seq": 61,
+        "effective": 9,
+        "fallback": null,
+        "solo": false
+      },
+      {
+        "seq": 63,
+        "effective": 9,
+        "fallback": null,
+        "solo": false
+      },
+      {
+        "seq": 64,
+        "effective": 9,
+        "fallback": null,
+        "solo": false
+      },
+      {
+        "seq": 66,
+        "effective": 9,
+        "fallback": null,
+        "solo": false
+      },
+      {
+        "seq": 68,
+        "effective": 9,
+        "fallback": null,
+        "solo": false
+      },
+      {
+        "seq": 70,
+        "effective": 9,
+        "fallback": null,
+        "solo": false
+      },
+      {
+        "seq": 72,
+        "effective": 9,
+        "fallback": null,
+        "solo": false
+      },
+      {
+        "seq": 74,
+        "effective": 9,
+        "fallback": null,
+        "solo": false
+      },
+      {
+        "seq": 76,
+        "effective": 9,
+        "fallback": null,
+        "solo": false
+      },
+      {
+        "seq": 78,
+        "effective": 9,
+        "fallback": null,
+        "solo": false
+      },
+      {
+        "seq": 80,
+        "effective": 9,
+        "fallback": null,
+        "solo": false
+      },
+      {
+        "seq": 82,
+        "effective": 9,
+        "fallback": null,
+        "solo": false
+      },
+      {
+        "seq": 84,
+        "effective": 9,
+        "fallback": null,
+        "solo": false
+      },
+      {
+        "seq": 86,
+        "effective": 9,
+        "fallback": null,
+        "solo": false
+      },
+      {
+        "seq": 88,
+        "effective": 9,
+        "fallback": null,
+        "solo": false
+      },
+      {
+        "seq": 90,
+        "effective": 9,
+        "fallback": null,
+        "solo": false
+      },
+      {
+        "seq": 92,
+        "effective": 9,
+        "fallback": null,
+        "solo": false
+      },
+      {
+        "seq": 94,
+        "effective": 9,
+        "fallback": null,
+        "solo": false
+      },
+      {
+        "seq": 96,
+        "effective": 9,
+        "fallback": null,
+        "solo": false
+      },
+      {
+        "seq": 98,
+        "effective": 9,
+        "fallback": null,
+        "solo": false
+      },
+      {
+        "seq": 100,
+        "effective": 9,
+        "fallback": null,
+        "solo": false
+      },
+      {
+        "seq": 102,
+        "effective": 9,
+        "fallback": null,
+        "solo": false
+      },
+      {
+        "seq": 104,
+        "effective": 9,
+        "fallback": null,
+        "solo": false
+      },
+      {
+        "seq": 106,
+        "effective": 9,
+        "fallback": null,
+        "solo": false
+      },
+      {
+        "seq": 108,
+        "effective": 9,
+        "fallback": null,
+        "solo": false
+      },
+      {
+        "seq": 110,
+        "effective": 9,
+        "fallback": null,
+        "solo": false
+      },
+      {
+        "seq": 112,
+        "effective": 9,
+        "fallback": null,
+        "solo": false
+      },
+      {
+        "seq": 114,
+        "effective": 9,
+        "fallback": null,
+        "solo": false
+      },
+      {
+        "seq": 116,
+        "effective": 9,
+        "fallback": null,
+        "solo": false
+      },
+      {
+        "seq": 118,
+        "effective": 9,
+        "fallback": null,
+        "solo": false
+      },
+      {
+        "seq": 120,
+        "effective": 9,
+        "fallback": null,
+        "solo": false
+      },
+      {
+        "seq": 122,
+        "effective": 9,
+        "fallback": null,
+        "solo": false
+      },
+      {
+        "seq": 124,
+        "effective": 9,
+        "fallback": null,
+        "solo": false
+      },
+      {
+        "seq": 126,
+        "effective": 9,
+        "fallback": null,
+        "solo": false
+      },
+      {
+        "seq": 128,
+        "effective": 9,
+        "fallback": null,
+        "solo": false
+      },
+      {
+        "seq": 130,
+        "effective": 9,
+        "fallback": null,
+        "solo": false
+      },
+      {
+        "seq": 132,
+        "effective": 9,
+        "fallback": null,
+        "solo": false
+      },
+      {
+        "seq": 134,
+        "effective": 9,
+        "fallback": null,
+        "solo": false
+      },
+      {
+        "seq": 136,
+        "effective": 9,
+        "fallback": null,
+        "solo": false
+      },
+      {
+        "seq": 138,
+        "effective": 9,
+        "fallback": null,
+        "solo": false
+      },
+      {
+        "seq": 140,
+        "effective": 9,
+        "fallback": null,
+        "solo": false
+      },
+      {
+        "seq": 142,
+        "effective": 9,
+        "fallback": null,
+        "solo": false
+      },
+      {
+        "seq": 144,
+        "effective": 9,
+        "fallback": null,
+        "solo": false
+      },
+      {
+        "seq": 146,
+        "effective": 9,
+        "fallback": null,
+        "solo": false
+      },
+      {
+        "seq": 148,
+        "effective": 9,
+        "fallback": null,
+        "solo": false
+      },
+      {
+        "seq": 150,
+        "effective": 9,
+        "fallback": null,
+        "solo": false
+      },
+      {
+        "seq": 152,
+        "effective": 9,
+        "fallback": null,
+        "solo": false
+      },
+      {
+        "seq": 154,
+        "effective": 9,
+        "fallback": null,
+        "solo": false
+      },
+      {
+        "seq": 156,
+        "effective": 9,
+        "fallback": null,
+        "solo": false
+      },
+      {
+        "seq": 158,
+        "effective": 9,
+        "fallback": null,
+        "solo": false
+      },
+      {
+        "seq": 160,
+        "effective": 9,
+        "fallback": null,
+        "solo": false
+      },
+      {
+        "seq": 162,
+        "effective": 9,
+        "fallback": null,
+        "solo": false
+      },
+      {
+        "seq": 164,
+        "effective": 9,
+        "fallback": null,
+        "solo": false
+      },
+      {
+        "seq": 166,
+        "effective": 9,
+        "fallback": null,
+        "solo": false
+      },
+      {
+        "seq": 168,
+        "effective": 9,
+        "fallback": null,
+        "solo": false
+      },
+      {
+        "seq": 170,
+        "effective": 9,
+        "fallback": null,
+        "solo": false
+      },
+      {
+        "seq": 172,
+        "effective": 9,
+        "fallback": null,
+        "solo": false
+      },
+      {
+        "seq": 174,
+        "effective": 9,
+        "fallback": null,
+        "solo": false
+      },
+      {
+        "seq": 176,
+        "effective": 9,
+        "fallback": null,
+        "solo": false
+      },
+      {
+        "seq": 178,
+        "effective": 9,
+        "fallback": null,
+        "solo": false
+      },
+      {
+        "seq": 180,
+        "effective": 9,
+        "fallback": null,
+        "solo": false
+      },
+      {
+        "seq": 182,
+        "effective": 9,
+        "fallback": null,
+        "solo": false
+      },
+      {
+        "seq": 184,
+        "effective": 9,
+        "fallback": null,
+        "solo": false
+      },
+      {
+        "seq": 186,
+        "effective": 9,
+        "fallback": null,
+        "solo": false
+      },
+      {
+        "seq": 188,
+        "effective": 9,
+        "fallback": null,
+        "solo": false
+      },
+      {
+        "seq": 191,
+        "effective": 9,
+        "fallback": null,
+        "solo": false
+      },
+      {
+        "seq": 194,
+        "effective": 9,
+        "fallback": null,
+        "solo": false
+      },
+      {
+        "seq": 196,
+        "effective": 9,
+        "fallback": null,
+        "solo": false
+      },
+      {
+        "seq": 198,
+        "effective": 9,
+        "fallback": null,
+        "solo": false
+      },
+      {
+        "seq": 201,
+        "effective": 9,
+        "fallback": null,
+        "solo": false
+      },
+      {
+        "seq": 203,
+        "effective": 8,
+        "fallback": null,
+        "solo": false
+      },
+      {
+        "seq": 204,
+        "effective": 8,
+        "fallback": null,
+        "solo": false
+      },
+      {
+        "seq": 206,
+        "effective": 8,
+        "fallback": null,
+        "solo": false
+      },
+      {
+        "seq": 208,
+        "effective": 8,
+        "fallback": null,
+        "solo": false
+      },
+      {
+        "seq": 210,
+        "effective": 8,
+        "fallback": null,
+        "solo": false
+      },
+      {
+        "seq": 212,
+        "effective": 8,
+        "fallback": null,
+        "solo": false
+      },
+      {
+        "seq": 214,
+        "effective": 8,
+        "fallback": null,
+        "solo": false
+      },
+      {
+        "seq": 216,
+        "effective": 8,
+        "fallback": null,
+        "solo": false
+      },
+      {
+        "seq": 218,
+        "effective": 8,
+        "fallback": null,
+        "solo": false
+      },
+      {
+        "seq": 220,
+        "effective": 8,
+        "fallback": null,
+        "solo": false
+      },
+      {
+        "seq": 223,
+        "effective": 9,
+        "fallback": null,
+        "solo": false
+      },
+      {
+        "seq": 225,
+        "effective": 8,
+        "fallback": null,
+        "solo": false
+      },
+      {
+        "seq": 228,
+        "effective": 8,
+        "fallback": null,
+        "solo": false
+      }
+    ],
+    "deferred": [
+      {
+        "seq": 4,
+        "fixed": "matrix-107",
+        "time_s": 0.0479833
+      },
+      {
+        "seq": 6,
+        "fixed": "matrix-107",
+        "time_s": 8.4510225
+      },
+      {
+        "seq": 8,
+        "fixed": "matrix-107",
+        "time_s": 11.544747
+      },
+      {
+        "seq": 11,
+        "fixed": "matrix-107",
+        "time_s": 16.0991351
+      },
+      {
+        "seq": 14,
+        "fixed": "matrix-095",
+        "time_s": 17.4376728
+      },
+      {
+        "seq": 16,
+        "fixed": "matrix-095",
+        "time_s": 23.7483537
+      },
+      {
+        "seq": 18,
+        "fixed": "matrix-089",
+        "time_s": 23.8747269
+      },
+      {
+        "seq": 20,
+        "fixed": "matrix-089",
+        "time_s": 24.9378687
+      },
+      {
+        "seq": 22,
+        "fixed": "matrix-090",
+        "time_s": 30.3593291
+      },
+      {
+        "seq": 26,
+        "fixed": "matrix-088",
+        "time_s": 33.9804598
+      },
+      {
+        "seq": 28,
+        "fixed": "matrix-088",
+        "time_s": 35.7544876
+      },
+      {
+        "seq": 30,
+        "fixed": "matrix-094",
+        "time_s": 36.7934397
+      },
+      {
+        "seq": 32,
+        "fixed": "matrix-087",
+        "time_s": 40.5635901
+      },
+      {
+        "seq": 34,
+        "fixed": "matrix-087",
+        "time_s": 42.7323019
+      },
+      {
+        "seq": 36,
+        "fixed": "matrix-092",
+        "time_s": 43.259922
+      },
+      {
+        "seq": 38,
+        "fixed": "matrix-093",
+        "time_s": 47.1765752
+      },
+      {
+        "seq": 40,
+        "fixed": "matrix-093",
+        "time_s": 47.9486775
+      },
+      {
+        "seq": 42,
+        "fixed": "matrix-086",
+        "time_s": 49.8249652
+      },
+      {
+        "seq": 44,
+        "fixed": "matrix-086",
+        "time_s": 51.6711808
+      },
+      {
+        "seq": 46,
+        "fixed": "matrix-003",
+        "time_s": 53.6772157
+      },
+      {
+        "seq": 49,
+        "fixed": "matrix-065",
+        "time_s": 56.2658428
+      },
+      {
+        "seq": 52,
+        "fixed": "matrix-062",
+        "time_s": 59.5697354
+      },
+      {
+        "seq": 54,
+        "fixed": "matrix-062",
+        "time_s": 60.1896459
+      },
+      {
+        "seq": 56,
+        "fixed": "matrix-019",
+        "time_s": 60.270551
+      },
+      {
+        "seq": 58,
+        "fixed": "matrix-019",
+        "time_s": 60.5137695
+      },
+      {
+        "seq": 61,
+        "fixed": "matrix-006",
+        "time_s": 61.5131128
+      },
+      {
+        "seq": 64,
+        "fixed": "matrix-061",
+        "time_s": 62.4050169
+      },
+      {
+        "seq": 66,
+        "fixed": "matrix-061",
+        "time_s": 63.5218626
+      },
+      {
+        "seq": 68,
+        "fixed": "matrix-061",
+        "time_s": 64.4360607
+      },
+      {
+        "seq": 70,
+        "fixed": "matrix-061",
+        "time_s": 64.727474
+      },
+      {
+        "seq": 72,
+        "fixed": "matrix-061",
+        "time_s": 64.9224812
+      },
+      {
+        "seq": 74,
+        "fixed": "matrix-061",
+        "time_s": 65.6826099
+      },
+      {
+        "seq": 76,
+        "fixed": "matrix-061",
+        "time_s": 65.7252895
+      },
+      {
+        "seq": 78,
+        "fixed": "matrix-061",
+        "time_s": 66.8095121
+      },
+      {
+        "seq": 80,
+        "fixed": "matrix-061",
+        "time_s": 68.0136509
+      },
+      {
+        "seq": 82,
+        "fixed": "matrix-061",
+        "time_s": 68.1724282
+      },
+      {
+        "seq": 84,
+        "fixed": "matrix-061",
+        "time_s": 68.2711472
+      },
+      {
+        "seq": 86,
+        "fixed": "matrix-061",
+        "time_s": 68.8722917
+      },
+      {
+        "seq": 88,
+        "fixed": "matrix-061",
+        "time_s": 68.900696
+      },
+      {
+        "seq": 90,
+        "fixed": "matrix-061",
+        "time_s": 69.9938884
+      },
+      {
+        "seq": 92,
+        "fixed": "matrix-061",
+        "time_s": 71.2961617
+      },
+      {
+        "seq": 94,
+        "fixed": "matrix-061",
+        "time_s": 71.4449578
+      },
+      {
+        "seq": 96,
+        "fixed": "matrix-061",
+        "time_s": 72.0880188
+      },
+      {
+        "seq": 98,
+        "fixed": "matrix-061",
+        "time_s": 72.1687068
+      },
+      {
+        "seq": 100,
+        "fixed": "matrix-061",
+        "time_s": 72.3346579
+      },
+      {
+        "seq": 102,
+        "fixed": "matrix-061",
+        "time_s": 73.1417605
+      },
+      {
+        "seq": 104,
+        "fixed": "matrix-061",
+        "time_s": 74.4790064
+      },
+      {
+        "seq": 106,
+        "fixed": "matrix-061",
+        "time_s": 74.5944941
+      },
+      {
+        "seq": 108,
+        "fixed": "matrix-061",
+        "time_s": 75.402732
+      },
+      {
+        "seq": 110,
+        "fixed": "matrix-061",
+        "time_s": 75.4767744
+      },
+      {
+        "seq": 112,
+        "fixed": "matrix-061",
+        "time_s": 76.1874962
+      },
+      {
+        "seq": 114,
+        "fixed": "matrix-061",
+        "time_s": 76.4267026
+      },
+      {
+        "seq": 116,
+        "fixed": "matrix-061",
+        "time_s": 77.6540181
+      },
+      {
+        "seq": 118,
+        "fixed": "matrix-061",
+        "time_s": 77.840407
+      },
+      {
+        "seq": 120,
+        "fixed": "matrix-061",
+        "time_s": 78.6073864
+      },
+      {
+        "seq": 122,
+        "fixed": "matrix-061",
+        "time_s": 78.6904617
+      },
+      {
+        "seq": 124,
+        "fixed": "matrix-061",
+        "time_s": 79.8007864
+      },
+      {
+        "seq": 126,
+        "fixed": "matrix-061",
+        "time_s": 79.9760902
+      },
+      {
+        "seq": 128,
+        "fixed": "matrix-061",
+        "time_s": 80.8645356
+      },
+      {
+        "seq": 130,
+        "fixed": "matrix-061",
+        "time_s": 81.0200205
+      },
+      {
+        "seq": 132,
+        "fixed": "matrix-061",
+        "time_s": 81.7662108
+      },
+      {
+        "seq": 134,
+        "fixed": "matrix-061",
+        "time_s": 81.8747196
+      },
+      {
+        "seq": 136,
+        "fixed": "matrix-061",
+        "time_s": 83.0776912
+      },
+      {
+        "seq": 138,
+        "fixed": "matrix-061",
+        "time_s": 83.7483947
+      },
+      {
+        "seq": 140,
+        "fixed": "matrix-061",
+        "time_s": 84.0331338
+      },
+      {
+        "seq": 142,
+        "fixed": "matrix-061",
+        "time_s": 84.1629415
+      },
+      {
+        "seq": 144,
+        "fixed": "matrix-061",
+        "time_s": 84.9101021
+      },
+      {
+        "seq": 146,
+        "fixed": "matrix-061",
+        "time_s": 85.0387845
+      },
+      {
+        "seq": 148,
+        "fixed": "matrix-061",
+        "time_s": 86.2844307
+      },
+      {
+        "seq": 150,
+        "fixed": "matrix-061",
+        "time_s": 87.3537252
+      },
+      {
+        "seq": 152,
+        "fixed": "matrix-061",
+        "time_s": 87.4445345
+      },
+      {
+        "seq": 154,
+        "fixed": "matrix-061",
+        "time_s": 87.5576738
+      },
+      {
+        "seq": 156,
+        "fixed": "matrix-061",
+        "time_s": 88.1251602
+      },
+      {
+        "seq": 158,
+        "fixed": "matrix-061",
+        "time_s": 88.2544232
+      },
+      {
+        "seq": 160,
+        "fixed": "matrix-061",
+        "time_s": 89.4333574
+      },
+      {
+        "seq": 162,
+        "fixed": "matrix-061",
+        "time_s": 90.6449714
+      },
+      {
+        "seq": 164,
+        "fixed": "matrix-061",
+        "time_s": 90.7275836
+      },
+      {
+        "seq": 166,
+        "fixed": "matrix-061",
+        "time_s": 91.386515
+      },
+      {
+        "seq": 168,
+        "fixed": "matrix-061",
+        "time_s": 91.4800019
+      },
+      {
+        "seq": 170,
+        "fixed": "matrix-061",
+        "time_s": 91.5383317
+      },
+      {
+        "seq": 172,
+        "fixed": "matrix-061",
+        "time_s": 92.6300803
+      },
+      {
+        "seq": 174,
+        "fixed": "matrix-061",
+        "time_s": 93.8650044
+      },
+      {
+        "seq": 176,
+        "fixed": "matrix-061",
+        "time_s": 93.9490385
+      },
+      {
+        "seq": 178,
+        "fixed": "matrix-061",
+        "time_s": 94.7351137
+      },
+      {
+        "seq": 180,
+        "fixed": "matrix-061",
+        "time_s": 94.8631208
+      },
+      {
+        "seq": 182,
+        "fixed": "matrix-061",
+        "time_s": 95.180092
+      },
+      {
+        "seq": 184,
+        "fixed": "matrix-061",
+        "time_s": 95.8261657
+      },
+      {
+        "seq": 186,
+        "fixed": "matrix-061",
+        "time_s": 97.0796131
+      },
+      {
+        "seq": 188,
+        "fixed": "matrix-061",
+        "time_s": 97.1448378
+      },
+      {
+        "seq": 189,
+        "fixed": "matrix-078",
+        "time_s": 97.9552562
+      },
+      {
+        "seq": 191,
+        "fixed": "matrix-069",
+        "time_s": 98.0599094
+      },
+      {
+        "seq": 192,
+        "fixed": "matrix-078",
+        "time_s": 99.0292856
+      },
+      {
+        "seq": 194,
+        "fixed": "matrix-069",
+        "time_s": 99.0584418
+      },
+      {
+        "seq": 196,
+        "fixed": "matrix-075",
+        "time_s": 99.8411503
+      },
+      {
+        "seq": 198,
+        "fixed": "matrix-070",
+        "time_s": 100.1165394
+      },
+      {
+        "seq": 199,
+        "fixed": "matrix-080",
+        "time_s": 100.1801697
+      },
+      {
+        "seq": 201,
+        "fixed": "matrix-070",
+        "time_s": 100.2640995
+      },
+      {
+        "seq": 204,
+        "fixed": "matrix-079",
+        "time_s": 101.4211305
+      },
+      {
+        "seq": 206,
+        "fixed": "matrix-079",
+        "time_s": 101.524761
+      },
+      {
+        "seq": 208,
+        "fixed": "matrix-079",
+        "time_s": 101.7383577
+      },
+      {
+        "seq": 210,
+        "fixed": "matrix-079",
+        "time_s": 103.1570055
+      },
+      {
+        "seq": 212,
+        "fixed": "matrix-079",
+        "time_s": 103.206498
+      },
+      {
+        "seq": 214,
+        "fixed": "matrix-079",
+        "time_s": 103.3043617
+      },
+      {
+        "seq": 216,
+        "fixed": "matrix-079",
+        "time_s": 103.4127195
+      },
+      {
+        "seq": 218,
+        "fixed": "matrix-079",
+        "time_s": 104.8875587
+      },
+      {
+        "seq": 220,
+        "fixed": "matrix-079",
+        "time_s": 104.9619857
+      },
+      {
+        "seq": 221,
+        "fixed": "matrix-079",
+        "time_s": 105.0088377
+      },
+      {
+        "seq": 223,
+        "fixed": "matrix-076",
+        "time_s": 105.1239529
+      },
+      {
+        "seq": 225,
+        "fixed": "matrix-077",
+        "time_s": 106.2618754
+      },
+      {
+        "seq": 226,
+        "fixed": "matrix-077",
+        "time_s": 106.5684016
+      }
+    ],
+    "fallback_polls": {}
+  }
+}

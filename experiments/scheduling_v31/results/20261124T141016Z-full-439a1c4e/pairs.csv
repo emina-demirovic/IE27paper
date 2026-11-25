@@ -1,0 +1,9 @@
+condition, repeat, first_policy, manifest_id                                                     , fixed_s   , adaptive_s , saved_s            , change_pct        , changed_admissions, outcome
+quiet    ,      1, LPT-KP      , 6b71d2bdfe544092000ffae9b0c9ee2e84c1bee1a02e7e394180fc5623ab1cfc, 53.9312828,  63.9368998, -10.005617         , 18.552529219646157,                176, slower
+quiet    ,      2, CPU-LPT-KP  , 6b71d2bdfe544092000ffae9b0c9ee2e84c1bee1a02e7e394180fc5623ab1cfc, 60.1704395,  63.2070473, -3.0366077999999987,  5.04667711459877 ,                135, slower
+quiet    ,      3, LPT-KP      , 6b71d2bdfe544092000ffae9b0c9ee2e84c1bee1a02e7e394180fc5623ab1cfc, 64.2418242,  69.6682668, -5.4264426000000014,  8.446899924737819,                168, slower
+steady   ,      1, LPT-KP      , 6b71d2bdfe544092000ffae9b0c9ee2e84c1bee1a02e7e394180fc5623ab1cfc, 88.1271749, 103.829763 , -15.7025881        , 17.818099942291468,                203, slower
+steady   ,      2, CPU-LPT-KP  , 6b71d2bdfe544092000ffae9b0c9ee2e84c1bee1a02e7e394180fc5623ab1cfc, 93.7955382, 104.3161441, -10.520605900000007, 11.216531299779895,                190, slower
+steady   ,      3, LPT-KP      , 6b71d2bdfe544092000ffae9b0c9ee2e84c1bee1a02e7e394180fc5623ab1cfc, 97.3379671, 123.6600686, -26.322101500000002, 27.04196757361702 ,                205, slower
+changing ,      1, LPT-KP      , 6b71d2bdfe544092000ffae9b0c9ee2e84c1bee1a02e7e394180fc5623ab1cfc, 89.8757482, 100.609812 , -10.734063800000001, 11.943226081538201,                183, slower
+changing ,      2, CPU-LPT-KP  , 6b71d2bdfe544092000ffae9b0c9ee2e84c1bee1a02e7e394180fc5623ab1cfc, 90.7990295,  98.0256681, -7.226638600000001 ,  7.958938151425948,                144, slower

@@ -1,0 +1,1163 @@
+{
+  "seed": 2702,
+  "calibration_id": "d9e7238167617c2e70b13c0beff47fe5d9c7c2fe6486136f29e2e47ec7803f38",
+  "control": false,
+  "backend": {
+    "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+    "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+    "operation": "cblas_dgemm",
+    "numpy": "2.4.6"
+  },
+  "jobs": [
+    {
+      "task_id": "matrix-003",
+      "workload_class": "short",
+      "seed": 1958173573,
+      "p": 1,
+      "n": 768,
+      "r": 47,
+      "k": 0.7551205420168117,
+      "arrival_index": 0
+    },
+    {
+      "task_id": "matrix-078",
+      "workload_class": "short",
+      "seed": 801921739,
+      "p": 4,
+      "n": 768,
+      "r": 47,
+      "k": 0.7551205420168117,
+      "arrival_index": 1
+    },
+    {
+      "task_id": "matrix-065",
+      "workload_class": "short",
+      "seed": 1150684065,
+      "p": 2,
+      "n": 768,
+      "r": 47,
+      "k": 0.7551205420168117,
+      "arrival_index": 2
+    },
+    {
+      "task_id": "matrix-034",
+      "workload_class": "short",
+      "seed": 935263858,
+      "p": 1,
+      "n": 768,
+      "r": 47,
+      "k": 0.7551205420168117,
+      "arrival_index": 3
+    },
+    {
+      "task_id": "matrix-062",
+      "workload_class": "short",
+      "seed": 558856545,
+      "p": 2,
+      "n": 768,
+      "r": 47,
+      "k": 0.7551205420168117,
+      "arrival_index": 4
+    },
+    {
+      "task_id": "matrix-103",
+      "workload_class": "medium",
+      "seed": 205779597,
+      "p": 4,
+      "n": 1536,
+      "r": 23,
+      "k": 2.948939458001405,
+      "arrival_index": 5
+    },
+    {
+      "task_id": "matrix-082",
+      "workload_class": "medium",
+      "seed": 1809768693,
+      "p": 1,
+      "n": 1536,
+      "r": 23,
+      "k": 2.948939458001405,
+      "arrival_index": 6
+    },
+    {
+      "task_id": "matrix-040",
+      "workload_class": "short",
+      "seed": 2066475779,
+      "p": 1,
+      "n": 768,
+      "r": 47,
+      "k": 0.7551205420168117,
+      "arrival_index": 7
+    },
+    {
+      "task_id": "matrix-019",
+      "workload_class": "short",
+      "seed": 1620563447,
+      "p": 1,
+      "n": 768,
+      "r": 47,
+      "k": 0.7551205420168117,
+      "arrival_index": 8
+    },
+    {
+      "task_id": "matrix-091",
+      "workload_class": "medium",
+      "seed": 1576442159,
+      "p": 2,
+      "n": 1536,
+      "r": 23,
+      "k": 2.948939458001405,
+      "arrival_index": 9
+    },
+    {
+      "task_id": "matrix-095",
+      "workload_class": "medium",
+      "seed": 2011789818,
+      "p": 2,
+      "n": 1536,
+      "r": 23,
+      "k": 2.948939458001405,
+      "arrival_index": 10
+    },
+    {
+      "task_id": "matrix-089",
+      "workload_class": "medium",
+      "seed": 1653054034,
+      "p": 2,
+      "n": 1536,
+      "r": 23,
+      "k": 2.948939458001405,
+      "arrival_index": 11
+    },
+    {
+      "task_id": "matrix-013",
+      "workload_class": "short",
+      "seed": 2007988446,
+      "p": 1,
+      "n": 768,
+      "r": 47,
+      "k": 0.7551205420168117,
+      "arrival_index": 12
+    },
+    {
+      "task_id": "matrix-109",
+      "workload_class": "long",
+      "seed": 1207308234,
+      "p": 4,
+      "n": 2304,
+      "r": 18,
+      "k": 7.81638324999949,
+      "arrival_index": 13
+    },
+    {
+      "task_id": "matrix-106",
+      "workload_class": "long",
+      "seed": 816880358,
+      "p": 2,
+      "n": 2304,
+      "r": 18,
+      "k": 7.81638324999949,
+      "arrival_index": 14
+    },
+    {
+      "task_id": "matrix-090",
+      "workload_class": "medium",
+      "seed": 1865376179,
+      "p": 2,
+      "n": 1536,
+      "r": 23,
+      "k": 2.948939458001405,
+      "arrival_index": 15
+    },
+    {
+      "task_id": "matrix-006",
+      "workload_class": "short",
+      "seed": 438016941,
+      "p": 1,
+      "n": 768,
+      "r": 47,
+      "k": 0.7551205420168117,
+      "arrival_index": 16
+    },
+    {
+      "task_id": "matrix-110",
+      "workload_class": "long",
+      "seed": 784208806,
+      "p": 4,
+      "n": 2304,
+      "r": 18,
+      "k": 7.81638324999949,
+      "arrival_index": 17
+    },
+    {
+      "task_id": "matrix-042",
+      "workload_class": "short",
+      "seed": 36073338,
+      "p": 1,
+      "n": 768,
+      "r": 47,
+      "k": 0.7551205420168117,
+      "arrival_index": 18
+    },
+    {
+      "task_id": "matrix-061",
+      "workload_class": "short",
+      "seed": 2126627181,
+      "p": 2,
+      "n": 768,
+      "r": 47,
+      "k": 0.7551205420168117,
+      "arrival_index": 19
+    },
+    {
+      "task_id": "matrix-059",
+      "workload_class": "short",
+      "seed": 825915338,
+      "p": 1,
+      "n": 768,
+      "r": 47,
+      "k": 0.7551205420168117,
+      "arrival_index": 20
+    },
+    {
+      "task_id": "matrix-102",
+      "workload_class": "medium",
+      "seed": 26276944,
+      "p": 4,
+      "n": 1536,
+      "r": 23,
+      "k": 2.948939458001405,
+      "arrival_index": 21
+    },
+    {
+      "task_id": "matrix-002",
+      "workload_class": "short",
+      "seed": 1810542448,
+      "p": 1,
+      "n": 768,
+      "r": 47,
+      "k": 0.7551205420168117,
+      "arrival_index": 22
+    },
+    {
+      "task_id": "matrix-083",
+      "workload_class": "medium",
+      "seed": 1376630090,
+      "p": 1,
+      "n": 1536,
+      "r": 23,
+      "k": 2.948939458001405,
+      "arrival_index": 23
+    },
+    {
+      "task_id": "matrix-038",
+      "workload_class": "short",
+      "seed": 523704477,
+      "p": 1,
+      "n": 768,
+      "r": 47,
+      "k": 0.7551205420168117,
+      "arrival_index": 24
+    },
+    {
+      "task_id": "matrix-056",
+      "workload_class": "short",
+      "seed": 2144168942,
+      "p": 1,
+      "n": 768,
+      "r": 47,
+      "k": 0.7551205420168117,
+      "arrival_index": 25
+    },
+    {
+      "task_id": "matrix-020",
+      "workload_class": "short",
+      "seed": 719915703,
+      "p": 1,
+      "n": 768,
+      "r": 47,
+      "k": 0.7551205420168117,
+      "arrival_index": 26
+    },
+    {
+      "task_id": "matrix-023",
+      "workload_class": "short",
+      "seed": 1303245290,
+      "p": 1,
+      "n": 768,
+      "r": 47,
+      "k": 0.7551205420168117,
+      "arrival_index": 27
+    },
+    {
+      "task_id": "matrix-069",
+      "workload_class": "short",
+      "seed": 348282966,
+      "p": 2,
+      "n": 768,
+      "r": 47,
+      "k": 0.7551205420168117,
+      "arrival_index": 28
+    },
+    {
+      "task_id": "matrix-030",
+      "workload_class": "short",
+      "seed": 861586606,
+      "p": 1,
+      "n": 768,
+      "r": 47,
+      "k": 0.7551205420168117,
+      "arrival_index": 29
+    },
+    {
+      "task_id": "matrix-088",
+      "workload_class": "medium",
+      "seed": 237830581,
+      "p": 2,
+      "n": 1536,
+      "r": 23,
+      "k": 2.948939458001405,
+      "arrival_index": 30
+    },
+    {
+      "task_id": "matrix-097",
+      "workload_class": "medium",
+      "seed": 888884828,
+      "p": 4,
+      "n": 1536,
+      "r": 23,
+      "k": 2.948939458001405,
+      "arrival_index": 31
+    },
+    {
+      "task_id": "matrix-094",
+      "workload_class": "medium",
+      "seed": 1071089760,
+      "p": 2,
+      "n": 1536,
+      "r": 23,
+      "k": 2.948939458001405,
+      "arrival_index": 32
+    },
+    {
+      "task_id": "matrix-049",
+      "workload_class": "short",
+      "seed": 883527264,
+      "p": 1,
+      "n": 768,
+      "r": 47,
+      "k": 0.7551205420168117,
+      "arrival_index": 33
+    },
+    {
+      "task_id": "matrix-098",
+      "workload_class": "medium",
+      "seed": 1463402352,
+      "p": 4,
+      "n": 1536,
+      "r": 23,
+      "k": 2.948939458001405,
+      "arrival_index": 34
+    },
+    {
+      "task_id": "matrix-026",
+      "workload_class": "short",
+      "seed": 2134252242,
+      "p": 1,
+      "n": 768,
+      "r": 47,
+      "k": 0.7551205420168117,
+      "arrival_index": 35
+    },
+    {
+      "task_id": "matrix-011",
+      "workload_class": "short",
+      "seed": 1898656778,
+      "p": 1,
+      "n": 768,
+      "r": 47,
+      "k": 0.7551205420168117,
+      "arrival_index": 36
+    },
+    {
+      "task_id": "matrix-033",
+      "workload_class": "short",
+      "seed": 1160646918,
+      "p": 1,
+      "n": 768,
+      "r": 47,
+      "k": 0.7551205420168117,
+      "arrival_index": 37
+    },
+    {
+      "task_id": "matrix-051",
+      "workload_class": "short",
+      "seed": 2090951695,
+      "p": 1,
+      "n": 768,
+      "r": 47,
+      "k": 0.7551205420168117,
+      "arrival_index": 38
+    },
+    {
+      "task_id": "matrix-099",
+      "workload_class": "medium",
+      "seed": 222694553,
+      "p": 4,
+      "n": 1536,
+      "r": 23,
+      "k": 2.948939458001405,
+      "arrival_index": 39
+    },
+    {
+      "task_id": "matrix-027",
+      "workload_class": "short",
+      "seed": 564247903,
+      "p": 1,
+      "n": 768,
+      "r": 47,
+      "k": 0.7551205420168117,
+      "arrival_index": 40
+    },
+    {
+      "task_id": "matrix-087",
+      "workload_class": "medium",
+      "seed": 1034623593,
+      "p": 2,
+      "n": 1536,
+      "r": 23,
+      "k": 2.948939458001405,
+      "arrival_index": 41
+    },
+    {
+      "task_id": "matrix-075",
+      "workload_class": "short",
+      "seed": 284705784,
+      "p": 2,
+      "n": 768,
+      "r": 47,
+      "k": 0.7551205420168117,
+      "arrival_index": 42
+    },
+    {
+      "task_id": "matrix-080",
+      "workload_class": "short",
+      "seed": 1590015002,
+      "p": 4,
+      "n": 768,
+      "r": 47,
+      "k": 0.7551205420168117,
+      "arrival_index": 43
+    },
+    {
+      "task_id": "matrix-041",
+      "workload_class": "short",
+      "seed": 388410529,
+      "p": 1,
+      "n": 768,
+      "r": 47,
+      "k": 0.7551205420168117,
+      "arrival_index": 44
+    },
+    {
+      "task_id": "matrix-108",
+      "workload_class": "long",
+      "seed": 2004233371,
+      "p": 2,
+      "n": 2304,
+      "r": 18,
+      "k": 7.81638324999949,
+      "arrival_index": 45
+    },
+    {
+      "task_id": "matrix-048",
+      "workload_class": "short",
+      "seed": 1407306532,
+      "p": 1,
+      "n": 768,
+      "r": 47,
+      "k": 0.7551205420168117,
+      "arrival_index": 46
+    },
+    {
+      "task_id": "matrix-092",
+      "workload_class": "medium",
+      "seed": 1524916362,
+      "p": 2,
+      "n": 1536,
+      "r": 23,
+      "k": 2.948939458001405,
+      "arrival_index": 47
+    },
+    {
+      "task_id": "matrix-114",
+      "workload_class": "long",
+      "seed": 1879128861,
+      "p": 4,
+      "n": 2304,
+      "r": 18,
+      "k": 7.81638324999949,
+      "arrival_index": 48
+    },
+    {
+      "task_id": "matrix-029",
+      "workload_class": "short",
+      "seed": 738614994,
+      "p": 1,
+      "n": 768,
+      "r": 47,
+      "k": 0.7551205420168117,
+      "arrival_index": 49
+    },
+    {
+      "task_id": "matrix-012",
+      "workload_class": "short",
+      "seed": 383968521,
+      "p": 1,
+      "n": 768,
+      "r": 47,
+      "k": 0.7551205420168117,
+      "arrival_index": 50
+    },
+    {
+      "task_id": "matrix-096",
+      "workload_class": "medium",
+      "seed": 1180750498,
+      "p": 4,
+      "n": 1536,
+      "r": 23,
+      "k": 2.948939458001405,
+      "arrival_index": 51
+    },
+    {
+      "task_id": "matrix-047",
+      "workload_class": "short",
+      "seed": 1242035481,
+      "p": 1,
+      "n": 768,
+      "r": 47,
+      "k": 0.7551205420168117,
+      "arrival_index": 52
+    },
+    {
+      "task_id": "matrix-070",
+      "workload_class": "short",
+      "seed": 918047672,
+      "p": 2,
+      "n": 768,
+      "r": 47,
+      "k": 0.7551205420168117,
+      "arrival_index": 53
+    },
+    {
+      "task_id": "matrix-085",
+      "workload_class": "medium",
+      "seed": 1647455833,
+      "p": 1,
+      "n": 1536,
+      "r": 23,
+      "k": 2.948939458001405,
+      "arrival_index": 54
+    },
+    {
+      "task_id": "matrix-054",
+      "workload_class": "short",
+      "seed": 466130806,
+      "p": 1,
+      "n": 768,
+      "r": 47,
+      "k": 0.7551205420168117,
+      "arrival_index": 55
+    },
+    {
+      "task_id": "matrix-046",
+      "workload_class": "short",
+      "seed": 1336867894,
+      "p": 1,
+      "n": 768,
+      "r": 47,
+      "k": 0.7551205420168117,
+      "arrival_index": 56
+    },
+    {
+      "task_id": "matrix-007",
+      "workload_class": "short",
+      "seed": 2049146592,
+      "p": 1,
+      "n": 768,
+      "r": 47,
+      "k": 0.7551205420168117,
+      "arrival_index": 57
+    },
+    {
+      "task_id": "matrix-072",
+      "workload_class": "short",
+      "seed": 740176444,
+      "p": 2,
+      "n": 768,
+      "r": 47,
+      "k": 0.7551205420168117,
+      "arrival_index": 58
+    },
+    {
+      "task_id": "matrix-016",
+      "workload_class": "short",
+      "seed": 806266810,
+      "p": 1,
+      "n": 768,
+      "r": 47,
+      "k": 0.7551205420168117,
+      "arrival_index": 59
+    },
+    {
+      "task_id": "matrix-015",
+      "workload_class": "short",
+      "seed": 871214629,
+      "p": 1,
+      "n": 768,
+      "r": 47,
+      "k": 0.7551205420168117,
+      "arrival_index": 60
+    },
+    {
+      "task_id": "matrix-005",
+      "workload_class": "short",
+      "seed": 2114796178,
+      "p": 1,
+      "n": 768,
+      "r": 47,
+      "k": 0.7551205420168117,
+      "arrival_index": 61
+    },
+    {
+      "task_id": "matrix-021",
+      "workload_class": "short",
+      "seed": 766617118,
+      "p": 1,
+      "n": 768,
+      "r": 47,
+      "k": 0.7551205420168117,
+      "arrival_index": 62
+    },
+    {
+      "task_id": "matrix-107",
+      "workload_class": "long",
+      "seed": 2140857340,
+      "p": 2,
+      "n": 2304,
+      "r": 18,
+      "k": 7.81638324999949,
+      "arrival_index": 63
+    },
+    {
+      "task_id": "matrix-115",
+      "workload_class": "long",
+      "seed": 2097576384,
+      "p": 4,
+      "n": 2304,
+      "r": 18,
+      "k": 7.81638324999949,
+      "arrival_index": 64
+    },
+    {
+      "task_id": "matrix-079",
+      "workload_class": "short",
+      "seed": 153735838,
+      "p": 4,
+      "n": 768,
+      "r": 47,
+      "k": 0.7551205420168117,
+      "arrival_index": 65
+    },
+    {
+      "task_id": "matrix-068",
+      "workload_class": "short",
+      "seed": 1054111588,
+      "p": 2,
+      "n": 768,
+      "r": 47,
+      "k": 0.7551205420168117,
+      "arrival_index": 66
+    },
+    {
+      "task_id": "matrix-113",
+      "workload_class": "long",
+      "seed": 1966791304,
+      "p": 4,
+      "n": 2304,
+      "r": 18,
+      "k": 7.81638324999949,
+      "arrival_index": 67
+    },
+    {
+      "task_id": "matrix-053",
+      "workload_class": "short",
+      "seed": 553803905,
+      "p": 1,
+      "n": 768,
+      "r": 47,
+      "k": 0.7551205420168117,
+      "arrival_index": 68
+    },
+    {
+      "task_id": "matrix-050",
+      "workload_class": "short",
+      "seed": 702094708,
+      "p": 1,
+      "n": 768,
+      "r": 47,
+      "k": 0.7551205420168117,
+      "arrival_index": 69
+    },
+    {
+      "task_id": "matrix-093",
+      "workload_class": "medium",
+      "seed": 477289263,
+      "p": 2,
+      "n": 1536,
+      "r": 23,
+      "k": 2.948939458001405,
+      "arrival_index": 70
+    },
+    {
+      "task_id": "matrix-076",
+      "workload_class": "short",
+      "seed": 1472972327,
+      "p": 4,
+      "n": 768,
+      "r": 47,
+      "k": 0.7551205420168117,
+      "arrival_index": 71
+    },
+    {
+      "task_id": "matrix-017",
+      "workload_class": "short",
+      "seed": 2010328261,
+      "p": 1,
+      "n": 768,
+      "r": 47,
+      "k": 0.7551205420168117,
+      "arrival_index": 72
+    },
+    {
+      "task_id": "matrix-063",
+      "workload_class": "short",
+      "seed": 650483792,
+      "p": 2,
+      "n": 768,
+      "r": 47,
+      "k": 0.7551205420168117,
+      "arrival_index": 73
+    },
+    {
+      "task_id": "matrix-018",
+      "workload_class": "short",
+      "seed": 455238739,
+      "p": 1,
+      "n": 768,
+      "r": 47,
+      "k": 0.7551205420168117,
+      "arrival_index": 74
+    },
+    {
+      "task_id": "matrix-081",
+      "workload_class": "medium",
+      "seed": 849377595,
+      "p": 1,
+      "n": 1536,
+      "r": 23,
+      "k": 2.948939458001405,
+      "arrival_index": 75
+    },
+    {
+      "task_id": "matrix-058",
+      "workload_class": "short",
+      "seed": 1911924999,
+      "p": 1,
+      "n": 768,
+      "r": 47,
+      "k": 0.7551205420168117,
+      "arrival_index": 76
+    },
+    {
+      "task_id": "matrix-104",
+      "workload_class": "medium",
+      "seed": 175607941,
+      "p": 4,
+      "n": 1536,
+      "r": 23,
+      "k": 2.948939458001405,
+      "arrival_index": 77
+    },
+    {
+      "task_id": "matrix-032",
+      "workload_class": "short",
+      "seed": 51826789,
+      "p": 1,
+      "n": 768,
+      "r": 47,
+      "k": 0.7551205420168117,
+      "arrival_index": 78
+    },
+    {
+      "task_id": "matrix-010",
+      "workload_class": "short",
+      "seed": 1162402666,
+      "p": 1,
+      "n": 768,
+      "r": 47,
+      "k": 0.7551205420168117,
+      "arrival_index": 79
+    },
+    {
+      "task_id": "matrix-073",
+      "workload_class": "short",
+      "seed": 1981499379,
+      "p": 2,
+      "n": 768,
+      "r": 47,
+      "k": 0.7551205420168117,
+      "arrival_index": 80
+    },
+    {
+      "task_id": "matrix-060",
+      "workload_class": "short",
+      "seed": 521499995,
+      "p": 1,
+      "n": 768,
+      "r": 47,
+      "k": 0.7551205420168117,
+      "arrival_index": 81
+    },
+    {
+      "task_id": "matrix-067",
+      "workload_class": "short",
+      "seed": 1814362323,
+      "p": 2,
+      "n": 768,
+      "r": 47,
+      "k": 0.7551205420168117,
+      "arrival_index": 82
+    },
+    {
+      "task_id": "matrix-028",
+      "workload_class": "short",
+      "seed": 843347271,
+      "p": 1,
+      "n": 768,
+      "r": 47,
+      "k": 0.7551205420168117,
+      "arrival_index": 83
+    },
+    {
+      "task_id": "matrix-037",
+      "workload_class": "short",
+      "seed": 158409127,
+      "p": 1,
+      "n": 768,
+      "r": 47,
+      "k": 0.7551205420168117,
+      "arrival_index": 84
+    },
+    {
+      "task_id": "matrix-014",
+      "workload_class": "short",
+      "seed": 281781798,
+      "p": 1,
+      "n": 768,
+      "r": 47,
+      "k": 0.7551205420168117,
+      "arrival_index": 85
+    },
+    {
+      "task_id": "matrix-100",
+      "workload_class": "medium",
+      "seed": 448556395,
+      "p": 4,
+      "n": 1536,
+      "r": 23,
+      "k": 2.948939458001405,
+      "arrival_index": 86
+    },
+    {
+      "task_id": "matrix-001",
+      "workload_class": "short",
+      "seed": 732265847,
+      "p": 1,
+      "n": 768,
+      "r": 47,
+      "k": 0.7551205420168117,
+      "arrival_index": 87
+    },
+    {
+      "task_id": "matrix-077",
+      "workload_class": "short",
+      "seed": 1716900900,
+      "p": 4,
+      "n": 768,
+      "r": 47,
+      "k": 0.7551205420168117,
+      "arrival_index": 88
+    },
+    {
+      "task_id": "matrix-045",
+      "workload_class": "short",
+      "seed": 1607884639,
+      "p": 1,
+      "n": 768,
+      "r": 47,
+      "k": 0.7551205420168117,
+      "arrival_index": 89
+    },
+    {
+      "task_id": "matrix-024",
+      "workload_class": "short",
+      "seed": 2044492405,
+      "p": 1,
+      "n": 768,
+      "r": 47,
+      "k": 0.7551205420168117,
+      "arrival_index": 90
+    },
+    {
+      "task_id": "matrix-022",
+      "workload_class": "short",
+      "seed": 877620278,
+      "p": 1,
+      "n": 768,
+      "r": 47,
+      "k": 0.7551205420168117,
+      "arrival_index": 91
+    },
+    {
+      "task_id": "matrix-039",
+      "workload_class": "short",
+      "seed": 38706840,
+      "p": 1,
+      "n": 768,
+      "r": 47,
+      "k": 0.7551205420168117,
+      "arrival_index": 92
+    },
+    {
+      "task_id": "matrix-101",
+      "workload_class": "medium",
+      "seed": 109591644,
+      "p": 4,
+      "n": 1536,
+      "r": 23,
+      "k": 2.948939458001405,
+      "arrival_index": 93
+    },
+    {
+      "task_id": "matrix-004",
+      "workload_class": "short",
+      "seed": 1539460854,
+      "p": 1,
+      "n": 768,
+      "r": 47,
+      "k": 0.7551205420168117,
+      "arrival_index": 94
+    },
+    {
+      "task_id": "matrix-086",
+      "workload_class": "medium",
+      "seed": 382321111,
+      "p": 2,
+      "n": 1536,
+      "r": 23,
+      "k": 2.948939458001405,
+      "arrival_index": 95
+    },
+    {
+      "task_id": "matrix-084",
+      "workload_class": "medium",
+      "seed": 935203534,
+      "p": 1,
+      "n": 1536,
+      "r": 23,
+      "k": 2.948939458001405,
+      "arrival_index": 96
+    },
+    {
+      "task_id": "matrix-057",
+      "workload_class": "short",
+      "seed": 1201668136,
+      "p": 1,
+      "n": 768,
+      "r": 47,
+      "k": 0.7551205420168117,
+      "arrival_index": 97
+    },
+    {
+      "task_id": "matrix-052",
+      "workload_class": "short",
+      "seed": 1855122204,
+      "p": 1,
+      "n": 768,
+      "r": 47,
+      "k": 0.7551205420168117,
+      "arrival_index": 98
+    },
+    {
+      "task_id": "matrix-036",
+      "workload_class": "short",
+      "seed": 2095816083,
+      "p": 1,
+      "n": 768,
+      "r": 47,
+      "k": 0.7551205420168117,
+      "arrival_index": 99
+    },
+    {
+      "task_id": "matrix-111",
+      "workload_class": "long",
+      "seed": 1107547097,
+      "p": 4,
+      "n": 2304,
+      "r": 18,
+      "k": 7.81638324999949,
+      "arrival_index": 100
+    },
+    {
+      "task_id": "matrix-112",
+      "workload_class": "long",
+      "seed": 2102475660,
+      "p": 4,
+      "n": 2304,
+      "r": 18,
+      "k": 7.81638324999949,
+      "arrival_index": 101
+    },
+    {
+      "task_id": "matrix-074",
+      "workload_class": "short",
+      "seed": 1621789060,
+      "p": 2,
+      "n": 768,
+      "r": 47,
+      "k": 0.7551205420168117,
+      "arrival_index": 102
+    },
+    {
+      "task_id": "matrix-066",
+      "workload_class": "short",
+      "seed": 1421395960,
+      "p": 2,
+      "n": 768,
+      "r": 47,
+      "k": 0.7551205420168117,
+      "arrival_index": 103
+    },
+    {
+      "task_id": "matrix-025",
+      "workload_class": "short",
+      "seed": 639277804,
+      "p": 1,
+      "n": 768,
+      "r": 47,
+      "k": 0.7551205420168117,
+      "arrival_index": 104
+    },
+    {
+      "task_id": "matrix-064",
+      "workload_class": "short",
+      "seed": 547735883,
+      "p": 2,
+      "n": 768,
+      "r": 47,
+      "k": 0.7551205420168117,
+      "arrival_index": 105
+    },
+    {
+      "task_id": "matrix-044",
+      "workload_class": "short",
+      "seed": 808642324,
+      "p": 1,
+      "n": 768,
+      "r": 47,
+      "k": 0.7551205420168117,
+      "arrival_index": 106
+    },
+    {
+      "task_id": "matrix-071",
+      "workload_class": "short",
+      "seed": 817128526,
+      "p": 2,
+      "n": 768,
+      "r": 47,
+      "k": 0.7551205420168117,
+      "arrival_index": 107
+    },
+    {
+      "task_id": "matrix-009",
+      "workload_class": "short",
+      "seed": 1850418827,
+      "p": 1,
+      "n": 768,
+      "r": 47,
+      "k": 0.7551205420168117,
+      "arrival_index": 108
+    },
+    {
+      "task_id": "matrix-008",
+      "workload_class": "short",
+      "seed": 344496995,
+      "p": 1,
+      "n": 768,
+      "r": 47,
+      "k": 0.7551205420168117,
+      "arrival_index": 109
+    },
+    {
+      "task_id": "matrix-055",
+      "workload_class": "short",
+      "seed": 538416421,
+      "p": 1,
+      "n": 768,
+      "r": 47,
+      "k": 0.7551205420168117,
+      "arrival_index": 110
+    },
+    {
+      "task_id": "matrix-043",
+      "workload_class": "short",
+      "seed": 111016941,
+      "p": 1,
+      "n": 768,
+      "r": 47,
+      "k": 0.7551205420168117,
+      "arrival_index": 111
+    },
+    {
+      "task_id": "matrix-031",
+      "workload_class": "short",
+      "seed": 1292373985,
+      "p": 1,
+      "n": 768,
+      "r": 47,
+      "k": 0.7551205420168117,
+      "arrival_index": 112
+    },
+    {
+      "task_id": "matrix-105",
+      "workload_class": "medium",
+      "seed": 1777866434,
+      "p": 4,
+      "n": 1536,
+      "r": 23,
+      "k": 2.948939458001405,
+      "arrival_index": 113
+    },
+    {
+      "task_id": "matrix-035",
+      "workload_class": "short",
+      "seed": 1575858390,
+      "p": 1,
+      "n": 768,
+      "r": 47,
+      "k": 0.7551205420168117,
+      "arrival_index": 114
+    }
+  ]
+}

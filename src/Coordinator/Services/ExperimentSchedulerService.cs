@@ -11,9 +11,13 @@ public sealed class ExperimentSchedulerService(
     CoordinatorCommandProcessor commandProcessor,
     RaftCommandSubmitter raftCommandSubmitter,
     RaftNodeState raftNodeState,
-    IOptions<RaftOptions> raftOptions)
+    IOptions<RaftOptions> raftOptions,
+    IConfiguration? configuration = null)
     : BackgroundService
 {
+    private readonly TimeSpan _pollInterval = configuration?.GetValue<TimeSpan?>(
+        "Coordinator:SchedulingInterval") ?? TimeSpan.FromSeconds(2);
+
     protected override async Task ExecuteAsync(
         CancellationToken stoppingToken)
     {
@@ -153,13 +157,13 @@ public sealed class ExperimentSchedulerService(
         }
     }
 
-    private static async Task DelayAsync(
+    private async Task DelayAsync(
         CancellationToken stoppingToken)
     {
         try
         {
             await Task.Delay(
-                TimeSpan.FromSeconds(2),
+                _pollInterval,
                 stoppingToken);
         }
         catch (OperationCanceledException)

@@ -28,8 +28,8 @@ public sealed class WorkerService(
     private static readonly TimeSpan HeartbeatInterval =
         TimeSpan.FromSeconds(5);
 
-    private static readonly TimeSpan ExperimentPollingInterval =
-        TimeSpan.FromSeconds(2);
+    private readonly TimeSpan ExperimentPollingInterval = configuration.GetValue(
+        "Worker:ExperimentPollingInterval", TimeSpan.FromSeconds(2));
 
     private static readonly TimeSpan RegistrationRetryInterval =
         TimeSpan.FromSeconds(5);
