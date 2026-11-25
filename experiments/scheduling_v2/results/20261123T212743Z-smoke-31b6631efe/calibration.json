@@ -1,0 +1,770 @@
+{
+  "mode": "smoke",
+  "backend": {
+    "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+    "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+    "operation": "cblas_dgemm",
+    "numpy": "2.4.6"
+  },
+  "host": "Danilos-MacBook-Air.local",
+  "machine": "arm64",
+  "seed": 2702,
+  "physical_ram": 25769803776,
+  "profiles": [
+    {
+      "n": 128,
+      "r": 2,
+      "p": 1,
+      "median_compute_s": 0.0001779790036380291,
+      "median_per_gemm_s": 8.898950181901455e-05,
+      "median_end_to_end_s": 0.07643385398841929,
+      "speedup": 1.0,
+      "samples": [
+        {
+          "n": 128,
+          "r": 2,
+          "seed": 2702,
+          "requested_p": 1,
+          "verified_p": 1,
+          "compute_s": 0.00018112501129508018,
+          "warmup_s": 0.0003099579771514982,
+          "checksum": 4084.158745726302,
+          "numpy": "2.4.6",
+          "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+          "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+          "operation": "cblas_dgemm",
+          "end_to_end_s": 0.06691024999599904
+        },
+        {
+          "n": 128,
+          "r": 2,
+          "seed": 2702,
+          "requested_p": 1,
+          "verified_p": 1,
+          "compute_s": 0.000174832995980978,
+          "warmup_s": 0.00010562498937360942,
+          "checksum": 4084.158745726302,
+          "numpy": "2.4.6",
+          "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+          "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+          "operation": "cblas_dgemm",
+          "end_to_end_s": 0.08595745798083954
+        }
+      ]
+    },
+    {
+      "n": 128,
+      "r": 2,
+      "p": 2,
+      "median_compute_s": 0.00014068750897422433,
+      "median_per_gemm_s": 7.034375448711216e-05,
+      "median_end_to_end_s": 0.06449256301857531,
+      "speedup": 1.2650661379656458,
+      "samples": [
+        {
+          "n": 128,
+          "r": 2,
+          "seed": 2702,
+          "requested_p": 2,
+          "verified_p": 2,
+          "compute_s": 0.00014229200314730406,
+          "warmup_s": 9.754201164469123e-05,
+          "checksum": 4084.158745726302,
+          "numpy": "2.4.6",
+          "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+          "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+          "operation": "cblas_dgemm",
+          "end_to_end_s": 0.06438354201964103
+        },
+        {
+          "n": 128,
+          "r": 2,
+          "seed": 2702,
+          "requested_p": 2,
+          "verified_p": 2,
+          "compute_s": 0.0001390830148011446,
+          "warmup_s": 0.00010720800491981208,
+          "checksum": 4084.158745726302,
+          "numpy": "2.4.6",
+          "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+          "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+          "operation": "cblas_dgemm",
+          "end_to_end_s": 0.0646015840175096
+        }
+      ]
+    },
+    {
+      "n": 128,
+      "r": 2,
+      "p": 4,
+      "median_compute_s": 0.00011681250180117786,
+      "median_per_gemm_s": 5.840625090058893e-05,
+      "median_end_to_end_s": 0.06246941699646413,
+      "speedup": 1.523629756179355,
+      "samples": [
+        {
+          "n": 128,
+          "r": 2,
+          "seed": 2702,
+          "requested_p": 4,
+          "verified_p": 4,
+          "compute_s": 0.00011824999819509685,
+          "warmup_s": 9.541699546389282e-05,
+          "checksum": 4084.158745726302,
+          "numpy": "2.4.6",
+          "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+          "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+          "operation": "cblas_dgemm",
+          "end_to_end_s": 0.06351808400359005
+        },
+        {
+          "n": 128,
+          "r": 2,
+          "seed": 2702,
+          "requested_p": 4,
+          "verified_p": 4,
+          "compute_s": 0.00011537500540725887,
+          "warmup_s": 9.470799705013633e-05,
+          "checksum": 4084.158745726302,
+          "numpy": "2.4.6",
+          "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+          "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+          "operation": "cblas_dgemm",
+          "end_to_end_s": 0.06142074998933822
+        }
+      ]
+    },
+    {
+      "n": 256,
+      "r": 2,
+      "p": 1,
+      "median_compute_s": 0.0013888124958612025,
+      "median_per_gemm_s": 0.0006944062479306012,
+      "median_end_to_end_s": 0.07064191649260465,
+      "speedup": 1.0,
+      "samples": [
+        {
+          "n": 256,
+          "r": 2,
+          "seed": 2702,
+          "requested_p": 1,
+          "verified_p": 1,
+          "compute_s": 0.0013995000044815242,
+          "warmup_s": 0.0007827919907867908,
+          "checksum": 16394.84413633622,
+          "numpy": "2.4.6",
+          "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+          "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+          "operation": "cblas_dgemm",
+          "end_to_end_s": 0.07380458299303427
+        },
+        {
+          "n": 256,
+          "r": 2,
+          "seed": 2702,
+          "requested_p": 1,
+          "verified_p": 1,
+          "compute_s": 0.0013781249872408807,
+          "warmup_s": 0.000778582994826138,
+          "checksum": 16394.84413633622,
+          "numpy": "2.4.6",
+          "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+          "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+          "operation": "cblas_dgemm",
+          "end_to_end_s": 0.06747924999217503
+        }
+      ]
+    },
+    {
+      "n": 256,
+      "r": 2,
+      "p": 2,
+      "median_compute_s": 0.0007182505069067702,
+      "median_per_gemm_s": 0.0003591252534533851,
+      "median_end_to_end_s": 0.06544270801532548,
+      "speedup": 1.9336046163646803,
+      "samples": [
+        {
+          "n": 256,
+          "r": 2,
+          "seed": 2702,
+          "requested_p": 2,
+          "verified_p": 2,
+          "compute_s": 0.0007165840070229024,
+          "warmup_s": 0.00044824997894465923,
+          "checksum": 16394.84413633622,
+          "numpy": "2.4.6",
+          "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+          "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+          "operation": "cblas_dgemm",
+          "end_to_end_s": 0.06655966601101682
+        },
+        {
+          "n": 256,
+          "r": 2,
+          "seed": 2702,
+          "requested_p": 2,
+          "verified_p": 2,
+          "compute_s": 0.000719917006790638,
+          "warmup_s": 0.0004560000088531524,
+          "checksum": 16394.84413633622,
+          "numpy": "2.4.6",
+          "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+          "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+          "operation": "cblas_dgemm",
+          "end_to_end_s": 0.06432575001963414
+        }
+      ]
+    },
+    {
+      "n": 256,
+      "r": 2,
+      "p": 4,
+      "median_compute_s": 0.0004843749920837581,
+      "median_per_gemm_s": 0.00024218749604187906,
+      "median_end_to_end_s": 0.06529210400185548,
+      "speedup": 2.86722584476667,
+      "samples": [
+        {
+          "n": 256,
+          "r": 2,
+          "seed": 2702,
+          "requested_p": 4,
+          "verified_p": 4,
+          "compute_s": 0.0004843749920837581,
+          "warmup_s": 0.00032920800731517375,
+          "checksum": 16394.84413633622,
+          "numpy": "2.4.6",
+          "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+          "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+          "operation": "cblas_dgemm",
+          "end_to_end_s": 0.06499920799979009
+        },
+        {
+          "n": 256,
+          "r": 2,
+          "seed": 2702,
+          "requested_p": 4,
+          "verified_p": 4,
+          "compute_s": 0.0004843749920837581,
+          "warmup_s": 0.00033725000685080886,
+          "checksum": 16394.84413633622,
+          "numpy": "2.4.6",
+          "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+          "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+          "operation": "cblas_dgemm",
+          "end_to_end_s": 0.06558500000392087
+        }
+      ]
+    },
+    {
+      "n": 384,
+      "r": 2,
+      "p": 1,
+      "median_compute_s": 0.004546479482087307,
+      "median_per_gemm_s": 0.0022732397410436533,
+      "median_end_to_end_s": 0.07032127099228092,
+      "speedup": 1.0,
+      "samples": [
+        {
+          "n": 384,
+          "r": 2,
+          "seed": 2702,
+          "requested_p": 1,
+          "verified_p": 1,
+          "compute_s": 0.00447466698824428,
+          "warmup_s": 0.0024037089897319674,
+          "checksum": 36916.74277848187,
+          "numpy": "2.4.6",
+          "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+          "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+          "operation": "cblas_dgemm",
+          "end_to_end_s": 0.06983062499784864
+        },
+        {
+          "n": 384,
+          "r": 2,
+          "seed": 2702,
+          "requested_p": 1,
+          "verified_p": 1,
+          "compute_s": 0.004618291975930333,
+          "warmup_s": 0.0024748750147409737,
+          "checksum": 36916.74277848187,
+          "numpy": "2.4.6",
+          "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+          "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+          "operation": "cblas_dgemm",
+          "end_to_end_s": 0.07081191698671319
+        }
+      ]
+    },
+    {
+      "n": 384,
+      "r": 2,
+      "p": 2,
+      "median_compute_s": 0.002345666493056342,
+      "median_per_gemm_s": 0.001172833246528171,
+      "median_end_to_end_s": 0.0705855210107984,
+      "speedup": 1.9382463344835366,
+      "samples": [
+        {
+          "n": 384,
+          "r": 2,
+          "seed": 2702,
+          "requested_p": 2,
+          "verified_p": 2,
+          "compute_s": 0.0023377919860649854,
+          "warmup_s": 0.0013141249946784228,
+          "checksum": 36916.74277848187,
+          "numpy": "2.4.6",
+          "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+          "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+          "operation": "cblas_dgemm",
+          "end_to_end_s": 0.07115533301839605
+        },
+        {
+          "n": 384,
+          "r": 2,
+          "seed": 2702,
+          "requested_p": 2,
+          "verified_p": 2,
+          "compute_s": 0.0023535410000476986,
+          "warmup_s": 0.0013125840050633997,
+          "checksum": 36916.74277848187,
+          "numpy": "2.4.6",
+          "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+          "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+          "operation": "cblas_dgemm",
+          "end_to_end_s": 0.07001570900320075
+        }
+      ]
+    },
+    {
+      "n": 384,
+      "r": 2,
+      "p": 4,
+      "median_compute_s": 0.0015032710070954636,
+      "median_per_gemm_s": 0.0007516355035477318,
+      "median_end_to_end_s": 0.06790879150503315,
+      "speedup": 3.0243911181868404,
+      "samples": [
+        {
+          "n": 384,
+          "r": 2,
+          "seed": 2702,
+          "requested_p": 4,
+          "verified_p": 4,
+          "compute_s": 0.0015035420074127614,
+          "warmup_s": 0.0009163340146187693,
+          "checksum": 36916.74277848187,
+          "numpy": "2.4.6",
+          "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+          "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+          "operation": "cblas_dgemm",
+          "end_to_end_s": 0.06799675000365824
+        },
+        {
+          "n": 384,
+          "r": 2,
+          "seed": 2702,
+          "requested_p": 4,
+          "verified_p": 4,
+          "compute_s": 0.0015030000067781657,
+          "warmup_s": 0.0009123329946305603,
+          "checksum": 36916.74277848187,
+          "numpy": "2.4.6",
+          "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+          "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+          "operation": "cblas_dgemm",
+          "end_to_end_s": 0.06782083300640807
+        }
+      ]
+    },
+    {
+      "n": 128,
+      "r": 2,
+      "p": 1,
+      "median_compute_s": 0.0001944585092132911,
+      "median_per_gemm_s": 9.722925460664555e-05,
+      "median_end_to_end_s": 0.06264327099779621,
+      "speedup": 1.0,
+      "samples": [
+        {
+          "n": 128,
+          "r": 2,
+          "seed": 2702,
+          "requested_p": 1,
+          "verified_p": 1,
+          "compute_s": 0.00019395901472307742,
+          "warmup_s": 0.00010716699762269855,
+          "checksum": 4084.158745726302,
+          "numpy": "2.4.6",
+          "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+          "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+          "operation": "cblas_dgemm",
+          "end_to_end_s": 0.06285370900877751
+        },
+        {
+          "n": 128,
+          "r": 2,
+          "seed": 2702,
+          "requested_p": 1,
+          "verified_p": 1,
+          "compute_s": 0.0001949580037035048,
+          "warmup_s": 0.0001086670090444386,
+          "checksum": 4084.158745726302,
+          "numpy": "2.4.6",
+          "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+          "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+          "operation": "cblas_dgemm",
+          "end_to_end_s": 0.0624328329868149
+        }
+      ]
+    },
+    {
+      "n": 128,
+      "r": 2,
+      "p": 2,
+      "median_compute_s": 0.00014520849799737334,
+      "median_per_gemm_s": 7.260424899868667e-05,
+      "median_end_to_end_s": 0.06350635401031468,
+      "speedup": 1.3391675548961923,
+      "samples": [
+        {
+          "n": 128,
+          "r": 2,
+          "seed": 2702,
+          "requested_p": 2,
+          "verified_p": 2,
+          "compute_s": 0.00015058298595249653,
+          "warmup_s": 9.950000094249845e-05,
+          "checksum": 4084.158745726302,
+          "numpy": "2.4.6",
+          "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+          "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+          "operation": "cblas_dgemm",
+          "end_to_end_s": 0.0637849580089096
+        },
+        {
+          "n": 128,
+          "r": 2,
+          "seed": 2702,
+          "requested_p": 2,
+          "verified_p": 2,
+          "compute_s": 0.00013983401004225016,
+          "warmup_s": 0.00010025000665336847,
+          "checksum": 4084.158745726302,
+          "numpy": "2.4.6",
+          "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+          "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+          "operation": "cblas_dgemm",
+          "end_to_end_s": 0.06322775001171976
+        }
+      ]
+    },
+    {
+      "n": 128,
+      "r": 2,
+      "p": 4,
+      "median_compute_s": 0.00011364599049557,
+      "median_per_gemm_s": 5.6822995247785e-05,
+      "median_end_to_end_s": 0.06291325001802761,
+      "speedup": 1.7110899237652493,
+      "samples": [
+        {
+          "n": 128,
+          "r": 2,
+          "seed": 2702,
+          "requested_p": 4,
+          "verified_p": 4,
+          "compute_s": 0.00011058399104513228,
+          "warmup_s": 8.583298767916858e-05,
+          "checksum": 4084.158745726302,
+          "numpy": "2.4.6",
+          "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+          "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+          "operation": "cblas_dgemm",
+          "end_to_end_s": 0.06180650001624599
+        },
+        {
+          "n": 128,
+          "r": 2,
+          "seed": 2702,
+          "requested_p": 4,
+          "verified_p": 4,
+          "compute_s": 0.00011670798994600773,
+          "warmup_s": 9.137499728240073e-05,
+          "checksum": 4084.158745726302,
+          "numpy": "2.4.6",
+          "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+          "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+          "operation": "cblas_dgemm",
+          "end_to_end_s": 0.06402000001980923
+        }
+      ]
+    },
+    {
+      "n": 256,
+      "r": 3,
+      "p": 1,
+      "median_compute_s": 0.002046021501882933,
+      "median_per_gemm_s": 0.000682007167294311,
+      "median_end_to_end_s": 0.0661646044900408,
+      "speedup": 1.0,
+      "samples": [
+        {
+          "n": 256,
+          "r": 3,
+          "seed": 2702,
+          "requested_p": 1,
+          "verified_p": 1,
+          "compute_s": 0.0020599589915946126,
+          "warmup_s": 0.00080245899152942,
+          "checksum": 16394.84413633622,
+          "numpy": "2.4.6",
+          "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+          "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+          "operation": "cblas_dgemm",
+          "end_to_end_s": 0.06739941699197516
+        },
+        {
+          "n": 256,
+          "r": 3,
+          "seed": 2702,
+          "requested_p": 1,
+          "verified_p": 1,
+          "compute_s": 0.0020320840121712536,
+          "warmup_s": 0.0007632499909959733,
+          "checksum": 16394.84413633622,
+          "numpy": "2.4.6",
+          "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+          "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+          "operation": "cblas_dgemm",
+          "end_to_end_s": 0.06492979198810644
+        }
+      ]
+    },
+    {
+      "n": 256,
+      "r": 3,
+      "p": 2,
+      "median_compute_s": 0.0010875834996113554,
+      "median_per_gemm_s": 0.0003625278332037851,
+      "median_end_to_end_s": 0.06325285448110662,
+      "speedup": 1.8812546371051717,
+      "samples": [
+        {
+          "n": 256,
+          "r": 3,
+          "seed": 2702,
+          "requested_p": 2,
+          "verified_p": 2,
+          "compute_s": 0.0010891669953707606,
+          "warmup_s": 0.0004521659866441041,
+          "checksum": 16394.84413633622,
+          "numpy": "2.4.6",
+          "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+          "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+          "operation": "cblas_dgemm",
+          "end_to_end_s": 0.06363162497291341
+        },
+        {
+          "n": 256,
+          "r": 3,
+          "seed": 2702,
+          "requested_p": 2,
+          "verified_p": 2,
+          "compute_s": 0.0010860000038519502,
+          "warmup_s": 0.0004547499993350357,
+          "checksum": 16394.84413633622,
+          "numpy": "2.4.6",
+          "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+          "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+          "operation": "cblas_dgemm",
+          "end_to_end_s": 0.06287408398929983
+        }
+      ]
+    },
+    {
+      "n": 256,
+      "r": 3,
+      "p": 4,
+      "median_compute_s": 0.0007160415116231889,
+      "median_per_gemm_s": 0.0002386805038743963,
+      "median_end_to_end_s": 0.06363954152038787,
+      "speedup": 2.857406265797109,
+      "samples": [
+        {
+          "n": 256,
+          "r": 3,
+          "seed": 2702,
+          "requested_p": 4,
+          "verified_p": 4,
+          "compute_s": 0.0007149580051191151,
+          "warmup_s": 0.0003324159770272672,
+          "checksum": 16394.84413633622,
+          "numpy": "2.4.6",
+          "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+          "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+          "operation": "cblas_dgemm",
+          "end_to_end_s": 0.0633206250204239
+        },
+        {
+          "n": 256,
+          "r": 3,
+          "seed": 2702,
+          "requested_p": 4,
+          "verified_p": 4,
+          "compute_s": 0.0007171250181272626,
+          "warmup_s": 0.00032470800215378404,
+          "checksum": 16394.84413633622,
+          "numpy": "2.4.6",
+          "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+          "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+          "operation": "cblas_dgemm",
+          "end_to_end_s": 0.06395845802035183
+        }
+      ]
+    },
+    {
+      "n": 384,
+      "r": 4,
+      "p": 1,
+      "median_compute_s": 0.008989312511403114,
+      "median_per_gemm_s": 0.0022473281278507784,
+      "median_end_to_end_s": 0.07266214551054873,
+      "speedup": 1.0,
+      "samples": [
+        {
+          "n": 384,
+          "r": 4,
+          "seed": 2702,
+          "requested_p": 1,
+          "verified_p": 1,
+          "compute_s": 0.008967250003479421,
+          "warmup_s": 0.002413832989986986,
+          "checksum": 36916.74277848187,
+          "numpy": "2.4.6",
+          "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+          "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+          "operation": "cblas_dgemm",
+          "end_to_end_s": 0.07271858301828615
+        },
+        {
+          "n": 384,
+          "r": 4,
+          "seed": 2702,
+          "requested_p": 1,
+          "verified_p": 1,
+          "compute_s": 0.009011375019326806,
+          "warmup_s": 0.002456124988384545,
+          "checksum": 36916.74277848187,
+          "numpy": "2.4.6",
+          "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+          "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+          "operation": "cblas_dgemm",
+          "end_to_end_s": 0.0726057080028113
+        }
+      ]
+    },
+    {
+      "n": 384,
+      "r": 4,
+      "p": 2,
+      "median_compute_s": 0.004707625004812144,
+      "median_per_gemm_s": 0.001176906251203036,
+      "median_end_to_end_s": 0.06874454198987223,
+      "speedup": 1.909521786933798,
+      "samples": [
+        {
+          "n": 384,
+          "r": 4,
+          "seed": 2702,
+          "requested_p": 2,
+          "verified_p": 2,
+          "compute_s": 0.004700332996435463,
+          "warmup_s": 0.0013360830198507756,
+          "checksum": 36916.74277848187,
+          "numpy": "2.4.6",
+          "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+          "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+          "operation": "cblas_dgemm",
+          "end_to_end_s": 0.06939704198157415
+        },
+        {
+          "n": 384,
+          "r": 4,
+          "seed": 2702,
+          "requested_p": 2,
+          "verified_p": 2,
+          "compute_s": 0.004714917013188824,
+          "warmup_s": 0.001316790992859751,
+          "checksum": 36916.74277848187,
+          "numpy": "2.4.6",
+          "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+          "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+          "operation": "cblas_dgemm",
+          "end_to_end_s": 0.06809204199817032
+        }
+      ]
+    },
+    {
+      "n": 384,
+      "r": 4,
+      "p": 4,
+      "median_compute_s": 0.0049534165154909715,
+      "median_per_gemm_s": 0.0012383541288727429,
+      "median_end_to_end_s": 0.07277510401036125,
+      "speedup": 1.8147701658624025,
+      "samples": [
+        {
+          "n": 384,
+          "r": 4,
+          "seed": 2702,
+          "requested_p": 4,
+          "verified_p": 4,
+          "compute_s": 0.006886125018354505,
+          "warmup_s": 0.0018647920223884284,
+          "checksum": 36916.74277848187,
+          "numpy": "2.4.6",
+          "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+          "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+          "operation": "cblas_dgemm",
+          "end_to_end_s": 0.07726083300076425
+        },
+        {
+          "n": 384,
+          "r": 4,
+          "seed": 2702,
+          "requested_p": 4,
+          "verified_p": 4,
+          "compute_s": 0.0030207080126274377,
+          "warmup_s": 0.001017832983052358,
+          "checksum": 36916.74277848187,
+          "numpy": "2.4.6",
+          "backend": "OpenBLAS 0.3.27  USE64BITINT DYNAMIC_ARCH NO_AFFINITY neoversen1 MAX_THREADS=512",
+          "library": "/Applications/Julia-1.11.app/Contents/Resources/julia/lib/julia/libopenblas64_.dylib",
+          "operation": "cblas_dgemm",
+          "end_to_end_s": 0.06828937501995824
+        }
+      ]
+    }
+  ],
+  "classes": {
+    "short": {
+      "n": 128,
+      "r": 2,
+      "k": 0.0001944585092132911
+    },
+    "medium": {
+      "n": 256,
+      "r": 3,
+      "k": 0.002046021501882933
+    },
+    "long": {
+      "n": 384,
+      "r": 4,
+      "k": 0.008989312511403114
+    }
+  }
+}

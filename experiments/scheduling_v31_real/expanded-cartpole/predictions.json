@@ -1,0 +1,142 @@
+{
+  "commit": "af23ff56c3047f1353f1b4194c1abab64c87141a",
+  "training_rows": 52,
+  "host": {
+    "hostId": "danilo-mac",
+    "isStale": false,
+    "sample": {
+      "cpuUsagePercent": 14.8,
+      "totalMemoryBytes": 25769803776,
+      "memoryKind": "free",
+      "memoryBytes": 2460450816
+    }
+  },
+  "configurations": [
+    {
+      "config": "rf420",
+      "group": "short",
+      "predicted_ms": 1271.94,
+      "algorithm": "random-forest",
+      "environment": "wine",
+      "maxSteps": 420,
+      "seed": 42
+    },
+    {
+      "config": "rf1050",
+      "group": "short",
+      "predicted_ms": 1755.13,
+      "algorithm": "random-forest",
+      "environment": "wine",
+      "maxSteps": 1050,
+      "seed": 42
+    },
+    {
+      "config": "m832x275",
+      "group": "short",
+      "predicted_ms": 1664.78,
+      "algorithm": "numeric-matmul",
+      "environment": "matrix-832",
+      "maxSteps": 275,
+      "seed": 42
+    },
+    {
+      "config": "m960x245",
+      "group": "short",
+      "predicted_ms": 1694.49,
+      "algorithm": "numeric-matmul",
+      "environment": "matrix-960",
+      "maxSteps": 245,
+      "seed": 42
+    },
+    {
+      "config": "cp5000",
+      "group": "short",
+      "predicted_ms": 159.55,
+      "algorithm": "q-learning-discrete",
+      "environment": "cartpole",
+      "maxSteps": 5000,
+      "seed": 42
+    },
+    {
+      "config": "cp25000",
+      "group": "short",
+      "predicted_ms": 320.49,
+      "algorithm": "q-learning-discrete",
+      "environment": "cartpole",
+      "maxSteps": 25000,
+      "seed": 42
+    },
+    {
+      "config": "rf6800",
+      "group": "medium",
+      "predicted_ms": 2984.82,
+      "algorithm": "random-forest",
+      "environment": "wine",
+      "maxSteps": 6800,
+      "seed": 42
+    },
+    {
+      "config": "rf11200",
+      "group": "medium",
+      "predicted_ms": 3039.44,
+      "algorithm": "random-forest",
+      "environment": "wine",
+      "maxSteps": 11200,
+      "seed": 42
+    },
+    {
+      "config": "m1216x450",
+      "group": "medium",
+      "predicted_ms": 5047.38,
+      "algorithm": "numeric-matmul",
+      "environment": "matrix-1216",
+      "maxSteps": 450,
+      "seed": 42
+    },
+    {
+      "config": "m1344x445",
+      "group": "medium",
+      "predicted_ms": 5095.79,
+      "algorithm": "numeric-matmul",
+      "environment": "matrix-1344",
+      "maxSteps": 445,
+      "seed": 42
+    },
+    {
+      "config": "rf35500",
+      "group": "long",
+      "predicted_ms": 15405.9,
+      "algorithm": "random-forest",
+      "environment": "wine",
+      "maxSteps": 35500,
+      "seed": 42
+    },
+    {
+      "config": "rf40000",
+      "group": "long",
+      "predicted_ms": 15540.14,
+      "algorithm": "random-forest",
+      "environment": "wine",
+      "maxSteps": 40000,
+      "seed": 42
+    },
+    {
+      "config": "m1536x945",
+      "group": "long",
+      "predicted_ms": 13422.98,
+      "algorithm": "numeric-matmul",
+      "environment": "matrix-1536",
+      "maxSteps": 945,
+      "seed": 42
+    },
+    {
+      "config": "m1600x900",
+      "group": "long",
+      "predicted_ms": 13461.03,
+      "algorithm": "numeric-matmul",
+      "environment": "matrix-1600",
+      "maxSteps": 900,
+      "seed": 42
+    }
+  ]
+}

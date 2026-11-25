@@ -1,0 +1,19 @@
+{
+  "os": "Darwin",
+  "macOS": "26.6.2",
+  "architecture": "arm64",
+  "python": "3.11.9",
+  "numpy": "2.4.6",
+  "sklearn": "1.9.1",
+  "workers": 10,
+  "transport": "ASP.NET TestServer",
+  "blas_thread_limit_env": 1,
+  "seed": 42,
+  "policies": [
+    "FIFO",
+    "LPT by frozen predicted duration"
+  ],
+  "workload_commit": "af23ff56c3047f1353f1b4194c1abab64c87141a",
+  "first_shuffle_seed": 2701,
+  "last_shuffle_seed": 2706
+}

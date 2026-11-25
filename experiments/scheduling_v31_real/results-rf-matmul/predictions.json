@@ -1,0 +1,70 @@
+{
+  "host": {
+    "hostId": "danilo-mac",
+    "isStale": false,
+    "sample": {
+      "cpuUsagePercent": 35.6,
+      "totalMemoryBytes": 25769803776,
+      "memoryKind": "free",
+      "memoryBytes": 95453184
+    }
+  },
+  "configurations": [
+    {
+      "algorithm": "random-forest",
+      "environment": "wine",
+      "maxSteps": 30,
+      "calibrationMs": [
+        760.1610829879064,
+        750.8726670057513,
+        754.956791002769
+      ],
+      "hostId": "danilo-mac",
+      "predictedDurationMs": 501.01,
+      "cpuTelemetryAvailable": true,
+      "memoryTelemetryAvailable": true
+    },
+    {
+      "algorithm": "random-forest",
+      "environment": "wine",
+      "maxSteps": 150,
+      "calibrationMs": [
+        1048.0257919989526,
+        784.4574170012493,
+        791.6204999783076
+      ],
+      "hostId": "danilo-mac",
+      "predictedDurationMs": 545.6,
+      "cpuTelemetryAvailable": true,
+      "memoryTelemetryAvailable": true
+    },
+    {
+      "algorithm": "numeric-matmul",
+      "environment": "matrix-192",
+      "maxSteps": 30,
+      "calibrationMs": [
+        109.80220802593976,
+        96.48270800244063,
+        105.18141702050343
+      ],
+      "hostId": "danilo-mac",
+      "predictedDurationMs": 358.61,
+      "cpuTelemetryAvailable": true,
+      "memoryTelemetryAvailable": true
+    },
+    {
+      "algorithm": "numeric-matmul",
+      "environment": "matrix-384",
+      "maxSteps": 60,
+      "calibrationMs": [
+        142.71066698711365,
+        117.69304098561406,
+        83.54170797974803
+      ],
+      "hostId": "danilo-mac",
+      "predictedDurationMs": 263.12,
+      "cpuTelemetryAvailable": true,
+      "memoryTelemetryAvailable": true
+    }
+  ]
+}

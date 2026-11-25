@@ -59,12 +59,12 @@ internal static class LocalBatch
         IPendingExperimentPolicy policy, CompletionClock clock, bool inProcess, TimeSpan deadline,
         Func<HttpClient, IServiceProvider, string[], Task<T>> export, CancellationToken token,
         Action<IServiceCollection>? configure = null, Action<IServiceProvider>? prepare = null,
-        Func<CancellationToken, Task>? warmup = null, Action? released = null, Action? finished = null)
+        Func<CancellationToken, Task>? warmup = null, Action? released = null, Action? finished = null, string? databasePath = null)
     {
         var temporary = Directory.CreateTempSubdirectory("scheduling-");
         try
         {
-            await using var host = new CoordinatorHost(policy, clock, Path.Combine(temporary.FullName, "batch.db"), configure);
+            await using var host = new CoordinatorHost(policy, clock, databasePath ?? Path.Combine(temporary.FullName, "batch.db"), configure);
             if (!inProcess)
                 host.UseKestrel(options => options.Listen(IPAddress.Loopback, 0));
 

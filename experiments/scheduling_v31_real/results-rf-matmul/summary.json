@@ -1,0 +1,20 @@
+{
+  "completed_jobs": 384,
+  "pairs": 6,
+  "jobs_per_arm": 32,
+  "v1_wins": 3,
+  "fifo_median_s": 3.3133108,
+  "v1_median_s": 3.2805659499999997,
+  "paired_median_saved_s": 0.017656349999999987,
+  "paired_median_reduction_pct": 0.537084609139264,
+  "paired_range_pct": [
+    -2.33178567709759,
+    6.232855532188838
+  ],
+  "median_worker_duration_ms": {
+    "numeric-matmul matrix-192 30": 154.0,
+    "random-forest wine 150": 1608.5,
+    "numeric-matmul matrix-384 60": 188.5,
+    "random-forest wine 30": 1357.0
+  }
+}
